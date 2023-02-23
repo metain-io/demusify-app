@@ -3,7 +3,7 @@ import styles from './styles.module.scss';
 import { useButtonConnectPhantomWallet } from './use-button-connect-phantom-wallet';
 
 const ButtonConnectPhantomWallet = () => {
-    const { loginStatus, walletAddress, handleOnClicked } = useButtonConnectPhantomWallet();
+    const { loginStatus, handleOnClicked } = useButtonConnectPhantomWallet();
 
     return (
         <button className={[styles.button, 'mButton', 'mButton-cp5-bn1'].join(' ')} onClick={handleOnClicked}>
@@ -15,7 +15,7 @@ const ButtonConnectPhantomWallet = () => {
                         [LoginStatus.InitializeFailed]: 'Connect Phantom Wallet',
                         [LoginStatus.Authenticating]: 'Authenticating',
                         [LoginStatus.AuthenticateFailed]: 'Connect Phantom Wallet',
-                        [LoginStatus.LoggedIn]: walletAddress,
+                        [LoginStatus.LoggedIn]: 'Logout',
                         [LoginStatus.NotLogged]: 'Connect Phantom Wallet',
                     } as any
                 )[loginStatus]

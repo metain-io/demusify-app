@@ -5,7 +5,7 @@ import { useWalletAddress } from './use-wallet-address';
 const WalletAddress = () => {
     const { walletAddress, copyState, handleCopyToClipboard } = useWalletAddress();
 
-    return (
+    return walletAddress ? (
         <div id={styles.wallet_wrapper} data-tip={true} data-for="tooltip-username" onClick={handleCopyToClipboard}>
             <img className={styles.image_1} src={'/svg/icon-token-sol.svg'} alt="" />
             <span className={styles.span_1}>{walletAddress}</span>
@@ -14,7 +14,7 @@ const WalletAddress = () => {
                 <div className={styles.commission_tooltip_area}>{<span>{copyState ? copyState : 'Copy'}</span>}</div>
             </ReactTooltip>
         </div>
-    );
+    ) : null;
 };
 
 export { WalletAddress };

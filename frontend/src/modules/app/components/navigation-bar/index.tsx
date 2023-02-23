@@ -1,4 +1,4 @@
-import { ButtonConnectPhantomWallet } from '@modules/auth/components';
+import { ButtonConnectPhantomWallet, WalletAddress } from '@modules/auth/components';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './styles.module.scss';
@@ -11,6 +11,8 @@ const NavigationBar = () => {
             </Link>
 
             <h2 className={styles['brand-name']}>DIMUSIFY</h2>
+
+            <WalletAddress />
 
             <div className={styles['button-connect-placeholder']}>
                 <ButtonConnectPhantomWallet />

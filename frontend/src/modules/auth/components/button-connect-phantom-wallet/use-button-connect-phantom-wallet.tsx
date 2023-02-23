@@ -1,8 +1,9 @@
-import { loginActions, LoginStatus, selectLoginStatus } from '../../redux/login/slice';
+import { loginActions, LoginStatus, selectLoginStatus, selectLoginWalletAddress } from '../../redux/login/slice';
 import { useDispatch, useSelector } from 'react-redux';
 
 const useButtonConnectPhantomWallet = () => {
     const loginStatus = useSelector(selectLoginStatus);
+    const walletAddress = useSelector(selectLoginWalletAddress);
     const dispatch = useDispatch();
 
     const handleOnClicked = () => {
@@ -17,7 +18,7 @@ const useButtonConnectPhantomWallet = () => {
         }
     };
 
-    return { loginStatus, handleOnClicked };
+    return { loginStatus, walletAddress, handleOnClicked };
 };
 
 export { useButtonConnectPhantomWallet };

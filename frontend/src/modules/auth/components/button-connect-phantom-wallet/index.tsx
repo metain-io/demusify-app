@@ -12,9 +12,9 @@ const ButtonConnectPhantomWallet = () => {
                     {
                         [LoginStatus.Undefined]: 'Connect Phantom Wallet',
                         [LoginStatus.Initializing]: 'Initializing',
-                        [LoginStatus.InitializeFailed]: '',
+                        [LoginStatus.InitializeFailed]: 'Connect Phantom Wallet',
                         [LoginStatus.Authenticating]: 'Authenticating',
-                        [LoginStatus.AuthenticateFailed]: '',
+                        [LoginStatus.AuthenticateFailed]: 'Connect Phantom Wallet',
                         [LoginStatus.LoggedIn]: 'Logout',
                         [LoginStatus.NotLogged]: 'Connect Phantom Wallet',
                     } as any

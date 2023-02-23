@@ -10,6 +10,8 @@ const NavigationBar = () => {
                 <Image src="" alt="" />
             </Link>
 
+            <h2 className={styles['brand-name']}>DIMUSIFY</h2>
+
             <div className={styles['button-connect-placeholder']}>
                 <ButtonConnectPhantomWallet />
             </div>

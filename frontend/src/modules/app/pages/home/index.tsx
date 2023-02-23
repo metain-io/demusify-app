@@ -1,7 +1,12 @@
-import type { NextPage } from 'next';
+import { MainLayout } from '@modules/app/layouts';
+import { ReactElement } from 'react';
 
-const Home: NextPage = () => {
+const PageHome = () => {
     return <div>Welcome to Demusify !!!</div>;
 };
 
-export default Home;
+PageHome.getLayout = (page: ReactElement) => {
+    return <MainLayout>{page}</MainLayout>;
+};
+
+export { PageHome };

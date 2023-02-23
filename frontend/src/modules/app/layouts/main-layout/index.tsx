@@ -16,7 +16,7 @@ const MainLayout = (props: MainLayoutProps) => {
             <div id={styles['main-layout__body']}>{children}</div>
 
             {/* Footer */}
-            <div id={styles['main-layout__footer']}>METAIN | Solana Hackathon - 2023</div>
+            <div id={styles['main-layout__footer']}>Demusify | Solana Hackathon - 2023</div>
         </div>
     );
 };

@@ -1,0 +1,988 @@
+// @import "@Shared/styles/_variable.scss";
+/* Color Define ***********************************************************************************************************************************************/
+$colorNeutral1: #ffffff;
+$colorNeutral2: #f9fafb;
+$colorNeutral3: #eaedf0;
+$colorNeutral4: #cdd3db;
+$colorNeutral5: #94a3b8;
+$colorNeutral6: #64748b;
+$colorNeutral7: #475569;
+$colorNeutral8: #334155;
+$colorNeutral9: #1e293b;
+$colorNeutral10: #0f1629;
+
+$colorGreen1: #f6fee9;
+$colorGreen2: #edfdd4;
+$colorGreen3: #d6fcaa;
+$colorGreen4: #b7f67e;
+$colorGreen5: #98ee5d;
+$colorGreen6: #6be42b;
+$colorGreen7: #4dc41f;
+$colorGreen8: #34a415;
+$colorGreen9: #20840d;
+$colorGreen10: #116d08;
+
+$colorOrange1: #fffaeb;
+$colorOrange2: #fff5d6;
+$colorOrange3: #ffe7ae;
+$colorOrange4: #ffd686;
+$colorOrange5: #ffc668;
+$colorOrange6: #ffab36;
+$colorOrange7: #db8827;
+$colorOrange8: #b7681b;
+$colorOrange9: #934c11;
+$colorOrange10: #7a380a;
+
+$colorRed1: #fff1ea;
+$colorRed2: #fee3d5;
+$colorRed3: #fec1ac;
+$colorRed4: #fd9782;
+$colorRed5: #fc7063;
+$colorRed6: #fb3030;
+$colorRed7: #d72332;
+$colorRed8: #b41833;
+$colorRed9: #910f31;
+$colorRed10: #78092f;
+
+$colorBlue1: #eff9ff;
+$colorBlue2: #dff3ff;
+$colorBlue3: #bfe5ff;
+$colorBlue4: #9fd4ff;
+$colorBlue5: #87c4ff;
+$colorBlue6: #5fa9ff;
+$colorBlue7: #4583db;
+$colorBlue8: #2f62b7;
+$colorBlue9: #1e4493;
+$colorBlue10: #122f7a;
+
+$colorPurple1: #ffebfc;
+$colorPurple2: #fed6fa;
+$colorPurple3: #fdaefb;
+$colorPurple4: #f585fa;
+$colorPurple5: #e466f6;
+$colorPurple6: #cc35f1;
+$colorPurple7: #a126cf;
+$colorPurple8: #7a1aad;
+$colorPurple9: #58108b;
+$colorPurple10: #3f0a73;
+
+$colorCyan1: #e9fef3;
+$colorCyan2: #d4fde6;
+$colorCyan3: #a9fcd5;
+$colorCyan4: #7df6c9;
+$colorCyan5: #5becc5;
+$colorCyan6: #29e1c0;
+$colorCyan7: #1dc1b3;
+$colorCyan8: #14a0a2;
+$colorCyan9: #0d7682;
+$colorCyan10: #07586c;
+
+$colorYellow1: #fffee5;
+$colorYellow2: #fff4c7;
+$colorYellow3: #ffe88a;
+$colorYellow4: #ffde5c;
+$colorYellow5: #ffd52e;
+$colorYellow6: #ffcc00;
+$colorYellow7: #e0b400;
+$colorYellow8: #b38f00;
+$colorYellow9: #947600;
+$colorYellow10: #755e00;
+
+$colorPink1: #ffece9;
+$colorPink2: #fed9d4;
+$colorPink3: #feabaa;
+$colorPink4: #fc7f8a;
+$colorPink5: #fa5f7b;
+$colorPink6: #f72b64;
+$colorPink7: #d41f63;
+$colorPink8: #b1155f;
+$colorPink9: #8f0d57;
+$colorPink10: #760852;
+
+$colorGeekBlue1: #e8edff;
+$colorGeekBlue2: #d2dcfe;
+$colorGeekBlue3: #a5b7fe;
+$colorGeekBlue4: #7891fc;
+$colorGeekBlue5: #5672fa;
+$colorGeekBlue6: #1f41f7;
+$colorGeekBlue7: #1631d4;
+$colorGeekBlue8: #0f23b1;
+$colorGeekBlue9: #09188f;
+$colorGeekBlue10: #051076;
+
+$colorTeal1: #e7fffa;
+$colorTeal2: #cffef5;
+$colorTeal3: #a0fdf2;
+$colorTeal4: #70f9f4;
+$colorTeal5: #4cecf4;
+$colorTeal6: #14d2ed;
+$colorTeal7: #0ea5cb;
+$colorTeal8: #0a7daa;
+$colorTeal9: #065989;
+$colorTeal10: #034171;
+
+/* Shared Variable ********************************************************************************************************************************************/
+$fontFamily: "Google Sans";
+
+$colorPrimary1: #e5ebff;
+$colorPrimary2: #b2c4ff;
+$colorPrimary3: #658aff;
+$colorPrimary4: #194fff;
+$colorPrimary5: #0036e5;
+$colorPrimary6: #002ab2;
+$colorPrimary7: #002393;
+$colorPrimary8: #001f84;
+$colorPrimary9: #001865;
+$colorPrimary10: #001147;
+
+$colorSecondary1: #eaf6ff;
+$colorSecondary2: #b7e1ff;
+$colorSecondary3: #84ccff;
+$colorSecondary4: #51b7ff;
+$colorSecondary5: #1ea2ff;
+$colorSecondary6: #0089ea;
+$colorSecondary7: #0077cb;
+$colorSecondary8: #0065ad;
+$colorSecondary9: #00538e;
+$colorSecondary10: #004170;
+
+$colorBackground1: #f3f6ff;
+
+// @import "@Shared/styles/_mixin.scss";
+// @import '../styles/_variable.scss';
+
+/* Variable ***************************************************************************************************************************************************/
+$lineHeight-fontSize-pair: ();
+
+/* Function ***************************************************************************************************************************************************/
+
+/* Mixin ******************************************************************************************************************************************************/
+@mixin fontSize($fontSize) {
+	$lineHeight: map-get($lineHeight-fontSize-pair, $fontSize);
+
+	@if $lineHeight == null {
+		line-height: calc($fontSize + 0.8rem);
+	} @else {
+		line-height: $lineHeight;
+	}
+
+	font-size: $fontSize;
+}
+
+@mixin customScrollbar($thumbColor: $colorNeutral4, $trackColor: $colorNeutral3, $size: 6px) {
+	overflow-x: auto !important;
+	overflow-y: overlay !important;
+	scrollbar-width: thin !important;
+
+	&::-webkit-scrollbar {
+		position: absolute !important;
+		width: $size !important;
+		height: $size !important;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: $trackColor !important;
+		border-radius: 100px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: $thumbColor;
+		border-radius: 100px;
+	}
+}
+
+
+
+
+.pwTable {
+	min-width: 100%;
+
+	.browser_wrapper {
+		width: 100%;
+	}
+
+	thead {
+		color: $colorNeutral6;
+		background: $colorBackground1;
+
+		th {
+			padding: 1rem 1.2rem;
+			@include fontSize(1.2rem);
+			font-weight: 500;
+			text-transform: uppercase;
+		}
+	}
+
+	tbody {
+		tr {
+			cursor: pointer;
+
+			&:not(:first-of-type) {
+				border-top: 1px solid $colorNeutral3;
+			}
+
+			&.disabled {
+				opacity: 0.3;
+			}
+		}
+
+		td {
+			padding: 2rem 1.2rem;
+			@include fontSize(1.4rem);
+		}
+	}
+
+	&.browser,
+	&.tablet-large,
+	&.tablet {
+		display: flex;
+		overflow-x: auto;
+	}
+
+	.loading_row {
+		justify-content: center;
+		width: 100% !important;
+	}
+}
+
+.pwTable.market_token,
+.pwTable.user_token {
+	th,
+	td {
+		&.drag {
+			width: 3rem;
+			color: $colorNeutral4;
+		}
+
+		&.name {
+			padding: 0.6rem;
+			min-width: 12.5rem;
+			width: 25%;
+			text-align: left;
+		}
+
+		&.current_price {
+			min-width: 10rem;
+		}
+
+		&.chart_data {
+			padding-left: 1.6rem;
+			width: 10rem;
+		}
+
+		&.price_change_percentage_24h {
+			text-align: left;
+		}
+	}
+
+	.span {
+		&_1 {
+			height: 2rem;
+			color: $colorNeutral9;
+			font-weight: 700;
+		}
+
+		&_2 {
+			height: 1.8rem;
+			color: $colorNeutral6;
+			@include fontSize(1.2rem);
+			text-transform: uppercase;
+		}
+
+		&_3 {
+			display: inline-flex;
+			width: 8rem;
+		}
+	}
+
+	.image {
+		&_1 {
+			display: flex;
+			align-items: center;
+			padding: 0.8rem 0;
+			margin-right: 0.8rem;
+			width: 2.4rem;
+			height: 4rem;
+		}
+	}
+
+	.div {
+		&_1 {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			align-content: flex-start;
+			justify-content: center;
+			height: 4.6rem;
+		}
+	}
+}
+
+.pwTable.user_token {
+	th,
+	td {
+		&.name {
+			padding: 0 0.6rem 0 1.6rem;
+		}
+
+		&.chart_data {
+			padding-left: 0;
+		}
+	}
+}
+
+.pwTable.user_nft {
+	tbody {
+		tr {
+			border-bottom: 1px solid $colorNeutral3;
+		}
+	}
+
+	th,
+	td {
+		&.vot_name {
+			min-width: 20rem;
+
+			.span {
+				&_1 {
+					color: $colorNeutral9;
+					font-weight: 700;
+				}
+			}
+
+			.image {
+				&_1 {
+					margin-right: 0.8rem;
+					width: 3.2rem;
+					height: 3.2rem;
+
+					img {
+						border-radius: 0.8rem;
+					}
+				}
+			}
+
+			.div {
+				&_1 {
+					display: flex;
+					align-items: center;
+				}
+			}
+		}
+
+		&.available,
+		&.value,
+		&.holding,
+		&.date {
+			padding-right: 2rem;
+			text-align: right;
+		}
+
+		&.redeem {
+			button {
+				padding: 0 1.2rem;
+				height: 3rem;
+				border: 1px solid $colorPrimary5;
+			}
+		}
+	}
+}
+
+.pwTable.user_transaction {
+	th,
+	td {
+		&.date {
+			min-width: 15rem;
+			width: 20%;
+			color: $colorNeutral6;
+		}
+
+		&.from {
+			min-width: 10rem;
+			width: 45%;
+		}
+
+		&.amount {
+			min-width: 15rem;
+			width: 20%;
+			font-weight: 700;
+		}
+
+		&.status {
+			width: 15%;
+			text-transform: uppercase;
+		}
+	}
+}
+
+/* Responsive *************************************************************************************************************************************************/
+.pwTable.mobile {
+	.mobile_wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		overflow-x: initial;
+	}
+
+	.row {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		position: relative;
+		padding: 1rem 1.6rem 1.6rem 1.6rem;
+		width: 100%;
+		border: 1px solid $colorNeutral3;
+		border-radius: 0.8rem;
+
+		&:not(:last-of-type) {
+			margin-bottom: 1.6rem;
+		}
+	}
+}
+
+.pwTable.market_token.mobile {
+	.column {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		margin-bottom: 1.6rem;
+		color: $colorNeutral9;
+		@include fontSize(1.4rem);
+
+		.title {
+			color: $colorNeutral6;
+			@include fontSize(1.2rem);
+			font-weight: 500;
+			text-transform: uppercase;
+		}
+
+		&.drag {
+			display: none;
+		}
+
+		&.name {
+			order: 1;
+			padding-bottom: 0.8rem;
+			width: 60%;
+			border-bottom: 1px solid $colorNeutral3;
+
+			.title {
+				display: none;
+			}
+
+			.div_1 {
+				order: 1;
+				display: flex;
+				flex-direction: column;
+				flex-wrap: wrap;
+				align-content: flex-start;
+				justify-content: center;
+				height: 4.4rem;
+			}
+		}
+
+		&.chart_data {
+			order: 2;
+			display: flex;
+			align-items: flex-end;
+			padding-bottom: 0.8rem;
+			width: 40%;
+			border-bottom: 1px solid $colorNeutral3;
+
+			.title {
+				display: none;
+			}
+
+			> div,
+			canvas {
+				width: 100% !important;
+			}
+		}
+
+		&.total_volume {
+			order: 3;
+			width: 60%;
+		}
+
+		&.market_cap {
+			order: 4;
+			width: 40%;
+		}
+
+		&.current_price {
+			order: 5;
+			margin-bottom: 0;
+			width: 60%;
+		}
+
+		&.price_change_percentage_24h {
+			order: 6;
+			margin-bottom: 0;
+			width: 40%;
+		}
+	}
+
+	.span {
+		&_1 {
+			height: 2rem;
+			color: $colorNeutral9;
+			font-weight: 700;
+		}
+
+		&_2 {
+			height: 1.8rem;
+			color: $colorNeutral6;
+			@include fontSize(1.2rem);
+			text-transform: uppercase;
+		}
+	}
+
+	.image {
+		&_1 {
+			display: flex;
+			align-items: center;
+			padding: 0.8rem 0;
+			margin-right: 0.8rem;
+			width: 2.4rem;
+			height: 4rem;
+		}
+	}
+}
+
+.pwTable.user_token.mobile {
+	.column {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		width: 50%;
+		color: $colorNeutral9;
+		@include fontSize(1.4rem);
+
+		.title {
+			color: $colorNeutral6;
+			@include fontSize(1.2rem);
+			font-weight: 500;
+			text-transform: uppercase;
+		}
+
+		&.drag {
+			display: none;
+		}
+
+		&.name {
+			order: 1;
+			padding-bottom: 0.8rem;
+			margin-bottom: 1.6rem;
+			width: 100%;
+			border-bottom: 1px solid $colorNeutral3;
+
+			.title {
+				display: none;
+			}
+
+			.div_1 {
+				order: 1;
+				display: flex;
+				flex-direction: column;
+				flex-wrap: wrap;
+				align-content: flex-start;
+				justify-content: center;
+				height: 4.4rem;
+			}
+		}
+
+		&.amount {
+			order: 2;
+		}
+
+		&.current_price {
+			order: 3;
+		}
+	}
+
+	.span {
+		&_1 {
+			height: 2rem;
+			color: $colorNeutral9;
+			font-weight: 700;
+		}
+
+		&_2 {
+			height: 1.8rem;
+			color: $colorNeutral6;
+			@include fontSize(1.2rem);
+			text-transform: uppercase;
+		}
+	}
+}
+
+.pwTable.user_transaction.mobile {
+	.row {
+		padding: 1.2rem 1.6rem;
+	}
+
+	.column {
+		display: flex;
+		align-items: center;
+		flex: 1 0 50%;
+		@include fontSize(1.2rem);
+
+		.title {
+			display: none;
+		}
+
+		&.from {
+			order: 1;
+			margin-bottom: 0.6rem;
+
+			.title {
+				display: inline-block;
+				margin-right: 0.2rem;
+
+				&:after {
+					content: ":";
+				}
+			}
+		}
+
+		&.amount,
+		&.value {
+			order: 2;
+			justify-content: flex-end;
+			margin-bottom: 0.6rem;
+			font-weight: 700;
+		}
+
+		&.date {
+			order: 3;
+			color: $colorNeutral6;
+		}
+
+		&.status {
+			order: 4;
+			justify-content: flex-end;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.pwTable.user_nft.mobile {
+	.row {
+		flex-wrap: wrap;
+		position: relative;
+		padding: 1.2rem 1.6rem 5.8rem 8.6rem;
+	}
+
+	.column {
+		display: flex;
+		align-items: center;
+		color: $colorNeutral8;
+		@include fontSize(1.2rem);
+
+		.title {
+			display: none;
+		}
+
+		&.vot_name {
+			order: 1;
+			flex: 1 0 100%;
+			margin-bottom: 0.4rem;
+
+			.span_1 {
+				color: $colorNeutral10;
+				@include fontSize(1.4rem);
+				font-weight: 700;
+			}
+
+			.image_1 {
+				position: absolute;
+				top: 1.6rem;
+				left: 1.6rem;
+				width: 6rem;
+				height: 6rem;
+
+				img {
+					border-radius: 0.8rem;
+				}
+			}
+		}
+
+		&.value {
+			order: 2;
+			flex: 0 0 40%;
+			border-right: 1px solid $colorNeutral3;
+
+			&:before {
+				content: "";
+				margin-right: 0.5rem;
+				width: 1.4rem;
+				height: 1.4rem;
+				background: url("/svg/icon-metain-nft.svg");
+				background-size: 100% 100%;
+			}
+		}
+
+		&.date {
+			order: 3;
+			flex: 0 0 50%;
+		}
+
+		&.available {
+			order: 4;
+			flex: 0 0 40%;
+			border-right: 1px solid $colorNeutral3;
+		}
+
+		&.holding {
+			order: 5;
+			flex: 0 0 50%;
+		}
+
+		&.redeem {
+			position: absolute;
+			bottom: 1.2rem;
+			left: 1.6rem;
+			width: calc(100% - 3.2rem);
+
+			button {
+				width: 100%;
+				height: 3.6rem;
+				@include fontSize(1.4rem);
+				font-weight: 500;
+				border: 1px solid $colorPrimary5;
+			}
+		}
+	}
+}
+
+.pwTable.refer_reward.mobile {
+	.row {
+		flex-wrap: wrap;
+		position: relative;
+		padding: 1.2rem 1.6rem;
+	}
+
+	.column {
+		display: flex;
+		align-items: center;
+		flex: 0 0 50%;
+		position: relative;
+		color: $colorNeutral6;
+		@include fontSize(1.2rem);
+
+		.title {
+			display: none;
+		}
+
+		&.detail {
+			order: 1;
+			color: $colorNeutral10;
+		}
+
+		&.bonus {
+			order: 2;
+			justify-content: flex-end;
+			margin-top: 0.6rem;
+			color: $colorGreen7;
+			font-weight: 700;
+		}
+
+		&.id {
+			order: 3;
+		}
+
+		&.status {
+			order: 4;
+			margin-top: 0.6rem;
+			justify-content: flex-end;
+		}
+
+		&.date {
+			position: absolute;
+			left: 6.6rem;
+			bottom: 1.7rem;
+
+			&:after {
+				content: "";
+				position: absolute;
+				left: -0.5rem;
+				top: 0.5rem;
+				width: 1px;
+				height: 1rem;
+				background: $colorNeutral6;
+			}
+		}
+	}
+}
+
+.pwTable.refer_friend.mobile {
+	.row {
+		flex-wrap: wrap;
+		position: relative;
+		padding: 1.2rem 1.6rem;
+	}
+
+	.column {
+		display: flex;
+		align-items: center;
+		flex: 0 0 50%;
+		position: relative;
+		color: $colorNeutral6;
+		@include fontSize(1.2rem);
+
+		.title {
+			display: none;
+		}
+
+		&.receive {
+			order: 1;
+			flex: 0 0 100%;
+			justify-content: space-between;
+			margin-bottom: 0.6rem;
+
+			.title {
+				flex: 0 0 50%;
+				display: flex;
+				text-transform: capitalize;
+			}
+
+			.div_2 {
+				display: flex;
+				flex-direction: column;
+				font-weight: 700;
+			}
+
+			.separator {
+				display: none;
+			}
+
+			.span_4 {
+				color: $colorNeutral9;
+			}
+		}
+
+		&.id {
+			order: 2;
+		}
+
+		&.date {
+			position: absolute;
+			left: 6.6rem;
+			bottom: 1.4rem;
+
+			&:after {
+				content: "";
+				position: absolute;
+				left: -0.5rem;
+				top: 0.5rem;
+				width: 1px;
+				height: 1rem;
+				background: $colorNeutral6;
+			}
+		}
+
+		&.status {
+			order: 4;
+			justify-content: flex-end;
+		}
+	}
+}
+
+.pwTable.reward_history.mobile {
+	.row {
+		flex-wrap: wrap;
+		position: relative;
+		padding: 1.2rem 1.6rem;
+	}
+
+	.column {
+		display: flex;
+		align-items: center;
+		flex: 0 0 50%;
+		position: relative;
+		@include fontSize(1.2rem);
+
+		.title {
+			display: none;
+		}
+
+		&.date {
+			flex: 0 0 100%;
+			color: $colorNeutral6;
+		}
+
+		&.amount {
+			justify-content: flex-end;
+			font-weight: 500;
+		}
+	}
+}
+
+.pwTable.order_list_can_cashback {
+	max-height: 400px;
+	overflow-y: auto;
+}
+
+@media screen and (max-width: 576px) {
+	.pwTable.order_list_can_cashback {
+		&.browser {
+			display: block;
+
+			table.browser_wrapper {
+				width: 50rem;
+			}
+		}
+	}
+
+	.pwTable.wheel_fortune_reward {
+		&.browser {
+			display: block;
+
+			table.browser_wrapper {
+				width: 50rem;
+			}
+		}
+	}
+}
+
+.pwTable.user_preorder.mobile {
+	.row {
+		flex-wrap: wrap;
+		position: relative;
+		padding: 1.2rem 1.6rem;
+	}
+
+	.column {
+		display: flex;
+		flex-direction: column;
+		width: 50%;
+		position: relative;
+		color: $colorNeutral9;
+		@include fontSize(1.2rem);
+		font-weight: 700;
+
+		&:not(:nth-last-of-type(1)),
+		&:not(:nth-last-of-type(2)) {
+			margin-bottom: 0.8rem;
+		}
+
+		.title {
+			color: $colorNeutral6;
+			font-weight: 500;
+			text-transform: uppercase;
+		}
+
+		&.date {
+			margin-bottom: 0.8rem;
+			width: 100%;
+			color: $colorNeutral6;
+			font-weight: 400;
+
+			.title {
+				display: none;
+			}
+		}
+	}
+}

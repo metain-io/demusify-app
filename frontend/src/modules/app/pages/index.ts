@@ -7,3 +7,7 @@ export * from './create';
 export * from './edit-profile';
 export * from './help-center';
 export * from './home-2';
+export * from './home-4';
+export * from './home-5';
+export * from './home-7';
+export * from './home-8';

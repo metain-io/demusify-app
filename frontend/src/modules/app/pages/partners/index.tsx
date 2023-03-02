@@ -8,10 +8,10 @@ const PagePartners = () => {
             {/* <!-- Benefits --> */}
             <section className="relative pt-32 pb-24">
                 <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
-                    <Image src="img/gradient.jpg" alt="gradient" className="h-full w-full" />
+                    <img src="img/gradient.jpg" alt="gradient" className="h-full w-full" />
                 </picture>
                 <picture className="pointer-events-none absolute inset-0 -z-10 hidden dark:block">
-                    <Image src="img/gradient_dark.jpg" alt="gradient dark" className="h-full w-full" />
+                    <img src="img/gradient_dark.jpg" alt="gradient dark" className="h-full w-full" />
                 </picture>
                 <div className="container">
                     <div className="mx-auto max-w-xl text-center">
@@ -241,7 +241,7 @@ const PagePartners = () => {
             {/* <!-- Partner collections / FAQ / Testimonials --> */}
             <section className="relative py-24">
                 <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
-                    <Image src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
+                    <img src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
                 </picture>
                 <div className="container">
                     <div className="mx-auto mb-8 max-w-xl text-center">
@@ -265,7 +265,7 @@ const PagePartners = () => {
                                         <div className="rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                             <a href="collection.html" className="flex space-x-[0.625rem]">
                                                 <span className="w-[74.5%]">
-                                                    <Image
+                                                    <img
                                                         src="./img/collections/collection_1_1.jpg"
                                                         alt="item 1"
                                                         className="h-full w-full rounded-[0.625rem] object-cover"
@@ -273,19 +273,19 @@ const PagePartners = () => {
                                                     />
                                                 </span>
                                                 <span className="flex w-1/3 flex-col space-y-[0.625rem]">
-                                                    <Image
+                                                    <img
                                                         src="./img/collections/collection_1_2.jpg"
                                                         alt="item 1"
                                                         className="h-full rounded-[0.625rem] object-cover"
                                                         loading="lazy"
                                                     />
-                                                    <Image
+                                                    <img
                                                         src="./img/collections/collection_1_3.jpg"
                                                         alt="item 1"
                                                         className="h-full rounded-[0.625rem] object-cover"
                                                         loading="lazy"
                                                     />
-                                                    <Image
+                                                    <img
                                                         src="./img/collections/collection_1_4.jpg"
                                                         alt="item 1"
                                                         className="h-full rounded-[0.625rem] object-cover"
@@ -304,7 +304,7 @@ const PagePartners = () => {
                                             <div className="mt-2 flex items-center justify-between text-sm font-medium tracking-tight">
                                                 <div className="flex flex-wrap items-center">
                                                     <a href="user.html" className="mr-2 shrink-0">
-                                                        <Image
+                                                        <img
                                                             src="img/avatars/owner_5.png"
                                                             alt="owner"
                                                             className="h-5 w-5 rounded-full"
@@ -325,7 +325,7 @@ const PagePartners = () => {
                                         <div className="rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                             <a href="collection.html" className="flex space-x-[0.625rem]">
                                                 <span className="w-[74.5%]">
-                                                    <Image
+                                                    <img
                                                         src="./img/collections/collection_2_1.jpg"
                                                         alt="item 1"
                                                         className="h-full w-full rounded-[0.625rem] object-cover"
@@ -333,19 +333,19 @@ const PagePartners = () => {
                                                     />
                                                 </span>
                                                 <span className="flex w-1/3 flex-col space-y-[0.625rem]">
-                                                    <Image
+                                                    <img
                                                         src="./img/collections/collection_2_2.jpg"
                                                         alt="item 1"
                                                         className="h-full rounded-[0.625rem] object-cover"
                                                         loading="lazy"
                                                     />
-                                                    <Image
+                                                    <img
                                                         src="./img/collections/collection_2_3.jpg"
                                                         alt="item 1"
                                                         className="h-full rounded-[0.625rem] object-cover"
                                                         loading="lazy"
                                                     />
-                                                    <Image
+                                                    <img
                                                         src="./img/collections/collection_2_4.jpg"
                                                         alt="item 1"
                                                         className="h-full rounded-[0.625rem] object-cover"
@@ -364,7 +364,7 @@ const PagePartners = () => {
                                             <div className="mt-2 flex items-center justify-between text-sm font-medium tracking-tight">
                                                 <div className="flex flex-wrap items-center">
                                                     <a href="user.html" className="mr-2 shrink-0">
-                                                        <Image
+                                                        <img
                                                             src="img/avatars/owner_9.png"
                                                             alt="owner"
                                                             className="h-5 w-5 rounded-full"
@@ -385,7 +385,7 @@ const PagePartners = () => {
                                         <div className="rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                             <a href="collection.html" className="flex space-x-[0.625rem]">
                                                 <span className="w-[74.5%]">
-                                                    <Image
+                                                    <img
                                                         src="./img/collections/collection_3_1.jpg"
                                                         alt="item 1"
                                                         className="h-full w-full rounded-[0.625rem] object-cover"
@@ -393,19 +393,19 @@ const PagePartners = () => {
                                                     />
                                                 </span>
                                                 <span className="flex w-1/3 flex-col space-y-[0.625rem]">
-                                                    <Image
+                                                    <img
                                                         src="./img/collections/collection_3_2.jpg"
                                                         alt="item 1"
                                                         className="h-full rounded-[0.625rem] object-cover"
                                                         loading="lazy"
                                                     />
-                                                    <Image
+                                                    <img
                                                         src="./img/collections/collection_3_3.jpg"
                                                         alt="item 1"
                                                         className="h-full rounded-[0.625rem] object-cover"
                                                         loading="lazy"
                                                     />
-                                                    <Image
+                                                    <img
                                                         src="./img/collections/collection_3_4.jpg"
                                                         alt="item 1"
                                                         className="h-full rounded-[0.625rem] object-cover"
@@ -424,7 +424,7 @@ const PagePartners = () => {
                                             <div className="mt-2 flex items-center justify-between text-sm font-medium tracking-tight">
                                                 <div className="flex flex-wrap items-center">
                                                     <a href="user.html" className="mr-2 shrink-0">
-                                                        <Image
+                                                        <img
                                                             src="img/avatars/owner_4.png"
                                                             alt="owner"
                                                             className="h-5 w-5 rounded-full"
@@ -445,7 +445,7 @@ const PagePartners = () => {
                                         <div className="rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                             <a href="collection.html" className="flex space-x-[0.625rem]">
                                                 <span className="w-[74.5%]">
-                                                    <Image
+                                                    <img
                                                         src="./img/collections/collection_4_1.jpg"
                                                         alt="item 1"
                                                         className="h-full w-full rounded-[0.625rem] object-cover"
@@ -453,19 +453,19 @@ const PagePartners = () => {
                                                     />
                                                 </span>
                                                 <span className="flex w-1/3 flex-col space-y-[0.625rem]">
-                                                    <Image
+                                                    <img
                                                         src="./img/collections/collection_4_2.jpg"
                                                         alt="item 1"
                                                         className="h-full rounded-[0.625rem] object-cover"
                                                         loading="lazy"
                                                     />
-                                                    <Image
+                                                    <img
                                                         src="./img/collections/collection_4_3.jpg"
                                                         alt="item 1"
                                                         className="h-full rounded-[0.625rem] object-cover"
                                                         loading="lazy"
                                                     />
-                                                    <Image
+                                                    <img
                                                         src="./img/collections/collection_4_4.jpg"
                                                         alt="item 1"
                                                         className="h-full rounded-[0.625rem] object-cover"
@@ -484,7 +484,7 @@ const PagePartners = () => {
                                             <div className="mt-2 flex items-center justify-between text-sm font-medium tracking-tight">
                                                 <div className="flex flex-wrap items-center">
                                                     <a href="user.html" className="mr-2 shrink-0">
-                                                        <Image
+                                                        <img
                                                             src="img/avatars/owner_10.png"
                                                             alt="owner"
                                                             className="h-5 w-5 rounded-full"
@@ -505,7 +505,7 @@ const PagePartners = () => {
                                         <div className="rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                             <a href="collection.html" className="flex space-x-[0.625rem]">
                                                 <span className="w-[74.5%]">
-                                                    <Image
+                                                    <img
                                                         src="./img/collections/collection_5_1.jpg"
                                                         alt="item 1"
                                                         className="h-full w-full rounded-[0.625rem] object-cover"
@@ -513,19 +513,19 @@ const PagePartners = () => {
                                                     />
                                                 </span>
                                                 <span className="flex w-1/3 flex-col space-y-[0.625rem]">
-                                                    <Image
+                                                    <img
                                                         src="./img/collections/collection_5_2.jpg"
                                                         alt="item 1"
                                                         className="h-full rounded-[0.625rem] object-cover"
                                                         loading="lazy"
                                                     />
-                                                    <Image
+                                                    <img
                                                         src="./img/collections/collection_5_3.jpg"
                                                         alt="item 1"
                                                         className="h-full rounded-[0.625rem] object-cover"
                                                         loading="lazy"
                                                     />
-                                                    <Image
+                                                    <img
                                                         src="./img/collections/collection_5_4.jpg"
                                                         alt="item 1"
                                                         className="h-full rounded-[0.625rem] object-cover"
@@ -544,7 +544,7 @@ const PagePartners = () => {
                                             <div className="mt-2 flex items-center justify-between text-sm font-medium tracking-tight">
                                                 <div className="flex flex-wrap items-center">
                                                     <a href="user.html" className="mr-2 shrink-0">
-                                                        <Image
+                                                        <img
                                                             src="img/avatars/owner_11.png"
                                                             alt="owner"
                                                             className="h-5 w-5 rounded-full"
@@ -829,7 +829,7 @@ const PagePartners = () => {
                             </span>
                         </div>
 
-                        <Image src="img/testimonials.jpg" alt="" className="w-28 self-start rounded-2.5xl lg:w-auto" />
+                        <img src="img/testimonials.jpg" alt="" className="w-28 self-start rounded-2.5xl lg:w-auto" />
                     </div>
                 </div>
             </section>
@@ -862,19 +862,19 @@ const PagePartners = () => {
                 <div className="container">
                     <div className="grid grid-cols-2 py-8 sm:grid-cols-5">
                         <a href="#">
-                            <Image src="img/partners/partner_logo_1.png" alt="partner 1" />
+                            <img src="img/partners/partner_logo_1.png" alt="partner 1" />
                         </a>
                         <a href="#">
-                            <Image src="img/partners/partner_logo_2.png" alt="partner 1" />
+                            <img src="img/partners/partner_logo_2.png" alt="partner 1" />
                         </a>
                         <a href="#">
-                            <Image src="img/partners/partner_logo_3.png" alt="partner 1" />
+                            <img src="img/partners/partner_logo_3.png" alt="partner 1" />
                         </a>
                         <a href="#">
-                            <Image src="img/partners/partner_logo_4.png" alt="partner 1" />
+                            <img src="img/partners/partner_logo_4.png" alt="partner 1" />
                         </a>
                         <a href="#">
-                            <Image src="img/partners/partner_logo_5.png" alt="partner 1" />
+                            <img src="img/partners/partner_logo_5.png" alt="partner 1" />
                         </a>
                     </div>
                 </div>

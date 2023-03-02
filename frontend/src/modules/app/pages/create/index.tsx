@@ -8,7 +8,7 @@ const PageCreate = () => {
             {/* <!-- Create --> */}
             <section className="relative py-24">
                 <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
-                    <Image src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
+                    <img src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
                 </picture>
                 <div className="container">
                     <h1 className="py-16 text-center font-display text-4xl font-medium text-jacarta-700 dark:text-white">
@@ -168,7 +168,7 @@ const PageCreate = () => {
                                                 className="dropdown-item flex w-full items-center justify-between rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
                                             >
                                                 <span className="flex items-center space-x-3">
-                                                    <Image
+                                                    <img
                                                         src="img/avatars/collection_ava_1.png"
                                                         className="h-8 w-8 rounded-full"
                                                         loading="lazy"
@@ -196,7 +196,7 @@ const PageCreate = () => {
                                                 className="dropdown-item flex w-full items-center rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
                                             >
                                                 <span className="flex items-center space-x-3">
-                                                    <Image
+                                                    <img
                                                         src="img/avatars/collection_ava_2.jpg"
                                                         className="h-8 w-8 rounded-full"
                                                         loading="lazy"
@@ -212,7 +212,7 @@ const PageCreate = () => {
                                                 className="dropdown-item flex w-full items-center rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
                                             >
                                                 <span className="flex items-center space-x-3">
-                                                    <Image
+                                                    <img
                                                         src="img/avatars/collection_ava_3.png"
                                                         className="h-8 w-8 rounded-full"
                                                         loading="lazy"
@@ -230,7 +230,7 @@ const PageCreate = () => {
                                                 className="dropdown-item flex w-full items-center rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
                                             >
                                                 <span className="flex items-center space-x-3">
-                                                    <Image
+                                                    <img
                                                         src="img/avatars/collection_ava_4.jpg"
                                                         className="h-8 w-8 rounded-full"
                                                         loading="lazy"
@@ -246,7 +246,7 @@ const PageCreate = () => {
                                                 className="dropdown-item flex w-full items-center rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
                                             >
                                                 <span className="flex items-center space-x-3">
-                                                    <Image
+                                                    <img
                                                         src="img/avatars/collection_ava_5.png"
                                                         className="h-8 w-8 rounded-full"
                                                         loading="lazy"
@@ -264,7 +264,7 @@ const PageCreate = () => {
                                                 className="dropdown-item flex w-full items-center rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
                                             >
                                                 <span className="flex items-center space-x-3">
-                                                    <Image
+                                                    <img
                                                         src="img/avatars/collection_ava_6.jpg"
                                                         className="h-8 w-8 rounded-full"
                                                         loading="lazy"
@@ -282,7 +282,7 @@ const PageCreate = () => {
                                                 className="dropdown-item flex w-full items-center rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
                                             >
                                                 <span className="flex items-center space-x-3">
-                                                    <Image
+                                                    <img
                                                         src="img/avatars/collection_ava_7.png"
                                                         className="h-8 w-8 rounded-full"
                                                         loading="lazy"
@@ -573,11 +573,7 @@ const PageCreate = () => {
                                     aria-expanded="false"
                                 >
                                     <span className="flex items-center">
-                                        <Image
-                                            src="img/chains/ETH.png"
-                                            alt="eth"
-                                            className="mr-2 h-5 w-5 rounded-full"
-                                        />
+                                        <img src="img/chains/ETH.png" alt="eth" className="mr-2 h-5 w-5 rounded-full" />
                                         Ethereum
                                     </span>
                                     <svg
@@ -598,7 +594,7 @@ const PageCreate = () => {
                                 >
                                     <button className="dropdown-item flex w-full items-center justify-between rounded-xl px-5 py-2 text-left text-base text-jacarta-700 transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600">
                                         <span className="flex items-center">
-                                            <Image
+                                            <img
                                                 src="img/chains/ETH.png"
                                                 alt="eth"
                                                 className="mr-2 h-5 w-5 rounded-full"
@@ -608,7 +604,7 @@ const PageCreate = () => {
                                     </button>
                                     <button className="dropdown-item flex w-full items-center justify-between rounded-xl px-5 py-2 text-left text-base transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600">
                                         <span className="flex items-center">
-                                            <Image
+                                            <img
                                                 src="img/chains/FLOW.png"
                                                 alt="flow"
                                                 className="mr-2 h-5 w-5 rounded-full"
@@ -619,7 +615,7 @@ const PageCreate = () => {
 
                                     <button className="dropdown-item flex w-full items-center justify-between rounded-xl px-5 py-2 text-left text-base transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600">
                                         <span className="flex items-center">
-                                            <Image
+                                            <img
                                                 src="img/chains/FUSD.png"
                                                 alt="fusd"
                                                 className="mr-2 h-5 w-5 rounded-full"

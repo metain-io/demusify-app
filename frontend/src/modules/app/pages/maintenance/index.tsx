@@ -7,11 +7,7 @@ const PageMaintenance = () => {
         <main>
             {/* <!-- Maintenance --> */}
             <section className="relative h-screen after:absolute after:inset-0 after:bg-jacarta-900/50">
-                <Image
-                    src="./img/maintenance.jpg"
-                    alt=""
-                    className="absolute inset-0 -z-10 h-full w-full object-cover"
-                />
+                <img src="./img/maintenance.jpg" alt="" className="absolute inset-0 -z-10 h-full w-full object-cover" />
 
                 <div className="container relative z-10 flex h-full items-center">
                     <div className="mx-auto max-w-lg text-center">

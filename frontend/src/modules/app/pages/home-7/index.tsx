@@ -8,12 +8,12 @@ const PageHome7 = () => {
             {/* <!-- Hero --> */}
             <section className="relative pb-32 pt-20 lg:pt-48">
                 <picture className="pointer-events-none absolute inset-x-0 top-0 -z-10 dark:hidden">
-                    <Image src="img/gradient.jpg" alt="gradient" className="w-full" />
+                    <img src="img/gradient.jpg" alt="gradient" className="w-full" />
                 </picture>
                 <picture className="pointer-events-none absolute inset-x-0 top-0 -z-10 hidden dark:block">
-                    <Image src="img/gradient_dark.jpg" alt="gradient dark" className="w-full" />
+                    <img src="img/gradient_dark.jpg" alt="gradient dark" className="w-full" />
                 </picture>
-                <Image
+                <img
                     src="img/patterns/pattern_donut.png"
                     alt="pattern donut"
                     className="absolute right-0 top-0 -z-10"
@@ -72,7 +72,7 @@ const PageHome7 = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <Image
+                                <img
                                     src="img/hero/hero_consultant_main.jpg"
                                     alt="crypto consultant hero"
                                     className="inline-block rounded-2.5xl"
@@ -94,7 +94,7 @@ const PageHome7 = () => {
                                         <span className="mb-5 block font-display text-sm text-jacarta-600">
                                             Happy customers
                                         </span>
-                                        <Image src="img/crypto-consultant/happy_customers.png" alt="happy customers" />
+                                        <img src="img/crypto-consultant/happy_customers.png" alt="happy customers" />
                                     </div>
                                 </div>
                             </div>
@@ -109,19 +109,19 @@ const PageHome7 = () => {
                 <div className="container">
                     <div className="grid grid-cols-2 py-8 sm:grid-cols-5">
                         <a href="#">
-                            <Image src="img/partners/partner_logo_1.png" alt="partner 1" />
+                            <img src="img/partners/partner_logo_1.png" alt="partner 1" />
                         </a>
                         <a href="#">
-                            <Image src="img/partners/partner_logo_2.png" alt="partner 1" />
+                            <img src="img/partners/partner_logo_2.png" alt="partner 1" />
                         </a>
                         <a href="#">
-                            <Image src="img/partners/partner_logo_3.png" alt="partner 1" />
+                            <img src="img/partners/partner_logo_3.png" alt="partner 1" />
                         </a>
                         <a href="#">
-                            <Image src="img/partners/partner_logo_4.png" alt="partner 1" />
+                            <img src="img/partners/partner_logo_4.png" alt="partner 1" />
                         </a>
                         <a href="#">
-                            <Image src="img/partners/partner_logo_5.png" alt="partner 1" />
+                            <img src="img/partners/partner_logo_5.png" alt="partner 1" />
                         </a>
                     </div>
                 </div>
@@ -269,25 +269,25 @@ const PageHome7 = () => {
             {/* <!-- Promo --> */}
             <section className="relative py-24 dark:bg-jacarta-800">
                 <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
-                    <Image src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
+                    <img src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
                 </picture>
                 <div className="container">
                     <div className="lg:flex lg:justify-between">
                         {/* <!-- Image --> */}
                         <div className="relative lg:w-[55%]">
-                            <Image
+                            <img
                                 src="img/patterns/pattern_circle_1.png"
                                 className="absolute -bottom-4 -left-8 animate-fly dark:opacity-10"
                                 alt=""
                             />
-                            <Image
+                            <img
                                 src="img/patterns/pattern_circle_2.png"
                                 className="absolute -top-14 right-0 animate-fly dark:opacity-10 md:-right-12"
                                 alt=""
                             />
                             <div className="flex items-center space-x-7">
                                 <figure className="relative">
-                                    <Image src="img/crypto-consultant/promo_1.jpg" className="rounded-3xl" alt="" />
+                                    <img src="img/crypto-consultant/promo_1.jpg" className="rounded-3xl" alt="" />
                                 </figure>
                                 <figure className="relative overflow-hidden rounded-3xl before:absolute before:inset-0 before:bg-jacarta-900/25">
                                     <a
@@ -307,7 +307,7 @@ const PageHome7 = () => {
                                             <path d="M19.376 12.416L8.777 19.482A.5.5 0 0 1 8 19.066V4.934a.5.5 0 0 1 .777-.416l10.599 7.066a.5.5 0 0 1 0 .832z" />
                                         </svg>
                                     </a>
-                                    <Image src="img/crypto-consultant/promo_2.jpg" alt="" />
+                                    <img src="img/crypto-consultant/promo_2.jpg" alt="" />
                                 </figure>
                             </div>
                         </div>
@@ -387,7 +387,7 @@ const PageHome7 = () => {
                             {/* <!-- Slides --> */}
                             <div className="swiper-slide">
                                 <div className="flex flex-wrap gap-5 rounded-2.5xl bg-white p-12 dark:bg-jacarta-700 lg:flex-nowrap">
-                                    <Image
+                                    <img
                                         src="img/testimonials/testimonial_1.jpg"
                                         alt=""
                                         className="w-28 self-start rounded-2.5xl lg:w-auto"
@@ -472,7 +472,7 @@ const PageHome7 = () => {
                             </div>
                             <div className="swiper-slide">
                                 <div className="flex flex-wrap gap-5 rounded-2.5xl bg-white p-12 dark:bg-jacarta-700 lg:flex-nowrap">
-                                    <Image
+                                    <img
                                         src="img/testimonials/testimonial_2.jpg"
                                         alt=""
                                         className="w-28 self-start rounded-2.5xl lg:w-auto"
@@ -557,7 +557,7 @@ const PageHome7 = () => {
                             </div>
                             <div className="swiper-slide">
                                 <div className="flex flex-wrap gap-5 rounded-2.5xl bg-white p-12 dark:bg-jacarta-700 lg:flex-nowrap">
-                                    <Image
+                                    <img
                                         src="img/testimonials/testimonial_3.jpg"
                                         alt=""
                                         className="w-28 self-start rounded-2.5xl lg:w-auto"
@@ -789,7 +789,7 @@ const PageHome7 = () => {
                         <div className="lg:w-[55%]">
                             <div className="mt-12 md:flex md:space-x-8 lg:justify-end">
                                 <div className="relative mb-8 max-w-[13.125rem] self-end rounded-2.5xl bg-green p-8 shadow-2xl">
-                                    <Image
+                                    <img
                                         src="img/patterns/pattern_circle_1.png"
                                         className="absolute -top-10 -left-8 -z-10 animate-fly dark:z-0 dark:opacity-10"
                                         alt=""
@@ -802,14 +802,14 @@ const PageHome7 = () => {
                                         <span className="block text-base text-white">Sed do eiusmod tempor.</span>
                                     </div>
                                 </div>
-                                <Image
+                                <img
                                     src="img/crypto-consultant/faq.jpg"
                                     className="mb-8 inline-block rounded-2.5xl"
                                     alt=""
                                 />
                             </div>
                             <div className="relative">
-                                <Image
+                                <img
                                     src="img/patterns/pattern_circle_2.png"
                                     className="absolute -bottom-8 right-12 animate-fly dark:opacity-10"
                                     alt=""
@@ -1033,10 +1033,10 @@ const PageHome7 = () => {
                 <div className="container">
                     <div className="relative overflow-hidden rounded-2.5xl px-16 pt-16 pb-8 shadow-md lg:px-24">
                         <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
-                            <Image src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
+                            <img src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
                         </picture>
                         <picture className="pointer-events-none absolute inset-0 -z-10 hidden dark:block">
-                            <Image src="img/gradient_dark.jpg" alt="gradient dark" className="h-full w-full" />
+                            <img src="img/gradient_dark.jpg" alt="gradient dark" className="h-full w-full" />
                         </picture>
                         <div className="items-center justify-between md:flex">
                             <div className="mb-6 md:w-1/2">
@@ -1053,7 +1053,7 @@ const PageHome7 = () => {
                                     Schedule a Call
                                 </a>
                             </div>
-                            <Image src="img/crypto-consultant/cta_illustration.png" alt="" />
+                            <img src="img/crypto-consultant/cta_illustration.png" alt="" />
                         </div>
                     </div>
                 </div>

@@ -8,7 +8,7 @@ const PageNewsletter = () => {
             {/* <!-- Newsletter --> */}
             <section className="relative py-24 dark:bg-jacarta-800">
                 <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
-                    <Image src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
+                    <img src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
                 </picture>
                 <div className="container">
                     <div className="lg:flex lg:items-center lg:justify-between">
@@ -59,14 +59,14 @@ const PageNewsletter = () => {
                                     <g clip-path="url(#clipping)">
                                         {/* <!-- Bg image --> */}
                                         <image
-                                            href="img/about/story.jpg"
+                                            href="img/hero/hero.jpg"
                                             width="200"
                                             height="200"
                                             clip-path="url(#clipping)"
                                         />
                                     </g>
                                 </svg>
-                                <Image src="img/hero/3D_elements.png" alt="" className="absolute top-0 animate-fly" />
+                                <img src="img/hero/3D_elements.png" alt="" className="absolute top-0 animate-fly" />
                             </div>
                         </div>
                     </div>

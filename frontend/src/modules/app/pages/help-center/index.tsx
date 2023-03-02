@@ -39,7 +39,7 @@ const PageHelpCenter = () => {
             {/* <!-- Help Center --> */}
             <section className="relative py-24">
                 <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
-                    <Image src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
+                    <img src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
                 </picture>
                 <div className="container">
                     <h2 className="mb-10 text-center font-display text-xl font-medium text-jacarta-700 dark:text-white">

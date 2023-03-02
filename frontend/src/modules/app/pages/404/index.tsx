@@ -7,11 +7,11 @@ const Page404 = () => {
         <main className="pt-[5.5rem] lg:pt-24">
             <section className="relative py-16 dark:bg-jacarta-800 md:py-24">
                 <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
-                    <Image src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
+                    <img src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
                 </picture>
                 <div className="container">
                     <div className="mx-auto max-w-lg text-center">
-                        <Image src="img/404.png" alt="" className="mb-16 inline-block" />
+                        <img src="img/404.png" alt="" className="mb-16 inline-block" />
                         <h1 className="mb-6 font-display text-4xl text-jacarta-700 dark:text-white md:text-6xl">
                             Page Not Found!
                         </h1>

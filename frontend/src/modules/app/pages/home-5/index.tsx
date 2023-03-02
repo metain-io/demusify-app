@@ -8,10 +8,10 @@ const PageHome5 = () => {
             {/*<!-- Hero -->*/}
             <section className="relative py-20 md:pt-32">
                 <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
-                    <Image src="img/gradient.jpg" alt="gradient" className="h-full" />
+                    <img src="img/gradient.jpg" alt="gradient" className="h-full" />
                 </picture>
                 <picture className="pointer-events-none absolute inset-0 -z-10 hidden dark:block">
-                    <Image src="img/gradient_dark.jpg" alt="gradient dark" className="h-full" />
+                    <img src="img/gradient_dark.jpg" alt="gradient dark" className="h-full" />
                 </picture>
 
                 <div className="h-full px-6 xl:px-20">
@@ -62,7 +62,7 @@ const PageHome5 = () => {
 
                         {/*<!-- Hero images -->*/}
                         <div className="relative col-span-6 xl:col-span-6 xl:col-start-7">
-                            <Image
+                            <img
                                 src="./img/hero/badge.png"
                                 className="absolute top-0 z-10 -ml-16 animate-spin-slow md:top-[12%]"
                                 alt=""
@@ -73,7 +73,7 @@ const PageHome5 = () => {
                                         <div className="block overflow-hidden rounded-2.5xl bg-white shadow-md transition-shadow hover:shadow-lg dark:bg-jacarta-700">
                                             <figure className="relative">
                                                 <a href="item.html">
-                                                    <Image
+                                                    <img
                                                         src="./img/products/item_16_2lg.jpg"
                                                         alt="item 1"
                                                         className="w-full object-cover"
@@ -85,7 +85,7 @@ const PageHome5 = () => {
                                             <div className="p-6">
                                                 <div className="flex">
                                                     <a href="user.html" className="shrink-0">
-                                                        <Image
+                                                        <img
                                                             src="img/avatars/avatar_22_rounded.jpg"
                                                             alt="avatar"
                                                             className="mr-4 h-10 w-10 rounded-full"
@@ -111,7 +111,7 @@ const PageHome5 = () => {
                                         <div className="block overflow-hidden rounded-2.5xl bg-white shadow-md transition-shadow hover:shadow-lg dark:bg-jacarta-700">
                                             <figure className="relative">
                                                 <a href="item.html">
-                                                    <Image
+                                                    <img
                                                         src="./img/products/item_12_2lg.jpg"
                                                         alt="item 1"
                                                         height="437"
@@ -123,7 +123,7 @@ const PageHome5 = () => {
                                             <div className="p-6">
                                                 <div className="flex">
                                                     <a href="user.html" className="shrink-0">
-                                                        <Image
+                                                        <img
                                                             src="img/avatars/avatar_17_rounded.jpg"
                                                             alt="avatar"
                                                             className="mr-4 h-10 w-10 rounded-full"
@@ -148,7 +148,7 @@ const PageHome5 = () => {
                                             <div className="block overflow-hidden rounded-2.5xl bg-white shadow-md transition-shadow hover:shadow-lg dark:bg-jacarta-700">
                                                 <figure className="relative">
                                                     <a href="item.html">
-                                                        <Image
+                                                        <img
                                                             src="./img/products/item_13_lg.gif"
                                                             alt="item 1"
                                                             className="w-full object-cover"
@@ -160,7 +160,7 @@ const PageHome5 = () => {
                                                 <div className="p-6">
                                                     <div className="flex">
                                                         <a href="user.html" className="shrink-0">
-                                                            <Image
+                                                            <img
                                                                 src="img/avatars/avatar_18_rounded.gif"
                                                                 alt="avatar"
                                                                 className="mr-4 h-10 w-10 rounded-full"
@@ -192,7 +192,7 @@ const PageHome5 = () => {
             {/*<!-- Process -->*/}
             <section className="relative py-24 dark:bg-jacarta-800">
                 <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
-                    <Image src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
+                    <img src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
                 </picture>
                 <div className="container">
                     <h2 className="mb-10 text-center font-display text-3xl text-jacarta-700 dark:text-white">
@@ -321,7 +321,7 @@ const PageHome5 = () => {
                                         <div className="rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                             <a href="collection.html" className="flex space-x-[0.625rem]">
                                                 <span className="w-[74.5%]">
-                                                    <Image
+                                                    <img
                                                         src="./img/collections/collection_1_1.jpg"
                                                         alt="item 1"
                                                         className="h-full w-full rounded-[0.625rem] object-cover"
@@ -329,19 +329,19 @@ const PageHome5 = () => {
                                                     />
                                                 </span>
                                                 <span className="flex w-1/3 flex-col space-y-[0.625rem]">
-                                                    <Image
+                                                    <img
                                                         src="./img/collections/collection_1_2.jpg"
                                                         alt="item 1"
                                                         className="h-full rounded-[0.625rem] object-cover"
                                                         loading="lazy"
                                                     />
-                                                    <Image
+                                                    <img
                                                         src="./img/collections/collection_1_3.jpg"
                                                         alt="item 1"
                                                         className="h-full rounded-[0.625rem] object-cover"
                                                         loading="lazy"
                                                     />
-                                                    <Image
+                                                    <img
                                                         src="./img/collections/collection_1_4.jpg"
                                                         alt="item 1"
                                                         className="h-full rounded-[0.625rem] object-cover"
@@ -360,7 +360,7 @@ const PageHome5 = () => {
                                             <div className="mt-2 flex items-center justify-between text-sm font-medium tracking-tight">
                                                 <div className="flex flex-wrap items-center">
                                                     <a href="user.html" className="mr-2 shrink-0">
-                                                        <Image
+                                                        <img
                                                             src="img/avatars/owner_5.png"
                                                             alt="owner"
                                                             className="h-5 w-5 rounded-full"
@@ -381,7 +381,7 @@ const PageHome5 = () => {
                                         <div className="rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                             <a href="collection.html" className="flex space-x-[0.625rem]">
                                                 <span className="w-[74.5%]">
-                                                    <Image
+                                                    <img
                                                         src="./img/collections/collection_2_1.jpg"
                                                         alt="item 1"
                                                         className="h-full w-full rounded-[0.625rem] object-cover"
@@ -389,19 +389,19 @@ const PageHome5 = () => {
                                                     />
                                                 </span>
                                                 <span className="flex w-1/3 flex-col space-y-[0.625rem]">
-                                                    <Image
+                                                    <img
                                                         src="./img/collections/collection_2_2.jpg"
                                                         alt="item 1"
                                                         className="h-full rounded-[0.625rem] object-cover"
                                                         loading="lazy"
                                                     />
-                                                    <Image
+                                                    <img
                                                         src="./img/collections/collection_2_3.jpg"
                                                         alt="item 1"
                                                         className="h-full rounded-[0.625rem] object-cover"
                                                         loading="lazy"
                                                     />
-                                                    <Image
+                                                    <img
                                                         src="./img/collections/collection_2_4.jpg"
                                                         alt="item 1"
                                                         className="h-full rounded-[0.625rem] object-cover"
@@ -420,7 +420,7 @@ const PageHome5 = () => {
                                             <div className="mt-2 flex items-center justify-between text-sm font-medium tracking-tight">
                                                 <div className="flex flex-wrap items-center">
                                                     <a href="user.html" className="mr-2 shrink-0">
-                                                        <Image
+                                                        <img
                                                             src="img/avatars/owner_9.png"
                                                             alt="owner"
                                                             className="h-5 w-5 rounded-full"
@@ -441,7 +441,7 @@ const PageHome5 = () => {
                                         <div className="rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                             <a href="collection.html" className="flex space-x-[0.625rem]">
                                                 <span className="w-[74.5%]">
-                                                    <Image
+                                                    <img
                                                         src="./img/collections/collection_3_1.jpg"
                                                         alt="item 1"
                                                         className="h-full w-full rounded-[0.625rem] object-cover"
@@ -449,19 +449,19 @@ const PageHome5 = () => {
                                                     />
                                                 </span>
                                                 <span className="flex w-1/3 flex-col space-y-[0.625rem]">
-                                                    <Image
+                                                    <img
                                                         src="./img/collections/collection_3_2.jpg"
                                                         alt="item 1"
                                                         className="h-full rounded-[0.625rem] object-cover"
                                                         loading="lazy"
                                                     />
-                                                    <Image
+                                                    <img
                                                         src="./img/collections/collection_3_3.jpg"
                                                         alt="item 1"
                                                         className="h-full rounded-[0.625rem] object-cover"
                                                         loading="lazy"
                                                     />
-                                                    <Image
+                                                    <img
                                                         src="./img/collections/collection_3_4.jpg"
                                                         alt="item 1"
                                                         className="h-full rounded-[0.625rem] object-cover"
@@ -480,7 +480,7 @@ const PageHome5 = () => {
                                             <div className="mt-2 flex items-center justify-between text-sm font-medium tracking-tight">
                                                 <div className="flex flex-wrap items-center">
                                                     <a href="user.html" className="mr-2 shrink-0">
-                                                        <Image
+                                                        <img
                                                             src="img/avatars/owner_4.png"
                                                             alt="owner"
                                                             className="h-5 w-5 rounded-full"
@@ -501,7 +501,7 @@ const PageHome5 = () => {
                                         <div className="rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                             <a href="collection.html" className="flex space-x-[0.625rem]">
                                                 <span className="w-[74.5%]">
-                                                    <Image
+                                                    <img
                                                         src="./img/collections/collection_4_1.jpg"
                                                         alt="item 1"
                                                         className="h-full w-full rounded-[0.625rem] object-cover"
@@ -509,19 +509,19 @@ const PageHome5 = () => {
                                                     />
                                                 </span>
                                                 <span className="flex w-1/3 flex-col space-y-[0.625rem]">
-                                                    <Image
+                                                    <img
                                                         src="./img/collections/collection_4_2.jpg"
                                                         alt="item 1"
                                                         className="h-full rounded-[0.625rem] object-cover"
                                                         loading="lazy"
                                                     />
-                                                    <Image
+                                                    <img
                                                         src="./img/collections/collection_4_3.jpg"
                                                         alt="item 1"
                                                         className="h-full rounded-[0.625rem] object-cover"
                                                         loading="lazy"
                                                     />
-                                                    <Image
+                                                    <img
                                                         src="./img/collections/collection_4_4.jpg"
                                                         alt="item 1"
                                                         className="h-full rounded-[0.625rem] object-cover"
@@ -540,7 +540,7 @@ const PageHome5 = () => {
                                             <div className="mt-2 flex items-center justify-between text-sm font-medium tracking-tight">
                                                 <div className="flex flex-wrap items-center">
                                                     <a href="user.html" className="mr-2 shrink-0">
-                                                        <Image
+                                                        <img
                                                             src="img/avatars/owner_10.png"
                                                             alt="owner"
                                                             className="h-5 w-5 rounded-full"
@@ -561,7 +561,7 @@ const PageHome5 = () => {
                                         <div className="rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                             <a href="collection.html" className="flex space-x-[0.625rem]">
                                                 <span className="w-[74.5%]">
-                                                    <Image
+                                                    <img
                                                         src="./img/collections/collection_5_1.jpg"
                                                         alt="item 1"
                                                         className="h-full w-full rounded-[0.625rem] object-cover"
@@ -569,19 +569,19 @@ const PageHome5 = () => {
                                                     />
                                                 </span>
                                                 <span className="flex w-1/3 flex-col space-y-[0.625rem]">
-                                                    <Image
+                                                    <img
                                                         src="./img/collections/collection_5_2.jpg"
                                                         alt="item 1"
                                                         className="h-full rounded-[0.625rem] object-cover"
                                                         loading="lazy"
                                                     />
-                                                    <Image
+                                                    <img
                                                         src="./img/collections/collection_5_3.jpg"
                                                         alt="item 1"
                                                         className="h-full rounded-[0.625rem] object-cover"
                                                         loading="lazy"
                                                     />
-                                                    <Image
+                                                    <img
                                                         src="./img/collections/collection_5_4.jpg"
                                                         alt="item 1"
                                                         className="h-full rounded-[0.625rem] object-cover"
@@ -600,7 +600,7 @@ const PageHome5 = () => {
                                             <div className="mt-2 flex items-center justify-between text-sm font-medium tracking-tight">
                                                 <div className="flex flex-wrap items-center">
                                                     <a href="user.html" className="mr-2 shrink-0">
-                                                        <Image
+                                                        <img
                                                             src="img/avatars/owner_11.png"
                                                             alt="owner"
                                                             className="h-5 w-5 rounded-full"
@@ -652,7 +652,7 @@ const PageHome5 = () => {
             {/*<!-- Today&apos;s Drops / Sellers / Buyers -->*/}
             <section className="relative py-24">
                 <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
-                    <Image src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
+                    <img src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
                 </picture>
                 <div className="container">
                     <div className="flex flex-col space-y-5 lg:flex-row lg:space-y-0 lg:space-x-7">
@@ -664,7 +664,7 @@ const PageHome5 = () => {
                                 <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                                     <figure className="mr-4 shrink-0">
                                         <a href="collection.html" className="relative block">
-                                            <Image
+                                            <img
                                                 src="img/avatars/avatar_1.jpg"
                                                 alt="avatar 1"
                                                 className="rounded-2lg"
@@ -702,7 +702,7 @@ const PageHome5 = () => {
                                 <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                                     <figure className="mr-4 shrink-0">
                                         <a href="collection.html" className="relative block">
-                                            <Image
+                                            <img
                                                 src="img/avatars/avatar_2.jpg"
                                                 alt="avatar 2"
                                                 className="rounded-2lg"
@@ -740,7 +740,7 @@ const PageHome5 = () => {
                                 <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                                     <figure className="mr-4 shrink-0">
                                         <a href="collection.html" className="relative block">
-                                            <Image
+                                            <img
                                                 src="img/avatars/avatar_3.jpg"
                                                 alt="avatar 3"
                                                 className="rounded-2lg"
@@ -763,7 +763,7 @@ const PageHome5 = () => {
                                 <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                                     <figure className="mr-4 shrink-0">
                                         <a href="collection.html" className="relative block">
-                                            <Image
+                                            <img
                                                 src="img/avatars/avatar_4.jpg"
                                                 alt="avatar 4"
                                                 className="rounded-2lg"
@@ -800,7 +800,7 @@ const PageHome5 = () => {
                                 <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                                     <figure className="mr-4 shrink-0">
                                         <a href="collection.html" className="relative block">
-                                            <Image
+                                            <img
                                                 src="img/avatars/avatar_5.jpg"
                                                 alt="avatar 5"
                                                 className="rounded-2lg"
@@ -823,7 +823,7 @@ const PageHome5 = () => {
                                 <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                                     <figure className="mr-4 shrink-0">
                                         <a href="collection.html" className="relative block">
-                                            <Image
+                                            <img
                                                 src="img/avatars/avatar_6.gif"
                                                 alt="avatar 6"
                                                 className="rounded-2lg"
@@ -846,7 +846,7 @@ const PageHome5 = () => {
                                 <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                                     <figure className="mr-4 shrink-0">
                                         <a href="collection.html" className="relative block">
-                                            <Image
+                                            <img
                                                 src="img/avatars/avatar_7.jpg"
                                                 alt="avatar 7"
                                                 className="rounded-2lg"
@@ -884,7 +884,7 @@ const PageHome5 = () => {
                                 <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                                     <figure className="mr-4 shrink-0">
                                         <a href="collection.html" className="relative block">
-                                            <Image
+                                            <img
                                                 src="img/avatars/avatar_8.jpg"
                                                 alt="avatar 8"
                                                 className="rounded-2lg"
@@ -936,7 +936,7 @@ const PageHome5 = () => {
                                 <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                                     <figure className="mr-4 shrink-0">
                                         <a href="collection.html" className="relative block">
-                                            <Image
+                                            <img
                                                 src="img/avatars/avatar_9.jpg"
                                                 alt="avatar 9"
                                                 className="rounded-2lg"
@@ -959,7 +959,7 @@ const PageHome5 = () => {
                                 <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                                     <figure className="mr-4 shrink-0">
                                         <a href="collection.html" className="relative block">
-                                            <Image
+                                            <img
                                                 src="img/avatars/avatar_10.jpg"
                                                 alt="avatar 10"
                                                 className="rounded-2lg"
@@ -997,7 +997,7 @@ const PageHome5 = () => {
                                 <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                                     <figure className="mr-4 shrink-0">
                                         <a href="collection.html" className="relative block">
-                                            <Image
+                                            <img
                                                 src="img/avatars/avatar_11.jpg"
                                                 alt="avatar 11"
                                                 className="rounded-2lg"
@@ -1020,7 +1020,7 @@ const PageHome5 = () => {
                                 <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                                     <figure className="mr-4 shrink-0">
                                         <a href="collection.html" className="relative block">
-                                            <Image
+                                            <img
                                                 src="img/avatars/avatar_12.jpg"
                                                 alt="avatar 12"
                                                 className="rounded-2lg"
@@ -1286,7 +1286,7 @@ const PageHome5 = () => {
                             <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                 <figure className="relative">
                                     <a href="item.html">
-                                        <Image
+                                        <img
                                             src="./img/products/item_5.jpg"
                                             alt="item 5"
                                             className="w-full rounded-[0.625rem]"
@@ -1314,7 +1314,7 @@ const PageHome5 = () => {
                                     <div className="absolute left-3 -bottom-3">
                                         <div className="flex -space-x-2">
                                             <a href="#">
-                                                <Image
+                                                <img
                                                     src="img/avatars/creator_1.png"
                                                     alt="creator"
                                                     className="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
@@ -1322,7 +1322,7 @@ const PageHome5 = () => {
                                                 />
                                             </a>
                                             <a href="#">
-                                                <Image
+                                                <img
                                                     src="img/avatars/owner_1.png"
                                                     alt="owner"
                                                     className="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
@@ -1415,7 +1415,7 @@ const PageHome5 = () => {
                             <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                 <figure className="relative">
                                     <a href="item.html">
-                                        <Image
+                                        <img
                                             src="./img/products/item_4.jpg"
                                             alt="item 4"
                                             className="w-full rounded-[0.625rem]"
@@ -1443,7 +1443,7 @@ const PageHome5 = () => {
                                     <div className="absolute left-3 -bottom-3">
                                         <div className="flex -space-x-2">
                                             <a href="#">
-                                                <Image
+                                                <img
                                                     src="img/avatars/creator_2.png"
                                                     alt="creator"
                                                     className="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
@@ -1451,7 +1451,7 @@ const PageHome5 = () => {
                                                 />
                                             </a>
                                             <a href="#">
-                                                <Image
+                                                <img
                                                     src="img/avatars/owner_2.png"
                                                     alt="owner"
                                                     className="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
@@ -1544,7 +1544,7 @@ const PageHome5 = () => {
                             <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                 <figure className="relative">
                                     <a href="item.html">
-                                        <Image
+                                        <img
                                             src="./img/products/item_7.jpg"
                                             alt="item 7"
                                             className="w-full rounded-[0.625rem]"
@@ -1572,7 +1572,7 @@ const PageHome5 = () => {
                                     <div className="absolute left-3 -bottom-3">
                                         <div className="flex -space-x-2">
                                             <a href="#">
-                                                <Image
+                                                <img
                                                     src="img/avatars/creator_3.png"
                                                     alt="creator"
                                                     className="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
@@ -1580,7 +1580,7 @@ const PageHome5 = () => {
                                                 />
                                             </a>
                                             <a href="#">
-                                                <Image
+                                                <img
                                                     src="img/avatars/owner_3.png"
                                                     alt="owner"
                                                     className="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
@@ -1673,7 +1673,7 @@ const PageHome5 = () => {
                             <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                 <figure className="relative">
                                     <a href="item.html">
-                                        <Image
+                                        <img
                                             src="./img/products/item_6.jpg"
                                             alt="item 6"
                                             className="w-full rounded-[0.625rem]"
@@ -1701,7 +1701,7 @@ const PageHome5 = () => {
                                     <div className="absolute left-3 -bottom-3">
                                         <div className="flex -space-x-2">
                                             <a href="#">
-                                                <Image
+                                                <img
                                                     src="img/avatars/creator_4.png"
                                                     alt="creator"
                                                     className="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
@@ -1709,7 +1709,7 @@ const PageHome5 = () => {
                                                 />
                                             </a>
                                             <a href="#">
-                                                <Image
+                                                <img
                                                     src="img/avatars/owner_4.png"
                                                     alt="owner"
                                                     className="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
@@ -1802,7 +1802,7 @@ const PageHome5 = () => {
                             <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                 <figure className="relative">
                                     <a href="item.html">
-                                        <Image
+                                        <img
                                             src="./img/products/item_8.jpg"
                                             alt="item 8"
                                             className="w-full rounded-[0.625rem]"
@@ -1830,7 +1830,7 @@ const PageHome5 = () => {
                                     <div className="absolute left-3 -bottom-3">
                                         <div className="flex -space-x-2">
                                             <a href="#">
-                                                <Image
+                                                <img
                                                     src="img/avatars/creator_3.png"
                                                     alt="creator"
                                                     className="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
@@ -1838,7 +1838,7 @@ const PageHome5 = () => {
                                                 />
                                             </a>
                                             <a href="#">
-                                                <Image
+                                                <img
                                                     src="img/avatars/owner_5.png"
                                                     alt="owner"
                                                     className="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
@@ -1931,7 +1931,7 @@ const PageHome5 = () => {
                             <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                 <figure className="relative">
                                     <a href="item.html">
-                                        <Image
+                                        <img
                                             src="./img/products/item_9.jpg"
                                             alt="item 9"
                                             className="w-full rounded-[0.625rem]"
@@ -1959,7 +1959,7 @@ const PageHome5 = () => {
                                     <div className="absolute left-3 -bottom-3">
                                         <div className="flex -space-x-2">
                                             <a href="#">
-                                                <Image
+                                                <img
                                                     src="img/avatars/creator_6.png"
                                                     alt="creator"
                                                     className="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
@@ -1967,7 +1967,7 @@ const PageHome5 = () => {
                                                 />
                                             </a>
                                             <a href="#">
-                                                <Image
+                                                <img
                                                     src="img/avatars/owner_4.png"
                                                     alt="owner"
                                                     className="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
@@ -2060,7 +2060,7 @@ const PageHome5 = () => {
                             <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                 <figure className="relative">
                                     <a href="item.html">
-                                        <Image
+                                        <img
                                             src="./img/products/item_10.jpg"
                                             alt="item 10"
                                             className="w-full rounded-[0.625rem]"
@@ -2088,7 +2088,7 @@ const PageHome5 = () => {
                                     <div className="absolute left-3 -bottom-3">
                                         <div className="flex -space-x-2">
                                             <a href="#">
-                                                <Image
+                                                <img
                                                     src="img/avatars/creator_2.png"
                                                     alt="creator"
                                                     className="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
@@ -2096,7 +2096,7 @@ const PageHome5 = () => {
                                                 />
                                             </a>
                                             <a href="#">
-                                                <Image
+                                                <img
                                                     src="img/avatars/owner_7.png"
                                                     alt="owner"
                                                     className="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
@@ -2189,7 +2189,7 @@ const PageHome5 = () => {
                             <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                 <figure className="relative">
                                     <a href="item.html">
-                                        <Image
+                                        <img
                                             src="./img/products/item_11.gif"
                                             alt="item 11"
                                             className="w-full rounded-[0.625rem]"
@@ -2217,7 +2217,7 @@ const PageHome5 = () => {
                                     <div className="absolute left-3 -bottom-3">
                                         <div className="flex -space-x-2">
                                             <a href="#">
-                                                <Image
+                                                <img
                                                     src="img/avatars/creator_8.png"
                                                     alt="creator"
                                                     className="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
@@ -2225,7 +2225,7 @@ const PageHome5 = () => {
                                                 />
                                             </a>
                                             <a href="#">
-                                                <Image
+                                                <img
                                                     src="img/avatars/owner_5.png"
                                                     alt="owner"
                                                     className="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
@@ -2322,7 +2322,7 @@ const PageHome5 = () => {
             {/*<!-- CTA Download App -->*/}
             <section className="relative pt-20 dark:bg-jacarta-800">
                 <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
-                    <Image src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
+                    <img src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
                 </picture>
                 <div className="container">
                     <div className="flex flex-col items-center space-y-10 lg:flex-row lg:space-y-0 lg:space-x-4">
@@ -2483,12 +2483,12 @@ const PageHome5 = () => {
                             </div>
                         </div>
                         <div className="order-3 text-center lg:order-2 lg:w-1/4 lg:self-end xl:w-[40%]">
-                            <Image src="./img/mobile_app_iphone.png" className="inline-block" alt="" />
+                            <img src="./img/mobile_app_iphone.png" className="inline-block" alt="" />
                         </div>
                         <div className="mb-10 hidden lg:order-3 lg:block lg:w-2/4 xl:w-[30%]">
                             <div className="flex items-center space-x-8 lg:pl-6">
                                 <div className="inline-block flex-shrink-0 rounded-2.5xl border border-jacarta-100 bg-white p-6">
-                                    <Image src="./img/qr.png" alt="" />
+                                    <img src="./img/qr.png" alt="" />
                                 </div>
                                 <div className="text-left">
                                     <svg

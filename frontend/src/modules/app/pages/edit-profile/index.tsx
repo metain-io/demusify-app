@@ -7,7 +7,7 @@ const PageEditProfile = () => {
         <main className="pt-[5.5rem] lg:pt-24">
             {/* <!-- Banner --> */}
             <div className="relative">
-                <Image src="img/user/banner.jpg" alt="banner" className="h-[18.75rem] object-cover" />
+                <img src="img/user/banner.jpg" alt="banner" className="h-[18.75rem] object-cover" />
                 <div className="container relative -translate-y-4">
                     <div className="group absolute right-0 bottom-4 flex items-center rounded-lg bg-white py-2 px-4 font-display text-sm hover:bg-accent">
                         <input type="file" accept="image/*" className="absolute inset-0 cursor-pointer opacity-0" />
@@ -30,7 +30,7 @@ const PageEditProfile = () => {
             {/* <!-- Edit Profile --> */}
             <section className="relative py-16 dark:bg-jacarta-800">
                 <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
-                    <Image src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
+                    <img src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
                 </picture>
 
                 <div className="container">
@@ -178,7 +178,7 @@ const PageEditProfile = () => {
                         <div className="flex space-x-5 md:w-1/2 md:pl-8">
                             <form className="shrink-0">
                                 <figure className="relative inline-block">
-                                    <Image
+                                    <img
                                         src="img/user/user_avatar.gif"
                                         alt="collection avatar"
                                         className="rounded-xl border-[5px] border-white dark:border-jacarta-600"

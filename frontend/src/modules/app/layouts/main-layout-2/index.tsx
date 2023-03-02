@@ -1,4 +1,5 @@
 import { Footer2, NavigationBar2 } from '@modules/app/components';
+import Script from 'next/script';
 import { PropsWithChildren } from 'react';
 
 type MainLayout2Props = PropsWithChildren<{}>;
@@ -18,7 +19,7 @@ const MainLayout2 = (props: MainLayout2Props) => {
                 <Footer2 />
             </footer>
 
-            <script src="./js/app.bundle.js" defer></script>
+            <Script src="./js/app.bundle.js" />
         </div>
     );
 };

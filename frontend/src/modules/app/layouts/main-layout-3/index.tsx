@@ -1,4 +1,5 @@
 import { NavigationBar3 } from '@modules/app/components';
+import Script from 'next/script';
 import { PropsWithChildren } from 'react';
 
 type MainLayout3Props = PropsWithChildren<{}>;
@@ -14,7 +15,7 @@ const MainLayout3 = (props: MainLayout3Props) => {
 
             {children}
 
-            <script src="./js/app.bundle.js" defer></script>
+            <Script src="./js/app.bundle.js" />
         </div>
     );
 };

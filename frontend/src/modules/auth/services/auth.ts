@@ -514,6 +514,8 @@ class AuthenticationCallback implements IAuthenticationCallback {
     }
 }
 
-export default new AuthService();
+const instance = new AuthService();
+
+export default instance;
 export { AuthService as AuthServiceClass };
 export type { IAuthService };

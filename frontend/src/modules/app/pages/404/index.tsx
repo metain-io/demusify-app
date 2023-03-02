@@ -1,16 +1,17 @@
 import { MainLayout } from '@modules/app/layouts';
 import { ReactElement } from 'react';
+import Image from 'next/image';
 
 const Page404 = () => {
     return (
         <main className="pt-[5.5rem] lg:pt-24">
             <section className="relative py-16 dark:bg-jacarta-800 md:py-24">
                 <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
-                    <img src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
+                    <Image src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
                 </picture>
                 <div className="container">
                     <div className="mx-auto max-w-lg text-center">
-                        <img src="img/404.png" alt="" className="mb-16 inline-block" />
+                        <Image src="img/404.png" alt="" className="mb-16 inline-block" />
                         <h1 className="mb-6 font-display text-4xl text-jacarta-700 dark:text-white md:text-6xl">
                             Page Not Found!
                         </h1>

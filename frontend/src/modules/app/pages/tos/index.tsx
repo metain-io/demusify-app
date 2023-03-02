@@ -1,5 +1,6 @@
 import { MainLayout } from '@modules/app/layouts';
 import { ReactElement } from 'react';
+import Image from 'next/image';
 
 const PageTos = () => {
     return (
@@ -7,7 +8,7 @@ const PageTos = () => {
             {/* <!-- TOS --> */}
             <section className="relative py-16 dark:bg-jacarta-800 md:py-24">
                 <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
-                    <img src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
+                    <Image src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
                 </picture>
                 <div className="container">
                     <h1 className="text-center font-display text-4xl font-medium text-jacarta-700 dark:text-white">

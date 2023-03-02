@@ -18,7 +18,7 @@ const MainLayout2 = (props: MainLayout2Props) => {
                 <Footer2 />
             </footer>
 
-            <script src="./js/app.bundle.js"></script>
+            <script src="./js/app.bundle.js" defer></script>
         </div>
     );
 };

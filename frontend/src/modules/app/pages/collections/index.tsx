@@ -1,5 +1,6 @@
 import { MainLayout } from '@modules/app/layouts';
 import { ReactElement } from 'react';
+import Image from 'next/image';
 
 const PageCollections = () => {
     return (
@@ -7,7 +8,7 @@ const PageCollections = () => {
             {/* <!-- Collections --> */}
             <section className="relative py-24">
                 <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
-                    <img src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
+                    <Image src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
                 </picture>
                 <div className="container">
                     <h1 className="py-16 text-center font-display text-4xl font-medium text-jacarta-700 dark:text-white">
@@ -189,7 +190,7 @@ const PageCollections = () => {
                             <div className="rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                 <a href="collection.html" className="flex space-x-[0.625rem]">
                                     <span className="w-[74.5%]">
-                                        <img
+                                        <Image
                                             src="./img/collections/collection_1_1.jpg"
                                             alt="item 1"
                                             className="h-full w-full rounded-[0.625rem] object-cover"
@@ -197,19 +198,19 @@ const PageCollections = () => {
                                         />
                                     </span>
                                     <span className="flex w-1/3 flex-col space-y-[0.625rem]">
-                                        <img
+                                        <Image
                                             src="./img/collections/collection_1_2.jpg"
                                             alt="item 1"
                                             className="h-full rounded-[0.625rem] object-cover"
                                             loading="lazy"
                                         />
-                                        <img
+                                        <Image
                                             src="./img/collections/collection_1_3.jpg"
                                             alt="item 1"
                                             className="h-full rounded-[0.625rem] object-cover"
                                             loading="lazy"
                                         />
-                                        <img
+                                        <Image
                                             src="./img/collections/collection_1_4.jpg"
                                             alt="item 1"
                                             className="h-full rounded-[0.625rem] object-cover"
@@ -228,7 +229,7 @@ const PageCollections = () => {
                                 <div className="mt-2 flex items-center justify-between text-sm font-medium tracking-tight">
                                     <div className="flex flex-wrap items-center">
                                         <a href="user.html" className="mr-2 shrink-0">
-                                            <img
+                                            <Image
                                                 src="img/avatars/owner_5.png"
                                                 alt="owner"
                                                 className="h-5 w-5 rounded-full"
@@ -247,7 +248,7 @@ const PageCollections = () => {
                             <div className="rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                 <a href="collection.html" className="flex space-x-[0.625rem]">
                                     <span className="w-[74.5%]">
-                                        <img
+                                        <Image
                                             src="./img/collections/collection_2_1.jpg"
                                             alt="item 1"
                                             className="h-full w-full rounded-[0.625rem] object-cover"
@@ -255,19 +256,19 @@ const PageCollections = () => {
                                         />
                                     </span>
                                     <span className="flex w-1/3 flex-col space-y-[0.625rem]">
-                                        <img
+                                        <Image
                                             src="./img/collections/collection_2_2.jpg"
                                             alt="item 1"
                                             className="h-full rounded-[0.625rem] object-cover"
                                             loading="lazy"
                                         />
-                                        <img
+                                        <Image
                                             src="./img/collections/collection_2_3.jpg"
                                             alt="item 1"
                                             className="h-full rounded-[0.625rem] object-cover"
                                             loading="lazy"
                                         />
-                                        <img
+                                        <Image
                                             src="./img/collections/collection_2_4.jpg"
                                             alt="item 1"
                                             className="h-full rounded-[0.625rem] object-cover"
@@ -286,7 +287,7 @@ const PageCollections = () => {
                                 <div className="mt-2 flex items-center justify-between text-sm font-medium tracking-tight">
                                     <div className="flex flex-wrap items-center">
                                         <a href="user.html" className="mr-2 shrink-0">
-                                            <img
+                                            <Image
                                                 src="img/avatars/owner_9.png"
                                                 alt="owner"
                                                 className="h-5 w-5 rounded-full"
@@ -305,7 +306,7 @@ const PageCollections = () => {
                             <div className="rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                 <a href="collection.html" className="flex space-x-[0.625rem]">
                                     <span className="w-[74.5%]">
-                                        <img
+                                        <Image
                                             src="./img/collections/collection_3_1.jpg"
                                             alt="item 1"
                                             className="h-full w-full rounded-[0.625rem] object-cover"
@@ -313,19 +314,19 @@ const PageCollections = () => {
                                         />
                                     </span>
                                     <span className="flex w-1/3 flex-col space-y-[0.625rem]">
-                                        <img
+                                        <Image
                                             src="./img/collections/collection_3_2.jpg"
                                             alt="item 1"
                                             className="h-full rounded-[0.625rem] object-cover"
                                             loading="lazy"
                                         />
-                                        <img
+                                        <Image
                                             src="./img/collections/collection_3_3.jpg"
                                             alt="item 1"
                                             className="h-full rounded-[0.625rem] object-cover"
                                             loading="lazy"
                                         />
-                                        <img
+                                        <Image
                                             src="./img/collections/collection_3_4.jpg"
                                             alt="item 1"
                                             className="h-full rounded-[0.625rem] object-cover"
@@ -344,7 +345,7 @@ const PageCollections = () => {
                                 <div className="mt-2 flex items-center justify-between text-sm font-medium tracking-tight">
                                     <div className="flex flex-wrap items-center">
                                         <a href="user.html" className="mr-2 shrink-0">
-                                            <img
+                                            <Image
                                                 src="img/avatars/owner_4.png"
                                                 alt="owner"
                                                 className="h-5 w-5 rounded-full"
@@ -363,7 +364,7 @@ const PageCollections = () => {
                             <div className="rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                 <a href="collection.html" className="flex space-x-[0.625rem]">
                                     <span className="w-[74.5%]">
-                                        <img
+                                        <Image
                                             src="./img/collections/collection_4_1.jpg"
                                             alt="item 1"
                                             className="h-full w-full rounded-[0.625rem] object-cover"
@@ -371,19 +372,19 @@ const PageCollections = () => {
                                         />
                                     </span>
                                     <span className="flex w-1/3 flex-col space-y-[0.625rem]">
-                                        <img
+                                        <Image
                                             src="./img/collections/collection_4_2.jpg"
                                             alt="item 1"
                                             className="h-full rounded-[0.625rem] object-cover"
                                             loading="lazy"
                                         />
-                                        <img
+                                        <Image
                                             src="./img/collections/collection_4_3.jpg"
                                             alt="item 1"
                                             className="h-full rounded-[0.625rem] object-cover"
                                             loading="lazy"
                                         />
-                                        <img
+                                        <Image
                                             src="./img/collections/collection_4_4.jpg"
                                             alt="item 1"
                                             className="h-full rounded-[0.625rem] object-cover"
@@ -402,7 +403,7 @@ const PageCollections = () => {
                                 <div className="mt-2 flex items-center justify-between text-sm font-medium tracking-tight">
                                     <div className="flex flex-wrap items-center">
                                         <a href="user.html" className="mr-2 shrink-0">
-                                            <img
+                                            <Image
                                                 src="img/avatars/owner_10.png"
                                                 alt="owner"
                                                 className="h-5 w-5 rounded-full"
@@ -421,7 +422,7 @@ const PageCollections = () => {
                             <div className="rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                 <a href="collection.html" className="flex space-x-[0.625rem]">
                                     <span className="w-[74.5%]">
-                                        <img
+                                        <Image
                                             src="./img/collections/collection_5_1.jpg"
                                             alt="item 1"
                                             className="h-full w-full rounded-[0.625rem] object-cover"
@@ -429,19 +430,19 @@ const PageCollections = () => {
                                         />
                                     </span>
                                     <span className="flex w-1/3 flex-col space-y-[0.625rem]">
-                                        <img
+                                        <Image
                                             src="./img/collections/collection_5_2.jpg"
                                             alt="item 1"
                                             className="h-full rounded-[0.625rem] object-cover"
                                             loading="lazy"
                                         />
-                                        <img
+                                        <Image
                                             src="./img/collections/collection_5_3.jpg"
                                             alt="item 1"
                                             className="h-full rounded-[0.625rem] object-cover"
                                             loading="lazy"
                                         />
-                                        <img
+                                        <Image
                                             src="./img/collections/collection_5_4.jpg"
                                             alt="item 1"
                                             className="h-full rounded-[0.625rem] object-cover"
@@ -460,7 +461,7 @@ const PageCollections = () => {
                                 <div className="mt-2 flex items-center justify-between text-sm font-medium tracking-tight">
                                     <div className="flex flex-wrap items-center">
                                         <a href="user.html" className="mr-2 shrink-0">
-                                            <img
+                                            <Image
                                                 src="img/avatars/owner_11.png"
                                                 alt="owner"
                                                 className="h-5 w-5 rounded-full"
@@ -479,7 +480,7 @@ const PageCollections = () => {
                             <div className="rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                 <a href="collection.html" className="flex space-x-[0.625rem]">
                                     <span className="w-[74.5%]">
-                                        <img
+                                        <Image
                                             src="./img/collections/collection_6_1.jpg"
                                             alt="item 1"
                                             className="h-full w-full rounded-[0.625rem] object-cover"
@@ -487,19 +488,19 @@ const PageCollections = () => {
                                         />
                                     </span>
                                     <span className="flex w-1/3 flex-col space-y-[0.625rem]">
-                                        <img
+                                        <Image
                                             src="./img/collections/collection_6_2.jpg"
                                             alt="item 1"
                                             className="h-full rounded-[0.625rem] object-cover"
                                             loading="lazy"
                                         />
-                                        <img
+                                        <Image
                                             src="./img/collections/collection_6_3.jpg"
                                             alt="item 1"
                                             className="h-full rounded-[0.625rem] object-cover"
                                             loading="lazy"
                                         />
-                                        <img
+                                        <Image
                                             src="./img/collections/collection_6_4.jpg"
                                             alt="item 1"
                                             className="h-full rounded-[0.625rem] object-cover"
@@ -518,7 +519,7 @@ const PageCollections = () => {
                                 <div className="mt-2 flex items-center justify-between text-sm font-medium tracking-tight">
                                     <div className="flex flex-wrap items-center">
                                         <a href="user.html" className="mr-2 shrink-0">
-                                            <img
+                                            <Image
                                                 src="img/avatars/owner_3.png"
                                                 alt="owner"
                                                 className="h-5 w-5 rounded-full"
@@ -537,7 +538,7 @@ const PageCollections = () => {
                             <div className="rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                 <a href="collection.html" className="flex space-x-[0.625rem]">
                                     <span className="w-[74.5%]">
-                                        <img
+                                        <Image
                                             src="./img/collections/collection_7_1.jpg"
                                             alt="item 1"
                                             className="h-full w-full rounded-[0.625rem] object-cover"
@@ -545,19 +546,19 @@ const PageCollections = () => {
                                         />
                                     </span>
                                     <span className="flex w-1/3 flex-col space-y-[0.625rem]">
-                                        <img
+                                        <Image
                                             src="./img/collections/collection_7_2.jpg"
                                             alt="item 1"
                                             className="h-full rounded-[0.625rem] object-cover"
                                             loading="lazy"
                                         />
-                                        <img
+                                        <Image
                                             src="./img/collections/collection_7_3.jpg"
                                             alt="item 1"
                                             className="h-full rounded-[0.625rem] object-cover"
                                             loading="lazy"
                                         />
-                                        <img
+                                        <Image
                                             src="./img/collections/collection_7_4.jpg"
                                             alt="item 1"
                                             className="h-full rounded-[0.625rem] object-cover"
@@ -576,7 +577,7 @@ const PageCollections = () => {
                                 <div className="mt-2 flex items-center justify-between text-sm font-medium tracking-tight">
                                     <div className="flex flex-wrap items-center">
                                         <a href="user.html" className="mr-2 shrink-0">
-                                            <img
+                                            <Image
                                                 src="img/avatars/creator_2.png"
                                                 alt="owner"
                                                 className="h-5 w-5 rounded-full"
@@ -595,7 +596,7 @@ const PageCollections = () => {
                             <div className="rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                 <a href="collection.html" className="flex space-x-[0.625rem]">
                                     <span className="w-[74.5%]">
-                                        <img
+                                        <Image
                                             src="./img/collections/collection_8_1.jpg"
                                             alt="item 1"
                                             className="h-full w-full rounded-[0.625rem] object-cover"
@@ -603,19 +604,19 @@ const PageCollections = () => {
                                         />
                                     </span>
                                     <span className="flex w-1/3 flex-col space-y-[0.625rem]">
-                                        <img
+                                        <Image
                                             src="./img/collections/collection_8_2.jpg"
                                             alt="item 1"
                                             className="h-full rounded-[0.625rem] object-cover"
                                             loading="lazy"
                                         />
-                                        <img
+                                        <Image
                                             src="./img/collections/collection_8_3.jpg"
                                             alt="item 1"
                                             className="h-full rounded-[0.625rem] object-cover"
                                             loading="lazy"
                                         />
-                                        <img
+                                        <Image
                                             src="./img/collections/collection_8_4.jpg"
                                             alt="item 1"
                                             className="h-full rounded-[0.625rem] object-cover"
@@ -634,7 +635,7 @@ const PageCollections = () => {
                                 <div className="mt-2 flex items-center justify-between text-sm font-medium tracking-tight">
                                     <div className="flex flex-wrap items-center">
                                         <a href="user.html" className="mr-2 shrink-0">
-                                            <img
+                                            <Image
                                                 src="img/avatars/owner_12.png"
                                                 alt="owner"
                                                 className="h-5 w-5 rounded-full"

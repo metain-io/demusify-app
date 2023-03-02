@@ -1,5 +1,6 @@
 import { MainLayout } from '@modules/app/layouts';
 import { ReactElement } from 'react';
+import Image from 'next/image';
 
 const PageRankings = () => {
     return (
@@ -7,7 +8,7 @@ const PageRankings = () => {
             {/* <!-- Rankings --> */}
             <section className="relative py-24">
                 <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
-                    <img src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
+                    <Image src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
                 </picture>
                 <div className="container">
                     <h1 className="py-16 text-center font-display text-4xl font-medium text-jacarta-700 dark:text-white">
@@ -295,7 +296,7 @@ const PageRankings = () => {
                                 >
                                     <span className="mr-2 lg:mr-4">1</span>
                                     <figure className="relative mr-2 w-8 shrink-0 self-start lg:mr-5 lg:w-12">
-                                        <img
+                                        <Image
                                             src="img/avatars/avatar_1.jpg"
                                             alt="avatar 1"
                                             className="rounded-2lg"
@@ -405,7 +406,7 @@ const PageRankings = () => {
                                 >
                                     <span className="mr-2 lg:mr-4">2</span>
                                     <figure className="relative mr-2 w-8 shrink-0 self-start lg:mr-5 lg:w-12">
-                                        <img
+                                        <Image
                                             src="img/avatars/avatar_2.jpg"
                                             alt="avatar 2"
                                             className="rounded-2lg"
@@ -501,7 +502,7 @@ const PageRankings = () => {
                                 >
                                     <span className="mr-2 lg:mr-4">3</span>
                                     <figure className="relative mr-2 w-8 shrink-0 self-start lg:mr-5 lg:w-12">
-                                        <img
+                                        <Image
                                             src="img/avatars/avatar_5.jpg"
                                             alt="avatar 5"
                                             className="rounded-2lg"
@@ -597,7 +598,7 @@ const PageRankings = () => {
                                 >
                                     <span className="mr-2 lg:mr-4">4</span>
                                     <figure className="relative mr-2 w-8 shrink-0 self-start lg:mr-5 lg:w-12">
-                                        <img
+                                        <Image
                                             src="img/avatars/avatar_9.jpg"
                                             alt="avatar 9"
                                             className="rounded-2lg"
@@ -693,7 +694,7 @@ const PageRankings = () => {
                                 >
                                     <span className="mr-2 lg:mr-4">5</span>
                                     <figure className="relative mr-2 w-8 shrink-0 self-start lg:mr-5 lg:w-12">
-                                        <img
+                                        <Image
                                             src="img/avatars/avatar_13.jpg"
                                             alt="avatar 13"
                                             className="rounded-2lg"
@@ -788,7 +789,7 @@ const PageRankings = () => {
                                 >
                                     <span className="mr-2 lg:mr-4">6</span>
                                     <figure className="relative mr-2 w-8 shrink-0 self-start lg:mr-5 lg:w-12">
-                                        <img
+                                        <Image
                                             src="img/avatars/avatar_6.jpg"
                                             alt="avatar 6"
                                             className="rounded-2lg"
@@ -883,7 +884,7 @@ const PageRankings = () => {
                                 >
                                     <span className="mr-2 lg:mr-4">7</span>
                                     <figure className="relative mr-2 w-8 shrink-0 self-start lg:mr-5 lg:w-12">
-                                        <img
+                                        <Image
                                             src="img/avatars/avatar_10.jpg"
                                             alt="avatar 10"
                                             className="rounded-2lg"

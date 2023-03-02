@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const Footer = () => {
     return (
         <div className="container">
@@ -5,8 +7,8 @@ const Footer = () => {
                 <div className="col-span-full sm:col-span-3 md:col-span-4">
                     {/* <!-- Logo --> */}
                     <a href="index.html" className="mb-6 inline-block">
-                        <img src="img/logo.png" className="max-h-7 dark:hidden" alt="Xhibiter | NFT Marketplace" />
-                        <img
+                        <Image src="img/logo.png" className="max-h-7 dark:hidden" alt="Xhibiter | NFT Marketplace" />
+                        <Image
                             src="img/logo_white.png"
                             className="hidden max-h-7 dark:block"
                             alt="Xhibiter | NFT Marketplace"

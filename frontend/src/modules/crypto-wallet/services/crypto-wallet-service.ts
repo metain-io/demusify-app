@@ -36,4 +36,6 @@ class CryptoWalletService {
     }
 }
 
-export default new CryptoWalletService();
+const instance = new CryptoWalletService();
+
+export default instance;

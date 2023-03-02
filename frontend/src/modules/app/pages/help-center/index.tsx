@@ -1,5 +1,6 @@
 import { MainLayout } from '@modules/app/layouts';
 import { ReactElement } from 'react';
+import Image from 'next/image';
 
 const PageHelpCenter = () => {
     return (
@@ -38,7 +39,7 @@ const PageHelpCenter = () => {
             {/* <!-- Help Center --> */}
             <section className="relative py-24">
                 <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
-                    <img src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
+                    <Image src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
                 </picture>
                 <div className="container">
                     <h2 className="mb-10 text-center font-display text-xl font-medium text-jacarta-700 dark:text-white">

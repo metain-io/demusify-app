@@ -1,5 +1,6 @@
 import { MainLayout } from '@modules/app/layouts';
 import { ReactElement } from 'react';
+import Image from 'next/image';
 
 const PageHome = () => {
     return (
@@ -7,10 +8,10 @@ const PageHome = () => {
             {/* <!-- Hero --> */}
             <section className="relative pb-10 pt-20 md:pt-32 lg:h-[88vh]">
                 <picture className="pointer-events-none absolute inset-x-0 top-0 -z-10 dark:hidden">
-                    <img src="img/gradient.jpg" alt="gradient" className="w-full" />
+                    <Image src="img/gradient.jpg" alt="gradient" className="w-full" />
                 </picture>
                 <picture className="pointer-events-none absolute inset-x-0 top-0 -z-10 hidden dark:block">
-                    <img src="img/gradient_dark.jpg" alt="gradient dark" className="w-full" />
+                    <Image src="img/gradient_dark.jpg" alt="gradient dark" className="w-full" />
                 </picture>
 
                 <div className="container h-full">
@@ -71,7 +72,7 @@ const PageHome = () => {
                                         />
                                     </g>
                                 </svg>
-                                <img
+                                <Image
                                     src="img/hero/3D_elements.png"
                                     alt=""
                                     className="absolute top-0 animate-fly md:-right-[10%]"
@@ -107,7 +108,7 @@ const PageHome = () => {
                                         <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                             <figure>
                                                 <a href="item.html">
-                                                    <img
+                                                    <Image
                                                         src="./img/products/item_1.jpg"
                                                         alt="item 1"
                                                         width="230"
@@ -200,7 +201,7 @@ const PageHome = () => {
                                         <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                             <figure>
                                                 <a href="item.html">
-                                                    <img
+                                                    <Image
                                                         src="./img/products/item_2.jpg"
                                                         alt="item 2"
                                                         width="230"
@@ -294,7 +295,7 @@ const PageHome = () => {
                                         <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                             <figure>
                                                 <a href="item.html">
-                                                    <img
+                                                    <Image
                                                         src="./img/products/item_6.jpg"
                                                         alt="item 6"
                                                         width="230"
@@ -386,7 +387,7 @@ const PageHome = () => {
                                         <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                             <figure>
                                                 <a href="item.html">
-                                                    <img
+                                                    <Image
                                                         src="./img/products/item_4.jpg"
                                                         alt="item 4"
                                                         width="230"
@@ -478,7 +479,7 @@ const PageHome = () => {
                                         <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                             <figure className="relative">
                                                 <a href="item.html">
-                                                    <img
+                                                    <Image
                                                         src="./img/pixel.jpg"
                                                         data-src="./img/products/item_3.gif"
                                                         alt="item 3"
@@ -571,7 +572,7 @@ const PageHome = () => {
                                         <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                             <figure className="relative">
                                                 <a href="item.html">
-                                                    <img
+                                                    <Image
                                                         src="./img/pixel.jpg"
                                                         data-src="./img/products/item_5.jpg"
                                                         alt="item 5"
@@ -695,7 +696,7 @@ const PageHome = () => {
             {/* <!-- Top Collections --> */}
             <section className="relative py-24 dark:bg-jacarta-800">
                 <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
-                    <img src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
+                    <Image src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
                 </picture>
                 <div className="container">
                     <div className="mb-12 text-center font-display text-3xl text-jacarta-700 dark:text-white">
@@ -750,7 +751,7 @@ const PageHome = () => {
                         <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                             <figure className="mr-4 shrink-0">
                                 <a href="collection.html" className="relative block">
-                                    <img
+                                    <Image
                                         src="img/avatars/avatar_1.jpg"
                                         alt="avatar 1"
                                         className="rounded-2lg"
@@ -788,7 +789,7 @@ const PageHome = () => {
                         <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                             <figure className="mr-4 shrink-0">
                                 <a href="collection.html" className="relative block">
-                                    <img
+                                    <Image
                                         src="img/avatars/avatar_2.jpg"
                                         alt="avatar 2"
                                         className="rounded-2lg"
@@ -826,7 +827,7 @@ const PageHome = () => {
                         <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                             <figure className="mr-4 shrink-0">
                                 <a href="collection.html" className="relative block">
-                                    <img
+                                    <Image
                                         src="img/avatars/avatar_3.jpg"
                                         alt="avatar 3"
                                         className="rounded-2lg"
@@ -849,7 +850,7 @@ const PageHome = () => {
                         <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                             <figure className="mr-4 shrink-0">
                                 <a href="collection.html" className="relative block">
-                                    <img
+                                    <Image
                                         src="img/avatars/avatar_4.jpg"
                                         alt="avatar 4"
                                         className="rounded-2lg"
@@ -872,7 +873,7 @@ const PageHome = () => {
                         <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                             <figure className="mr-4 shrink-0">
                                 <a href="collection.html" className="relative block">
-                                    <img
+                                    <Image
                                         src="img/avatars/avatar_5.jpg"
                                         alt="avatar 5"
                                         className="rounded-2lg"
@@ -895,7 +896,7 @@ const PageHome = () => {
                         <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                             <figure className="mr-4 shrink-0">
                                 <a href="collection.html" className="relative block">
-                                    <img
+                                    <Image
                                         src="img/avatars/avatar_6.gif"
                                         alt="avatar 6"
                                         className="rounded-2lg"
@@ -918,7 +919,7 @@ const PageHome = () => {
                         <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                             <figure className="mr-4 shrink-0">
                                 <a href="collection.html" className="relative block">
-                                    <img
+                                    <Image
                                         src="img/avatars/avatar_7.jpg"
                                         alt="avatar 7"
                                         className="rounded-2lg"
@@ -956,7 +957,7 @@ const PageHome = () => {
                         <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                             <figure className="mr-4 shrink-0">
                                 <a href="collection.html" className="relative block">
-                                    <img
+                                    <Image
                                         src="img/avatars/avatar_8.jpg"
                                         alt="avatar 8"
                                         className="rounded-2lg"
@@ -994,7 +995,7 @@ const PageHome = () => {
                         <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                             <figure className="mr-4 shrink-0">
                                 <a href="collection.html" className="relative block">
-                                    <img
+                                    <Image
                                         src="img/avatars/avatar_9.jpg"
                                         alt="avatar 9"
                                         className="rounded-2lg"
@@ -1017,7 +1018,7 @@ const PageHome = () => {
                         <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                             <figure className="mr-4 shrink-0">
                                 <a href="collection.html" className="relative block">
-                                    <img
+                                    <Image
                                         src="img/avatars/avatar_10.jpg"
                                         alt="avatar 10"
                                         className="rounded-2lg"
@@ -1055,7 +1056,7 @@ const PageHome = () => {
                         <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                             <figure className="mr-4 shrink-0">
                                 <a href="collection.html" className="relative block">
-                                    <img
+                                    <Image
                                         src="img/avatars/avatar_11.jpg"
                                         alt="avatar 11"
                                         className="rounded-2lg"
@@ -1078,7 +1079,7 @@ const PageHome = () => {
                         <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                             <figure className="mr-4 shrink-0">
                                 <a href="collection.html" className="relative block">
-                                    <img
+                                    <Image
                                         src="img/avatars/avatar_12.jpg"
                                         alt="avatar 12"
                                         className="rounded-2lg"
@@ -1101,7 +1102,7 @@ const PageHome = () => {
                         <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                             <figure className="mr-4 shrink-0">
                                 <a href="collection.html" className="relative block">
-                                    <img
+                                    <Image
                                         src="img/avatars/avatar_13.jpg"
                                         alt="avatar 13"
                                         className="rounded-2lg"
@@ -1139,7 +1140,7 @@ const PageHome = () => {
                         <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                             <figure className="mr-4 shrink-0">
                                 <a href="collection.html" className="relative block">
-                                    <img
+                                    <Image
                                         src="img/avatars/avatar_14.jpg"
                                         alt="avatar 14"
                                         className="rounded-2lg"
@@ -1162,7 +1163,7 @@ const PageHome = () => {
                         <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                             <figure className="mr-4 shrink-0">
                                 <a href="collection.html" className="relative block">
-                                    <img
+                                    <Image
                                         src="img/avatars/avatar_15.jpg"
                                         alt="avatar 15"
                                         className="rounded-2lg"
@@ -1200,7 +1201,7 @@ const PageHome = () => {
                         <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                             <figure className="mr-4 shrink-0">
                                 <a href="collection.html" className="relative block">
-                                    <img
+                                    <Image
                                         src="img/avatars/avatar_16.jpg"
                                         alt="avatar 16"
                                         className="rounded-2lg"
@@ -1466,7 +1467,7 @@ const PageHome = () => {
                             <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                 <figure className="relative">
                                     <a href="item.html">
-                                        <img
+                                        <Image
                                             src="./img/products/item_5.jpg"
                                             alt="item 5"
                                             className="w-full rounded-[0.625rem]"
@@ -1494,7 +1495,7 @@ const PageHome = () => {
                                     <div className="absolute left-3 -bottom-3">
                                         <div className="flex -space-x-2">
                                             <a href="#">
-                                                <img
+                                                <Image
                                                     src="img/avatars/creator_1.png"
                                                     alt="creator"
                                                     className="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
@@ -1502,7 +1503,7 @@ const PageHome = () => {
                                                 />
                                             </a>
                                             <a href="#">
-                                                <img
+                                                <Image
                                                     src="img/avatars/owner_1.png"
                                                     alt="owner"
                                                     className="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
@@ -1595,7 +1596,7 @@ const PageHome = () => {
                             <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                 <figure className="relative">
                                     <a href="item.html">
-                                        <img
+                                        <Image
                                             src="./img/products/item_4.jpg"
                                             alt="item 4"
                                             className="w-full rounded-[0.625rem]"
@@ -1623,7 +1624,7 @@ const PageHome = () => {
                                     <div className="absolute left-3 -bottom-3">
                                         <div className="flex -space-x-2">
                                             <a href="#">
-                                                <img
+                                                <Image
                                                     src="img/avatars/creator_2.png"
                                                     alt="creator"
                                                     className="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
@@ -1631,7 +1632,7 @@ const PageHome = () => {
                                                 />
                                             </a>
                                             <a href="#">
-                                                <img
+                                                <Image
                                                     src="img/avatars/owner_2.png"
                                                     alt="owner"
                                                     className="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
@@ -1724,7 +1725,7 @@ const PageHome = () => {
                             <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                 <figure className="relative">
                                     <a href="item.html">
-                                        <img
+                                        <Image
                                             src="./img/products/item_7.jpg"
                                             alt="item 7"
                                             className="w-full rounded-[0.625rem]"
@@ -1752,7 +1753,7 @@ const PageHome = () => {
                                     <div className="absolute left-3 -bottom-3">
                                         <div className="flex -space-x-2">
                                             <a href="#">
-                                                <img
+                                                <Image
                                                     src="img/avatars/creator_3.png"
                                                     alt="creator"
                                                     className="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
@@ -1760,7 +1761,7 @@ const PageHome = () => {
                                                 />
                                             </a>
                                             <a href="#">
-                                                <img
+                                                <Image
                                                     src="img/avatars/owner_3.png"
                                                     alt="owner"
                                                     className="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
@@ -1853,7 +1854,7 @@ const PageHome = () => {
                             <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                 <figure className="relative">
                                     <a href="item.html">
-                                        <img
+                                        <Image
                                             src="./img/products/item_6.jpg"
                                             alt="item 6"
                                             className="w-full rounded-[0.625rem]"
@@ -1881,7 +1882,7 @@ const PageHome = () => {
                                     <div className="absolute left-3 -bottom-3">
                                         <div className="flex -space-x-2">
                                             <a href="#">
-                                                <img
+                                                <Image
                                                     src="img/avatars/creator_4.png"
                                                     alt="creator"
                                                     className="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
@@ -1889,7 +1890,7 @@ const PageHome = () => {
                                                 />
                                             </a>
                                             <a href="#">
-                                                <img
+                                                <Image
                                                     src="img/avatars/owner_4.png"
                                                     alt="owner"
                                                     className="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
@@ -1982,7 +1983,7 @@ const PageHome = () => {
                             <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                 <figure className="relative">
                                     <a href="item.html">
-                                        <img
+                                        <Image
                                             src="./img/products/item_8.jpg"
                                             alt="item 8"
                                             className="w-full rounded-[0.625rem]"
@@ -2010,7 +2011,7 @@ const PageHome = () => {
                                     <div className="absolute left-3 -bottom-3">
                                         <div className="flex -space-x-2">
                                             <a href="#">
-                                                <img
+                                                <Image
                                                     src="img/avatars/creator_3.png"
                                                     alt="creator"
                                                     className="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
@@ -2018,7 +2019,7 @@ const PageHome = () => {
                                                 />
                                             </a>
                                             <a href="#">
-                                                <img
+                                                <Image
                                                     src="img/avatars/owner_5.png"
                                                     alt="owner"
                                                     className="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
@@ -2111,7 +2112,7 @@ const PageHome = () => {
                             <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                 <figure className="relative">
                                     <a href="item.html">
-                                        <img
+                                        <Image
                                             src="./img/products/item_9.jpg"
                                             alt="item 9"
                                             className="w-full rounded-[0.625rem]"
@@ -2139,7 +2140,7 @@ const PageHome = () => {
                                     <div className="absolute left-3 -bottom-3">
                                         <div className="flex -space-x-2">
                                             <a href="#">
-                                                <img
+                                                <Image
                                                     src="img/avatars/creator_6.png"
                                                     alt="creator"
                                                     className="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
@@ -2147,7 +2148,7 @@ const PageHome = () => {
                                                 />
                                             </a>
                                             <a href="#">
-                                                <img
+                                                <Image
                                                     src="img/avatars/owner_4.png"
                                                     alt="owner"
                                                     className="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
@@ -2240,7 +2241,7 @@ const PageHome = () => {
                             <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                 <figure className="relative">
                                     <a href="item.html">
-                                        <img
+                                        <Image
                                             src="./img/products/item_10.jpg"
                                             alt="item 10"
                                             className="w-full rounded-[0.625rem]"
@@ -2268,7 +2269,7 @@ const PageHome = () => {
                                     <div className="absolute left-3 -bottom-3">
                                         <div className="flex -space-x-2">
                                             <a href="#">
-                                                <img
+                                                <Image
                                                     src="img/avatars/creator_2.png"
                                                     alt="creator"
                                                     className="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
@@ -2276,7 +2277,7 @@ const PageHome = () => {
                                                 />
                                             </a>
                                             <a href="#">
-                                                <img
+                                                <Image
                                                     src="img/avatars/owner_7.png"
                                                     alt="owner"
                                                     className="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
@@ -2369,7 +2370,7 @@ const PageHome = () => {
                             <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                 <figure className="relative">
                                     <a href="item.html">
-                                        <img
+                                        <Image
                                             src="./img/products/item_11.gif"
                                             alt="item 11"
                                             className="w-full rounded-[0.625rem]"
@@ -2397,7 +2398,7 @@ const PageHome = () => {
                                     <div className="absolute left-3 -bottom-3">
                                         <div className="flex -space-x-2">
                                             <a href="#">
-                                                <img
+                                                <Image
                                                     src="img/avatars/creator_8.png"
                                                     alt="creator"
                                                     className="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
@@ -2405,7 +2406,7 @@ const PageHome = () => {
                                                 />
                                             </a>
                                             <a href="#">
-                                                <img
+                                                <Image
                                                     src="img/avatars/owner_5.png"
                                                     alt="owner"
                                                     className="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
@@ -2502,7 +2503,7 @@ const PageHome = () => {
             {/* <!-- Process / Newsletter --> */}
             <section className="relative py-24 dark:bg-jacarta-800">
                 <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
-                    <img src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
+                    <Image src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
                 </picture>
                 <div className="container">
                     <h2 className="mb-16 text-center font-display text-3xl text-jacarta-700 dark:text-white">

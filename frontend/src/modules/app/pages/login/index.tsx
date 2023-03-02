@@ -1,5 +1,6 @@
 import { AuthLayout } from '@modules/app/layouts';
 import { ReactElement } from 'react';
+import Image from 'next/image';
 
 const PageLogin = () => {
     return (
@@ -9,10 +10,10 @@ const PageLogin = () => {
                 <div className="lg:flex lg:h-full">
                     {/* <!-- Left --> */}
                     <div className="relative text-center lg:w-1/2">
-                        <img src="img/login.jpg" alt="login" className="absolute h-full w-full object-cover" />
+                        <Image src="img/login.jpg" alt="login" className="absolute h-full w-full object-cover" />
                         {/* <!-- Logo --> */}
                         <a href="index.html" className="relative inline-block py-36">
-                            <img
+                            <Image
                                 src="img/logo_white.png"
                                 className="inline-block max-h-7"
                                 alt="Xhibiter | NFT Marketplace"
@@ -23,7 +24,7 @@ const PageLogin = () => {
                     {/* <!-- Right --> */}
                     <div className="relative flex items-center justify-center p-[10%] lg:w-1/2">
                         <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
-                            <img src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
+                            <Image src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
                         </picture>
 
                         <div className="w-full max-w-[25.625rem] text-center">
@@ -147,7 +148,7 @@ const PageLogin = () => {
                                         data-bs-toggle="modal"
                                         data-bs-target="#walletModal"
                                     >
-                                        <img
+                                        <Image
                                             src="img/wallets/metamask_24.svg"
                                             className="mr-2.5 inline-block h-6 w-6"
                                             alt=""
@@ -156,7 +157,7 @@ const PageLogin = () => {
                                     </button>
 
                                     <button className="mb-4 flex w-full items-center justify-center rounded-full border-2 border-jacarta-100 bg-white py-4 px-8 text-center font-semibold text-jacarta-700 transition-all hover:border-transparent hover:bg-accent hover:text-white dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:hover:border-transparent dark:hover:bg-accent">
-                                        <img
+                                        <Image
                                             src="img/wallets/torus_24.svg"
                                             className="mr-2.5 inline-block h-6 w-6"
                                             alt=""
@@ -165,7 +166,7 @@ const PageLogin = () => {
                                     </button>
 
                                     <button className="mb-4 flex w-full items-center justify-center rounded-full border-2 border-jacarta-100 bg-white py-4 px-8 text-center font-semibold text-jacarta-700 transition-all hover:border-transparent hover:bg-accent hover:text-white dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:hover:border-transparent dark:hover:bg-accent">
-                                        <img
+                                        <Image
                                             src="img/wallets/wallet_connect_24.svg"
                                             className="mr-2.5 inline-block h-6 w-6"
                                             alt=""
@@ -182,7 +183,7 @@ const PageLogin = () => {
                                 {/* <!-- Torus --> */}
                                 <div className="tab-pane fade" id="torus" role="tabpanel" aria-labelledby="torus-tab">
                                     <button className="mb-4 flex w-full items-center justify-center rounded-full border-2 border-jacarta-100 bg-white py-4 px-8 text-center font-semibold text-jacarta-700 transition-all hover:border-transparent hover:bg-accent hover:text-white dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:hover:border-transparent dark:hover:bg-accent">
-                                        <img
+                                        <Image
                                             src="img/wallets/torus_24.svg"
                                             className="mr-2.5 inline-block h-6 w-6"
                                             alt=""
@@ -195,7 +196,7 @@ const PageLogin = () => {
                                         data-bs-toggle="modal"
                                         data-bs-target="#walletModal"
                                     >
-                                        <img
+                                        <Image
                                             src="img/wallets/metamask_24.svg"
                                             className="mr-2.5 inline-block h-6 w-6"
                                             alt=""
@@ -204,7 +205,7 @@ const PageLogin = () => {
                                     </button>
 
                                     <button className="mb-4 flex w-full items-center justify-center rounded-full border-2 border-jacarta-100 bg-white py-4 px-8 text-center font-semibold text-jacarta-700 transition-all hover:border-transparent hover:bg-accent hover:text-white dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:hover:border-transparent dark:hover:bg-accent">
-                                        <img
+                                        <Image
                                             src="img/wallets/wallet_connect_24.svg"
                                             className="mr-2.5 inline-block h-6 w-6"
                                             alt=""
@@ -226,7 +227,7 @@ const PageLogin = () => {
                                     aria-labelledby="wallet-connect-tab"
                                 >
                                     <button className="mb-4 flex w-full items-center justify-center rounded-full border-2 border-jacarta-100 bg-white py-4 px-8 text-center font-semibold text-jacarta-700 transition-all hover:border-transparent hover:bg-accent hover:text-white dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:hover:border-transparent dark:hover:bg-accent">
-                                        <img
+                                        <Image
                                             src="img/wallets/wallet_connect_24.svg"
                                             className="mr-2.5 inline-block h-6 w-6"
                                             alt=""
@@ -235,7 +236,7 @@ const PageLogin = () => {
                                     </button>
 
                                     <button className="mb-4 flex w-full items-center justify-center rounded-full border-2 border-jacarta-100 bg-white py-4 px-8 text-center font-semibold text-jacarta-700 transition-all hover:border-transparent hover:bg-accent hover:text-white dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:hover:border-transparent dark:hover:bg-accent">
-                                        <img
+                                        <Image
                                             src="img/wallets/torus_24.svg"
                                             className="mr-2.5 inline-block h-6 w-6"
                                             alt=""
@@ -248,7 +249,7 @@ const PageLogin = () => {
                                         data-bs-toggle="modal"
                                         data-bs-target="#walletModal"
                                     >
-                                        <img
+                                        <Image
                                             src="img/wallets/metamask_24.svg"
                                             className="mr-2.5 inline-block h-6 w-6"
                                             alt=""

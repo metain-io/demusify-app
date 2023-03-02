@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const Footer2 = () => {
     return (
         <div className="container">
@@ -5,7 +7,7 @@ const Footer2 = () => {
                 <div className="col-span-full sm:col-span-3 md:col-span-4">
                     {/* <!-- Logo --> */}
                     <a href="index.html" className="mb-6 inline-block">
-                        <img src="img/logo_white.png" className="max-h-7" alt="Xhibiter | NFT Marketplace" />
+                        <Image src="img/logo_white.png" className="max-h-7" alt="Xhibiter | NFT Marketplace" />
                     </a>
                     <p className="mb-12 text-jacarta-300">
                         Create, sell and collect truly rare digital artworks. Powered by blockchain technology.

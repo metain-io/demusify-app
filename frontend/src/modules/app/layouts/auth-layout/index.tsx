@@ -9,7 +9,7 @@ const AuthLayout = (props: AuthLayoutProps) => {
         <div className="overflow-x-hidden font-body text-jacarta-500 dark:bg-jacarta-900">
             {children}
 
-            <script src="./js/app.bundle.js"></script>
+            <script src="./js/app.bundle.js" defer></script>
         </div>
     );
 };

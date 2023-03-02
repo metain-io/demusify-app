@@ -1,5 +1,6 @@
 import { MainLayout } from '@modules/app/layouts';
 import { ReactElement } from 'react';
+import Image from 'next/image';
 
 const PageItem = () => {
     return (
@@ -7,14 +8,14 @@ const PageItem = () => {
             {/* <!-- Item --> */}
             <section className="relative pt-12 pb-24 lg:py-24">
                 <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
-                    <img src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
+                    <Image src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
                 </picture>
                 <div className="container">
                     {/* <!-- Item --> */}
                     <div className="md:flex md:flex-wrap">
                         {/* <!-- Image --> */}
                         <figure className="mb-8 md:w-2/5 md:flex-shrink-0 md:flex-grow-0 md:basis-auto lg:w-1/2">
-                            <img
+                            <Image
                                 src="img/products/item_single_large.jpg"
                                 alt="item"
                                 className="cursor-pointer rounded-2.5xl"
@@ -25,7 +26,7 @@ const PageItem = () => {
                             {/* <!-- Modal --> */}
                             <div className="modal fade" id="imageModal" tabIndex={-1} aria-hidden="true">
                                 <div className="modal-dialog !my-0 flex h-full items-center justify-center p-4">
-                                    <img src="img/products/item_single_full.jpg" alt="item" />
+                                    <Image src="img/products/item_single_full.jpg" alt="item" />
                                 </div>
 
                                 <button
@@ -184,7 +185,7 @@ const PageItem = () => {
                                 <div className="mr-8 mb-4 flex">
                                     <figure className="mr-4 shrink-0">
                                         <a href="user.html" className="relative block">
-                                            <img
+                                            <Image
                                                 src="img/avatars/avatar_7.jpg"
                                                 alt="avatar 7"
                                                 className="rounded-2lg"
@@ -220,7 +221,7 @@ const PageItem = () => {
                                 <div className="mb-4 flex">
                                     <figure className="mr-4 shrink-0">
                                         <a href="user.html" className="relative block">
-                                            <img
+                                            <Image
                                                 src="img/avatars/avatar_1.jpg"
                                                 alt="avatar 1"
                                                 className="rounded-2lg"
@@ -268,7 +269,7 @@ const PageItem = () => {
                                         <div className="mt-3 flex">
                                             <figure className="mr-4 shrink-0">
                                                 <a href="user.html" className="relative block">
-                                                    <img
+                                                    <Image
                                                         src="img/avatars/avatar_4.jpg"
                                                         alt="avatar"
                                                         className="rounded-2lg"
@@ -1548,7 +1549,7 @@ const PageItem = () => {
                                         <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                             <figure>
                                                 <a href="item.html">
-                                                    <img
+                                                    <Image
                                                         src="./img/products/item_1.jpg"
                                                         alt="item 1"
                                                         width="230"
@@ -1641,7 +1642,7 @@ const PageItem = () => {
                                         <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                             <figure>
                                                 <a href="item.html">
-                                                    <img
+                                                    <Image
                                                         src="./img/products/item_2.jpg"
                                                         alt="item 2"
                                                         width="230"
@@ -1735,7 +1736,7 @@ const PageItem = () => {
                                         <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                             <figure>
                                                 <a href="item.html">
-                                                    <img
+                                                    <Image
                                                         src="./img/products/item_6.jpg"
                                                         alt="item 6"
                                                         width="230"
@@ -1827,7 +1828,7 @@ const PageItem = () => {
                                         <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                             <figure>
                                                 <a href="item.html">
-                                                    <img
+                                                    <Image
                                                         src="./img/products/item_4.jpg"
                                                         alt="item 4"
                                                         width="230"
@@ -1919,7 +1920,7 @@ const PageItem = () => {
                                         <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                             <figure className="relative">
                                                 <a href="item.html">
-                                                    <img
+                                                    <Image
                                                         src="./img/pixel.jpg"
                                                         data-src="./img/products/item_3.gif"
                                                         alt="item 3"
@@ -2012,7 +2013,7 @@ const PageItem = () => {
                                         <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                             <figure className="relative">
                                                 <a href="item.html">
-                                                    <img
+                                                    <Image
                                                         src="./img/pixel.jpg"
                                                         data-src="./img/products/item_5.jpg"
                                                         alt="item 5"

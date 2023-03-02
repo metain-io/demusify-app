@@ -14,7 +14,7 @@ const MainLayout3 = (props: MainLayout3Props) => {
 
             {children}
 
-            <script src="./js/app.bundle.js"></script>
+            <script src="./js/app.bundle.js" defer></script>
         </div>
     );
 };

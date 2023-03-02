@@ -1,5 +1,6 @@
 import { MainLayout } from '@modules/app/layouts';
 import { ReactElement } from 'react';
+import Image from 'next/image';
 
 const PageNewsletter = () => {
     return (
@@ -7,7 +8,7 @@ const PageNewsletter = () => {
             {/* <!-- Newsletter --> */}
             <section className="relative py-24 dark:bg-jacarta-800">
                 <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
-                    <img src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
+                    <Image src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
                 </picture>
                 <div className="container">
                     <div className="lg:flex lg:items-center lg:justify-between">
@@ -65,7 +66,7 @@ const PageNewsletter = () => {
                                         />
                                     </g>
                                 </svg>
-                                <img src="img/hero/3D_elements.png" alt="" className="absolute top-0 animate-fly" />
+                                <Image src="img/hero/3D_elements.png" alt="" className="absolute top-0 animate-fly" />
                             </div>
                         </div>
                     </div>

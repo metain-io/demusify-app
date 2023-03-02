@@ -1,5 +1,6 @@
 import { MainLayout2 } from '@modules/app/layouts';
 import { ReactElement } from 'react';
+import Image from 'next/image';
 
 const PageHome8 = () => {
     return (
@@ -7,9 +8,9 @@ const PageHome8 = () => {
             {/* <!-- Hero --> */}
             <section className="hero relative py-20 md:pt-32">
                 <picture className="pointer-events-none absolute inset-0 -z-10">
-                    <img src="img/gradient_dark.jpg" alt="gradient dark" className="h-full w-full" />
+                    <Image src="img/gradient_dark.jpg" alt="gradient dark" className="h-full w-full" />
                 </picture>
-                <img
+                <Image
                     src="img/patterns/pattern_donut.png"
                     alt="pattern donut"
                     className="absolute right-0 top-0 -z-10"
@@ -36,14 +37,14 @@ const PageHome8 = () => {
 
             {/* <!-- Intro Video --> */}
             <div className="relative mx-auto max-w-[90rem]">
-                <img
+                <Image
                     src="img/nft-game/crypto_icons.png"
                     className="pointer-events-none absolute -top-1/4 animate-fly"
                     alt=""
                 />
                 <div className="container">
                     <figure className="relative overflow-hidden rounded-3xl before:absolute before:inset-0 before:bg-jacarta-900/25">
-                        <img src="img/nft-game/nft_game_video_poster.jpg" className="w-full" alt="video" />
+                        <Image src="img/nft-game/nft_game_video_poster.jpg" className="w-full" alt="video" />
                         <a
                             href="https://www.youtube.com/embed/dQw4w9WgXcQ"
                             data-bs-toggle="modal"
@@ -69,7 +70,7 @@ const PageHome8 = () => {
             {/* <!-- Characters Slider --> */}
             <section className="relative pb-12 pt-24 lg:py-36">
                 <picture className="pointer-events-none absolute inset-0 -z-10">
-                    <img src="img/gradient_creative.jpg" alt="gradient" className="h-full w-full" />
+                    <Image src="img/gradient_creative.jpg" alt="gradient" className="h-full w-full" />
                 </picture>
                 <div className="container">
                     <h2 className="mx-auto mb-16 max-w-md text-center font-display text-3xl text-white">
@@ -88,13 +89,13 @@ const PageHome8 = () => {
                                         className="animate-gradient--no-text-fill block animate-gradient overflow-hidden rounded-2.5xl !bg-clip-border p-[2px] text-center shadow-md transition-shadow hover:shadow-lg"
                                     >
                                         <div className="rounded-[1.125rem] bg-jacarta-900 p-8">
-                                            <img
+                                            <Image
                                                 src="img/nft-game/gradient_glow_small.png"
                                                 alt=""
                                                 className="absolute inset-0"
                                             />
                                             <figure className="relative my-4 mb-14">
-                                                <img
+                                                <Image
                                                     src="./img/nft-game/nft_game_character_1.png"
                                                     alt="item 1"
                                                     className="swiper-lazy inline-block"
@@ -201,13 +202,13 @@ const PageHome8 = () => {
                                         className="animate-gradient--no-text-fill block animate-gradient overflow-hidden rounded-2.5xl !bg-clip-border p-[2px] text-center shadow-md transition-shadow hover:shadow-lg"
                                     >
                                         <div className="rounded-[1.125rem] bg-jacarta-900 p-8">
-                                            <img
+                                            <Image
                                                 src="img/nft-game/gradient_glow_small.png"
                                                 alt=""
                                                 className="absolute inset-0"
                                             />
                                             <figure className="relative my-4 mb-14">
-                                                <img
+                                                <Image
                                                     src="./img/nft-game/nft_game_character_2.png"
                                                     alt="item 1"
                                                     className="swiper-lazy inline-block"
@@ -306,13 +307,13 @@ const PageHome8 = () => {
                                         className="animate-gradient--no-text-fill block animate-gradient overflow-hidden rounded-2.5xl !bg-clip-border p-[2px] text-center shadow-md transition-shadow hover:shadow-lg"
                                     >
                                         <div className="rounded-[1.125rem] bg-jacarta-900 p-8">
-                                            <img
+                                            <Image
                                                 src="img/nft-game/gradient_glow_small.png"
                                                 alt=""
                                                 className="absolute inset-0"
                                             />
                                             <figure className="relative my-4 mb-14">
-                                                <img
+                                                <Image
                                                     src="./img/nft-game/nft_game_character_3.png"
                                                     alt="item 1"
                                                     className="swiper-lazy inline-block"
@@ -419,13 +420,13 @@ const PageHome8 = () => {
                                         className="animate-gradient--no-text-fill block animate-gradient overflow-hidden rounded-2.5xl !bg-clip-border p-[2px] text-center shadow-md transition-shadow hover:shadow-lg"
                                     >
                                         <div className="rounded-[1.125rem] bg-jacarta-900 p-8">
-                                            <img
+                                            <Image
                                                 src="img/nft-game/gradient_glow_small.png"
                                                 alt=""
                                                 className="absolute inset-0"
                                             />
                                             <figure className="relative my-4 mb-14">
-                                                <img
+                                                <Image
                                                     src="./img/nft-game/nft_game_character_4.png"
                                                     alt="item 1"
                                                     className="swiper-lazy inline-block"
@@ -532,13 +533,13 @@ const PageHome8 = () => {
                                         className="animate-gradient--no-text-fill block animate-gradient overflow-hidden rounded-2.5xl !bg-clip-border p-[2px] text-center shadow-md transition-shadow hover:shadow-lg"
                                     >
                                         <div className="rounded-[1.125rem] bg-jacarta-900 p-8">
-                                            <img
+                                            <Image
                                                 src="img/nft-game/gradient_glow_small.png"
                                                 alt=""
                                                 className="absolute inset-0"
                                             />
                                             <figure className="relative my-4 mb-14">
-                                                <img
+                                                <Image
                                                     src="./img/nft-game/nft_game_character_5.png"
                                                     alt="item 1"
                                                     className="swiper-lazy inline-block"
@@ -642,7 +643,7 @@ const PageHome8 = () => {
             {/* <!-- Statistic / Promo --> */}
             <section className="relative py-12 lg:py-36">
                 <picture className="pointer-events-none absolute inset-0 -z-10 after:absolute after:bottom-0 after:h-1/3 after:w-full after:bg-gradient-to-t after:from-[#010107]">
-                    <img src="img/gradient_creative.jpg" alt="gradient" className="h-full w-full -scale-y-100" />
+                    <Image src="img/gradient_creative.jpg" alt="gradient" className="h-full w-full -scale-y-100" />
                 </picture>
                 <div className="container -mt-20 lg:pb-32">
                     <h2 className="mb-12 max-w-5xl font-display text-5xl text-white lg:text-[6rem]">
@@ -692,19 +693,19 @@ const PageHome8 = () => {
                 <div className="container pt-32">
                     <div className="items-center justify-between lg:flex">
                         <div className="relative text-center lg:w-1/2">
-                            <img
+                            <Image
                                 src="img/nft-game/gradient_glow_large_1.png"
                                 alt=""
                                 loading="lazy"
                                 className="absolute scale-150"
                             />
-                            <img
+                            <Image
                                 src="img/nft-game/robot_large_1.png"
                                 alt=""
                                 loading="lazy"
                                 className="relative -top-10 inline-block"
                             />
-                            <img
+                            <Image
                                 src="img/hero/3D_elements.png"
                                 alt=""
                                 loading="lazy"
@@ -761,7 +762,7 @@ const PageHome8 = () => {
                             </a>
                         </div>
                         <div className="relative text-center lg:w-1/2">
-                            <img
+                            <Image
                                 src="img/nft-game/gradient_glow_large_2.png"
                                 loading="lazy"
                                 alt=""
@@ -772,10 +773,10 @@ const PageHome8 = () => {
                             <div className="swiper single-slider">
                                 <div className="swiper-wrapper">
                                     <div className="swiper-slide">
-                                        <img src="img/nft-game/robot_large_2.png" alt="" className="inline-block" />
+                                        <Image src="img/nft-game/robot_large_2.png" alt="" className="inline-block" />
                                     </div>
                                     <div className="swiper-slide">
-                                        <img
+                                        <Image
                                             src="img/transparent_pixel.png"
                                             data-src="img/nft-game/robot_large_3.png"
                                             alt=""
@@ -786,7 +787,7 @@ const PageHome8 = () => {
                                         <div className="swiper-lazy-preloader"></div>
                                     </div>
                                     <div className="swiper-slide">
-                                        <img
+                                        <Image
                                             src="img/transparent_pixel.png"
                                             data-src="img/nft-game/robot_large_4.png"
                                             alt=""
@@ -827,7 +828,7 @@ const PageHome8 = () => {
                                 </div>
                             </div>
 
-                            <img
+                            <Image
                                 src="img/nft-game/crypto_icons_1.png"
                                 alt=""
                                 loading="lazy"
@@ -1072,19 +1073,19 @@ const PageHome8 = () => {
                 <div className="container">
                     <div className="grid grid-cols-2 py-8 sm:grid-cols-5">
                         <a href="#">
-                            <img src="img/partners/partner_logo_1.png" alt="partner 1" />
+                            <Image src="img/partners/partner_logo_1.png" alt="partner 1" />
                         </a>
                         <a href="#">
-                            <img src="img/partners/partner_logo_2.png" alt="partner 1" />
+                            <Image src="img/partners/partner_logo_2.png" alt="partner 1" />
                         </a>
                         <a href="#">
-                            <img src="img/partners/partner_logo_3.png" alt="partner 1" />
+                            <Image src="img/partners/partner_logo_3.png" alt="partner 1" />
                         </a>
                         <a href="#">
-                            <img src="img/partners/partner_logo_4.png" alt="partner 1" />
+                            <Image src="img/partners/partner_logo_4.png" alt="partner 1" />
                         </a>
                         <a href="#">
-                            <img src="img/partners/partner_logo_5.png" alt="partner 1" />
+                            <Image src="img/partners/partner_logo_5.png" alt="partner 1" />
                         </a>
                     </div>
                 </div>

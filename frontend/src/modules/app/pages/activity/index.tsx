@@ -1,12 +1,13 @@
 import { MainLayout } from '@modules/app/layouts';
 import { ReactElement } from 'react';
+import Image from 'next/image';
 
 const PageActivity = () => {
     return (
         <main>
             <section className="relative py-24">
                 <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
-                    <img src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
+                    <Image src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
                 </picture>
                 <div className="container">
                     <h1 className="py-16 text-center font-display text-4xl font-medium text-jacarta-700 dark:text-white">
@@ -22,7 +23,7 @@ const PageActivity = () => {
                                 className="relative flex items-center rounded-2.5xl border border-jacarta-100 bg-white p-8 transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700"
                             >
                                 <figure className="mr-5 self-start">
-                                    <img
+                                    <Image
                                         src="img/avatars/avatar_2.jpg"
                                         alt="avatar 2"
                                         className="rounded-2lg"
@@ -58,7 +59,7 @@ const PageActivity = () => {
                                 className="relative flex items-center rounded-2.5xl border border-jacarta-100 bg-white p-8 transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700"
                             >
                                 <figure className="mr-5 self-start">
-                                    <img
+                                    <Image
                                         src="img/products/item_21_sm.jpg"
                                         alt="item 2"
                                         className="rounded-2lg"
@@ -94,7 +95,7 @@ const PageActivity = () => {
                                 className="relative flex items-center rounded-2.5xl border border-jacarta-100 bg-white p-8 transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700"
                             >
                                 <figure className="mr-5 self-start">
-                                    <img
+                                    <Image
                                         src="img/products/item_22_sm.jpg"
                                         alt="item 3"
                                         className="rounded-2lg"
@@ -130,7 +131,7 @@ const PageActivity = () => {
                                 className="relative flex items-center rounded-2.5xl border border-jacarta-100 bg-white p-8 transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700"
                             >
                                 <figure className="mr-5 self-start">
-                                    <img
+                                    <Image
                                         src="img/products/item_23_sm.jpg"
                                         alt="item 3"
                                         className="rounded-2lg"
@@ -166,7 +167,7 @@ const PageActivity = () => {
                                 className="relative flex items-center rounded-2.5xl border border-jacarta-100 bg-white p-8 transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700"
                             >
                                 <figure className="mr-5 self-start">
-                                    <img
+                                    <Image
                                         src="img/products/item_24_sm.jpg"
                                         alt="item 3"
                                         className="rounded-2lg"

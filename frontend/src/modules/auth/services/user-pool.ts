@@ -116,5 +116,7 @@ class UserPoolService {
     }
 }
 
-export default new UserPoolService();
+const instance = new UserPoolService();
+
+export default instance;
 export { UserPoolService as UserPoolServiceClass };

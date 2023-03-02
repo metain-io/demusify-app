@@ -1,7 +1,6 @@
-// import { NavigationBar } from '@app/components';
-import { NavigationBar } from '@modules/app/components';
+import { Footer, NavigationBar } from '@modules/app/components';
+import Script from 'next/script';
 import { PropsWithChildren } from 'react';
-import styles from './styles.module.scss';
 
 type MainLayoutProps = PropsWithChildren<{}>;
 
@@ -9,17 +8,18 @@ const MainLayout = (props: MainLayoutProps) => {
     const { children } = props;
 
     return (
-        <div id={styles['main-layout']}>
-            {/* Header */}
-            <div id={styles['main-layout__header']}>
+        <div className="overflow-x-hidden font-body text-jacarta-500 dark:bg-jacarta-900">
+            <header className="js-page-header fixed top-0 z-20 w-full backdrop-blur transition-colors">
                 <NavigationBar />
-            </div>
+            </header>
 
-            {/* Body */}
-            <div id={styles['main-layout__body']}>{children}</div>
+            {children}
 
-            {/* Footer */}
-            <div id={styles['main-layout__footer']}>DEMUSIFY | Solana Hackathon - 2023</div>
+            <footer className="page-footer bg-white dark:bg-jacarta-900">
+                <Footer />
+            </footer>
+
+            <Script src="./js/app.bundle.js" />
         </div>
     );
 };

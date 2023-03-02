@@ -108,19 +108,19 @@ const PageHome7 = () => {
                 <div className="container">
                     <div className="grid grid-cols-2 py-8 sm:grid-cols-5">
                         <a href="#">
-                            <img src="img/partners/partner_logo_1.png" alt="partner 1" />{' '}
+                            <img src="img/partners/partner_logo_1.png" alt="partner 1" />
                         </a>
                         <a href="#">
-                            <img src="img/partners/partner_logo_2.png" alt="partner 1" />{' '}
+                            <img src="img/partners/partner_logo_2.png" alt="partner 1" />
                         </a>
                         <a href="#">
-                            <img src="img/partners/partner_logo_3.png" alt="partner 1" />{' '}
+                            <img src="img/partners/partner_logo_3.png" alt="partner 1" />
                         </a>
                         <a href="#">
-                            <img src="img/partners/partner_logo_4.png" alt="partner 1" />{' '}
+                            <img src="img/partners/partner_logo_4.png" alt="partner 1" />
                         </a>
                         <a href="#">
-                            <img src="img/partners/partner_logo_5.png" alt="partner 1" />{' '}
+                            <img src="img/partners/partner_logo_5.png" alt="partner 1" />
                         </a>
                     </div>
                 </div>
@@ -155,7 +155,7 @@ const PageHome7 = () => {
                                 NFT Consultant Analytics
                             </h3>
                             <p className="dark:text-jacarta-300">
-                                Once you've set up your wallet of choice, connect it to OpenSeaby clicking the NFT
+                                Once you&apos;ve set up your wallet of choice, connect it to OpenSeaby clicking the NFT
                                 Marketplacein the top right corner.
                             </p>
                         </div>
@@ -176,7 +176,7 @@ const PageHome7 = () => {
                                 NFT Marketing
                             </h3>
                             <p className="dark:text-jacarta-300">
-                                Once you've set up your wallet of choice, connect it to OpenSeaby clicking the NFT
+                                Once you&apos;ve set up your wallet of choice, connect it to OpenSeaby clicking the NFT
                                 Marketplacein the top right corner.
                             </p>
                         </div>
@@ -195,7 +195,7 @@ const PageHome7 = () => {
                             </svg>
                             <h3 className="mb-4 font-display text-lg text-jacarta-700 dark:text-white">NFT Strategy</h3>
                             <p className="dark:text-jacarta-300">
-                                Once you've set up your wallet of choice, connect it to OpenSeaby clicking the NFT
+                                Once you&apos;ve set up your wallet of choice, connect it to OpenSeaby clicking the NFT
                                 Marketplacein the top right corner.
                             </p>
                         </div>
@@ -216,7 +216,7 @@ const PageHome7 = () => {
                                 NFT Technology
                             </h3>
                             <p className="dark:text-jacarta-300">
-                                Once you've set up your wallet of choice, connect it to OpenSeaby clicking the NFT
+                                Once you&apos;ve set up your wallet of choice, connect it to OpenSeaby clicking the NFT
                                 Marketplacein the top right corner.
                             </p>
                         </div>
@@ -237,7 +237,7 @@ const PageHome7 = () => {
                                 Advisers & Intermediaries
                             </h3>
                             <p className="dark:text-jacarta-300">
-                                Once you've set up your wallet of choice, connect it to OpenSeaby clicking the NFT
+                                Once you&apos;ve set up your wallet of choice, connect it to OpenSeaby clicking the NFT
                                 Marketplacein the top right corner.
                             </p>
                         </div>
@@ -256,7 +256,7 @@ const PageHome7 = () => {
                             </svg>
                             <h3 className="mb-4 font-display text-lg text-jacarta-700 dark:text-white">ICO Token</h3>
                             <p className="dark:text-jacarta-300">
-                                Once you've set up your wallet of choice, connect it to OpenSeaby clicking the NFT
+                                Once you&apos;ve set up your wallet of choice, connect it to OpenSeaby clicking the NFT
                                 Marketplacein the top right corner.
                             </p>
                         </div>
@@ -457,8 +457,8 @@ const PageHome7 = () => {
                                             </svg>
                                         </div>
                                         <p className="text-md leading-normal text-jacarta-700 dark:text-white">
-                                            Xhibiter is one of the most exciting, if you're interested in shaping a new
-                                            business model for creators, this is the team to join.
+                                            Xhibiter is one of the most exciting, if you&apos;re interested in shaping a
+                                            new business model for creators, this is the team to join.
                                         </p>
                                         <span className="mt-6 block font-display text-sm font-medium text-jacarta-700 dark:text-white">
                                             Katie Smith
@@ -542,8 +542,8 @@ const PageHome7 = () => {
                                             </svg>
                                         </div>
                                         <p className="text-md leading-normal text-jacarta-700 dark:text-white">
-                                            Xhibiter is one of the most exciting, if you're interested in shaping a new
-                                            business model for creators, this is the team to join.
+                                            Xhibiter is one of the most exciting, if you&apos;re interested in shaping a
+                                            new business model for creators, this is the team to join.
                                         </p>
                                         <span className="mt-6 block font-display text-sm font-medium text-jacarta-700 dark:text-white">
                                             Alex Fox
@@ -627,8 +627,8 @@ const PageHome7 = () => {
                                             </svg>
                                         </div>
                                         <p className="text-md leading-normal text-jacarta-700 dark:text-white">
-                                            Xhibiter is one of the most exciting, if you're interested in shaping a new
-                                            business model for creators, this is the team to join.
+                                            Xhibiter is one of the most exciting, if you&apos;re interested in shaping a
+                                            new business model for creators, this is the team to join.
                                         </p>
                                         <span className="mt-6 block font-display text-sm font-medium text-jacarta-700 dark:text-white">
                                             Marshal Ericson
@@ -779,7 +779,7 @@ const PageHome7 = () => {
                                 </div>
                             </div>
                             <p className="text-lg text-jacarta-700 dark:text-jacarta-100">
-                                Any Question?{' '}
+                                Any Question?
                                 <a href="#" className="text-accent">
                                     support@xhibiter.com
                                 </a>

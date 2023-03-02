@@ -28,7 +28,7 @@ const PageTos = () => {
                             you use the Service on behalf of a company or other entity then “you” includes you and that
                             entity, and you represent and warrant that (a) you are an authorized representative of the
                             entity with the authority to bind the entity to these Terms, and (b) you agree to these
-                            Terms on the entity's behalf.
+                            Terms on the entity&apos;s behalf.
                         </p>
                         <p>
                             PLEASE READ THESE TERMS OF SERVICE CAREFULLY AS THEY CONTAIN IMPORTANT INFORMATION AND
@@ -102,9 +102,9 @@ const PageTos = () => {
 
                         <p>
                             By using the Service in conjunction with creating, submitting, posting, promoting, or
-                            displaying content, or by complying with OpenSea's metadata standards in your metadata API
-                            responses, you grant us a worldwide, non-exclusive, sublicensable, royalty-free license to
-                            use, copy, modify, and display any content, including but not limited to text, materials,
+                            displaying content, or by complying with OpenSea&apos;s metadata standards in your metadata
+                            API responses, you grant us a worldwide, non-exclusive, sublicensable, royalty-free license
+                            to use, copy, modify, and display any content, including but not limited to text, materials,
                             images, files, communications, comments, feedback, suggestions, ideas, concepts, questions,
                             data, or otherwise, that you submit or post on or through the Service for our current and
                             future business purposes, including to provide, promote, and improve the Service. This

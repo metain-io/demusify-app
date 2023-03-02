@@ -20,7 +20,8 @@ const PageHome = () => {
                                 Buy, sell and collect NFTs.
                             </h1>
                             <p className="mb-8 text-center text-lg dark:text-jacarta-200 md:text-left">
-                                The world's largest digital marketplace for crypto collectibles and non-fungible tokens
+                                The world&apos;s largest digital marketplace for crypto collectibles and non-fungible
+                                tokens
                             </p>
                             <div className="flex space-x-4">
                                 <a
@@ -2527,7 +2528,7 @@ const PageHome = () => {
                                 1. Set up your wallet
                             </h3>
                             <p className="dark:text-jacarta-300">
-                                Once you've set up your wallet of choice, connect it to OpenSeaby clicking the NFT
+                                Once you&apos;ve set up your wallet of choice, connect it to OpenSeaby clicking the NFT
                                 Marketplacein the top right corner.
                             </p>
                         </div>

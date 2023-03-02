@@ -721,7 +721,7 @@ const PageHome8 = () => {
                             <p className="mb-12 text-jacarta-200">
                                 Every digital creation available through MakersPlace is an authentic and truly unique
                                 digital creation, signed and issued by the creator — made possible by blockchain
-                                technology. Even if the digital creation is copied, it won't be the authentic and
+                                technology. Even if the digital creation is copied, it won&apos;t be the authentic and
                                 originally signed version.
                             </p>
                             <a
@@ -750,7 +750,7 @@ const PageHome8 = () => {
                             <p className="mb-12 text-jacarta-200">
                                 Every digital creation available through MakersPlace is an authentic and truly unique
                                 digital creation, signed and issued by the creator — made possible by blockchain
-                                technology. Even if the digital creation is copied, it won't be the authentic and
+                                technology. Even if the digital creation is copied, it won&apos;t be the authentic and
                                 originally signed version.
                             </p>
                             <a
@@ -1072,19 +1072,19 @@ const PageHome8 = () => {
                 <div className="container">
                     <div className="grid grid-cols-2 py-8 sm:grid-cols-5">
                         <a href="#">
-                            <img src="img/partners/partner_logo_1.png" alt="partner 1" />{' '}
+                            <img src="img/partners/partner_logo_1.png" alt="partner 1" />
                         </a>
                         <a href="#">
-                            <img src="img/partners/partner_logo_2.png" alt="partner 1" />{' '}
+                            <img src="img/partners/partner_logo_2.png" alt="partner 1" />
                         </a>
                         <a href="#">
-                            <img src="img/partners/partner_logo_3.png" alt="partner 1" />{' '}
+                            <img src="img/partners/partner_logo_3.png" alt="partner 1" />
                         </a>
                         <a href="#">
-                            <img src="img/partners/partner_logo_4.png" alt="partner 1" />{' '}
+                            <img src="img/partners/partner_logo_4.png" alt="partner 1" />
                         </a>
                         <a href="#">
-                            <img src="img/partners/partner_logo_5.png" alt="partner 1" />{' '}
+                            <img src="img/partners/partner_logo_5.png" alt="partner 1" />
                         </a>
                     </div>
                 </div>

@@ -74,8 +74,9 @@ const PageCreate = () => {
                                 External link
                             </label>
                             <p className="mb-3 text-2xs dark:text-jacarta-300">
-                                We will include a link to this URL on this item's detail page, so that users can click
-                                to learn more about it. You are welcome to link to your own webpage with more details.
+                                We will include a link to this URL on this item&apos;s detail page, so that users can
+                                click to learn more about it. You are welcome to link to your own webpage with more
+                                details.
                             </p>
                             <input
                                 type="url"
@@ -94,7 +95,7 @@ const PageCreate = () => {
                                 Description
                             </label>
                             <p className="mb-3 text-2xs dark:text-jacarta-300">
-                                The description will be included on the item's detail page underneath its image.
+                                The description will be included on the item&apos;s detail page underneath its image.
                                 Markdown syntax is supported.
                             </p>
                             <textarea
@@ -652,8 +653,8 @@ const PageCreate = () => {
                             </div>
 
                             <p className="mb-3 text-2xs dark:text-jacarta-300">
-                                Freezing your metadata will allow you to permanently lock and store all of this item's
-                                content in decentralized file storage.
+                                Freezing your metadata will allow you to permanently lock and store all of this
+                                item&apos;s content in decentralized file storage.
                             </p>
 
                             <input

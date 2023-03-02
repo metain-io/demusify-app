@@ -1,5 +1,4 @@
 import { MainLayout } from '@modules/app/layouts';
-import Script from 'next/script';
 import { ReactElement } from 'react';
 
 const PageHome4 = () => {
@@ -2114,7 +2113,7 @@ const PageHome4 = () => {
                                 1. Set up your wallet
                             </h3>
                             <p className="dark:text-jacarta-300">
-                                Once you've set up your wallet of choice, connect it to OpenSeaby clicking the NFT
+                                Once you&apos;ve set up your wallet of choice, connect it to OpenSeaby clicking the NFT
                                 Marketplacein the top right corner.
                             </p>
                         </div>
@@ -2567,19 +2566,19 @@ const PageHome4 = () => {
                 <div className="container">
                     <div className="grid grid-cols-2 py-8 sm:grid-cols-5">
                         <a href="#">
-                            <img src="img/partners/partner_logo_1.png" alt="partner 1" />{' '}
+                            <img src="img/partners/partner_logo_1.png" alt="partner 1" />
                         </a>
                         <a href="#">
-                            <img src="img/partners/partner_logo_2.png" alt="partner 1" />{' '}
+                            <img src="img/partners/partner_logo_2.png" alt="partner 1" />
                         </a>
                         <a href="#">
-                            <img src="img/partners/partner_logo_3.png" alt="partner 1" />{' '}
+                            <img src="img/partners/partner_logo_3.png" alt="partner 1" />
                         </a>
                         <a href="#">
-                            <img src="img/partners/partner_logo_4.png" alt="partner 1" />{' '}
+                            <img src="img/partners/partner_logo_4.png" alt="partner 1" />
                         </a>
                         <a href="#">
-                            <img src="img/partners/partner_logo_5.png" alt="partner 1" />{' '}
+                            <img src="img/partners/partner_logo_5.png" alt="partner 1" />
                         </a>
                     </div>
                 </div>

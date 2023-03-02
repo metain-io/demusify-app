@@ -1,5 +1,4 @@
 import { MainLayout } from '@modules/app/layouts';
-import Script from 'next/script';
 import { ReactElement } from 'react';
 
 const PageHome5 = () => {
@@ -41,7 +40,8 @@ const PageHome5 = () => {
                                 Buy and Sell Digital Art and NFT’s
                             </h1>
                             <p className="mb-8 text-center text-lg dark:text-jacarta-200 md:text-left">
-                                The world's largest digital marketplace for crypto collectibles and non-fungible tokens
+                                The world&apos;s largest digital marketplace for crypto collectibles and non-fungible
+                                tokens
                             </p>
                             <div className="flex space-x-4">
                                 <a
@@ -225,7 +225,7 @@ const PageHome5 = () => {
                                 Connect your Wallet
                             </h3>
                             <p className="dark:text-jacarta-300">
-                                Once you've set up your wallet of choice, connect it to OpenSeaby clicking the NFT
+                                Once you&apos;ve set up your wallet of choice, connect it to OpenSeaby clicking the NFT
                                 Marketplacein the top right corner.
                             </p>
                         </div>
@@ -648,7 +648,7 @@ const PageHome5 = () => {
             </section>
             {/*<!-- end featured collections -->*/}
 
-            {/*<!-- Today's Drops / Sellers / Buyers -->*/}
+            {/*<!-- Today&apos;s Drops / Sellers / Buyers -->*/}
             <section className="relative py-24">
                 <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
                     <img src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
@@ -657,7 +657,7 @@ const PageHome5 = () => {
                     <div className="flex flex-col space-y-5 lg:flex-row lg:space-y-0 lg:space-x-7">
                         <div className="rounded-2.5xl bg-light-base p-12 dark:bg-jacarta-800 lg:w-1/3">
                             <h2 className="mb-8 text-center font-display text-3xl font-semibold text-jacarta-700 dark:text-white">
-                                Today's Drops
+                                Today&apos;s Drops
                             </h2>
                             <div className="flex flex-col space-y-5">
                                 <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
@@ -1050,7 +1050,7 @@ const PageHome5 = () => {
                     </div>
                 </div>
             </section>
-            {/*<!-- end today's drops / sellers / buyers -->*/}
+            {/*<!-- end today&apos;s drops / sellers / buyers -->*/}
 
             {/*<!-- Trending Categories -->*/}
             <section className="py-24">

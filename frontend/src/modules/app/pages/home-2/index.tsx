@@ -20,7 +20,7 @@ const PageHome2 = () => {
                             Collect Digital Art.
                         </h1>
                         <p className="mb-8 text-lg dark:text-jacarta-200">
-                            Buy and sell NFTs from the world's top artists
+                            Buy and sell NFTs from the world&apos;s top artists
                         </p>
                         <div className="inline-flex space-x-4">
                             <a
@@ -2094,7 +2094,7 @@ const PageHome2 = () => {
                                 1. Set up your wallet
                             </h3>
                             <p className="dark:text-jacarta-300">
-                                Once you've set up your wallet of choice, connect it to OpenSeaby clicking the NFT
+                                Once you&apos;ve set up your wallet of choice, connect it to OpenSeaby clicking the NFT
                                 Marketplacein the top right corner.
                             </p>
                         </div>

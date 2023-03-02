@@ -9,7 +9,7 @@ export default function Document() {
 
                 <link rel="stylesheet" href="./css/style.css" />
 
-                <script src="./js/darkMode.bundle.js"></script>
+                <script src="./js/darkMode.bundle.js" defer></script>
 
                 <link rel="shortcut icon" href="img/favicon.ico" />
                 <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />

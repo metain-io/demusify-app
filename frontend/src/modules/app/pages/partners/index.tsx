@@ -120,7 +120,7 @@ const PagePartners = () => {
                                 Generate Revenue
                             </h3>
                             <p className="dark:text-jacarta-300">
-                                With millions in transactions since 2017, we'll help you generate revenue on our
+                                With millions in transactions since 2017, we&apos;ll help you generate revenue on our
                                 platform ⁠— from direct sales to secondary sales
                             </p>
                         </div>
@@ -817,8 +817,8 @@ const PagePartners = () => {
                         <div className="mb-4 md:mb-0">
                             <p className="text-lg leading-normal text-jacarta-700 dark:text-white">
                                 Xhibiter is one of the most exciting, important companies in the world right now because
-                                it's the portal to the new digital economy. If you're interested in shaping a new
-                                business model for creators, this is the team to join.
+                                it&apos;s the portal to the new digital economy. If you&apos;re interested in shaping a
+                                new business model for creators, this is the team to join.
                             </p>
                             <span className="mt-12 block font-display text-md font-medium text-jacarta-700 dark:text-white">
                                 Katie Smith
@@ -861,19 +861,19 @@ const PagePartners = () => {
                 <div className="container">
                     <div className="grid grid-cols-2 py-8 sm:grid-cols-5">
                         <a href="#">
-                            <img src="img/partners/partner_logo_1.png" alt="partner 1" />{' '}
+                            <img src="img/partners/partner_logo_1.png" alt="partner 1" />
                         </a>
                         <a href="#">
-                            <img src="img/partners/partner_logo_2.png" alt="partner 1" />{' '}
+                            <img src="img/partners/partner_logo_2.png" alt="partner 1" />
                         </a>
                         <a href="#">
-                            <img src="img/partners/partner_logo_3.png" alt="partner 1" />{' '}
+                            <img src="img/partners/partner_logo_3.png" alt="partner 1" />
                         </a>
                         <a href="#">
-                            <img src="img/partners/partner_logo_4.png" alt="partner 1" />{' '}
+                            <img src="img/partners/partner_logo_4.png" alt="partner 1" />
                         </a>
                         <a href="#">
-                            <img src="img/partners/partner_logo_5.png" alt="partner 1" />{' '}
+                            <img src="img/partners/partner_logo_5.png" alt="partner 1" />
                         </a>
                     </div>
                 </div>

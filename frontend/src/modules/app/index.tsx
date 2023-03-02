@@ -16,10 +16,6 @@ type AppPropsWithLayout = AppProps & {
 function App({ Component, pageProps }: AppPropsWithLayout) {
     const getLayout = Component.getLayout ?? ((page) => page);
 
-    React.useEffect(() => {
-        (window as any).bootstrap = require('bootstrap');
-    }, []);
-
     return <ReduxProvider store={appStore}>{getLayout(<Component {...pageProps} />)}</ReduxProvider>;
 }
 

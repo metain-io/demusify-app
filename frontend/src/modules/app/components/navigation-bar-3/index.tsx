@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 const NavigationBar3 = () => {
     return (
         <div className="flex items-center px-6 py-6 xl:px-24">

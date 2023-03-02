@@ -1,6 +1,5 @@
 import { AuthLayout } from '@modules/app/layouts';
 import { ReactElement } from 'react';
-import Image from 'next/image';
 
 const PageLogin = () => {
     return (

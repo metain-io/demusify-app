@@ -1,14 +1,13 @@
 import ReactTooltip from 'react-tooltip';
 import styles from './styles.module.scss';
 import { useWalletAddress } from './use-wallet-address';
-import Image from 'next/image';
 
 const WalletAddress = () => {
     const { walletAddress, copyState, handleCopyToClipboard } = useWalletAddress();
 
     return walletAddress ? (
         <div id={styles.wallet_wrapper} data-tip={true} data-for="tooltip-username" onClick={handleCopyToClipboard}>
-            <Image className={styles.image_1} src={'/svg/icon-token-sol.svg'} alt="" />
+            <img className={styles.image_1} src={'/svg/icon-token-sol.svg'} alt="" />
             <span className={styles.span_1}>{walletAddress}</span>
 
             <ReactTooltip id="tooltip-username" uuid="tooltip-username" type="info" effect="solid">

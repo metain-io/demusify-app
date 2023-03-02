@@ -1,6 +1,5 @@
 import { MainLayout } from '@modules/app/layouts';
 import { ReactElement } from 'react';
-import Image from 'next/image';
 import Script from 'next/script';
 
 const PageHome7 = () => {

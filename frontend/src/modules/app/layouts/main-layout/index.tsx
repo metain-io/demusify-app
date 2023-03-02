@@ -1,4 +1,3 @@
-// import { NavigationBar } from '@app/components';
 import { Footer, NavigationBar } from '@modules/app/components';
 import { PropsWithChildren } from 'react';
 
@@ -13,7 +12,7 @@ const MainLayout = (props: MainLayoutProps) => {
                 <NavigationBar />
             </header>
 
-            <main className="pt-[5.5rem] lg:pt-24">{children}</main>
+            {children}
 
             <footer className="page-footer bg-white dark:bg-jacarta-900">
                 <Footer />

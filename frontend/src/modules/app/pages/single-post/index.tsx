@@ -14,7 +14,7 @@ const SinglePostPage = () => {
                         <header className="mx-auto mb-16 max-w-lg text-center">
                             <div className="mb-3 inline-flex flex-wrap items-center space-x-1 text-xs">
                                 <span className="inline-flex flex-wrap items-center space-x-1 text-accent">
-                                    <a href="single-post">NFT's</a>
+                                    <a href="single-post">NFT&apos;s</a>
                                     <a href="single-post">DIGITAL ART</a>
                                 </span>
                             </div>
@@ -66,14 +66,14 @@ const SinglePostPage = () => {
                                     people in a café grew into a passionate team of over 100, and counting!
                                 </p>
                                 <p>
-                                    And that team has been busy. In 2021, we've shipped more features than ever before,
-                                    scaled to a multi-chain platform with Flow and Tezos integrations, and watched our
-                                    community soar on every social media channel.
+                                    And that team has been busy. In 2021, we&apos;ve shipped more features than ever
+                                    before, scaled to a multi-chain platform with Flow and Tezos integrations, and
+                                    watched our community soar on every social media channel.
                                 </p>
                                 <p>
-                                    And of course, we couldn't have done it without you! You are creating Rarible day by
-                                    day - by using the platform, requesting features, sharing your feedback, being as
-                                    active and passionate as you are.
+                                    And of course, we couldn&apos;t have done it without you! You are creating Rarible
+                                    day by day - by using the platform, requesting features, sharing your feedback,
+                                    being as active and passionate as you are.
                                 </p>
                                 <h2 className="text-xl">A Picture is Worth a Thousand Words</h2>
                                 <p>
@@ -276,13 +276,13 @@ const SinglePostPage = () => {
                                                 </a>
                                                 <span className="dark:text-jacarta-400">in</span>
                                                 <span className="inline-flex flex-wrap items-center space-x-1 text-accent">
-                                                    <a href="#">NFT's</a>
+                                                    <a href="#">NFT&apos;s</a>
                                                     <a href="#">DIGITAL ART</a>
                                                 </span>
                                             </div>
                                             <h2 className="mb-4 font-display text-xl text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent">
                                                 <a href="single-post">
-                                                    Inflation is up, it matters: High prices plague Biden's
+                                                    Inflation is up, it matters: High prices plague Biden&apos;s
                                                 </a>
                                             </h2>
                                             <p className="mb-8 dark:text-jacarta-200">
@@ -322,7 +322,7 @@ const SinglePostPage = () => {
                                                 </a>
                                                 <span className="dark:text-jacarta-400">in</span>
                                                 <span className="inline-flex flex-wrap items-center space-x-1 text-accent">
-                                                    <a href="#">NFT's</a>
+                                                    <a href="#">NFT&apos;s</a>
                                                     <a href="#">DIGITAL ART</a>
                                                 </span>
                                             </div>
@@ -466,7 +466,7 @@ const SinglePostPage = () => {
                                 />
                             </svg>
                             <p className="text-center dark:text-white">
-                                You don't have MetaMask in your browser, please download it from
+                                You don&apos;t have MetaMask in your browser, please download it from
                                 <a
                                     href="https://metamask.io/"
                                     className="text-accent"
@@ -633,7 +633,7 @@ const SinglePostPage = () => {
                                     className="h-5 w-5 self-start rounded border-jacarta-200 text-accent checked:bg-accent focus:ring-accent/20 focus:ring-offset-0 dark:border-jacarta-500 dark:bg-jacarta-600"
                                 />
                                 <label htmlFor="buyNowTerms" className="text-sm dark:text-jacarta-200">
-                                    By checking this box, I agree to Xhibiter's{' '}
+                                    By checking this box, I agree to Xhibiter&apos;s{' '}
                                     <a href="#" className="text-accent">
                                         Terms of Service
                                     </a>

@@ -126,7 +126,7 @@ const AboutPage = () => {
                         {/* Info */}
                         <div className="py-20 lg:w-[45%] lg:pl-16">
                             <h2 className="mb-6 font-display text-2xl text-jacarta-700 dark:text-white">
-                                Get Experience. We're A Results Driven Team.
+                                Get Experience. We&apos;re A Results Driven Team.
                             </h2>
                             <p className="mb-8 text-lg leading-normal dark:text-jacarta-300">
                                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
@@ -135,7 +135,7 @@ const AboutPage = () => {
                             <p className="mb-10 dark:text-jacarta-300">
                                 Every digital creation available through MakersPlace is an authentic and truly unique
                                 digital creation, signed and issued by the creator — made possible by blockchain
-                                technology. Even if the digital creation is copied, it won't be the authentic and
+                                technology. Even if the digital creation is copied, it won&apos;t be the authentic and
                                 originally signed version.
                             </p>
                             <div className="flex space-x-4 sm:space-x-10">
@@ -622,7 +622,7 @@ const AboutPage = () => {
                                         </a>
                                         <span className="dark:text-jacarta-400">in</span>
                                         <span className="inline-flex flex-wrap items-center space-x-1 text-accent">
-                                            <a href="#">NFT's</a>
+                                            <a href="#">NFT&apos;s</a>
                                             <a href="#">DIGITAL ART</a>
                                         </span>
                                     </div>
@@ -666,7 +666,7 @@ const AboutPage = () => {
                                         </a>
                                         <span className="dark:text-jacarta-400">in</span>
                                         <span className="inline-flex flex-wrap items-center space-x-1 text-accent">
-                                            <a href="#">NFT's</a>
+                                            <a href="#">NFT&apos;s</a>
                                             <a href="#">DIGITAL ART</a>
                                         </span>
                                     </div>
@@ -710,7 +710,7 @@ const AboutPage = () => {
                                         </a>
                                         <span className="dark:text-jacarta-400">in</span>
                                         <span className="inline-flex flex-wrap items-center space-x-1 text-accent">
-                                            <a href="#">NFT's</a>
+                                            <a href="#">NFT&apos;s</a>
                                             <a href="#">DIGITAL ART</a>
                                         </span>
                                     </div>

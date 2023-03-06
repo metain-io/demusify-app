@@ -35,7 +35,7 @@ const BlogPage = () => {
                                         </a>
                                         <span className="dark:text-jacarta-400">in</span>
                                         <span className="inline-flex flex-wrap items-center space-x-1 text-accent">
-                                            <a href="#">NFT's</a>
+                                            <a href="#">NFT&apos;s</a>
                                             <a href="#">DIGITAL ART</a>
                                         </span>
                                     </div>
@@ -81,7 +81,7 @@ const BlogPage = () => {
                                             </a>
                                             <span className="dark:text-jacarta-400">in</span>
                                             <span className="inline-flex flex-wrap items-center space-x-1 text-accent">
-                                                <a href="#">NFT's</a>
+                                                <a href="#">NFT&apos;s</a>
                                                 <a href="#">DIGITAL ART</a>
                                             </span>
                                         </div>
@@ -125,7 +125,7 @@ const BlogPage = () => {
                                             </a>
                                             <span className="dark:text-jacarta-400">in</span>
                                             <span className="inline-flex flex-wrap items-center space-x-1 text-accent">
-                                                <a href="#">NFT's</a>
+                                                <a href="#">NFT&apos;s</a>
                                                 <a href="#">DIGITAL ART</a>
                                             </span>
                                         </div>
@@ -169,7 +169,7 @@ const BlogPage = () => {
                                             </a>
                                             <span className="dark:text-jacarta-400">in</span>
                                             <span className="inline-flex flex-wrap items-center space-x-1 text-accent">
-                                                <a href="#">NFT's</a>
+                                                <a href="#">NFT&apos;s</a>
                                                 <a href="#">DIGITAL ART</a>
                                             </span>
                                         </div>
@@ -213,12 +213,14 @@ const BlogPage = () => {
                                             </a>
                                             <span className="dark:text-jacarta-400">in</span>
                                             <span className="inline-flex flex-wrap items-center space-x-1 text-accent">
-                                                <a href="#">NFT's</a>
+                                                <a href="#">NFT&apos;s</a>
                                                 <a href="#">DIGITAL ART</a>
                                             </span>
                                         </div>
                                         <h2 className="mb-4 font-display text-xl text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent">
-                                            <a href="single-post">Incredible Amount of Developer Energy' in Web3</a>
+                                            <a href="single-post">
+                                                Incredible Amount of Developer Energy&apos; in Web3
+                                            </a>
                                         </h2>
                                         <p className="mb-8 dark:text-jacarta-200">
                                             Since we launched Tezos at the end of 2021, many awesome creators...
@@ -257,13 +259,13 @@ const BlogPage = () => {
                                             </a>
                                             <span className="dark:text-jacarta-400">in</span>
                                             <span className="inline-flex flex-wrap items-center space-x-1 text-accent">
-                                                <a href="#">NFT's</a>
+                                                <a href="#">NFT&apos;s</a>
                                                 <a href="#">DIGITAL ART</a>
                                             </span>
                                         </div>
                                         <h2 className="mb-4 font-display text-xl text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent">
                                             <a href="single-post">
-                                                Inflation is up, it matters: High prices plague Biden's
+                                                Inflation is up, it matters: High prices plague Biden&apos;s
                                             </a>
                                         </h2>
                                         <p className="mb-8 dark:text-jacarta-200">
@@ -303,7 +305,7 @@ const BlogPage = () => {
                                             </a>
                                             <span className="dark:text-jacarta-400">in</span>
                                             <span className="inline-flex flex-wrap items-center space-x-1 text-accent">
-                                                <a href="#">NFT's</a>
+                                                <a href="#">NFT&apos;s</a>
                                                 <a href="#">DIGITAL ART</a>
                                             </span>
                                         </div>
@@ -454,7 +456,7 @@ const BlogPage = () => {
                                 />
                             </svg>
                             <p className="text-center dark:text-white">
-                                You don't have MetaMask in your browser, please download it from
+                                You don&apos;t have MetaMask in your browser, please download it from
                                 <a
                                     href="https://metamask.io/"
                                     className="text-accent"
@@ -621,7 +623,7 @@ const BlogPage = () => {
                                     className="h-5 w-5 self-start rounded border-jacarta-200 text-accent checked:bg-accent focus:ring-accent/20 focus:ring-offset-0 dark:border-jacarta-500 dark:bg-jacarta-600"
                                 />
                                 <label htmlFor="buyNowTerms" className="text-sm dark:text-jacarta-200">
-                                    By checking this box, I agree to Xhibiter's{' '}
+                                    By checking this box, I agree to Xhibiter&apos;s{' '}
                                     <a href="#" className="text-accent">
                                         Terms of Service
                                     </a>

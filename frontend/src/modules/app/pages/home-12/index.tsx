@@ -1133,8 +1133,8 @@ const Home12Page = () => {
                                                 </svg>
                                             </div>
                                             <p className="text-md leading-normal text-jacarta-700 dark:text-white">
-                                                Xhibiter is one of the most exciting, if you're interested in shaping a
-                                                new business model for creators, this is the team to join.
+                                                Xhibiter is one of the most exciting, if you&apos;re interested in
+                                                shaping a new business model for creators, this is the team to join.
                                             </p>
                                             <span className="mt-6 block font-display text-sm font-medium text-jacarta-700 dark:text-white">
                                                 Katie Smith
@@ -1217,8 +1217,8 @@ const Home12Page = () => {
                                                 </svg>
                                             </div>
                                             <p className="text-md leading-normal text-jacarta-700 dark:text-white">
-                                                Xhibiter is one of the most exciting, if you're interested in shaping a
-                                                new business model for creators, this is the team to join.
+                                                Xhibiter is one of the most exciting, if you&apos;re interested in
+                                                shaping a new business model for creators, this is the team to join.
                                             </p>
                                             <span className="mt-6 block font-display text-sm font-medium text-jacarta-700 dark:text-white">
                                                 Alex Fox
@@ -1301,8 +1301,8 @@ const Home12Page = () => {
                                                 </svg>
                                             </div>
                                             <p className="text-md leading-normal text-jacarta-700 dark:text-white">
-                                                Xhibiter is one of the most exciting, if you're interested in shaping a
-                                                new business model for creators, this is the team to join.
+                                                Xhibiter is one of the most exciting, if you&apos;re interested in
+                                                shaping a new business model for creators, this is the team to join.
                                             </p>
                                             <span className="mt-6 block font-display text-sm font-medium text-jacarta-700 dark:text-white">
                                                 Marshal Ericson
@@ -1472,7 +1472,7 @@ const Home12Page = () => {
                                 />
                             </svg>
                             <p className="text-center dark:text-white">
-                                You don't have MetaMask in your browser, please download it from
+                                You don&apos;t have MetaMask in your browser, please download it from
                                 <a
                                     href="https://metamask.io/"
                                     className="text-accent"

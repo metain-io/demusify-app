@@ -241,7 +241,7 @@ const CaseStudiesPage = () => {
                                 />
                             </svg>
                             <p className="text-center dark:text-white">
-                                You don't have MetaMask in your browser, please download it from
+                                You don&apos;t have MetaMask in your browser, please download it from
                                 <a
                                     href="https://metamask.io/"
                                     className="text-accent"
@@ -408,7 +408,7 @@ const CaseStudiesPage = () => {
                                     className="h-5 w-5 self-start rounded border-jacarta-200 text-accent checked:bg-accent focus:ring-accent/20 focus:ring-offset-0 dark:border-jacarta-500 dark:bg-jacarta-600"
                                 />
                                 <label htmlFor="buyNowTerms" className="text-sm dark:text-jacarta-200">
-                                    By checking this box, I agree to Xhibiter's{' '}
+                                    By checking this box, I agree to Xhibiter&apos;s{' '}
                                     <a href="#" className="text-accent">
                                         Terms of Service
                                     </a>

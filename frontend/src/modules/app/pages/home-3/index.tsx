@@ -930,13 +930,13 @@ const Home3Page = () => {
                     </div>
                 </section>
                 {/* end hot bids */}
-                {/* Today's Drops / Sellers / Buyers */}
+                {/* Today&apos;s Drops / Sellers / Buyers */}
                 <section className="py-24">
                     <div className="container">
                         <div className="flex flex-col space-y-5 lg:flex-row lg:space-y-0 lg:space-x-7">
                             <div className="rounded-2.5xl bg-light-base p-12 dark:bg-jacarta-800 lg:w-1/3">
                                 <h2 className="mb-8 text-center font-display text-3xl font-semibold text-jacarta-700 dark:text-white">
-                                    Today's Drops
+                                    Today&apos;s Drops
                                 </h2>
                                 <div className="flex flex-col space-y-5">
                                     <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
@@ -1327,7 +1327,7 @@ const Home3Page = () => {
                         </div>
                     </div>
                 </section>
-                {/* end today's drops / sellers / buyers */}
+                {/* end today&apos;s drops / sellers / buyers */}
                 {/* Featured collections */}
                 <section className="relative py-24 dark:bg-jacarta-800">
                     <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
@@ -1696,8 +1696,8 @@ const Home3Page = () => {
                                     1. Set up your wallet
                                 </h3>
                                 <p className="dark:text-jacarta-300">
-                                    Once you've set up your wallet of choice, connect it to OpenSeaby clicking the NFT
-                                    Marketplacein the top right corner.
+                                    Once you&apos;ve set up your wallet of choice, connect it to OpenSeaby clicking the
+                                    NFT Marketplacein the top right corner.
                                 </p>
                             </div>
                             <div className="text-center">
@@ -1928,7 +1928,7 @@ const Home3Page = () => {
                                 />
                             </svg>
                             <p className="text-center dark:text-white">
-                                You don't have MetaMask in your browser, please download it from
+                                You don&apos;t have MetaMask in your browser, please download it from
                                 <a
                                     href="https://metamask.io/"
                                     className="text-accent"
@@ -2034,7 +2034,7 @@ const Home3Page = () => {
                                     className="h-5 w-5 self-start rounded border-jacarta-200 text-accent checked:bg-accent focus:ring-accent/20 focus:ring-offset-0 dark:border-jacarta-500 dark:bg-jacarta-600"
                                 />
                                 <label htmlFor="terms" className="text-sm dark:text-jacarta-200">
-                                    By checking this box, I agree to Xhibiter's{' '}
+                                    By checking this box, I agree to Xhibiter&apos;s{' '}
                                     <a href="#" className="text-accent">
                                         Terms of Service
                                     </a>

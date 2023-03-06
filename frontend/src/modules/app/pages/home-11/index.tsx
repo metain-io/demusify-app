@@ -552,8 +552,8 @@ const Home11Page = () => {
                                     Create an account
                                 </h3>
                                 <p className="dark:text-jacarta-300">
-                                    Once you've set up your wallet of choice, connect it to OpenSeaby clicking the NFT
-                                    Marketplacein.
+                                    Once you&apos;ve set up your wallet of choice, connect it to OpenSeaby clicking the
+                                    NFT Marketplacein.
                                 </p>
                                 <div className="absolute -bottom-6 left-1/2 inline-flex h-12 w-12 -translate-x-1/2 items-center justify-center rounded-full bg-light-base dark:bg-jacarta-600">
                                     <svg
@@ -584,8 +584,8 @@ const Home11Page = () => {
                                     Link your bank account
                                 </h3>
                                 <p className="dark:text-jacarta-300">
-                                    Once you've set up your wallet of choice, connect it to OpenSeaby clicking the NFT
-                                    Marketplacein.
+                                    Once you&apos;ve set up your wallet of choice, connect it to OpenSeaby clicking the
+                                    NFT Marketplacein.
                                 </p>
                                 <div className="absolute -bottom-6 left-1/2 inline-flex h-12 w-12 -translate-x-1/2 items-center justify-center rounded-full bg-light-base dark:bg-jacarta-600">
                                     <svg
@@ -616,8 +616,8 @@ const Home11Page = () => {
                                     Start buying &amp; selling
                                 </h3>
                                 <p className="dark:text-jacarta-300">
-                                    Once you've set up your wallet of choice, connect it to OpenSeaby clicking the NFT
-                                    Marketplacein.
+                                    Once you&apos;ve set up your wallet of choice, connect it to OpenSeaby clicking the
+                                    NFT Marketplacein.
                                 </p>
                                 <div className="absolute -bottom-6 left-1/2 inline-flex h-12 w-12 -translate-x-1/2 items-center justify-center rounded-full bg-light-base dark:bg-jacarta-600">
                                     <svg
@@ -806,7 +806,7 @@ const Home11Page = () => {
                                 />
                             </svg>
                             <p className="text-center dark:text-white">
-                                You don't have MetaMask in your browser, please download it from
+                                You don&apos;t have MetaMask in your browser, please download it from
                                 <a
                                     href="https://metamask.io/"
                                     className="text-accent"
@@ -912,7 +912,7 @@ const Home11Page = () => {
                                     className="h-5 w-5 self-start rounded border-jacarta-200 text-accent checked:bg-accent focus:ring-accent/20 focus:ring-offset-0 dark:border-jacarta-500 dark:bg-jacarta-600"
                                 />
                                 <label htmlFor="terms" className="text-sm dark:text-jacarta-200">
-                                    By checking this box, I agree to Xhibiter's{' '}
+                                    By checking this box, I agree to Xhibiter&apos;s{' '}
                                     <a href="#" className="text-accent">
                                         Terms of Service
                                     </a>

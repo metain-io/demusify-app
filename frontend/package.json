@@ -12,7 +12,7 @@
         "start:alpha": "node ./tools/scripts/start.js --e alpha",
         "start:beta": "node ./tools/scripts/start.js --e beta",
         "start:prod": "node ./tools/scripts/start.js --e prod",
-        "lint": "next lint"
+        "lint": "next lint --quiet"
     },
     "dependencies": {
         "@project-serum/anchor": "^0.25.0",

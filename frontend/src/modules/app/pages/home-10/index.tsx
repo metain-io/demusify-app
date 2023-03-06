@@ -418,8 +418,8 @@ const Home10Page = () => {
                                                 </svg>
                                             </div>
                                             <p className="text-md leading-normal text-jacarta-700 dark:text-white">
-                                                Xhibiter is one of the most exciting, if you're interested in shaping a
-                                                new business model for creators, this is the team to join.
+                                                Xhibiter is one of the most exciting, if you&apos;re interested in
+                                                shaping a new business model for creators, this is the team to join.
                                             </p>
                                             <span className="mt-6 block font-display text-sm font-medium text-jacarta-700 dark:text-white">
                                                 Katie Smith
@@ -502,8 +502,8 @@ const Home10Page = () => {
                                                 </svg>
                                             </div>
                                             <p className="text-md leading-normal text-jacarta-700 dark:text-white">
-                                                Xhibiter is one of the most exciting, if you're interested in shaping a
-                                                new business model for creators, this is the team to join.
+                                                Xhibiter is one of the most exciting, if you&apos;re interested in
+                                                shaping a new business model for creators, this is the team to join.
                                             </p>
                                             <span className="mt-6 block font-display text-sm font-medium text-jacarta-700 dark:text-white">
                                                 Alex Fox
@@ -586,8 +586,8 @@ const Home10Page = () => {
                                                 </svg>
                                             </div>
                                             <p className="text-md leading-normal text-jacarta-700 dark:text-white">
-                                                Xhibiter is one of the most exciting, if you're interested in shaping a
-                                                new business model for creators, this is the team to join.
+                                                Xhibiter is one of the most exciting, if you&apos;re interested in
+                                                shaping a new business model for creators, this is the team to join.
                                             </p>
                                             <span className="mt-6 block font-display text-sm font-medium text-jacarta-700 dark:text-white">
                                                 Marshal Ericson
@@ -1045,7 +1045,7 @@ const Home10Page = () => {
                                 />
                             </svg>
                             <p className="text-center dark:text-white">
-                                You don't have MetaMask in your browser, please download it from
+                                You don&apos;t have MetaMask in your browser, please download it from
                                 <a
                                     href="https://metamask.io/"
                                     className="text-accent"
@@ -1212,7 +1212,7 @@ const Home10Page = () => {
                                     className="h-5 w-5 self-start rounded border-jacarta-200 text-accent checked:bg-accent focus:ring-accent/20 focus:ring-offset-0 dark:border-jacarta-500 dark:bg-jacarta-600"
                                 />
                                 <label htmlFor="buyNowTerms" className="text-sm dark:text-jacarta-200">
-                                    By checking this box, I agree to Xhibiter's{' '}
+                                    By checking this box, I agree to Xhibiter&apos;s{' '}
                                     <a href="#" className="text-accent">
                                         Terms of Service
                                     </a>
@@ -1312,7 +1312,7 @@ const Home10Page = () => {
                                     className="h-5 w-5 self-start rounded border-jacarta-200 text-accent checked:bg-accent focus:ring-accent/20 focus:ring-offset-0 dark:border-jacarta-500 dark:bg-jacarta-600"
                                 />
                                 <label htmlFor="terms" className="text-sm dark:text-jacarta-200">
-                                    By checking this box, I agree to Xhibiter's{' '}
+                                    By checking this box, I agree to Xhibiter&apos;s{' '}
                                     <a href="#" className="text-accent">
                                         Terms of Service
                                     </a>

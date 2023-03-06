@@ -20,8 +20,8 @@ const IndexRTLPage = () => {
                                     Buy, sell and collect NFTs.
                                 </h1>
                                 <p className="mb-8 text-center text-lg dark:text-jacarta-200 md:text-left">
-                                    The world's largest digital marketplace for crypto collectibles and non-fungible
-                                    tokens
+                                    The world&apos;s largest digital marketplace for crypto collectibles and
+                                    non-fungible tokens
                                 </p>
                                 <div className="flex space-x-4">
                                     <a
@@ -2532,8 +2532,8 @@ const IndexRTLPage = () => {
                                     1. Set up your wallet
                                 </h3>
                                 <p className="dark:text-jacarta-300">
-                                    Once you've set up your wallet of choice, connect it to OpenSeaby clicking the NFT
-                                    Marketplacein the top right corner.
+                                    Once you&apos;ve set up your wallet of choice, connect it to OpenSeaby clicking the
+                                    NFT Marketplacein the top right corner.
                                 </p>
                             </div>
                             <div className="text-center">
@@ -2742,7 +2742,7 @@ const IndexRTLPage = () => {
                                 />
                             </svg>
                             <p className="text-center dark:text-white">
-                                You don't have MetaMask in your browser, please download it from
+                                You don&apos;t have MetaMask in your browser, please download it from
                                 <a
                                     href="https://metamask.io/"
                                     className="text-accent"
@@ -2909,7 +2909,7 @@ const IndexRTLPage = () => {
                                     className="h-5 w-5 self-start rounded border-jacarta-200 text-accent checked:bg-accent focus:ring-accent/20 focus:ring-offset-0 dark:border-jacarta-500 dark:bg-jacarta-600"
                                 />
                                 <label htmlFor="buyNowTerms" className="text-sm dark:text-jacarta-200">
-                                    By checking this box, I agree to Xhibiter's{' '}
+                                    By checking this box, I agree to Xhibiter&apos;s{' '}
                                     <a href="#" className="text-accent">
                                         Terms of Service
                                     </a>
@@ -3009,7 +3009,7 @@ const IndexRTLPage = () => {
                                     className="h-5 w-5 self-start rounded border-jacarta-200 text-accent checked:bg-accent focus:ring-accent/20 focus:ring-offset-0 dark:border-jacarta-500 dark:bg-jacarta-600"
                                 />
                                 <label htmlFor="terms" className="text-sm dark:text-jacarta-200">
-                                    By checking this box, I agree to Xhibiter's{' '}
+                                    By checking this box, I agree to Xhibiter&apos;s{' '}
                                     <a href="#" className="text-accent">
                                         Terms of Service
                                     </a>

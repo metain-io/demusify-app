@@ -35,13 +35,13 @@ const PageHome7 = () => {
                                 </p>
                                 <div className="flex space-x-4">
                                     <a
-                                        href="collections.html"
+                                        href="collections"
                                         className="rounded-full bg-accent py-3 px-8 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark"
                                     >
                                         Contact Us
                                     </a>
                                     <a
-                                        href="collections.html"
+                                        href="collections"
                                         className="rounded-full bg-white py-3 px-8 text-center font-semibold text-accent shadow-white-volume transition-all hover:bg-accent-dark hover:text-white hover:shadow-accent-volume"
                                     >
                                         Learn More
@@ -873,7 +873,7 @@ const PageHome7 = () => {
                                         <div className="mb-4 flex flex-wrap gap-4 text-2xs dark:text-jacarta-300">
                                             <div className="flex flex-wrap items-center space-x-2">
                                                 <span className="text-accent">
-                                                    <a href="single-post.html" className="uppercase">
+                                                    <a href="single-post" className="uppercase">
                                                         Finance
                                                     </a>
                                                 </span>
@@ -884,7 +884,7 @@ const PageHome7 = () => {
                                         </div>
 
                                         <h2 className="mb-5 font-display text-xl text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent">
-                                            <a href="single-post.html">
+                                            <a href="single-post">
                                                 10 Marketing Trends That You Should Be Prepared for in 2022
                                             </a>
                                         </h2>
@@ -894,7 +894,7 @@ const PageHome7 = () => {
                                         </p>
                                         <div className="overflow-hidden">
                                             <a
-                                                href="single-post.html"
+                                                href="single-post"
                                                 className="h-rotate inline-block transition-transform will-change-transform hover:translate-x-1"
                                             >
                                                 <svg
@@ -916,7 +916,7 @@ const PageHome7 = () => {
                                         <div className="mb-4 flex flex-wrap gap-4 text-2xs dark:text-jacarta-300">
                                             <div className="flex flex-wrap items-center space-x-2">
                                                 <span className="text-accent">
-                                                    <a href="single-post.html" className="uppercase">
+                                                    <a href="single-post" className="uppercase">
                                                         Finance
                                                     </a>
                                                 </span>
@@ -927,7 +927,7 @@ const PageHome7 = () => {
                                         </div>
 
                                         <h2 className="mb-5 font-display text-xl text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent">
-                                            <a href="single-post.html">
+                                            <a href="single-post">
                                                 Expanding the Global NFT Ecosystem: A Preview of Chain Expansion
                                             </a>
                                         </h2>
@@ -936,7 +936,7 @@ const PageHome7 = () => {
                                             simple…
                                         </p>
                                         <a
-                                            href="single-post.html"
+                                            href="single-post"
                                             className="h-rotate inline-block transition-transform will-change-transform hover:translate-x-1"
                                         >
                                             <svg
@@ -957,7 +957,7 @@ const PageHome7 = () => {
                                         <div className="mb-4 flex flex-wrap gap-4 text-2xs dark:text-jacarta-300">
                                             <div className="flex flex-wrap items-center space-x-2">
                                                 <span className="text-accent">
-                                                    <a href="single-post.html" className="uppercase">
+                                                    <a href="single-post" className="uppercase">
                                                         Finance
                                                     </a>
                                                 </span>
@@ -968,16 +968,14 @@ const PageHome7 = () => {
                                         </div>
 
                                         <h2 className="mb-5 font-display text-xl text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent">
-                                            <a href="single-post.html">
-                                                OpenSea Acquires Gem to Invest in Pro Experience
-                                            </a>
+                                            <a href="single-post">OpenSea Acquires Gem to Invest in Pro Experience</a>
                                         </h2>
                                         <p className="mb-8 dark:text-jacarta-300">
                                             The goal of this new editor is to make adding rich content to WordPress
                                             simple…
                                         </p>
                                         <a
-                                            href="single-post.html"
+                                            href="single-post"
                                             className="h-rotate inline-block transition-transform will-change-transform hover:translate-x-1"
                                         >
                                             <svg
@@ -998,7 +996,7 @@ const PageHome7 = () => {
                                         <div className="mb-4 flex flex-wrap gap-4 text-2xs dark:text-jacarta-300">
                                             <div className="flex flex-wrap items-center space-x-2">
                                                 <span className="text-accent">
-                                                    <a href="single-post.html" className="uppercase">
+                                                    <a href="single-post" className="uppercase">
                                                         Finance
                                                     </a>
                                                 </span>
@@ -1009,7 +1007,7 @@ const PageHome7 = () => {
                                         </div>
 
                                         <h2 className="mb-5 font-display text-xl text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent">
-                                            <a href="single-post.html">
+                                            <a href="single-post">
                                                 10 Marketing Trends That You Should Be Prepared for in 2022
                                             </a>
                                         </h2>
@@ -1018,7 +1016,7 @@ const PageHome7 = () => {
                                             simple…
                                         </p>
                                         <a
-                                            href="single-post.html"
+                                            href="single-post"
                                             className="h-rotate inline-block transition-transform will-change-transform hover:translate-x-1"
                                         >
                                             <svg
@@ -1062,7 +1060,7 @@ const PageHome7 = () => {
                                         Our support heroes will have you up and running in less than 10mins.
                                     </p>
                                     <a
-                                        href="contact.html"
+                                        href="contact"
                                         className="inline-block rounded-full bg-accent py-3 px-8 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark"
                                     >
                                         Schedule a Call

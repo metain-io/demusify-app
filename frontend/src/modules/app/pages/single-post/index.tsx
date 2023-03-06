@@ -14,8 +14,8 @@ const SinglePostPage = () => {
                         <header className="mx-auto mb-16 max-w-lg text-center">
                             <div className="mb-3 inline-flex flex-wrap items-center space-x-1 text-xs">
                                 <span className="inline-flex flex-wrap items-center space-x-1 text-accent">
-                                    <a href="single-post.html">NFT's</a>
-                                    <a href="single-post.html">DIGITAL ART</a>
+                                    <a href="single-post">NFT's</a>
+                                    <a href="single-post">DIGITAL ART</a>
                                 </span>
                             </div>
                             <h1 className="mb-4 font-display text-2xl text-jacarta-700 dark:text-white sm:text-5xl">
@@ -256,7 +256,7 @@ const SinglePostPage = () => {
                                 <article>
                                     <div className="overflow-hidden rounded-2.5xl transition-shadow hover:shadow-lg">
                                         <figure className="group overflow-hidden">
-                                            <a href="single-post.html">
+                                            <a href="single-post">
                                                 <img
                                                     src="../img/blog/post_6.jpg"
                                                     alt="post 6"
@@ -281,7 +281,7 @@ const SinglePostPage = () => {
                                                 </span>
                                             </div>
                                             <h2 className="mb-4 font-display text-xl text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent">
-                                                <a href="single-post.html">
+                                                <a href="single-post">
                                                     Inflation is up, it matters: High prices plague Biden's
                                                 </a>
                                             </h2>
@@ -302,7 +302,7 @@ const SinglePostPage = () => {
                                 <article>
                                     <div className="overflow-hidden rounded-2.5xl transition-shadow hover:shadow-lg">
                                         <figure className="group overflow-hidden">
-                                            <a href="single-post.html">
+                                            <a href="single-post">
                                                 <img
                                                     src="../img/blog/post_7.jpg"
                                                     alt="post 7"
@@ -327,9 +327,7 @@ const SinglePostPage = () => {
                                                 </span>
                                             </div>
                                             <h2 className="mb-4 font-display text-xl text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent">
-                                                <a href="single-post.html">
-                                                    What to do when the market is going everywhere
-                                                </a>
+                                                <a href="single-post">What to do when the market is going everywhere</a>
                                             </h2>
                                             <p className="mb-8 dark:text-jacarta-200">
                                                 Since we launched Tezos at the end of 2021, many awesome creators...
@@ -542,7 +540,7 @@ const SinglePostPage = () => {
                                     />
                                 </figure>
                                 <div>
-                                    <a href="collection.html" className="text-sm text-accent">
+                                    <a href="collection" className="text-sm text-accent">
                                         Elon Musk #709
                                     </a>
                                     <h3 className="mb-1 font-display text-base font-semibold text-jacarta-700 dark:text-white">

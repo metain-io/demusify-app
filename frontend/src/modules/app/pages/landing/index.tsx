@@ -198,49 +198,49 @@ const LandingPage = () => {
                         </h2>
                         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
                             <a
-                                href="index.html"
+                                href="index"
                                 className="overflow-hidden rounded-2.5xl bg-white shadow-sm transition-shadow hover:shadow-lg"
                             >
                                 <img className="w-full" src="../img/pages/home_1.jpg" alt="home 1" />
                                 <h3 className="py-6 text-center font-display text-base text-jacarta-700">Home 1</h3>
                             </a>
                             <a
-                                href="home-2.html"
+                                href="home-2"
                                 className="overflow-hidden rounded-2.5xl bg-white shadow-sm transition-shadow hover:shadow-lg"
                             >
                                 <img className="w-full" src="../img/pages/home_2.jpg" alt="home 2" />
                                 <h3 className="py-6 text-center font-display text-base text-jacarta-700">Home 2</h3>
                             </a>
                             <a
-                                href="home-3.html"
+                                href="home-3"
                                 className="overflow-hidden rounded-2.5xl bg-white shadow-sm transition-shadow hover:shadow-lg"
                             >
                                 <img className="w-full" src="../img/pages/home_3.jpg" alt="home 3" />
                                 <h3 className="py-6 text-center font-display text-base text-jacarta-700">Home 3</h3>
                             </a>
                             <a
-                                href="home-4.html"
+                                href="home-4"
                                 className="overflow-hidden rounded-2.5xl bg-white shadow-sm transition-shadow hover:shadow-lg"
                             >
                                 <img className="w-full" src="../img/pages/home_4.jpg" alt="home 4" />
                                 <h3 className="py-6 text-center font-display text-base text-jacarta-700">Home 4</h3>
                             </a>
                             <a
-                                href="home-5.html"
+                                href="home-5"
                                 className="overflow-hidden rounded-2.5xl bg-white shadow-sm transition-shadow hover:shadow-lg"
                             >
                                 <img className="w-full" src="../img/pages/home_5.jpg" alt="home 5" />
                                 <h3 className="py-6 text-center font-display text-base text-jacarta-700">Home 5</h3>
                             </a>
                             <a
-                                href="home-6.html"
+                                href="home-6"
                                 className="overflow-hidden rounded-2.5xl bg-white shadow-sm transition-shadow hover:shadow-lg"
                             >
                                 <img className="w-full" src="../img/pages/home_6.jpg" alt="home 6" />
                                 <h3 className="py-6 text-center font-display text-base text-jacarta-700">Home 6</h3>
                             </a>
                             <a
-                                href="home-7.html"
+                                href="home-7"
                                 className="overflow-hidden rounded-2.5xl bg-white shadow-sm transition-shadow hover:shadow-lg"
                             >
                                 <img
@@ -253,7 +253,7 @@ const LandingPage = () => {
                                 </h3>
                             </a>
                             <a
-                                href="home-8.html"
+                                href="home-8"
                                 className="overflow-hidden rounded-2.5xl bg-white shadow-sm transition-shadow hover:shadow-lg"
                             >
                                 <img className="w-full" src="../img/pages/home_8.jpg" alt="Home 8 — NFT Game" />
@@ -262,7 +262,7 @@ const LandingPage = () => {
                                 </h3>
                             </a>
                             <a
-                                href="home-9.html"
+                                href="home-9"
                                 className="overflow-hidden rounded-2.5xl bg-white shadow-sm transition-shadow hover:shadow-lg"
                             >
                                 <img className="w-full" src="../img/pages/home_9.jpg" alt="Home 9 — DAO" />
@@ -271,7 +271,7 @@ const LandingPage = () => {
                                 </h3>
                             </a>
                             <a
-                                href="home-10.html"
+                                href="home-10"
                                 className="overflow-hidden rounded-2.5xl bg-white shadow-sm transition-shadow hover:shadow-lg"
                             >
                                 <img className="w-full" src="../img/pages/home_10.jpg" alt="Home 10 — Crypto App" />
@@ -280,7 +280,7 @@ const LandingPage = () => {
                                 </h3>
                             </a>
                             <a
-                                href="home-11.html"
+                                href="home-11"
                                 className="overflow-hidden rounded-2.5xl bg-white shadow-sm transition-shadow hover:shadow-lg"
                             >
                                 <img className="w-full" src="../img/pages/home_11.jpg" alt="Home 11 — Crypto Trading" />
@@ -289,7 +289,7 @@ const LandingPage = () => {
                                 </h3>
                             </a>
                             <a
-                                href="home-12.html"
+                                href="home-12"
                                 className="overflow-hidden rounded-2.5xl bg-white shadow-sm transition-shadow hover:shadow-lg"
                             >
                                 <img className="w-full" src="../img/pages/home_12.jpg" alt="Home 12 — ICO Landing" />
@@ -298,14 +298,14 @@ const LandingPage = () => {
                                 </h3>
                             </a>
                             <a
-                                href="index-rtl.html"
+                                href="index-rtl"
                                 className="overflow-hidden rounded-2.5xl bg-white shadow-sm transition-shadow hover:shadow-lg"
                             >
                                 <img className="w-full" src="../img/pages/home_rtl.jpg" alt="Home RTL" />
                                 <h3 className="py-6 text-center font-display text-base text-jacarta-700">Home RTL</h3>
                             </a>
                             <a
-                                href="collections.html"
+                                href="collections"
                                 className="overflow-hidden rounded-2.5xl bg-white shadow-sm transition-shadow hover:shadow-lg"
                             >
                                 <img className="w-full" src="../img/pages/collections.jpg" alt="Collections" />
@@ -314,7 +314,7 @@ const LandingPage = () => {
                                 </h3>
                             </a>
                             <a
-                                href="item.html"
+                                href="item"
                                 className="overflow-hidden rounded-2.5xl bg-white shadow-sm transition-shadow hover:shadow-lg"
                             >
                                 <img className="w-full" src="../img/pages/item.jpg" alt="item" />
@@ -323,35 +323,35 @@ const LandingPage = () => {
                                 </h3>
                             </a>
                             <a
-                                href="collection.html"
+                                href="collection"
                                 className="overflow-hidden rounded-2.5xl bg-white shadow-sm transition-shadow hover:shadow-lg"
                             >
                                 <img className="w-full" src="../img/pages/collection.jpg" alt="Collection" />
                                 <h3 className="py-6 text-center font-display text-base text-jacarta-700">Collection</h3>
                             </a>
                             <a
-                                href="activity.html"
+                                href="activity"
                                 className="overflow-hidden rounded-2.5xl bg-white shadow-sm transition-shadow hover:shadow-lg"
                             >
                                 <img className="w-full" src="../img/pages/activity.jpg" alt="activity" />
                                 <h3 className="py-6 text-center font-display text-base text-jacarta-700">Activity</h3>
                             </a>
                             <a
-                                href="rankings.html"
+                                href="rankings"
                                 className="overflow-hidden rounded-2.5xl bg-white shadow-sm transition-shadow hover:shadow-lg"
                             >
                                 <img className="w-full" src="../img/pages/rankings.jpg" alt="rankings" />
                                 <h3 className="py-6 text-center font-display text-base text-jacarta-700">Rankings</h3>
                             </a>
                             <a
-                                href="user.html"
+                                href="user"
                                 className="overflow-hidden rounded-2.5xl bg-white shadow-sm transition-shadow hover:shadow-lg"
                             >
                                 <img className="w-full" src="../img/pages/user.jpg" alt="user" />
                                 <h3 className="py-6 text-center font-display text-base text-jacarta-700">User</h3>
                             </a>
                             <a
-                                href="edit-profile.html"
+                                href="edit-profile"
                                 className="overflow-hidden rounded-2.5xl bg-white shadow-sm transition-shadow hover:shadow-lg"
                             >
                                 <img className="w-full" src="../img/pages/edit_profile.jpg" alt="Edit Profile" />
@@ -360,7 +360,7 @@ const LandingPage = () => {
                                 </h3>
                             </a>
                             <a
-                                href="case-studies.html"
+                                href="case-studies"
                                 className="overflow-hidden rounded-2.5xl bg-white shadow-sm transition-shadow hover:shadow-lg"
                             >
                                 <img className="w-full" src="../img/pages/case_studies.jpg" alt="case studies" />
@@ -369,7 +369,7 @@ const LandingPage = () => {
                                 </h3>
                             </a>
                             <a
-                                href="single-case-study.html"
+                                href="single-case-study"
                                 className="overflow-hidden rounded-2.5xl bg-white shadow-sm transition-shadow hover:shadow-lg"
                             >
                                 <img className="w-full" src="../img/pages/single_case_study.jpg" alt="case studies" />
@@ -378,63 +378,63 @@ const LandingPage = () => {
                                 </h3>
                             </a>
                             <a
-                                href="about.html"
+                                href="about"
                                 className="overflow-hidden rounded-2.5xl bg-white shadow-sm transition-shadow hover:shadow-lg"
                             >
                                 <img className="w-full" src="../img/pages/about.jpg" alt="about" />
                                 <h3 className="py-6 text-center font-display text-base text-jacarta-700">About</h3>
                             </a>
                             <a
-                                href="careers.html"
+                                href="careers"
                                 className="overflow-hidden rounded-2.5xl bg-white shadow-sm transition-shadow hover:shadow-lg"
                             >
                                 <img className="w-full" src="../img/pages/careers.jpg" alt="careers" />
                                 <h3 className="py-6 text-center font-display text-base text-jacarta-700">Careers</h3>
                             </a>
                             <a
-                                href="contact.html"
+                                href="contact"
                                 className="overflow-hidden rounded-2.5xl bg-white shadow-sm transition-shadow hover:shadow-lg"
                             >
                                 <img className="w-full" src="../img/pages/contact.jpg" alt="contact" />
                                 <h3 className="py-6 text-center font-display text-base text-jacarta-700">Contact</h3>
                             </a>
                             <a
-                                href="wallet.html"
+                                href="wallet"
                                 className="overflow-hidden rounded-2.5xl bg-white shadow-sm transition-shadow hover:shadow-lg"
                             >
                                 <img className="w-full" src="../img/pages/wallet.jpg" alt="wallet" />
                                 <h3 className="py-6 text-center font-display text-base text-jacarta-700">Wallet</h3>
                             </a>
                             <a
-                                href="create.html"
+                                href="create"
                                 className="overflow-hidden rounded-2.5xl bg-white shadow-sm transition-shadow hover:shadow-lg"
                             >
                                 <img className="w-full" src="../img/pages/create.jpg" alt="create" />
                                 <h3 className="py-6 text-center font-display text-base text-jacarta-700">Create</h3>
                             </a>
                             <a
-                                href="login.html"
+                                href="login"
                                 className="overflow-hidden rounded-2.5xl bg-white shadow-sm transition-shadow hover:shadow-lg"
                             >
                                 <img className="w-full" src="../img/pages/login.jpg" alt="login" />
                                 <h3 className="py-6 text-center font-display text-base text-jacarta-700">Login</h3>
                             </a>
                             <a
-                                href="404.html"
+                                href="404"
                                 className="overflow-hidden rounded-2.5xl bg-white shadow-sm transition-shadow hover:shadow-lg"
                             >
                                 <img className="w-full" src="../img/pages/404.jpg" alt={'404'} />
                                 <h3 className="py-6 text-center font-display text-base text-jacarta-700">Page 404</h3>
                             </a>
                             <a
-                                href="blog.html"
+                                href="blog"
                                 className="overflow-hidden rounded-2.5xl bg-white shadow-sm transition-shadow hover:shadow-lg"
                             >
                                 <img className="w-full" src="../img/pages/blog.jpg" alt="blog" />
                                 <h3 className="py-6 text-center font-display text-base text-jacarta-700">Blog</h3>
                             </a>
                             <a
-                                href="single-post.html"
+                                href="single-post"
                                 className="overflow-hidden rounded-2.5xl bg-white shadow-sm transition-shadow hover:shadow-lg"
                             >
                                 <img className="w-full" src="../img/pages/single_post.jpg" alt="Single post" />
@@ -443,14 +443,14 @@ const LandingPage = () => {
                                 </h3>
                             </a>
                             <a
-                                href="newsletter.html"
+                                href="newsletter"
                                 className="overflow-hidden rounded-2.5xl bg-white shadow-sm transition-shadow hover:shadow-lg"
                             >
                                 <img className="w-full" src="../img/pages/newsletter.jpg" alt="newsletter" />
                                 <h3 className="py-6 text-center font-display text-base text-jacarta-700">Newsletter</h3>
                             </a>
                             <a
-                                href="help-center.html"
+                                href="help-center"
                                 className="overflow-hidden rounded-2.5xl bg-white shadow-sm transition-shadow hover:shadow-lg"
                             >
                                 <img className="w-full" src="../img/pages/help_center.jpg" alt="Help Center" />
@@ -459,7 +459,7 @@ const LandingPage = () => {
                                 </h3>
                             </a>
                             <a
-                                href="platform-status.html"
+                                href="platform-status"
                                 className="overflow-hidden rounded-2.5xl bg-white shadow-sm transition-shadow hover:shadow-lg"
                             >
                                 <img className="w-full" src="../img/pages/platform_status.jpg" alt="platform status" />
@@ -468,14 +468,14 @@ const LandingPage = () => {
                                 </h3>
                             </a>
                             <a
-                                href="partners.html"
+                                href="partners"
                                 className="overflow-hidden rounded-2.5xl bg-white shadow-sm transition-shadow hover:shadow-lg"
                             >
                                 <img className="w-full" src="../img/pages/partners.jpg" alt="partners" />
                                 <h3 className="py-6 text-center font-display text-base text-jacarta-700">Partners</h3>
                             </a>
                             <a
-                                href="tos.html"
+                                href="tos"
                                 className="overflow-hidden rounded-2.5xl bg-white shadow-sm transition-shadow hover:shadow-lg"
                             >
                                 <img className="w-full" src="../img/pages/tos.jpg" alt="tos" />

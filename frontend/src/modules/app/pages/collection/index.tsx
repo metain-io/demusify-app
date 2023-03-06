@@ -51,7 +51,7 @@ const PageCollection = () => {
                             </h2>
                             <div className="mb-8">
                                 <span className="text-sm font-bold text-jacarta-400">Created by</span>
-                                <a href="user.html" className="text-sm font-bold text-accent">
+                                <a href="user" className="text-sm font-bold text-accent">
                                     051_Hart
                                 </a>
                             </div>
@@ -1246,7 +1246,7 @@ const PageCollection = () => {
                                     <article>
                                         <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                             <figure className="relative">
-                                                <a href="item.html">
+                                                <a href="item">
                                                     <img
                                                         src="./img/products/item_5.jpg"
                                                         alt="item 5"
@@ -1294,7 +1294,7 @@ const PageCollection = () => {
                                                 </div>
                                             </figure>
                                             <div className="mt-7 flex items-center justify-between">
-                                                <a href="item.html">
+                                                <a href="item">
                                                     <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                         Flourishing Cat #180
                                                     </span>
@@ -1356,7 +1356,7 @@ const PageCollection = () => {
                                                 >
                                                     Buy now
                                                 </button>
-                                                <a href="item.html" className="group flex items-center">
+                                                <a href="item" className="group flex items-center">
                                                     <svg
                                                         xmlns="http://www.w3.org/2000/svg"
                                                         viewBox="0 0 24 24"
@@ -1377,7 +1377,7 @@ const PageCollection = () => {
                                     <article>
                                         <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                             <figure className="relative">
-                                                <a href="item.html">
+                                                <a href="item">
                                                     <img
                                                         src="./img/products/item_4.jpg"
                                                         alt="item 4"
@@ -1425,7 +1425,7 @@ const PageCollection = () => {
                                                 </div>
                                             </figure>
                                             <div className="mt-7 flex items-center justify-between">
-                                                <a href="item.html">
+                                                <a href="item">
                                                     <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                         Amazing NFT art
                                                     </span>
@@ -1487,7 +1487,7 @@ const PageCollection = () => {
                                                 >
                                                     Buy now
                                                 </button>
-                                                <a href="item.html" className="group flex items-center">
+                                                <a href="item" className="group flex items-center">
                                                     <svg
                                                         xmlns="http://www.w3.org/2000/svg"
                                                         viewBox="0 0 24 24"
@@ -1508,7 +1508,7 @@ const PageCollection = () => {
                                     <article>
                                         <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                             <figure className="relative">
-                                                <a href="item.html">
+                                                <a href="item">
                                                     <img
                                                         src="./img/products/item_7.jpg"
                                                         alt="item 7"
@@ -1556,7 +1556,7 @@ const PageCollection = () => {
                                                 </div>
                                             </figure>
                                             <div className="mt-7 flex items-center justify-between">
-                                                <a href="item.html">
+                                                <a href="item">
                                                     <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                         SwagFox#133
                                                     </span>
@@ -1618,7 +1618,7 @@ const PageCollection = () => {
                                                 >
                                                     Buy now
                                                 </button>
-                                                <a href="item.html" className="group flex items-center">
+                                                <a href="item" className="group flex items-center">
                                                     <svg
                                                         xmlns="http://www.w3.org/2000/svg"
                                                         viewBox="0 0 24 24"
@@ -1639,7 +1639,7 @@ const PageCollection = () => {
                                     <article>
                                         <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                             <figure className="relative">
-                                                <a href="item.html">
+                                                <a href="item">
                                                     <img
                                                         src="./img/products/item_6.jpg"
                                                         alt="item 6"
@@ -1687,7 +1687,7 @@ const PageCollection = () => {
                                                 </div>
                                             </figure>
                                             <div className="mt-7 flex items-center justify-between">
-                                                <a href="item.html">
+                                                <a href="item">
                                                     <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                         Splendid Girl
                                                     </span>
@@ -1749,7 +1749,7 @@ const PageCollection = () => {
                                                 >
                                                     Buy now
                                                 </button>
-                                                <a href="item.html" className="group flex items-center">
+                                                <a href="item" className="group flex items-center">
                                                     <svg
                                                         xmlns="http://www.w3.org/2000/svg"
                                                         viewBox="0 0 24 24"
@@ -1770,7 +1770,7 @@ const PageCollection = () => {
                                     <article>
                                         <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                             <figure className="relative">
-                                                <a href="item.html">
+                                                <a href="item">
                                                     <img
                                                         src="./img/products/item_8.jpg"
                                                         alt="item 8"
@@ -1818,7 +1818,7 @@ const PageCollection = () => {
                                                 </div>
                                             </figure>
                                             <div className="mt-7 flex items-center justify-between">
-                                                <a href="item.html">
+                                                <a href="item">
                                                     <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                         Monkeyme#155
                                                     </span>
@@ -1880,7 +1880,7 @@ const PageCollection = () => {
                                                 >
                                                     Buy now
                                                 </button>
-                                                <a href="item.html" className="group flex items-center">
+                                                <a href="item" className="group flex items-center">
                                                     <svg
                                                         xmlns="http://www.w3.org/2000/svg"
                                                         viewBox="0 0 24 24"
@@ -1901,7 +1901,7 @@ const PageCollection = () => {
                                     <article>
                                         <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                             <figure className="relative">
-                                                <a href="item.html">
+                                                <a href="item">
                                                     <img
                                                         src="./img/products/item_9.jpg"
                                                         alt="item 9"
@@ -1949,7 +1949,7 @@ const PageCollection = () => {
                                                 </div>
                                             </figure>
                                             <div className="mt-7 flex items-center justify-between">
-                                                <a href="item.html">
+                                                <a href="item">
                                                     <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                         Jedidia#149
                                                     </span>
@@ -2011,7 +2011,7 @@ const PageCollection = () => {
                                                 >
                                                     Buy now
                                                 </button>
-                                                <a href="item.html" className="group flex items-center">
+                                                <a href="item" className="group flex items-center">
                                                     <svg
                                                         xmlns="http://www.w3.org/2000/svg"
                                                         viewBox="0 0 24 24"
@@ -2032,7 +2032,7 @@ const PageCollection = () => {
                                     <article>
                                         <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                             <figure className="relative">
-                                                <a href="item.html">
+                                                <a href="item">
                                                     <img
                                                         src="./img/products/item_10.jpg"
                                                         alt="item 10"
@@ -2080,7 +2080,7 @@ const PageCollection = () => {
                                                 </div>
                                             </figure>
                                             <div className="mt-7 flex items-center justify-between">
-                                                <a href="item.html">
+                                                <a href="item">
                                                     <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                         Artof Eve
                                                     </span>
@@ -2142,7 +2142,7 @@ const PageCollection = () => {
                                                 >
                                                     Buy now
                                                 </button>
-                                                <a href="item.html" className="group flex items-center">
+                                                <a href="item" className="group flex items-center">
                                                     <svg
                                                         xmlns="http://www.w3.org/2000/svg"
                                                         viewBox="0 0 24 24"
@@ -2163,7 +2163,7 @@ const PageCollection = () => {
                                     <article>
                                         <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                             <figure className="relative">
-                                                <a href="item.html">
+                                                <a href="item">
                                                     <img
                                                         src="./img/products/item_11.gif"
                                                         alt="item 11"
@@ -2211,7 +2211,7 @@ const PageCollection = () => {
                                                 </div>
                                             </figure>
                                             <div className="mt-7 flex items-center justify-between">
-                                                <a href="item.html">
+                                                <a href="item">
                                                     <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                         Asuna #1649
                                                     </span>
@@ -2273,7 +2273,7 @@ const PageCollection = () => {
                                                 >
                                                     Buy now
                                                 </button>
-                                                <a href="item.html" className="group flex items-center">
+                                                <a href="item" className="group flex items-center">
                                                     <svg
                                                         xmlns="http://www.w3.org/2000/svg"
                                                         viewBox="0 0 24 24"
@@ -2339,7 +2339,7 @@ const PageCollection = () => {
                                     {/* <!-- Records --> */}
                                     <div className="mb-10 shrink-0 basis-8/12 space-y-5 lg:mb-0 lg:pr-10">
                                         <a
-                                            href="item.html"
+                                            href="item"
                                             className="relative flex items-center rounded-2.5xl border border-jacarta-100 bg-white p-8 transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700"
                                         >
                                             <figure className="mr-5 self-start">
@@ -2377,7 +2377,7 @@ const PageCollection = () => {
                                             </div>
                                         </a>
                                         <a
-                                            href="item.html"
+                                            href="item"
                                             className="relative flex items-center rounded-2.5xl border border-jacarta-100 bg-white p-8 transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700"
                                         >
                                             <figure className="mr-5 self-start">
@@ -2415,7 +2415,7 @@ const PageCollection = () => {
                                             </div>
                                         </a>
                                         <a
-                                            href="item.html"
+                                            href="item"
                                             className="relative flex items-center rounded-2.5xl border border-jacarta-100 bg-white p-8 transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700"
                                         >
                                             <figure className="mr-5 self-start">
@@ -2453,7 +2453,7 @@ const PageCollection = () => {
                                             </div>
                                         </a>
                                         <a
-                                            href="item.html"
+                                            href="item"
                                             className="relative flex items-center rounded-2.5xl border border-jacarta-100 bg-white p-8 transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700"
                                         >
                                             <figure className="mr-5 self-start">
@@ -2491,7 +2491,7 @@ const PageCollection = () => {
                                             </div>
                                         </a>
                                         <a
-                                            href="item.html"
+                                            href="item"
                                             className="relative flex items-center rounded-2.5xl border border-jacarta-100 bg-white p-8 transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700"
                                         >
                                             <figure className="mr-5 self-start">

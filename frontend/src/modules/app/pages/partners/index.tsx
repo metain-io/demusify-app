@@ -262,7 +262,7 @@ const PagePartners = () => {
                                 <div className="swiper-slide">
                                     <article>
                                         <div className="rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
-                                            <a href="collection.html" className="flex space-x-[0.625rem]">
+                                            <a href="collection" className="flex space-x-[0.625rem]">
                                                 <span className="w-[74.5%]">
                                                     <img
                                                         src="./img/collections/collection_1_1.jpg"
@@ -294,7 +294,7 @@ const PagePartners = () => {
                                             </a>
 
                                             <a
-                                                href="collection.html"
+                                                href="collection"
                                                 className="mt-4 block font-display text-base text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent"
                                             >
                                                 Art Me Outside
@@ -302,7 +302,7 @@ const PagePartners = () => {
 
                                             <div className="mt-2 flex items-center justify-between text-sm font-medium tracking-tight">
                                                 <div className="flex flex-wrap items-center">
-                                                    <a href="user.html" className="mr-2 shrink-0">
+                                                    <a href="user" className="mr-2 shrink-0">
                                                         <img
                                                             src="img/avatars/owner_5.png"
                                                             alt="owner"
@@ -310,7 +310,7 @@ const PagePartners = () => {
                                                         />
                                                     </a>
                                                     <span className="mr-1 dark:text-jacarta-400">by</span>
-                                                    <a href="user.html" className="text-accent">
+                                                    <a href="user" className="text-accent">
                                                         <span>Wow Frens</span>
                                                     </a>
                                                 </div>
@@ -322,7 +322,7 @@ const PagePartners = () => {
                                 <div className="swiper-slide">
                                     <article>
                                         <div className="rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
-                                            <a href="collection.html" className="flex space-x-[0.625rem]">
+                                            <a href="collection" className="flex space-x-[0.625rem]">
                                                 <span className="w-[74.5%]">
                                                     <img
                                                         src="./img/collections/collection_2_1.jpg"
@@ -354,7 +354,7 @@ const PagePartners = () => {
                                             </a>
 
                                             <a
-                                                href="collection.html"
+                                                href="collection"
                                                 className="mt-4 block font-display text-base text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent"
                                             >
                                                 PankySkal
@@ -362,7 +362,7 @@ const PagePartners = () => {
 
                                             <div className="mt-2 flex items-center justify-between text-sm font-medium tracking-tight">
                                                 <div className="flex flex-wrap items-center">
-                                                    <a href="user.html" className="mr-2 shrink-0">
+                                                    <a href="user" className="mr-2 shrink-0">
                                                         <img
                                                             src="img/avatars/owner_9.png"
                                                             alt="owner"
@@ -370,7 +370,7 @@ const PagePartners = () => {
                                                         />
                                                     </a>
                                                     <span className="mr-1 dark:text-jacarta-400">by</span>
-                                                    <a href="user.html" className="text-accent">
+                                                    <a href="user" className="text-accent">
                                                         <span>NFT stars</span>
                                                     </a>
                                                 </div>
@@ -382,7 +382,7 @@ const PagePartners = () => {
                                 <div className="swiper-slide">
                                     <article>
                                         <div className="rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
-                                            <a href="collection.html" className="flex space-x-[0.625rem]">
+                                            <a href="collection" className="flex space-x-[0.625rem]">
                                                 <span className="w-[74.5%]">
                                                     <img
                                                         src="./img/collections/collection_3_1.jpg"
@@ -414,7 +414,7 @@ const PagePartners = () => {
                                             </a>
 
                                             <a
-                                                href="collection.html"
+                                                href="collection"
                                                 className="mt-4 block font-display text-base text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent"
                                             >
                                                 VR Space_287
@@ -422,7 +422,7 @@ const PagePartners = () => {
 
                                             <div className="mt-2 flex items-center justify-between text-sm font-medium tracking-tight">
                                                 <div className="flex flex-wrap items-center">
-                                                    <a href="user.html" className="mr-2 shrink-0">
+                                                    <a href="user" className="mr-2 shrink-0">
                                                         <img
                                                             src="img/avatars/owner_4.png"
                                                             alt="owner"
@@ -430,7 +430,7 @@ const PagePartners = () => {
                                                         />
                                                     </a>
                                                     <span className="mr-1 dark:text-jacarta-400">by</span>
-                                                    <a href="user.html" className="text-accent">
+                                                    <a href="user" className="text-accent">
                                                         <span>Origin Morish</span>
                                                     </a>
                                                 </div>
@@ -442,7 +442,7 @@ const PagePartners = () => {
                                 <div className="swiper-slide">
                                     <article>
                                         <div className="rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
-                                            <a href="collection.html" className="flex space-x-[0.625rem]">
+                                            <a href="collection" className="flex space-x-[0.625rem]">
                                                 <span className="w-[74.5%]">
                                                     <img
                                                         src="./img/collections/collection_4_1.jpg"
@@ -474,7 +474,7 @@ const PagePartners = () => {
                                             </a>
 
                                             <a
-                                                href="collection.html"
+                                                href="collection"
                                                 className="mt-4 block font-display text-base text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent"
                                             >
                                                 Metasmorf
@@ -482,7 +482,7 @@ const PagePartners = () => {
 
                                             <div className="mt-2 flex items-center justify-between text-sm font-medium tracking-tight">
                                                 <div className="flex flex-wrap items-center">
-                                                    <a href="user.html" className="mr-2 shrink-0">
+                                                    <a href="user" className="mr-2 shrink-0">
                                                         <img
                                                             src="img/avatars/owner_10.png"
                                                             alt="owner"
@@ -490,7 +490,7 @@ const PagePartners = () => {
                                                         />
                                                     </a>
                                                     <span className="mr-1 dark:text-jacarta-400">by</span>
-                                                    <a href="user.html" className="text-accent">
+                                                    <a href="user" className="text-accent">
                                                         <span>Lazy Panda</span>
                                                     </a>
                                                 </div>
@@ -502,7 +502,7 @@ const PagePartners = () => {
                                 <div className="swiper-slide">
                                     <article>
                                         <div className="rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
-                                            <a href="collection.html" className="flex space-x-[0.625rem]">
+                                            <a href="collection" className="flex space-x-[0.625rem]">
                                                 <span className="w-[74.5%]">
                                                     <img
                                                         src="./img/collections/collection_5_1.jpg"
@@ -534,7 +534,7 @@ const PagePartners = () => {
                                             </a>
 
                                             <a
-                                                href="collection.html"
+                                                href="collection"
                                                 className="mt-4 block font-display text-base text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent"
                                             >
                                                 3Landers
@@ -542,7 +542,7 @@ const PagePartners = () => {
 
                                             <div className="mt-2 flex items-center justify-between text-sm font-medium tracking-tight">
                                                 <div className="flex flex-wrap items-center">
-                                                    <a href="user.html" className="mr-2 shrink-0">
+                                                    <a href="user" className="mr-2 shrink-0">
                                                         <img
                                                             src="img/avatars/owner_11.png"
                                                             alt="owner"
@@ -550,7 +550,7 @@ const PagePartners = () => {
                                                         />
                                                     </a>
                                                     <span className="mr-1 dark:text-jacarta-400">by</span>
-                                                    <a href="user.html" className="text-accent">
+                                                    <a href="user" className="text-accent">
                                                         <span>051_Hart</span>
                                                     </a>
                                                 </div>
@@ -597,7 +597,7 @@ const PagePartners = () => {
                         </h2>
                         <p className="mx-auto mb-10 max-w-md text-center text-lg dark:text-jacarta-300">
                             Join our community now to get free updates and also alot of freebies are waiting for you or
-                            <a href="contact.html" className="text-accent">
+                            <a href="contact" className="text-accent">
                                 Contact Support
                             </a>
                         </p>
@@ -846,7 +846,7 @@ const PagePartners = () => {
                             tips and tricks for navigating Xhibiter
                         </p>
                         <a
-                            href="contact.html"
+                            href="contact"
                             className="inline-block rounded-full bg-white py-3 px-8 text-center font-semibold text-accent transition-all hover:bg-accent-dark hover:text-white"
                         >
                             Sign Up Now

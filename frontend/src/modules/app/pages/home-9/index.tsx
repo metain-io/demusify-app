@@ -24,13 +24,13 @@ const Home9Page = () => {
                                 </p>
                                 <div className="flex space-x-4">
                                     <a
-                                        href="collections.html"
+                                        href="collections"
                                         className="rounded-full bg-accent py-3 px-8 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark"
                                     >
                                         Get Started
                                     </a>
                                     <a
-                                        href="collections.html"
+                                        href="collections"
                                         className="rounded-full bg-white py-3 px-8 text-center font-semibold text-accent shadow-white-volume transition-all hover:bg-accent-dark hover:text-white hover:shadow-accent-volume"
                                     >
                                         Learn More

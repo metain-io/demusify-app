@@ -2,7 +2,7 @@ const NavigationBar2 = () => {
     return (
         <div className="flex items-center px-6 py-6 xl:px-24">
             {/* <!-- Logo --> */}
-            <a href="index.html" className="flex-1 shrink-0">
+            <a href="index" className="flex-1 shrink-0">
                 <img src="img/logo_white.png" className="max-h-7" alt="Xhibiter | NFT Marketplace" />
             </a>
 
@@ -11,7 +11,7 @@ const NavigationBar2 = () => {
                 {/* <!-- Mobile Logo / Menu Close --> */}
                 <div className="t-0 fixed left-0 z-10 flex w-full items-center justify-between bg-jacarta-800 p-6 lg:hidden">
                     {/* <!-- Mobile Logo --> */}
-                    <a href="index.html" className="shrink-0">
+                    <a href="index" className="shrink-0">
                         <img src="img/logo_white.png" className="max-h-7" alt="Xhibiter | NFT Marketplace" />
                     </a>
 
@@ -65,7 +65,7 @@ const NavigationBar2 = () => {
                             >
                                 <li>
                                     <a
-                                        href="index.html"
+                                        href="index"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="font-display text-sm text-white">Home 1</span>
@@ -73,7 +73,7 @@ const NavigationBar2 = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="index-rtl.html"
+                                        href="index-rtl"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="font-display text-sm text-white">Home 1 RTL</span>
@@ -81,7 +81,7 @@ const NavigationBar2 = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="home-2.html"
+                                        href="home-2"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="font-display text-sm text-white">Home 2</span>
@@ -89,7 +89,7 @@ const NavigationBar2 = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="home-3.html"
+                                        href="home-3"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="font-display text-sm text-white">Home 3</span>
@@ -97,7 +97,7 @@ const NavigationBar2 = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="home-4.html"
+                                        href="home-4"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="font-display text-sm text-white">Home 4</span>
@@ -105,7 +105,7 @@ const NavigationBar2 = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="home-5.html"
+                                        href="home-5"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="font-display text-sm text-white">Home 5</span>
@@ -113,7 +113,7 @@ const NavigationBar2 = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="home-6.html"
+                                        href="home-6"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="font-display text-sm text-white">Home 6</span>
@@ -121,7 +121,7 @@ const NavigationBar2 = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="home-7.html"
+                                        href="home-7"
                                         className="flex items-center justify-between rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="mr-4 font-display text-sm text-white">Crypto Consultant</span>
@@ -132,7 +132,7 @@ const NavigationBar2 = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="home-8.html"
+                                        href="home-8"
                                         className="flex items-center justify-between rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="mr-4 font-display text-sm text-accent">NFT Game</span>
@@ -143,7 +143,7 @@ const NavigationBar2 = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="home-9.html"
+                                        href="home-9"
                                         className="flex items-center justify-between rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="mr-4 font-display text-sm text-white">DAO Platform</span>
@@ -154,7 +154,7 @@ const NavigationBar2 = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="home-10.html"
+                                        href="home-10"
                                         className="flex items-center justify-between rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="mr-4 font-display text-sm text-white">Crypto App</span>
@@ -165,7 +165,7 @@ const NavigationBar2 = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="home-11.html"
+                                        href="home-11"
                                         className="flex items-center justify-between rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="mr-4 font-display text-sm text-white">Crypto Trading</span>
@@ -176,7 +176,7 @@ const NavigationBar2 = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="home-12.html"
+                                        href="home-12"
                                         className="flex items-center justify-between rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="mr-4 font-display text-sm text-white">ICO Landing</span>
@@ -216,7 +216,7 @@ const NavigationBar2 = () => {
                             >
                                 <li>
                                     <a
-                                        href="maintenance.html"
+                                        href="maintenance"
                                         className="flex items-center justify-between rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="mr-4 font-display text-sm text-white">Maintenance</span>
@@ -227,7 +227,7 @@ const NavigationBar2 = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="case-studies.html"
+                                        href="case-studies"
                                         className="flex items-center justify-between rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="mr-4 font-display text-sm text-white">Case Studies</span>
@@ -238,7 +238,7 @@ const NavigationBar2 = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="single-case-study.html"
+                                        href="single-case-study"
                                         className="flex items-center justify-between rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="mr-4 font-display text-sm text-white">Single Case Study</span>
@@ -249,7 +249,7 @@ const NavigationBar2 = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="careers.html"
+                                        href="careers"
                                         className="flex items-center justify-between rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="mr-4 font-display text-sm text-white">Careers</span>
@@ -260,7 +260,7 @@ const NavigationBar2 = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="item.html"
+                                        href="item"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="font-display text-sm text-white">Item Details</span>
@@ -268,7 +268,7 @@ const NavigationBar2 = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="collections.html"
+                                        href="collections"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="font-display text-sm text-white">Explore Collections</span>
@@ -276,7 +276,7 @@ const NavigationBar2 = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="collection.html"
+                                        href="collection"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="font-display text-sm text-white">Collection</span>
@@ -284,7 +284,7 @@ const NavigationBar2 = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="activity.html"
+                                        href="activity"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="font-display text-sm text-white">Activity</span>
@@ -292,7 +292,7 @@ const NavigationBar2 = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="rankings.html"
+                                        href="rankings"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="font-display text-sm text-white">Rankings</span>
@@ -300,7 +300,7 @@ const NavigationBar2 = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="user.html"
+                                        href="user"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="font-display text-sm text-white">User</span>
@@ -308,7 +308,7 @@ const NavigationBar2 = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="edit-profile.html"
+                                        href="edit-profile"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="font-display text-sm text-white">Edit Profile</span>
@@ -316,7 +316,7 @@ const NavigationBar2 = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="about.html"
+                                        href="about"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="font-display text-sm text-white">About</span>
@@ -325,7 +325,7 @@ const NavigationBar2 = () => {
 
                                 <li>
                                     <a
-                                        href="contact.html"
+                                        href="contact"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="font-display text-sm text-white">Contact</span>
@@ -333,7 +333,7 @@ const NavigationBar2 = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="wallet.html"
+                                        href="wallet"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="font-display text-sm text-white">Wallet</span>
@@ -341,7 +341,7 @@ const NavigationBar2 = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="login.html"
+                                        href="login"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="font-display text-sm text-white">Login</span>
@@ -349,7 +349,7 @@ const NavigationBar2 = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="404.html"
+                                        href="404"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="font-display text-sm text-white">Page 404</span>
@@ -357,7 +357,7 @@ const NavigationBar2 = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="tos.html"
+                                        href="tos"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="font-display text-sm text-white">Terms of Service</span>
@@ -367,7 +367,7 @@ const NavigationBar2 = () => {
                         </li>
                         <li className="js-nav-dropdown nav-item dropdown group relative">
                             <a
-                                href="collections.html"
+                                href="collections"
                                 className="dropdown-toggle flex items-center justify-between py-3.5 font-display text-base text-white hover:text-accent focus:text-accent lg:px-5 lg:text-white lg:hover:text-white"
                                 id="navDropdown-3"
                                 aria-expanded="false"
@@ -394,7 +394,7 @@ const NavigationBar2 = () => {
                             >
                                 <li>
                                     <a
-                                        href="collections.html"
+                                        href="collections"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="mr-3 rounded-xl bg-light-base p-[0.375rem]">
@@ -414,7 +414,7 @@ const NavigationBar2 = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="collections.html"
+                                        href="collections"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="mr-3 rounded-xl bg-[#E4FCF4] p-[0.375rem]">
@@ -434,7 +434,7 @@ const NavigationBar2 = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="collections.html"
+                                        href="collections"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="mr-3 rounded-xl bg-[#FDF7EE] p-[0.375rem]">
@@ -454,7 +454,7 @@ const NavigationBar2 = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="collections.html"
+                                        href="collections"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="mr-3 rounded-xl bg-[#F2EEFF] p-[0.375rem]">
@@ -474,7 +474,7 @@ const NavigationBar2 = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="collections.html"
+                                        href="collections"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="mr-3 rounded-xl bg-[#FFEEFA] p-[0.375rem]">
@@ -494,7 +494,7 @@ const NavigationBar2 = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="collections.html"
+                                        href="collections"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="mr-3 rounded-xl bg-[#EAF2FE] p-[0.375rem]">
@@ -514,7 +514,7 @@ const NavigationBar2 = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="collections.html"
+                                        href="collections"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="mr-3 rounded-xl bg-[#EBEDFF] p-[0.375rem]">
@@ -534,7 +534,7 @@ const NavigationBar2 = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="collections.html"
+                                        href="collections"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="mr-3 rounded-xl bg-[#F5FFED] p-[0.375rem]">
@@ -554,7 +554,7 @@ const NavigationBar2 = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="collections.html"
+                                        href="collections"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="mr-3 rounded-xl bg-[#FFEEEE] p-[0.375rem]">
@@ -574,7 +574,7 @@ const NavigationBar2 = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="collections.html"
+                                        href="collections"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="mr-3 rounded-xl bg-[#EEFCFF] p-[0.375rem]">
@@ -623,7 +623,7 @@ const NavigationBar2 = () => {
                             >
                                 <li>
                                     <a
-                                        href="help-center.html"
+                                        href="help-center"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="font-display text-sm text-white">Help Center</span>
@@ -631,7 +631,7 @@ const NavigationBar2 = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="platform-status.html"
+                                        href="platform-status"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="font-display text-sm text-white">Platform Status</span>
@@ -639,7 +639,7 @@ const NavigationBar2 = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="partners.html"
+                                        href="partners"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="font-display text-sm text-white">Partners</span>
@@ -647,7 +647,7 @@ const NavigationBar2 = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="blog.html"
+                                        href="blog"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="font-display text-sm text-white">Blog</span>
@@ -655,7 +655,7 @@ const NavigationBar2 = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="single-post.html"
+                                        href="single-post"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="font-display text-sm text-white">Single Post</span>
@@ -663,7 +663,7 @@ const NavigationBar2 = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="newsletter.html"
+                                        href="newsletter"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="font-display text-sm text-white">Newsletter</span>
@@ -678,7 +678,7 @@ const NavigationBar2 = () => {
                 <div className="mt-10 w-full lg:hidden">
                     {/* <!-- CTA --> */}
                     <a
-                        href="collections.html"
+                        href="collections"
                         className="mb-8 block rounded-full bg-white py-3 px-8 text-center font-semibold text-accent shadow-white-volume transition-all hover:bg-accent-dark hover:text-white hover:shadow-accent-volume"
                     >
                         Marketplace
@@ -764,7 +764,7 @@ const NavigationBar2 = () => {
             {/* <!-- CTA --> */}
             <div className="hidden flex-1 justify-end lg:flex">
                 <a
-                    href="collections.html"
+                    href="collections"
                     className="rounded-full bg-white py-3 px-8 text-center font-semibold text-accent shadow-white-volume transition-all hover:bg-accent-dark hover:text-white hover:shadow-accent-volume"
                 >
                     Marketplace

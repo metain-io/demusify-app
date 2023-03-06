@@ -187,7 +187,7 @@ const PageCollections = () => {
                     <div className="grid grid-cols-1 gap-[1.875rem] md:grid-cols-3 lg:grid-cols-4">
                         <article>
                             <div className="rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
-                                <a href="collection.html" className="flex space-x-[0.625rem]">
+                                <a href="collection" className="flex space-x-[0.625rem]">
                                     <span className="w-[74.5%]">
                                         <img
                                             src="./img/collections/collection_1_1.jpg"
@@ -219,7 +219,7 @@ const PageCollections = () => {
                                 </a>
 
                                 <a
-                                    href="collection.html"
+                                    href="collection"
                                     className="mt-4 block font-display text-base text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent"
                                 >
                                     Art Me Outside
@@ -227,7 +227,7 @@ const PageCollections = () => {
 
                                 <div className="mt-2 flex items-center justify-between text-sm font-medium tracking-tight">
                                     <div className="flex flex-wrap items-center">
-                                        <a href="user.html" className="mr-2 shrink-0">
+                                        <a href="user" className="mr-2 shrink-0">
                                             <img
                                                 src="img/avatars/owner_5.png"
                                                 alt="owner"
@@ -235,7 +235,7 @@ const PageCollections = () => {
                                             />
                                         </a>
                                         <span className="mr-1 dark:text-jacarta-400">by</span>
-                                        <a href="user.html" className="text-accent">
+                                        <a href="user" className="text-accent">
                                             <span>Wow Frens</span>
                                         </a>
                                     </div>
@@ -245,7 +245,7 @@ const PageCollections = () => {
                         </article>
                         <article>
                             <div className="rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
-                                <a href="collection.html" className="flex space-x-[0.625rem]">
+                                <a href="collection" className="flex space-x-[0.625rem]">
                                     <span className="w-[74.5%]">
                                         <img
                                             src="./img/collections/collection_2_1.jpg"
@@ -277,7 +277,7 @@ const PageCollections = () => {
                                 </a>
 
                                 <a
-                                    href="collection.html"
+                                    href="collection"
                                     className="mt-4 block font-display text-base text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent"
                                 >
                                     PankySkal
@@ -285,7 +285,7 @@ const PageCollections = () => {
 
                                 <div className="mt-2 flex items-center justify-between text-sm font-medium tracking-tight">
                                     <div className="flex flex-wrap items-center">
-                                        <a href="user.html" className="mr-2 shrink-0">
+                                        <a href="user" className="mr-2 shrink-0">
                                             <img
                                                 src="img/avatars/owner_9.png"
                                                 alt="owner"
@@ -293,7 +293,7 @@ const PageCollections = () => {
                                             />
                                         </a>
                                         <span className="mr-1 dark:text-jacarta-400">by</span>
-                                        <a href="user.html" className="text-accent">
+                                        <a href="user" className="text-accent">
                                             <span>NFT stars</span>
                                         </a>
                                     </div>
@@ -303,7 +303,7 @@ const PageCollections = () => {
                         </article>
                         <article>
                             <div className="rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
-                                <a href="collection.html" className="flex space-x-[0.625rem]">
+                                <a href="collection" className="flex space-x-[0.625rem]">
                                     <span className="w-[74.5%]">
                                         <img
                                             src="./img/collections/collection_3_1.jpg"
@@ -335,7 +335,7 @@ const PageCollections = () => {
                                 </a>
 
                                 <a
-                                    href="collection.html"
+                                    href="collection"
                                     className="mt-4 block font-display text-base text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent"
                                 >
                                     VR Space_287
@@ -343,7 +343,7 @@ const PageCollections = () => {
 
                                 <div className="mt-2 flex items-center justify-between text-sm font-medium tracking-tight">
                                     <div className="flex flex-wrap items-center">
-                                        <a href="user.html" className="mr-2 shrink-0">
+                                        <a href="user" className="mr-2 shrink-0">
                                             <img
                                                 src="img/avatars/owner_4.png"
                                                 alt="owner"
@@ -351,7 +351,7 @@ const PageCollections = () => {
                                             />
                                         </a>
                                         <span className="mr-1 dark:text-jacarta-400">by</span>
-                                        <a href="user.html" className="text-accent">
+                                        <a href="user" className="text-accent">
                                             <span>Origin Morish</span>
                                         </a>
                                     </div>
@@ -361,7 +361,7 @@ const PageCollections = () => {
                         </article>
                         <article>
                             <div className="rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
-                                <a href="collection.html" className="flex space-x-[0.625rem]">
+                                <a href="collection" className="flex space-x-[0.625rem]">
                                     <span className="w-[74.5%]">
                                         <img
                                             src="./img/collections/collection_4_1.jpg"
@@ -393,7 +393,7 @@ const PageCollections = () => {
                                 </a>
 
                                 <a
-                                    href="collection.html"
+                                    href="collection"
                                     className="mt-4 block font-display text-base text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent"
                                 >
                                     Metasmorf
@@ -401,7 +401,7 @@ const PageCollections = () => {
 
                                 <div className="mt-2 flex items-center justify-between text-sm font-medium tracking-tight">
                                     <div className="flex flex-wrap items-center">
-                                        <a href="user.html" className="mr-2 shrink-0">
+                                        <a href="user" className="mr-2 shrink-0">
                                             <img
                                                 src="img/avatars/owner_10.png"
                                                 alt="owner"
@@ -409,7 +409,7 @@ const PageCollections = () => {
                                             />
                                         </a>
                                         <span className="mr-1 dark:text-jacarta-400">by</span>
-                                        <a href="user.html" className="text-accent">
+                                        <a href="user" className="text-accent">
                                             <span>Lazy Panda</span>
                                         </a>
                                     </div>
@@ -419,7 +419,7 @@ const PageCollections = () => {
                         </article>
                         <article>
                             <div className="rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
-                                <a href="collection.html" className="flex space-x-[0.625rem]">
+                                <a href="collection" className="flex space-x-[0.625rem]">
                                     <span className="w-[74.5%]">
                                         <img
                                             src="./img/collections/collection_5_1.jpg"
@@ -451,7 +451,7 @@ const PageCollections = () => {
                                 </a>
 
                                 <a
-                                    href="collection.html"
+                                    href="collection"
                                     className="mt-4 block font-display text-base text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent"
                                 >
                                     3Landers
@@ -459,7 +459,7 @@ const PageCollections = () => {
 
                                 <div className="mt-2 flex items-center justify-between text-sm font-medium tracking-tight">
                                     <div className="flex flex-wrap items-center">
-                                        <a href="user.html" className="mr-2 shrink-0">
+                                        <a href="user" className="mr-2 shrink-0">
                                             <img
                                                 src="img/avatars/owner_11.png"
                                                 alt="owner"
@@ -467,7 +467,7 @@ const PageCollections = () => {
                                             />
                                         </a>
                                         <span className="mr-1 dark:text-jacarta-400">by</span>
-                                        <a href="user.html" className="text-accent">
+                                        <a href="user" className="text-accent">
                                             <span>051_Hart</span>
                                         </a>
                                     </div>
@@ -477,7 +477,7 @@ const PageCollections = () => {
                         </article>
                         <article>
                             <div className="rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
-                                <a href="collection.html" className="flex space-x-[0.625rem]">
+                                <a href="collection" className="flex space-x-[0.625rem]">
                                     <span className="w-[74.5%]">
                                         <img
                                             src="./img/collections/collection_6_1.jpg"
@@ -509,7 +509,7 @@ const PageCollections = () => {
                                 </a>
 
                                 <a
-                                    href="collection.html"
+                                    href="collection"
                                     className="mt-4 block font-display text-base text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent"
                                 >
                                     SlimHoods
@@ -517,7 +517,7 @@ const PageCollections = () => {
 
                                 <div className="mt-2 flex items-center justify-between text-sm font-medium tracking-tight">
                                     <div className="flex flex-wrap items-center">
-                                        <a href="user.html" className="mr-2 shrink-0">
+                                        <a href="user" className="mr-2 shrink-0">
                                             <img
                                                 src="img/avatars/owner_3.png"
                                                 alt="owner"
@@ -525,7 +525,7 @@ const PageCollections = () => {
                                             />
                                         </a>
                                         <span className="mr-1 dark:text-jacarta-400">by</span>
-                                        <a href="user.html" className="text-accent">
+                                        <a href="user" className="text-accent">
                                             <span>Crytopank</span>
                                         </a>
                                     </div>
@@ -535,7 +535,7 @@ const PageCollections = () => {
                         </article>
                         <article>
                             <div className="rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
-                                <a href="collection.html" className="flex space-x-[0.625rem]">
+                                <a href="collection" className="flex space-x-[0.625rem]">
                                     <span className="w-[74.5%]">
                                         <img
                                             src="./img/collections/collection_7_1.jpg"
@@ -567,7 +567,7 @@ const PageCollections = () => {
                                 </a>
 
                                 <a
-                                    href="collection.html"
+                                    href="collection"
                                     className="mt-4 block font-display text-base text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent"
                                 >
                                     The Overseers
@@ -575,7 +575,7 @@ const PageCollections = () => {
 
                                 <div className="mt-2 flex items-center justify-between text-sm font-medium tracking-tight">
                                     <div className="flex flex-wrap items-center">
-                                        <a href="user.html" className="mr-2 shrink-0">
+                                        <a href="user" className="mr-2 shrink-0">
                                             <img
                                                 src="img/avatars/creator_2.png"
                                                 alt="owner"
@@ -583,7 +583,7 @@ const PageCollections = () => {
                                             />
                                         </a>
                                         <span className="mr-1 dark:text-jacarta-400">by</span>
-                                        <a href="user.html" className="text-accent">
+                                        <a href="user" className="text-accent">
                                             <span>Hey Mrsmeseks</span>
                                         </a>
                                     </div>
@@ -593,7 +593,7 @@ const PageCollections = () => {
                         </article>
                         <article>
                             <div className="rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
-                                <a href="collection.html" className="flex space-x-[0.625rem]">
+                                <a href="collection" className="flex space-x-[0.625rem]">
                                     <span className="w-[74.5%]">
                                         <img
                                             src="./img/collections/collection_8_1.jpg"
@@ -625,7 +625,7 @@ const PageCollections = () => {
                                 </a>
 
                                 <a
-                                    href="collection.html"
+                                    href="collection"
                                     className="mt-4 block font-display text-base text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent"
                                 >
                                     Dope Shibas
@@ -633,7 +633,7 @@ const PageCollections = () => {
 
                                 <div className="mt-2 flex items-center justify-between text-sm font-medium tracking-tight">
                                     <div className="flex flex-wrap items-center">
-                                        <a href="user.html" className="mr-2 shrink-0">
+                                        <a href="user" className="mr-2 shrink-0">
                                             <img
                                                 src="img/avatars/owner_12.png"
                                                 alt="owner"
@@ -641,7 +641,7 @@ const PageCollections = () => {
                                             />
                                         </a>
                                         <span className="mr-1 dark:text-jacarta-400">by</span>
-                                        <a href="user.html" className="text-accent">
+                                        <a href="user" className="text-accent">
                                             <span>alyxbow</span>
                                         </a>
                                     </div>

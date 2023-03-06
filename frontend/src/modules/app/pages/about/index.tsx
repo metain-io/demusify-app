@@ -560,7 +560,7 @@ const AboutPage = () => {
                             </div>
                         </div>
                         <a
-                            href="careers.html"
+                            href="careers"
                             className="flex items-center justify-center rounded-2lg border border-jacarta-100 bg-white p-8 text-center transition-shadow hover:shadow-lg dark:border-jacarta-600 dark:bg-jacarta-700"
                         >
                             <span className="font-display text-md text-jacarta-700 dark:text-white">Join us!</span>
@@ -602,7 +602,7 @@ const AboutPage = () => {
                         <article>
                             <div className="overflow-hidden rounded-2.5xl transition-shadow hover:shadow-lg">
                                 <figure className="group overflow-hidden">
-                                    <a href="single-post.html">
+                                    <a href="single-post">
                                         <img
                                             src="../img/blog/post_2.jpg"
                                             alt="post 2"
@@ -627,7 +627,7 @@ const AboutPage = () => {
                                         </span>
                                     </div>
                                     <h2 className="mb-4 font-display text-xl text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent">
-                                        <a href="single-post.html"> Mint your own Tezos collections </a>
+                                        <a href="single-post"> Mint your own Tezos collections </a>
                                     </h2>
                                     <p className="mb-8 dark:text-jacarta-200">
                                         Since we launched Tezos at the end of 2021, many awesome creators...
@@ -646,7 +646,7 @@ const AboutPage = () => {
                         <article>
                             <div className="overflow-hidden rounded-2.5xl transition-shadow hover:shadow-lg">
                                 <figure className="group overflow-hidden">
-                                    <a href="single-post.html">
+                                    <a href="single-post">
                                         <img
                                             src="../img/blog/post_3.jpg"
                                             alt="post 3"
@@ -671,7 +671,7 @@ const AboutPage = () => {
                                         </span>
                                     </div>
                                     <h2 className="mb-4 font-display text-xl text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent">
-                                        <a href="single-post.html">List your collection for secondary sales</a>
+                                        <a href="single-post">List your collection for secondary sales</a>
                                     </h2>
                                     <p className="mb-8 dark:text-jacarta-200">
                                         Since we launched Tezos at the end of 2021, many awesome creators...
@@ -690,7 +690,7 @@ const AboutPage = () => {
                         <article>
                             <div className="overflow-hidden rounded-2.5xl transition-shadow hover:shadow-lg">
                                 <figure className="group overflow-hidden">
-                                    <a href="single-post.html">
+                                    <a href="single-post">
                                         <img
                                             src="../img/blog/post_4.jpg"
                                             alt="post 4"
@@ -715,7 +715,7 @@ const AboutPage = () => {
                                         </span>
                                     </div>
                                     <h2 className="mb-4 font-display text-xl text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent">
-                                        <a href="single-post.html">The biggest moves in NFTs, Bitcoin, crypto rules</a>
+                                        <a href="single-post">The biggest moves in NFTs, Bitcoin, crypto rules</a>
                                     </h2>
                                     <p className="mb-8 dark:text-jacarta-200">
                                         Since we launched Tezos at the end of 2021, many awesome creators...

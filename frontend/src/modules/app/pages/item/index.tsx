@@ -57,7 +57,7 @@ const PageItem = () => {
                                 <div className="mb-3 flex">
                                     {/* <!-- Collection --> */}
                                     <div className="flex items-center">
-                                        <a href="collection.html" className="mr-2 text-sm font-bold text-accent">
+                                        <a href="collection" className="mr-2 text-sm font-bold text-accent">
                                             CryptoGuysNFT
                                         </a>
                                         <span
@@ -187,7 +187,7 @@ const PageItem = () => {
                                 <div className="mb-8 flex flex-wrap">
                                     <div className="mr-8 mb-4 flex">
                                         <figure className="mr-4 shrink-0">
-                                            <a href="user.html" className="relative block">
+                                            <a href="user" className="relative block">
                                                 <img
                                                     src="img/avatars/avatar_7.jpg"
                                                     alt="avatar 7"
@@ -215,7 +215,7 @@ const PageItem = () => {
                                             <span className="block text-sm text-jacarta-400 dark:text-white">
                                                 Creator <strong>10% royalties</strong>
                                             </span>
-                                            <a href="user.html" className="block text-accent">
+                                            <a href="user" className="block text-accent">
                                                 <span className="text-sm font-bold">@creative_world</span>
                                             </a>
                                         </div>
@@ -223,7 +223,7 @@ const PageItem = () => {
 
                                     <div className="mb-4 flex">
                                         <figure className="mr-4 shrink-0">
-                                            <a href="user.html" className="relative block">
+                                            <a href="user" className="relative block">
                                                 <img
                                                     src="img/avatars/avatar_1.jpg"
                                                     alt="avatar 1"
@@ -251,7 +251,7 @@ const PageItem = () => {
                                             <span className="block text-sm text-jacarta-400 dark:text-white">
                                                 Owned by
                                             </span>
-                                            <a href="user.html" className="block text-accent">
+                                            <a href="user" className="block text-accent">
                                                 <span className="text-sm font-bold">@051_Hart</span>
                                             </a>
                                         </div>
@@ -267,13 +267,13 @@ const PageItem = () => {
                                                 <span className="text-sm text-jacarta-400 dark:text-jacarta-300">
                                                     Highest bid by{' '}
                                                 </span>
-                                                <a href="user.html" className="text-sm font-bold text-accent">
+                                                <a href="user" className="text-sm font-bold text-accent">
                                                     0x695d2ef170ce69e794707eeef9497af2de25df82
                                                 </a>
                                             </div>
                                             <div className="mt-3 flex">
                                                 <figure className="mr-4 shrink-0">
-                                                    <a href="user.html" className="relative block">
+                                                    <a href="user" className="relative block">
                                                         <img
                                                             src="img/avatars/avatar_4.jpg"
                                                             alt="avatar"
@@ -633,7 +633,7 @@ const PageItem = () => {
                                                     className="flex items-center border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
                                                     role="cell"
                                                 >
-                                                    <a href="user.html" className="text-accent">
+                                                    <a href="user" className="text-accent">
                                                         ViviGiallo
                                                     </a>
                                                 </div>
@@ -701,7 +701,7 @@ const PageItem = () => {
                                                     className="flex items-center border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
                                                     role="cell"
                                                 >
-                                                    <a href="user.html" className="text-accent">
+                                                    <a href="user" className="text-accent">
                                                         DB96DB
                                                     </a>
                                                 </div>
@@ -769,7 +769,7 @@ const PageItem = () => {
                                                     className="flex items-center border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
                                                     role="cell"
                                                 >
-                                                    <a href="user.html" className="text-accent">
+                                                    <a href="user" className="text-accent">
                                                         myc_nc
                                                     </a>
                                                 </div>
@@ -837,7 +837,7 @@ const PageItem = () => {
                                                     className="flex items-center border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
                                                     role="cell"
                                                 >
-                                                    <a href="user.html" className="text-accent">
+                                                    <a href="user" className="text-accent">
                                                         MetaRDnA
                                                     </a>
                                                 </div>
@@ -905,7 +905,7 @@ const PageItem = () => {
                                                     className="flex items-center border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
                                                     role="cell"
                                                 >
-                                                    <a href="user.html" className="text-accent">
+                                                    <a href="user" className="text-accent">
                                                         Karafuru
                                                     </a>
                                                 </div>
@@ -973,7 +973,7 @@ const PageItem = () => {
                                                     className="flex items-center border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
                                                     role="cell"
                                                 >
-                                                    <a href="user.html" className="text-accent">
+                                                    <a href="user" className="text-accent">
                                                         seekortelur
                                                     </a>
                                                 </div>
@@ -991,7 +991,7 @@ const PageItem = () => {
                                         <div className="rounded-t-2lg rounded-b-2lg rounded-tl-none border border-jacarta-100 bg-white p-6 dark:border-jacarta-600 dark:bg-jacarta-700 md:p-10">
                                             <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4">
                                                 <a
-                                                    href="collection.html"
+                                                    href="collection"
                                                     className="flex flex-col space-y-2 rounded-2lg border border-jacarta-100 bg-light-base p-5 text-center transition-shadow hover:shadow-lg dark:border-jacarta-600 dark:bg-jacarta-800"
                                                 >
                                                     <span className="text-sm uppercase text-accent">ACCESSORY</span>
@@ -1001,7 +1001,7 @@ const PageItem = () => {
                                                     <span className="text-sm text-jacarta-400">3% have this trait</span>
                                                 </a>
                                                 <a
-                                                    href="collection.html"
+                                                    href="collection"
                                                     className="flex flex-col space-y-2 rounded-2lg border border-jacarta-100 bg-light-base p-5 text-center transition-shadow hover:shadow-lg dark:border-jacarta-600 dark:bg-jacarta-800"
                                                 >
                                                     <span className="text-sm uppercase text-accent">SKIN</span>
@@ -1011,7 +1011,7 @@ const PageItem = () => {
                                                     <span className="text-sm text-jacarta-400">8% have this trait</span>
                                                 </a>
                                                 <a
-                                                    href="collection.html"
+                                                    href="collection"
                                                     className="flex flex-col space-y-2 rounded-2lg border border-jacarta-100 bg-light-base p-5 text-center transition-shadow hover:shadow-lg dark:border-jacarta-600 dark:bg-jacarta-800"
                                                 >
                                                     <span className="text-sm uppercase text-accent">EYES</span>
@@ -1021,7 +1021,7 @@ const PageItem = () => {
                                                     <span className="text-sm text-jacarta-400">2% have this trait</span>
                                                 </a>
                                                 <a
-                                                    href="collection.html"
+                                                    href="collection"
                                                     className="flex flex-col space-y-2 rounded-2lg border border-jacarta-100 bg-light-base p-5 text-center transition-shadow hover:shadow-lg dark:border-jacarta-600 dark:bg-jacarta-800"
                                                 >
                                                     <span className="text-sm uppercase text-accent">CLOTH</span>
@@ -1031,7 +1031,7 @@ const PageItem = () => {
                                                     <span className="text-sm text-jacarta-400">7% have this trait</span>
                                                 </a>
                                                 <a
-                                                    href="collection.html"
+                                                    href="collection"
                                                     className="flex flex-col space-y-2 rounded-2lg border border-jacarta-100 bg-light-base p-5 text-center transition-shadow hover:shadow-lg dark:border-jacarta-600 dark:bg-jacarta-800"
                                                 >
                                                     <span className="text-sm uppercase text-accent">HAIR</span>
@@ -1041,7 +1041,7 @@ const PageItem = () => {
                                                     <span className="text-sm text-jacarta-400">7% have this trait</span>
                                                 </a>
                                                 <a
-                                                    href="collection.html"
+                                                    href="collection"
                                                     className="flex flex-col space-y-2 rounded-2lg border border-jacarta-100 bg-light-base p-5 text-center transition-shadow hover:shadow-lg dark:border-jacarta-600 dark:bg-jacarta-800"
                                                 >
                                                     <span className="text-sm uppercase text-accent">CHARACTER</span>
@@ -1051,7 +1051,7 @@ const PageItem = () => {
                                                     <span className="text-sm text-jacarta-400">1% have this trait</span>
                                                 </a>
                                                 <a
-                                                    href="collection.html"
+                                                    href="collection"
                                                     className="flex flex-col space-y-2 rounded-2lg border border-jacarta-100 bg-light-base p-5 text-center transition-shadow hover:shadow-lg dark:border-jacarta-600 dark:bg-jacarta-800"
                                                 >
                                                     <span className="text-sm uppercase text-accent">BACKGROUND</span>
@@ -1061,7 +1061,7 @@ const PageItem = () => {
                                                     <span className="text-sm text-jacarta-400">9% have this trait</span>
                                                 </a>
                                                 <a
-                                                    href="collection.html"
+                                                    href="collection"
                                                     className="flex flex-col space-y-2 rounded-2lg border border-jacarta-100 bg-light-base p-5 text-center transition-shadow hover:shadow-lg dark:border-jacarta-600 dark:bg-jacarta-800"
                                                 >
                                                     <span className="text-sm uppercase text-accent">MOUTH</span>
@@ -1276,7 +1276,7 @@ const PageItem = () => {
                                                     className="flex w-[22%] items-center border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
                                                     role="cell"
                                                 >
-                                                    <a href="user.html" className="text-accent">
+                                                    <a href="user" className="text-accent">
                                                         AD496A
                                                     </a>
                                                 </div>
@@ -1284,7 +1284,7 @@ const PageItem = () => {
                                                     className="flex w-[22%] items-center border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
                                                     role="cell"
                                                 >
-                                                    <a href="user.html" className="text-accent">
+                                                    <a href="user" className="text-accent">
                                                         Polymorph: MORPH Token
                                                     </a>
                                                 </div>
@@ -1375,7 +1375,7 @@ const PageItem = () => {
                                                     className="flex w-[22%] items-center border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
                                                     role="cell"
                                                 >
-                                                    <a href="user.html" className="text-accent">
+                                                    <a href="user" className="text-accent">
                                                         The_vikk
                                                     </a>
                                                 </div>
@@ -1383,7 +1383,7 @@ const PageItem = () => {
                                                     className="flex w-[22%] items-center border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
                                                     role="cell"
                                                 >
-                                                    <a href="user.html" className="text-accent">
+                                                    <a href="user" className="text-accent">
                                                         Polymorph: MORPH Token
                                                     </a>
                                                 </div>
@@ -1455,7 +1455,7 @@ const PageItem = () => {
                                                     className="flex w-[22%] items-center border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
                                                     role="cell"
                                                 >
-                                                    <a href="user.html" className="text-accent">
+                                                    <a href="user" className="text-accent">
                                                         CryptoGuysNFT
                                                     </a>
                                                 </div>
@@ -1463,7 +1463,7 @@ const PageItem = () => {
                                                     className="flex w-[22%] items-center border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
                                                     role="cell"
                                                 >
-                                                    <a href="user.html" className="text-accent">
+                                                    <a href="user" className="text-accent">
                                                         Polymorph: MORPH Token
                                                     </a>
                                                 </div>
@@ -1570,7 +1570,7 @@ const PageItem = () => {
                                         <article>
                                             <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                                 <figure>
-                                                    <a href="item.html">
+                                                    <a href="item">
                                                         <img
                                                             src="./img/products/item_1.jpg"
                                                             alt="item 1"
@@ -1582,7 +1582,7 @@ const PageItem = () => {
                                                     </a>
                                                 </figure>
                                                 <div className="mt-4 flex items-center justify-between">
-                                                    <a href="item.html">
+                                                    <a href="item">
                                                         <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                             ETH Me Outside
                                                         </span>
@@ -1668,7 +1668,7 @@ const PageItem = () => {
                                         <article>
                                             <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                                 <figure>
-                                                    <a href="item.html">
+                                                    <a href="item">
                                                         <img
                                                             src="./img/products/item_2.jpg"
                                                             alt="item 2"
@@ -1680,7 +1680,7 @@ const PageItem = () => {
                                                     </a>
                                                 </figure>
                                                 <div className="mt-4 flex items-center justify-between">
-                                                    <a href="item.html">
+                                                    <a href="item">
                                                         <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                             Lazyone Panda
                                                         </span>
@@ -1765,7 +1765,7 @@ const PageItem = () => {
                                         <article>
                                             <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                                 <figure>
-                                                    <a href="item.html">
+                                                    <a href="item">
                                                         <img
                                                             src="./img/products/item_6.jpg"
                                                             alt="item 6"
@@ -1777,7 +1777,7 @@ const PageItem = () => {
                                                     </a>
                                                 </figure>
                                                 <div className="mt-4 flex items-center justify-between">
-                                                    <a href="item.html">
+                                                    <a href="item">
                                                         <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                             Splendid Girl
                                                         </span>
@@ -1862,7 +1862,7 @@ const PageItem = () => {
                                         <article>
                                             <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                                 <figure>
-                                                    <a href="item.html">
+                                                    <a href="item">
                                                         <img
                                                             src="./img/products/item_4.jpg"
                                                             alt="item 4"
@@ -1874,7 +1874,7 @@ const PageItem = () => {
                                                     </a>
                                                 </figure>
                                                 <div className="mt-4 flex items-center justify-between">
-                                                    <a href="item.html">
+                                                    <a href="item">
                                                         <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                             Amazing NFT art
                                                         </span>
@@ -1959,7 +1959,7 @@ const PageItem = () => {
                                         <article>
                                             <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                                 <figure className="relative">
-                                                    <a href="item.html">
+                                                    <a href="item">
                                                         <img
                                                             src="./img/pixel.jpg"
                                                             data-src="./img/products/item_3.gif"
@@ -1972,7 +1972,7 @@ const PageItem = () => {
                                                     </a>
                                                 </figure>
                                                 <div className="mt-4 flex items-center justify-between">
-                                                    <a href="item.html">
+                                                    <a href="item">
                                                         <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                             Portrait Gallery
                                                         </span>
@@ -2057,7 +2057,7 @@ const PageItem = () => {
                                         <article>
                                             <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                                 <figure className="relative">
-                                                    <a href="item.html">
+                                                    <a href="item">
                                                         <img
                                                             src="./img/pixel.jpg"
                                                             data-src="./img/products/item_5.jpg"
@@ -2070,7 +2070,7 @@ const PageItem = () => {
                                                     </a>
                                                 </figure>
                                                 <div className="mt-4 flex items-center justify-between">
-                                                    <a href="item.html">
+                                                    <a href="item">
                                                         <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                             Flourishing Cat #180
                                                         </span>

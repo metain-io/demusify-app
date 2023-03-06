@@ -26,7 +26,7 @@ const PageHome8 = () => {
                                 A place where inspiration starts here. Play your favorite games and earn real money
                             </p>
                             <a
-                                href="edit-profile.html"
+                                href="edit-profile"
                                 className="inline-block rounded-full bg-accent py-3 px-8 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark"
                             >
                                 Enter Account
@@ -86,7 +86,7 @@ const PageHome8 = () => {
                                 <div className="swiper-slide">
                                     <article>
                                         <a
-                                            href="item.html"
+                                            href="item"
                                             className="animate-gradient--no-text-fill block animate-gradient overflow-hidden rounded-2.5xl !bg-clip-border p-[2px] text-center shadow-md transition-shadow hover:shadow-lg"
                                         >
                                             <div className="rounded-[1.125rem] bg-jacarta-900 p-8">
@@ -199,7 +199,7 @@ const PageHome8 = () => {
                                 <div className="swiper-slide">
                                     <article>
                                         <a
-                                            href="item.html"
+                                            href="item"
                                             className="animate-gradient--no-text-fill block animate-gradient overflow-hidden rounded-2.5xl !bg-clip-border p-[2px] text-center shadow-md transition-shadow hover:shadow-lg"
                                         >
                                             <div className="rounded-[1.125rem] bg-jacarta-900 p-8">
@@ -304,7 +304,7 @@ const PageHome8 = () => {
                                 <div className="swiper-slide">
                                     <article>
                                         <a
-                                            href="item.html"
+                                            href="item"
                                             className="animate-gradient--no-text-fill block animate-gradient overflow-hidden rounded-2.5xl !bg-clip-border p-[2px] text-center shadow-md transition-shadow hover:shadow-lg"
                                         >
                                             <div className="rounded-[1.125rem] bg-jacarta-900 p-8">
@@ -417,7 +417,7 @@ const PageHome8 = () => {
                                 <div className="swiper-slide">
                                     <article>
                                         <a
-                                            href="item.html"
+                                            href="item"
                                             className="animate-gradient--no-text-fill block animate-gradient overflow-hidden rounded-2.5xl !bg-clip-border p-[2px] text-center shadow-md transition-shadow hover:shadow-lg"
                                         >
                                             <div className="rounded-[1.125rem] bg-jacarta-900 p-8">
@@ -530,7 +530,7 @@ const PageHome8 = () => {
                                 <div className="swiper-slide">
                                     <article>
                                         <a
-                                            href="item.html"
+                                            href="item"
                                             className="animate-gradient--no-text-fill block animate-gradient overflow-hidden rounded-2.5xl !bg-clip-border p-[2px] text-center shadow-md transition-shadow hover:shadow-lg"
                                         >
                                             <div className="rounded-[1.125rem] bg-jacarta-900 p-8">
@@ -727,7 +727,7 @@ const PageHome8 = () => {
                                     authentic and originally signed version.
                                 </p>
                                 <a
-                                    href="collections.html"
+                                    href="collections"
                                     className="inline-block rounded-full bg-accent py-3 px-8 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark"
                                 >
                                     Come Discover
@@ -756,7 +756,7 @@ const PageHome8 = () => {
                                     authentic and originally signed version.
                                 </p>
                                 <a
-                                    href="collections.html"
+                                    href="collections"
                                     className="inline-block rounded-full bg-accent py-3 px-8 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark"
                                 >
                                     Create Avatar

@@ -90,7 +90,7 @@ const ContactPage = () => {
                                             className="text-sm dark:text-jacarta-200"
                                         >
                                             I agree to the{' '}
-                                            <a href="tos.html" className="text-accent">
+                                            <a href="tos" className="text-accent">
                                                 Terms of Service
                                             </a>
                                         </label>

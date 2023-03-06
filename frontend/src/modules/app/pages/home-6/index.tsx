@@ -14,7 +14,7 @@ const Home6Page = () => {
                                     <div className="relative overflow-hidden rounded-2.5xl bg-white dark:bg-jacarta-700">
                                         <figure className="relative">
                                             <a
-                                                href="item.html"
+                                                href="item"
                                                 className="group block after:absolute after:inset-0 after:block after:bg-jacarta-900/20"
                                             >
                                                 <img
@@ -38,7 +38,7 @@ const Home6Page = () => {
                                     <div className="relative overflow-hidden rounded-2.5xl bg-white dark:bg-jacarta-700">
                                         <figure className="relative">
                                             <a
-                                                href="item.html"
+                                                href="item"
                                                 className="group block after:absolute after:inset-0 after:block after:bg-jacarta-900/20"
                                             >
                                                 <img
@@ -62,7 +62,7 @@ const Home6Page = () => {
                                     <div className="relative overflow-hidden rounded-2.5xl bg-white dark:bg-jacarta-700">
                                         <figure className="relative">
                                             <a
-                                                href="item.html"
+                                                href="item"
                                                 className="group block after:absolute after:inset-0 after:block after:bg-jacarta-900/20"
                                             >
                                                 <img
@@ -86,7 +86,7 @@ const Home6Page = () => {
                                     <div className="relative overflow-hidden rounded-2.5xl bg-white dark:bg-jacarta-700">
                                         <figure className="relative">
                                             <a
-                                                href="item.html"
+                                                href="item"
                                                 className="group block after:absolute after:inset-0 after:block after:bg-jacarta-900/20"
                                             >
                                                 <img
@@ -113,7 +113,7 @@ const Home6Page = () => {
                                 <div className="relative overflow-hidden rounded-2.5xl bg-white dark:bg-jacarta-700">
                                     <figure className="relative">
                                         <a
-                                            href="item.html"
+                                            href="item"
                                             className="group block after:absolute after:inset-0 after:block after:bg-jacarta-900/20"
                                         >
                                             <img
@@ -138,7 +138,7 @@ const Home6Page = () => {
                                     <div className="relative overflow-hidden rounded-2.5xl bg-white dark:bg-jacarta-700">
                                         <figure className="relative">
                                             <a
-                                                href="item.html"
+                                                href="item"
                                                 className="group block after:absolute after:inset-0 after:block after:bg-jacarta-900/20"
                                             >
                                                 <img
@@ -162,7 +162,7 @@ const Home6Page = () => {
                                     <div className="relative overflow-hidden rounded-2.5xl bg-white dark:bg-jacarta-700">
                                         <figure className="relative">
                                             <a
-                                                href="item.html"
+                                                href="item"
                                                 className="group block after:absolute after:inset-0 after:block after:bg-jacarta-900/20"
                                             >
                                                 <img
@@ -186,7 +186,7 @@ const Home6Page = () => {
                                     <div className="relative overflow-hidden rounded-2.5xl bg-white dark:bg-jacarta-700">
                                         <figure className="relative">
                                             <a
-                                                href="item.html"
+                                                href="item"
                                                 className="group block after:absolute after:inset-0 after:block after:bg-jacarta-900/20"
                                             >
                                                 <img
@@ -210,7 +210,7 @@ const Home6Page = () => {
                                     <div className="relative overflow-hidden rounded-2.5xl bg-white dark:bg-jacarta-700">
                                         <figure className="relative">
                                             <a
-                                                href="item.html"
+                                                href="item"
                                                 className="group block after:absolute after:inset-0 after:block after:bg-jacarta-900/20"
                                             >
                                                 <img
@@ -257,7 +257,7 @@ const Home6Page = () => {
                                         <article>
                                             <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                                 <figure>
-                                                    <a href="item.html">
+                                                    <a href="item">
                                                         <img
                                                             src="./../img/products/item_1.jpg"
                                                             alt="item 1"
@@ -269,7 +269,7 @@ const Home6Page = () => {
                                                     </a>
                                                 </figure>
                                                 <div className="mt-4 flex items-center justify-between">
-                                                    <a href="item.html">
+                                                    <a href="item">
                                                         <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                             ETH Me Outside
                                                         </span>
@@ -353,7 +353,7 @@ const Home6Page = () => {
                                         <article>
                                             <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                                 <figure>
-                                                    <a href="item.html">
+                                                    <a href="item">
                                                         <img
                                                             src="./../img/products/item_2.jpg"
                                                             alt="item 2"
@@ -365,7 +365,7 @@ const Home6Page = () => {
                                                     </a>
                                                 </figure>
                                                 <div className="mt-4 flex items-center justify-between">
-                                                    <a href="item.html">
+                                                    <a href="item">
                                                         <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                             Lazyone Panda
                                                         </span>
@@ -449,7 +449,7 @@ const Home6Page = () => {
                                         <article>
                                             <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                                 <figure>
-                                                    <a href="item.html">
+                                                    <a href="item">
                                                         <img
                                                             src="./../img/products/item_6.jpg"
                                                             alt="item 6"
@@ -461,7 +461,7 @@ const Home6Page = () => {
                                                     </a>
                                                 </figure>
                                                 <div className="mt-4 flex items-center justify-between">
-                                                    <a href="item.html">
+                                                    <a href="item">
                                                         <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                             Splendid Girl
                                                         </span>
@@ -545,7 +545,7 @@ const Home6Page = () => {
                                         <article>
                                             <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                                 <figure>
-                                                    <a href="item.html">
+                                                    <a href="item">
                                                         <img
                                                             src="./../img/products/item_4.jpg"
                                                             alt="item 4"
@@ -557,7 +557,7 @@ const Home6Page = () => {
                                                     </a>
                                                 </figure>
                                                 <div className="mt-4 flex items-center justify-between">
-                                                    <a href="item.html">
+                                                    <a href="item">
                                                         <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                             Amazing NFT art
                                                         </span>
@@ -641,7 +641,7 @@ const Home6Page = () => {
                                         <article>
                                             <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                                 <figure className="relative">
-                                                    <a href="item.html">
+                                                    <a href="item">
                                                         <img
                                                             src="./../img/pixel.jpg"
                                                             data-src="./../img/products/item_3.gif"
@@ -654,7 +654,7 @@ const Home6Page = () => {
                                                     </a>
                                                 </figure>
                                                 <div className="mt-4 flex items-center justify-between">
-                                                    <a href="item.html">
+                                                    <a href="item">
                                                         <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                             Portrait Gallery
                                                         </span>
@@ -738,7 +738,7 @@ const Home6Page = () => {
                                         <article>
                                             <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                                 <figure className="relative">
-                                                    <a href="item.html">
+                                                    <a href="item">
                                                         <img
                                                             src="./../img/pixel.jpg"
                                                             data-src="./../img/products/item_5.jpg"
@@ -751,7 +751,7 @@ const Home6Page = () => {
                                                     </a>
                                                 </figure>
                                                 <div className="mt-4 flex items-center justify-between">
-                                                    <a href="item.html">
+                                                    <a href="item">
                                                         <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                             Flourishing Cat #180
                                                         </span>
@@ -876,7 +876,7 @@ const Home6Page = () => {
                                 <div className="flex flex-col space-y-5">
                                     <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                                         <figure className="mr-4 shrink-0">
-                                            <a href="collection.html" className="relative block">
+                                            <a href="collection" className="relative block">
                                                 <img
                                                     src="../img/avatars/avatar_1.jpg"
                                                     alt="avatar 1"
@@ -904,7 +904,7 @@ const Home6Page = () => {
                                             </a>
                                         </figure>
                                         <div>
-                                            <a href="collection.html" className="block">
+                                            <a href="collection" className="block">
                                                 <span className="font-display font-semibold text-jacarta-700 hover:text-accent dark:text-white">
                                                     NFT Funny Cat
                                                 </span>
@@ -914,7 +914,7 @@ const Home6Page = () => {
                                     </div>
                                     <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                                         <figure className="mr-4 shrink-0">
-                                            <a href="collection.html" className="relative block">
+                                            <a href="collection" className="relative block">
                                                 <img
                                                     src="../img/avatars/avatar_2.jpg"
                                                     alt="avatar 2"
@@ -942,7 +942,7 @@ const Home6Page = () => {
                                             </a>
                                         </figure>
                                         <div>
-                                            <a href="collection.html" className="block">
+                                            <a href="collection" className="block">
                                                 <span className="font-display font-semibold text-jacarta-700 hover:text-accent dark:text-white">
                                                     Cryptopank
                                                 </span>
@@ -952,7 +952,7 @@ const Home6Page = () => {
                                     </div>
                                     <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                                         <figure className="mr-4 shrink-0">
-                                            <a href="collection.html" className="relative block">
+                                            <a href="collection" className="relative block">
                                                 <img
                                                     src="../img/avatars/avatar_3.jpg"
                                                     alt="avatar 3"
@@ -965,7 +965,7 @@ const Home6Page = () => {
                                             </a>
                                         </figure>
                                         <div>
-                                            <a href="collection.html" className="block">
+                                            <a href="collection" className="block">
                                                 <span className="font-display font-semibold text-jacarta-700 hover:text-accent dark:text-white">
                                                     Prince Ape Planet
                                                 </span>
@@ -975,7 +975,7 @@ const Home6Page = () => {
                                     </div>
                                     <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                                         <figure className="mr-4 shrink-0">
-                                            <a href="collection.html" className="relative block">
+                                            <a href="collection" className="relative block">
                                                 <img
                                                     src="../img/avatars/avatar_4.jpg"
                                                     alt="avatar 4"
@@ -988,7 +988,7 @@ const Home6Page = () => {
                                             </a>
                                         </figure>
                                         <div>
-                                            <a href="collection.html" className="block">
+                                            <a href="collection" className="block">
                                                 <span className="font-display font-semibold text-jacarta-700 hover:text-accent dark:text-white">
                                                     Hey Mrsmeseks
                                                 </span>
@@ -998,7 +998,7 @@ const Home6Page = () => {
                                     </div>
                                 </div>
                                 <a
-                                    href="collection.html"
+                                    href="collection"
                                     className="mt-8 block text-center text-sm font-bold tracking-tight text-accent"
                                 >
                                     View All Drops
@@ -1011,7 +1011,7 @@ const Home6Page = () => {
                                 <div className="flex flex-col space-y-5">
                                     <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                                         <figure className="mr-4 shrink-0">
-                                            <a href="collection.html" className="relative block">
+                                            <a href="collection" className="relative block">
                                                 <img
                                                     src="../img/avatars/avatar_5.jpg"
                                                     alt="avatar 5"
@@ -1024,7 +1024,7 @@ const Home6Page = () => {
                                             </a>
                                         </figure>
                                         <div>
-                                            <a href="collection.html" className="block">
+                                            <a href="collection" className="block">
                                                 <span className="font-display font-semibold text-jacarta-700 hover:text-accent dark:text-white">
                                                     Bored Bunny
                                                 </span>
@@ -1034,7 +1034,7 @@ const Home6Page = () => {
                                     </div>
                                     <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                                         <figure className="mr-4 shrink-0">
-                                            <a href="collection.html" className="relative block">
+                                            <a href="collection" className="relative block">
                                                 <img
                                                     src="../img/avatars/avatar_6.gif"
                                                     alt="avatar 6"
@@ -1047,7 +1047,7 @@ const Home6Page = () => {
                                             </a>
                                         </figure>
                                         <div>
-                                            <a href="collection.html" className="block">
+                                            <a href="collection" className="block">
                                                 <span className="font-display font-semibold text-jacarta-700 hover:text-accent dark:text-white">
                                                     Wow Frens
                                                 </span>
@@ -1057,7 +1057,7 @@ const Home6Page = () => {
                                     </div>
                                     <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                                         <figure className="mr-4 shrink-0">
-                                            <a href="collection.html" className="relative block">
+                                            <a href="collection" className="relative block">
                                                 <img
                                                     src="../img/avatars/avatar_7.jpg"
                                                     alt="avatar 7"
@@ -1085,7 +1085,7 @@ const Home6Page = () => {
                                             </a>
                                         </figure>
                                         <div>
-                                            <a href="collection.html" className="block">
+                                            <a href="collection" className="block">
                                                 <span className="font-display font-semibold text-jacarta-700 hover:text-accent dark:text-white">
                                                     Origin Morish
                                                 </span>
@@ -1095,7 +1095,7 @@ const Home6Page = () => {
                                     </div>
                                     <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                                         <figure className="mr-4 shrink-0">
-                                            <a href="collection.html" className="relative block">
+                                            <a href="collection" className="relative block">
                                                 <img
                                                     src="../img/avatars/avatar_8.jpg"
                                                     alt="avatar 8"
@@ -1123,7 +1123,7 @@ const Home6Page = () => {
                                             </a>
                                         </figure>
                                         <div>
-                                            <a href="collection.html" className="block">
+                                            <a href="collection" className="block">
                                                 <span className="font-display font-semibold text-jacarta-700 hover:text-accent dark:text-white">
                                                     Superdo
                                                 </span>
@@ -1133,7 +1133,7 @@ const Home6Page = () => {
                                     </div>
                                 </div>
                                 <a
-                                    href="collection.html"
+                                    href="collection"
                                     className="mt-8 block text-center text-sm font-bold tracking-tight text-accent"
                                 >
                                     View All Sellers
@@ -1146,7 +1146,7 @@ const Home6Page = () => {
                                 <div className="flex flex-col space-y-5">
                                     <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                                         <figure className="mr-4 shrink-0">
-                                            <a href="collection.html" className="relative block">
+                                            <a href="collection" className="relative block">
                                                 <img
                                                     src="../img/avatars/avatar_9.jpg"
                                                     alt="avatar 9"
@@ -1159,7 +1159,7 @@ const Home6Page = () => {
                                             </a>
                                         </figure>
                                         <div>
-                                            <a href="collection.html" className="block">
+                                            <a href="collection" className="block">
                                                 <span className="font-display font-semibold text-jacarta-700 hover:text-accent dark:text-white">
                                                     NFT stars
                                                 </span>
@@ -1169,7 +1169,7 @@ const Home6Page = () => {
                                     </div>
                                     <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                                         <figure className="mr-4 shrink-0">
-                                            <a href="collection.html" className="relative block">
+                                            <a href="collection" className="relative block">
                                                 <img
                                                     src="../img/avatars/avatar_10.jpg"
                                                     alt="avatar 10"
@@ -1197,7 +1197,7 @@ const Home6Page = () => {
                                             </a>
                                         </figure>
                                         <div>
-                                            <a href="collection.html" className="block">
+                                            <a href="collection" className="block">
                                                 <span className="font-display font-semibold text-jacarta-700 hover:text-accent dark:text-white">
                                                     Asumitsu
                                                 </span>
@@ -1207,7 +1207,7 @@ const Home6Page = () => {
                                     </div>
                                     <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                                         <figure className="mr-4 shrink-0">
-                                            <a href="collection.html" className="relative block">
+                                            <a href="collection" className="relative block">
                                                 <img
                                                     src="../img/avatars/avatar_11.jpg"
                                                     alt="avatar 11"
@@ -1220,7 +1220,7 @@ const Home6Page = () => {
                                             </a>
                                         </figure>
                                         <div>
-                                            <a href="collection.html" className="block">
+                                            <a href="collection" className="block">
                                                 <span className="font-display font-semibold text-jacarta-700 hover:text-accent dark:text-white">
                                                     Pank Skull
                                                 </span>
@@ -1230,7 +1230,7 @@ const Home6Page = () => {
                                     </div>
                                     <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                                         <figure className="mr-4 shrink-0">
-                                            <a href="collection.html" className="relative block">
+                                            <a href="collection" className="relative block">
                                                 <img
                                                     src="../img/avatars/avatar_12.jpg"
                                                     alt="avatar 12"
@@ -1243,7 +1243,7 @@ const Home6Page = () => {
                                             </a>
                                         </figure>
                                         <div>
-                                            <a href="collection.html" className="block">
+                                            <a href="collection" className="block">
                                                 <span className="font-display font-semibold text-jacarta-700 hover:text-accent dark:text-white">
                                                     Lazy Panda
                                                 </span>
@@ -1253,7 +1253,7 @@ const Home6Page = () => {
                                     </div>
                                 </div>
                                 <a
-                                    href="collection.html"
+                                    href="collection"
                                     className="mt-8 block text-center text-sm font-bold tracking-tight text-accent"
                                 >
                                     View All Buyers
@@ -1341,7 +1341,7 @@ const Home6Page = () => {
                                         </div>
                                     </div>
                                     <figure className="relative">
-                                        <a href="item.html">
+                                        <a href="item">
                                             <img
                                                 src="./../img/products/item_8.jpg"
                                                 alt="item 8"
@@ -1366,7 +1366,7 @@ const Home6Page = () => {
                                         </div>
                                     </figure>
                                     <div className="mt-7 flex items-center justify-between">
-                                        <a href="item.html">
+                                        <a href="item">
                                             <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                 Monkeyme#155
                                             </span>
@@ -1491,7 +1491,7 @@ const Home6Page = () => {
                                         </div>
                                     </div>
                                     <figure className="relative">
-                                        <a href="item.html">
+                                        <a href="item">
                                             <img
                                                 src="./../img/products/item_6.jpg"
                                                 alt="item 6"
@@ -1516,7 +1516,7 @@ const Home6Page = () => {
                                         </div>
                                     </figure>
                                     <div className="mt-7 flex items-center justify-between">
-                                        <a href="item.html">
+                                        <a href="item">
                                             <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                 Splendid Girl
                                             </span>
@@ -1641,7 +1641,7 @@ const Home6Page = () => {
                                         </div>
                                     </div>
                                     <figure className="relative">
-                                        <a href="item.html">
+                                        <a href="item">
                                             <img
                                                 src="./../img/products/item_11.gif"
                                                 alt="item 6"
@@ -1666,7 +1666,7 @@ const Home6Page = () => {
                                         </div>
                                     </figure>
                                     <div className="mt-7 flex items-center justify-between">
-                                        <a href="item.html">
+                                        <a href="item">
                                             <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                 Asuna #1649
                                             </span>
@@ -1791,7 +1791,7 @@ const Home6Page = () => {
                                         </div>
                                     </div>
                                     <figure className="relative">
-                                        <a href="item.html">
+                                        <a href="item">
                                             <img
                                                 src="./../img/products/item_10.jpg"
                                                 alt="item 6"
@@ -1816,7 +1816,7 @@ const Home6Page = () => {
                                         </div>
                                     </figure>
                                     <div className="mt-7 flex items-center justify-between">
-                                        <a href="item.html">
+                                        <a href="item">
                                             <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                 Artof Eve
                                             </span>
@@ -1941,7 +1941,7 @@ const Home6Page = () => {
                                         </div>
                                     </div>
                                     <figure className="relative">
-                                        <a href="item.html">
+                                        <a href="item">
                                             <img
                                                 src="./../img/products/item_17.jpg"
                                                 alt="item 6"
@@ -1966,7 +1966,7 @@ const Home6Page = () => {
                                         </div>
                                     </figure>
                                     <div className="mt-7 flex items-center justify-between">
-                                        <a href="item.html">
+                                        <a href="item">
                                             <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                 Azuki #4017
                                             </span>
@@ -2091,7 +2091,7 @@ const Home6Page = () => {
                                         </div>
                                     </div>
                                     <figure className="relative">
-                                        <a href="item.html">
+                                        <a href="item">
                                             <img
                                                 src="./../img/products/item_18.jpg"
                                                 alt="item 6"
@@ -2116,7 +2116,7 @@ const Home6Page = () => {
                                         </div>
                                     </figure>
                                     <div className="mt-7 flex items-center justify-between">
-                                        <a href="item.html">
+                                        <a href="item">
                                             <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                 Block #2788
                                             </span>
@@ -2241,7 +2241,7 @@ const Home6Page = () => {
                                         </div>
                                     </div>
                                     <figure className="relative">
-                                        <a href="item.html">
+                                        <a href="item">
                                             <img
                                                 src="./../img/products/item_19.jpg"
                                                 alt="item 6"
@@ -2266,7 +2266,7 @@ const Home6Page = () => {
                                         </div>
                                     </figure>
                                     <div className="mt-7 flex items-center justify-between">
-                                        <a href="item.html">
+                                        <a href="item">
                                             <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                 Crypto bull #6195
                                             </span>
@@ -2391,7 +2391,7 @@ const Home6Page = () => {
                                         </div>
                                     </div>
                                     <figure className="relative">
-                                        <a href="item.html">
+                                        <a href="item">
                                             <img
                                                 src="./../img/products/item_20.jpg"
                                                 alt="item 6"
@@ -2416,7 +2416,7 @@ const Home6Page = () => {
                                         </div>
                                     </figure>
                                     <div className="mt-7 flex items-center justify-between">
-                                        <a href="item.html">
+                                        <a href="item">
                                             <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                 TSARÉVNA
                                             </span>
@@ -2480,7 +2480,7 @@ const Home6Page = () => {
                         </div>
                         <div className="mt-10 text-center">
                             <a
-                                href="collections.html"
+                                href="collections"
                                 className="inline-block rounded-full bg-accent py-3 px-8 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark"
                             >
                                 Load More
@@ -2505,7 +2505,7 @@ const Home6Page = () => {
                                 <div className="swiper-slide">
                                     <article>
                                         <a
-                                            href="collections.html"
+                                            href="collections"
                                             className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700"
                                         >
                                             <figure className="rounded-t-[0.625rem] bg-green">
@@ -2527,7 +2527,7 @@ const Home6Page = () => {
                                 <div className="swiper-slide">
                                     <article>
                                         <a
-                                            href="collections.html"
+                                            href="collections"
                                             className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700"
                                         >
                                             <figure className="rounded-t-[0.625rem] bg-orange">
@@ -2549,7 +2549,7 @@ const Home6Page = () => {
                                 <div className="swiper-slide">
                                     <article>
                                         <a
-                                            href="collections.html"
+                                            href="collections"
                                             className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700"
                                         >
                                             <figure className="rounded-t-[0.625rem] bg-accent">
@@ -2571,7 +2571,7 @@ const Home6Page = () => {
                                 <div className="swiper-slide">
                                     <article>
                                         <a
-                                            href="collections.html"
+                                            href="collections"
                                             className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700"
                                         >
                                             <figure className="rounded-t-[0.625rem] bg-[#46C7E3]">
@@ -2593,7 +2593,7 @@ const Home6Page = () => {
                                 <div className="swiper-slide">
                                     <article>
                                         <a
-                                            href="collections.html"
+                                            href="collections"
                                             className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700"
                                         >
                                             <figure className="rounded-t-[0.625rem] bg-[#737EF2]">
@@ -2615,7 +2615,7 @@ const Home6Page = () => {
                                 <div className="swiper-slide">
                                     <article>
                                         <a
-                                            href="collections.html"
+                                            href="collections"
                                             className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700"
                                         >
                                             <figure className="rounded-t-[0.625rem] bg-blue">
@@ -2637,7 +2637,7 @@ const Home6Page = () => {
                                 <div className="swiper-slide">
                                     <article>
                                         <a
-                                            href="collections.html"
+                                            href="collections"
                                             className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700"
                                         >
                                             <figure className="rounded-t-[0.625rem] bg-[#F35BC7]">
@@ -3100,7 +3100,7 @@ const Home6Page = () => {
                                     />
                                 </figure>
                                 <div>
-                                    <a href="collection.html" className="text-sm text-accent">
+                                    <a href="collection" className="text-sm text-accent">
                                         Elon Musk #709
                                     </a>
                                     <h3 className="mb-1 font-display text-base font-semibold text-jacarta-700 dark:text-white">

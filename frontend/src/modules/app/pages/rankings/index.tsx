@@ -288,7 +288,7 @@ const PageRankings = () => {
                                     </span>
                                 </div>
                             </div>
-                            <a href="user.html" className="flex transition-shadow hover:shadow-lg" role="row">
+                            <a href="user" className="flex transition-shadow hover:shadow-lg" role="row">
                                 <div
                                     className="flex w-[28%] items-center border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
                                     role="cell"
@@ -398,7 +398,7 @@ const PageRankings = () => {
                                     <span>10.0K</span>
                                 </div>
                             </a>
-                            <a href="user.html" className="flex transition-shadow hover:shadow-lg" role="row">
+                            <a href="user" className="flex transition-shadow hover:shadow-lg" role="row">
                                 <div
                                     className="flex w-[28%] items-center border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
                                     role="cell"
@@ -494,7 +494,7 @@ const PageRankings = () => {
                                     <span>8.2K</span>
                                 </div>
                             </a>
-                            <a href="user.html" className="flex transition-shadow hover:shadow-lg" role="row">
+                            <a href="user" className="flex transition-shadow hover:shadow-lg" role="row">
                                 <div
                                     className="flex w-[28%] items-center border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
                                     role="cell"
@@ -590,7 +590,7 @@ const PageRankings = () => {
                                     <span>6.2K</span>
                                 </div>
                             </a>
-                            <a href="user.html" className="flex transition-shadow hover:shadow-lg" role="row">
+                            <a href="user" className="flex transition-shadow hover:shadow-lg" role="row">
                                 <div
                                     className="flex w-[28%] items-center border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
                                     role="cell"
@@ -686,7 +686,7 @@ const PageRankings = () => {
                                     <span>8.2K</span>
                                 </div>
                             </a>
-                            <a href="user.html" className="flex transition-shadow hover:shadow-lg" role="row">
+                            <a href="user" className="flex transition-shadow hover:shadow-lg" role="row">
                                 <div
                                     className="flex w-[28%] items-center border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
                                     role="cell"
@@ -781,7 +781,7 @@ const PageRankings = () => {
                                     <span>5.2K</span>
                                 </div>
                             </a>
-                            <a href="user.html" className="flex transition-shadow hover:shadow-lg" role="row">
+                            <a href="user" className="flex transition-shadow hover:shadow-lg" role="row">
                                 <div
                                     className="flex w-[28%] items-center border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
                                     role="cell"
@@ -876,7 +876,7 @@ const PageRankings = () => {
                                     <span>6.2K</span>
                                 </div>
                             </a>
-                            <a href="user.html" className="flex transition-shadow hover:shadow-lg" role="row">
+                            <a href="user" className="flex transition-shadow hover:shadow-lg" role="row">
                                 <div
                                     className="flex w-[28%] items-center border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
                                     role="cell"

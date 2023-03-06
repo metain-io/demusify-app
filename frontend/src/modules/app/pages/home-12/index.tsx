@@ -24,13 +24,13 @@ const Home12Page = () => {
                                 </h1>
                                 <div className="flex space-x-4">
                                     <a
-                                        href="collections.html"
+                                        href="collections"
                                         className="rounded-full bg-accent py-3 px-8 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark"
                                     >
                                         Get Started
                                     </a>
                                     <a
-                                        href="tos.html"
+                                        href="tos"
                                         className="rounded-full bg-white py-3 px-8 text-center font-semibold text-accent shadow-white-volume transition-all hover:bg-accent-dark hover:text-white hover:shadow-accent-volume"
                                     >
                                         White Paper
@@ -53,7 +53,7 @@ const Home12Page = () => {
                                     Discount Tier: 40%
                                 </p>
                                 <a
-                                    href="item.html"
+                                    href="item"
                                     className="inline-block rounded-full bg-accent py-2.5 px-8 text-center text-sm font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark"
                                 >
                                     Buy Token Now

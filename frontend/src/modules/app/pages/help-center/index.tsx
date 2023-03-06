@@ -121,7 +121,7 @@ const PageHelpCenter = () => {
                     </h2>
                     <p className="mx-auto mb-10 max-w-md text-center text-lg text-jacarta-300">
                         Join our community now to get free updates and also alot of freebies are waiting for you or
-                        <a href="contact.html" className="text-accent">
+                        <a href="contact" className="text-accent">
                             Contact Support
                         </a>
                     </p>

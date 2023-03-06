@@ -18,7 +18,7 @@ const PageActivity = () => {
                         {/* <!-- Records --> */}
                         <div className="mb-10 shrink-0 basis-8/12 space-y-5 lg:mb-0 lg:pr-10">
                             <a
-                                href="item.html"
+                                href="item"
                                 className="relative flex items-center rounded-2.5xl border border-jacarta-100 bg-white p-8 transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700"
                             >
                                 <figure className="mr-5 self-start">
@@ -54,7 +54,7 @@ const PageActivity = () => {
                                 </div>
                             </a>
                             <a
-                                href="item.html"
+                                href="item"
                                 className="relative flex items-center rounded-2.5xl border border-jacarta-100 bg-white p-8 transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700"
                             >
                                 <figure className="mr-5 self-start">
@@ -90,7 +90,7 @@ const PageActivity = () => {
                                 </div>
                             </a>
                             <a
-                                href="item.html"
+                                href="item"
                                 className="relative flex items-center rounded-2.5xl border border-jacarta-100 bg-white p-8 transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700"
                             >
                                 <figure className="mr-5 self-start">
@@ -126,7 +126,7 @@ const PageActivity = () => {
                                 </div>
                             </a>
                             <a
-                                href="item.html"
+                                href="item"
                                 className="relative flex items-center rounded-2.5xl border border-jacarta-100 bg-white p-8 transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700"
                             >
                                 <figure className="mr-5 self-start">
@@ -162,7 +162,7 @@ const PageActivity = () => {
                                 </div>
                             </a>
                             <a
-                                href="item.html"
+                                href="item"
                                 className="relative flex items-center rounded-2.5xl border border-jacarta-100 bg-white p-8 transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700"
                             >
                                 <figure className="mr-5 self-start">

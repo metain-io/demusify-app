@@ -31,69 +31,69 @@ const CaseStudiesPage = () => {
                     <div className="container">
                         <div className="grid gap-12 md:grid-cols-2">
                             <article>
-                                <a href="single-case-study.html">
+                                <a href="single-case-study">
                                     <figure className="mb-10 overflow-hidden rounded-2.5xl transition-shadow hover:shadow-xl">
                                         <img src="../img/case-studies/case_study_1.jpg" alt="" />
                                     </figure>
                                 </a>
                                 <h2 className="group mb-2 max-w-md font-display text-lg text-jacarta-700 dark:text-white">
-                                    <a href="single-case-study.html" className="group-hover:text-accent">
+                                    <a href="single-case-study" className="group-hover:text-accent">
                                         Which cryptocurrency has highest potential in future growth?
                                     </a>
                                 </h2>
-                                <a href="single-case-study.html" className="text-sm font-bold text-accent">
+                                <a href="single-case-study" className="text-sm font-bold text-accent">
                                     View Case Study
                                 </a>
                             </article>
                             <article>
-                                <a href="single-case-study.html">
+                                <a href="single-case-study">
                                     <figure className="mb-10 overflow-hidden rounded-2.5xl transition-shadow hover:shadow-xl">
                                         <img src="../img/case-studies/case_study_2.jpg" alt="" />
                                     </figure>
                                 </a>
                                 <h2 className="group mb-2 max-w-md font-display text-lg text-jacarta-700 dark:text-white">
-                                    <a href="single-case-study.html" className="group-hover:text-accent">
+                                    <a href="single-case-study" className="group-hover:text-accent">
                                         Will NFT Collections Succeeded this Coming Year 2023
                                     </a>
                                 </h2>
-                                <a href="single-case-study.html" className="text-sm font-bold text-accent">
+                                <a href="single-case-study" className="text-sm font-bold text-accent">
                                     View Case Study
                                 </a>
                             </article>
                             <article>
-                                <a href="single-case-study.html">
+                                <a href="single-case-study">
                                     <figure className="mb-10 overflow-hidden rounded-2.5xl transition-shadow hover:shadow-xl">
                                         <img src="../img/case-studies/case_study_3.jpg" alt="" />
                                     </figure>
                                 </a>
                                 <h2 className="group mb-2 max-w-md font-display text-lg text-jacarta-700 dark:text-white">
-                                    <a href="single-case-study.html" className="group-hover:text-accent">
+                                    <a href="single-case-study" className="group-hover:text-accent">
                                         UI/UX Designers Achieves a 31% Increase in Organic Traffic
                                     </a>
                                 </h2>
-                                <a href="single-case-study.html" className="text-sm font-bold text-accent">
+                                <a href="single-case-study" className="text-sm font-bold text-accent">
                                     View Case Study
                                 </a>
                             </article>
                             <article>
-                                <a href="single-case-study.html">
+                                <a href="single-case-study">
                                     <figure className="mb-10 overflow-hidden rounded-2.5xl transition-shadow hover:shadow-xl">
                                         <img src="../img/case-studies/case_study_4.jpg" alt="" />
                                     </figure>
                                 </a>
                                 <h2 className="group mb-2 max-w-md font-display text-lg text-jacarta-700 dark:text-white">
-                                    <a href="single-case-study.html" className="group-hover:text-accent">
+                                    <a href="single-case-study" className="group-hover:text-accent">
                                         New Social Media Platforms Marketers Should Watch in 2022
                                     </a>
                                 </h2>
-                                <a href="single-case-study.html" className="text-sm font-bold text-accent">
+                                <a href="single-case-study" className="text-sm font-bold text-accent">
                                     View Case Study
                                 </a>
                             </article>
                         </div>
                         <div className="mt-10 text-center">
                             <a
-                                href="collections.html"
+                                href="collections"
                                 className="inline-block rounded-full bg-accent py-3 px-8 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark"
                             >
                                 Load More
@@ -315,7 +315,7 @@ const CaseStudiesPage = () => {
                                     />
                                 </figure>
                                 <div>
-                                    <a href="collection.html" className="text-sm text-accent">
+                                    <a href="collection" className="text-sm text-accent">
                                         Elon Musk #709
                                     </a>
                                     <h3 className="mb-1 font-display text-base font-semibold text-jacarta-700 dark:text-white">

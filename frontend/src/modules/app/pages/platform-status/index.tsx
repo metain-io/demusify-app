@@ -345,7 +345,7 @@ const PlatformStatusPage = () => {
                                     />
                                 </figure>
                                 <div>
-                                    <a href="collection.html" className="text-sm text-accent">
+                                    <a href="collection" className="text-sm text-accent">
                                         Elon Musk #709
                                     </a>
                                     <h3 className="mb-1 font-display text-base font-semibold text-jacarta-700 dark:text-white">

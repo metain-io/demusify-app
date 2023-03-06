@@ -25,13 +25,13 @@ const PageHome2 = () => {
                             </p>
                             <div className="inline-flex space-x-4">
                                 <a
-                                    href="create.html"
+                                    href="create"
                                     className="w-36 rounded-full bg-accent py-3 px-8 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark"
                                 >
                                     Create
                                 </a>
                                 <a
-                                    href="collections.html"
+                                    href="collections"
                                     className="w-36 rounded-full bg-white py-3 px-8 text-center font-semibold text-accent shadow-white-volume transition-all hover:bg-accent-dark hover:text-white hover:shadow-accent-volume"
                                 >
                                     Explore
@@ -48,7 +48,7 @@ const PageHome2 = () => {
                                         <article>
                                             <div className="block overflow-hidden rounded-2.5xl bg-white shadow-md transition-shadow hover:shadow-lg dark:bg-jacarta-700">
                                                 <figure className="relative">
-                                                    <a href="item.html">
+                                                    <a href="item">
                                                         <img
                                                             src="./img/products/item_12_lg.jpg"
                                                             alt="item 1"
@@ -61,7 +61,7 @@ const PageHome2 = () => {
                                                 </figure>
                                                 <div className="p-6">
                                                     <div className="flex">
-                                                        <a href="user.html" className="shrink-0">
+                                                        <a href="user" className="shrink-0">
                                                             <img
                                                                 src="img/avatars/avatar_17_rounded.jpg"
                                                                 alt="avatar"
@@ -69,7 +69,7 @@ const PageHome2 = () => {
                                                             />
                                                         </a>
                                                         <div>
-                                                            <a href="item.html" className="block">
+                                                            <a href="item" className="block">
                                                                 <span className="font-display text-lg leading-none text-jacarta-700 hover:text-accent dark:text-white">
                                                                     Light Bars
                                                                 </span>
@@ -87,7 +87,7 @@ const PageHome2 = () => {
                                         <article>
                                             <div className="block overflow-hidden rounded-2.5xl bg-white shadow-md transition-shadow hover:shadow-lg dark:bg-jacarta-700">
                                                 <figure className="relative">
-                                                    <a href="item.html">
+                                                    <a href="item">
                                                         <img
                                                             src="./img/products/item_13_lg.gif"
                                                             alt="item 1"
@@ -100,7 +100,7 @@ const PageHome2 = () => {
                                                 </figure>
                                                 <div className="p-6">
                                                     <div className="flex">
-                                                        <a href="user.html" className="shrink-0">
+                                                        <a href="user" className="shrink-0">
                                                             <img
                                                                 src="img/avatars/avatar_18_rounded.gif"
                                                                 alt="avatar"
@@ -108,7 +108,7 @@ const PageHome2 = () => {
                                                             />
                                                         </a>
                                                         <div>
-                                                            <a href="item.html" className="block">
+                                                            <a href="item" className="block">
                                                                 <span className="font-display text-lg leading-none text-jacarta-700 hover:text-accent dark:text-white">
                                                                     Etherium NFT Launching Lab
                                                                 </span>
@@ -126,7 +126,7 @@ const PageHome2 = () => {
                                         <article>
                                             <div className="block overflow-hidden rounded-2.5xl bg-white shadow-md transition-shadow hover:shadow-lg dark:bg-jacarta-700">
                                                 <figure className="relative">
-                                                    <a href="item.html">
+                                                    <a href="item">
                                                         <img
                                                             src="./img/products/item_16_lg.jpg"
                                                             alt="item 1"
@@ -139,7 +139,7 @@ const PageHome2 = () => {
                                                 </figure>
                                                 <div className="p-6">
                                                     <div className="flex">
-                                                        <a href="user.html" className="shrink-0">
+                                                        <a href="user" className="shrink-0">
                                                             <img
                                                                 src="img/avatars/avatar_22_rounded.jpg"
                                                                 alt="avatar"
@@ -147,7 +147,7 @@ const PageHome2 = () => {
                                                             />
                                                         </a>
                                                         <div>
-                                                            <a href="item.html" className="block">
+                                                            <a href="item" className="block">
                                                                 <span className="font-display text-lg leading-none text-jacarta-700 hover:text-accent dark:text-white">
                                                                     Oceania \\ OVERSEER 017
                                                                 </span>
@@ -165,7 +165,7 @@ const PageHome2 = () => {
                                         <article>
                                             <div className="block overflow-hidden rounded-2.5xl bg-white shadow-md transition-shadow hover:shadow-lg dark:bg-jacarta-700">
                                                 <figure className="relative">
-                                                    <a href="item.html">
+                                                    <a href="item">
                                                         <img
                                                             src="./img/pixel.jpg"
                                                             data-src="./img/products/item_14_lg.jpg"
@@ -179,7 +179,7 @@ const PageHome2 = () => {
                                                 </figure>
                                                 <div className="p-6">
                                                     <div className="flex">
-                                                        <a href="user.html" className="shrink-0">
+                                                        <a href="user" className="shrink-0">
                                                             <img
                                                                 src="img/avatars/avatar_19_rounded.jpg"
                                                                 alt="avatar"
@@ -187,7 +187,7 @@ const PageHome2 = () => {
                                                             />
                                                         </a>
                                                         <div>
-                                                            <a href="item.html" className="block">
+                                                            <a href="item" className="block">
                                                                 <span className="font-display text-lg leading-none text-jacarta-700 hover:text-accent dark:text-white">
                                                                     Amazing NFT art
                                                                 </span>
@@ -205,7 +205,7 @@ const PageHome2 = () => {
                                         <article>
                                             <div className="block overflow-hidden rounded-2.5xl bg-white shadow-md transition-shadow hover:shadow-lg dark:bg-jacarta-700">
                                                 <figure className="relative">
-                                                    <a href="item.html">
+                                                    <a href="item">
                                                         <img
                                                             src="./img/pixel.jpg"
                                                             data-src="./img/products/item_15_lg.jpg"
@@ -219,7 +219,7 @@ const PageHome2 = () => {
                                                 </figure>
                                                 <div className="p-6">
                                                     <div className="flex">
-                                                        <a href="user.html" className="shrink-0">
+                                                        <a href="user" className="shrink-0">
                                                             <img
                                                                 src="img/avatars/avatar_20_rounded.jpg"
                                                                 alt="avatar"
@@ -227,7 +227,7 @@ const PageHome2 = () => {
                                                             />
                                                         </a>
                                                         <div>
-                                                            <a href="item.html" className="block">
+                                                            <a href="item" className="block">
                                                                 <span className="font-display text-lg leading-none text-jacarta-700 hover:text-accent dark:text-white">
                                                                     SwagFox#133
                                                                 </span>
@@ -331,7 +331,7 @@ const PageHome2 = () => {
                         <div className="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-[1.875rem] lg:grid-cols-4">
                             <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                                 <figure className="mr-4 shrink-0">
-                                    <a href="collection.html" className="relative block">
+                                    <a href="collection" className="relative block">
                                         <img
                                             src="img/avatars/avatar_1.jpg"
                                             alt="avatar 1"
@@ -359,7 +359,7 @@ const PageHome2 = () => {
                                     </a>
                                 </figure>
                                 <div>
-                                    <a href="collection.html" className="block">
+                                    <a href="collection" className="block">
                                         <span className="font-display font-semibold text-jacarta-700 hover:text-accent dark:text-white">
                                             NFT Funny Cat
                                         </span>
@@ -369,7 +369,7 @@ const PageHome2 = () => {
                             </div>
                             <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                                 <figure className="mr-4 shrink-0">
-                                    <a href="collection.html" className="relative block">
+                                    <a href="collection" className="relative block">
                                         <img
                                             src="img/avatars/avatar_2.jpg"
                                             alt="avatar 2"
@@ -397,7 +397,7 @@ const PageHome2 = () => {
                                     </a>
                                 </figure>
                                 <div>
-                                    <a href="collection.html" className="block">
+                                    <a href="collection" className="block">
                                         <span className="font-display font-semibold text-jacarta-700 hover:text-accent dark:text-white">
                                             Cryptopank
                                         </span>
@@ -407,7 +407,7 @@ const PageHome2 = () => {
                             </div>
                             <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                                 <figure className="mr-4 shrink-0">
-                                    <a href="collection.html" className="relative block">
+                                    <a href="collection" className="relative block">
                                         <img
                                             src="img/avatars/avatar_3.jpg"
                                             alt="avatar 3"
@@ -420,7 +420,7 @@ const PageHome2 = () => {
                                     </a>
                                 </figure>
                                 <div>
-                                    <a href="collection.html" className="block">
+                                    <a href="collection" className="block">
                                         <span className="font-display font-semibold text-jacarta-700 hover:text-accent dark:text-white">
                                             Prince Ape Planet
                                         </span>
@@ -430,7 +430,7 @@ const PageHome2 = () => {
                             </div>
                             <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                                 <figure className="mr-4 shrink-0">
-                                    <a href="collection.html" className="relative block">
+                                    <a href="collection" className="relative block">
                                         <img
                                             src="img/avatars/avatar_4.jpg"
                                             alt="avatar 4"
@@ -443,7 +443,7 @@ const PageHome2 = () => {
                                     </a>
                                 </figure>
                                 <div>
-                                    <a href="collection.html" className="block">
+                                    <a href="collection" className="block">
                                         <span className="font-display font-semibold text-jacarta-700 hover:text-accent dark:text-white">
                                             Hey Mrsmeseks
                                         </span>
@@ -453,7 +453,7 @@ const PageHome2 = () => {
                             </div>
                             <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                                 <figure className="mr-4 shrink-0">
-                                    <a href="collection.html" className="relative block">
+                                    <a href="collection" className="relative block">
                                         <img
                                             src="img/avatars/avatar_5.jpg"
                                             alt="avatar 5"
@@ -466,7 +466,7 @@ const PageHome2 = () => {
                                     </a>
                                 </figure>
                                 <div>
-                                    <a href="collection.html" className="block">
+                                    <a href="collection" className="block">
                                         <span className="font-display font-semibold text-jacarta-700 hover:text-accent dark:text-white">
                                             Bored Bunny
                                         </span>
@@ -476,7 +476,7 @@ const PageHome2 = () => {
                             </div>
                             <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                                 <figure className="mr-4 shrink-0">
-                                    <a href="collection.html" className="relative block">
+                                    <a href="collection" className="relative block">
                                         <img
                                             src="img/avatars/avatar_6.gif"
                                             alt="avatar 6"
@@ -489,7 +489,7 @@ const PageHome2 = () => {
                                     </a>
                                 </figure>
                                 <div>
-                                    <a href="collection.html" className="block">
+                                    <a href="collection" className="block">
                                         <span className="font-display font-semibold text-jacarta-700 hover:text-accent dark:text-white">
                                             Wow Frens
                                         </span>
@@ -499,7 +499,7 @@ const PageHome2 = () => {
                             </div>
                             <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                                 <figure className="mr-4 shrink-0">
-                                    <a href="collection.html" className="relative block">
+                                    <a href="collection" className="relative block">
                                         <img
                                             src="img/avatars/avatar_7.jpg"
                                             alt="avatar 7"
@@ -527,7 +527,7 @@ const PageHome2 = () => {
                                     </a>
                                 </figure>
                                 <div>
-                                    <a href="collection.html" className="block">
+                                    <a href="collection" className="block">
                                         <span className="font-display font-semibold text-jacarta-700 hover:text-accent dark:text-white">
                                             Origin Morish
                                         </span>
@@ -537,7 +537,7 @@ const PageHome2 = () => {
                             </div>
                             <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                                 <figure className="mr-4 shrink-0">
-                                    <a href="collection.html" className="relative block">
+                                    <a href="collection" className="relative block">
                                         <img
                                             src="img/avatars/avatar_8.jpg"
                                             alt="avatar 8"
@@ -565,7 +565,7 @@ const PageHome2 = () => {
                                     </a>
                                 </figure>
                                 <div>
-                                    <a href="collection.html" className="block">
+                                    <a href="collection" className="block">
                                         <span className="font-display font-semibold text-jacarta-700 hover:text-accent dark:text-white">
                                             Superdo
                                         </span>
@@ -575,7 +575,7 @@ const PageHome2 = () => {
                             </div>
                             <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                                 <figure className="mr-4 shrink-0">
-                                    <a href="collection.html" className="relative block">
+                                    <a href="collection" className="relative block">
                                         <img
                                             src="img/avatars/avatar_9.jpg"
                                             alt="avatar 9"
@@ -588,7 +588,7 @@ const PageHome2 = () => {
                                     </a>
                                 </figure>
                                 <div>
-                                    <a href="collection.html" className="block">
+                                    <a href="collection" className="block">
                                         <span className="font-display font-semibold text-jacarta-700 hover:text-accent dark:text-white">
                                             NFT stars
                                         </span>
@@ -598,7 +598,7 @@ const PageHome2 = () => {
                             </div>
                             <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                                 <figure className="mr-4 shrink-0">
-                                    <a href="collection.html" className="relative block">
+                                    <a href="collection" className="relative block">
                                         <img
                                             src="img/avatars/avatar_10.jpg"
                                             alt="avatar 10"
@@ -626,7 +626,7 @@ const PageHome2 = () => {
                                     </a>
                                 </figure>
                                 <div>
-                                    <a href="collection.html" className="block">
+                                    <a href="collection" className="block">
                                         <span className="font-display font-semibold text-jacarta-700 hover:text-accent dark:text-white">
                                             Asumitsu
                                         </span>
@@ -636,7 +636,7 @@ const PageHome2 = () => {
                             </div>
                             <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                                 <figure className="mr-4 shrink-0">
-                                    <a href="collection.html" className="relative block">
+                                    <a href="collection" className="relative block">
                                         <img
                                             src="img/avatars/avatar_11.jpg"
                                             alt="avatar 11"
@@ -649,7 +649,7 @@ const PageHome2 = () => {
                                     </a>
                                 </figure>
                                 <div>
-                                    <a href="collection.html" className="block">
+                                    <a href="collection" className="block">
                                         <span className="font-display font-semibold text-jacarta-700 hover:text-accent dark:text-white">
                                             Pank Skull
                                         </span>
@@ -659,7 +659,7 @@ const PageHome2 = () => {
                             </div>
                             <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                                 <figure className="mr-4 shrink-0">
-                                    <a href="collection.html" className="relative block">
+                                    <a href="collection" className="relative block">
                                         <img
                                             src="img/avatars/avatar_12.jpg"
                                             alt="avatar 12"
@@ -672,7 +672,7 @@ const PageHome2 = () => {
                                     </a>
                                 </figure>
                                 <div>
-                                    <a href="collection.html" className="block">
+                                    <a href="collection" className="block">
                                         <span className="font-display font-semibold text-jacarta-700 hover:text-accent dark:text-white">
                                             Lazy Panda
                                         </span>
@@ -682,7 +682,7 @@ const PageHome2 = () => {
                             </div>
                             <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                                 <figure className="mr-4 shrink-0">
-                                    <a href="collection.html" className="relative block">
+                                    <a href="collection" className="relative block">
                                         <img
                                             src="img/avatars/avatar_13.jpg"
                                             alt="avatar 13"
@@ -710,7 +710,7 @@ const PageHome2 = () => {
                                     </a>
                                 </figure>
                                 <div>
-                                    <a href="collection.html" className="block">
+                                    <a href="collection" className="block">
                                         <span className="font-display font-semibold text-jacarta-700 hover:text-accent dark:text-white">
                                             Arcahorizons
                                         </span>
@@ -720,7 +720,7 @@ const PageHome2 = () => {
                             </div>
                             <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                                 <figure className="mr-4 shrink-0">
-                                    <a href="collection.html" className="relative block">
+                                    <a href="collection" className="relative block">
                                         <img
                                             src="img/avatars/avatar_14.jpg"
                                             alt="avatar 14"
@@ -733,7 +733,7 @@ const PageHome2 = () => {
                                     </a>
                                 </figure>
                                 <div>
-                                    <a href="collection.html" className="block">
+                                    <a href="collection" className="block">
                                         <span className="font-display font-semibold text-jacarta-700 hover:text-accent dark:text-white">
                                             Sussygirl
                                         </span>
@@ -743,7 +743,7 @@ const PageHome2 = () => {
                             </div>
                             <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                                 <figure className="mr-4 shrink-0">
-                                    <a href="collection.html" className="relative block">
+                                    <a href="collection" className="relative block">
                                         <img
                                             src="img/avatars/avatar_15.jpg"
                                             alt="avatar 15"
@@ -771,7 +771,7 @@ const PageHome2 = () => {
                                     </a>
                                 </figure>
                                 <div>
-                                    <a href="collection.html" className="block">
+                                    <a href="collection" className="block">
                                         <span className="font-display font-semibold text-jacarta-700 hover:text-accent dark:text-white">
                                             Smilebin
                                         </span>
@@ -781,7 +781,7 @@ const PageHome2 = () => {
                             </div>
                             <div className="flex rounded-2.5xl border border-jacarta-100 bg-white py-4 px-7 transition-shadow hover:shadow-lg dark:border-transparent dark:bg-jacarta-700">
                                 <figure className="mr-4 shrink-0">
-                                    <a href="collection.html" className="relative block">
+                                    <a href="collection" className="relative block">
                                         <img
                                             src="img/avatars/avatar_16.jpg"
                                             alt="avatar 16"
@@ -794,7 +794,7 @@ const PageHome2 = () => {
                                     </a>
                                 </figure>
                                 <div>
-                                    <a href="collection.html" className="block">
+                                    <a href="collection" className="block">
                                         <span className="font-display font-semibold text-jacarta-700 hover:text-accent dark:text-white">
                                             Pankysmoke
                                         </span>
@@ -805,7 +805,7 @@ const PageHome2 = () => {
                         </div>
                         <div className="mt-10 text-center">
                             <a
-                                href="rankings.html"
+                                href="rankings"
                                 className="inline-block rounded-full bg-accent py-3 px-8 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark"
                             >
                                 Go to Rankings
@@ -894,7 +894,7 @@ const PageHome2 = () => {
                                         </div>
                                     </div>
                                     <figure className="relative">
-                                        <a href="item.html">
+                                        <a href="item">
                                             <img
                                                 src="./img/products/item_8.jpg"
                                                 alt="item 8"
@@ -919,7 +919,7 @@ const PageHome2 = () => {
                                         </div>
                                     </figure>
                                     <div className="mt-7 flex items-center justify-between">
-                                        <a href="item.html">
+                                        <a href="item">
                                             <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                 Monkeyme#155
                                             </span>
@@ -1047,7 +1047,7 @@ const PageHome2 = () => {
                                         </div>
                                     </div>
                                     <figure className="relative">
-                                        <a href="item.html">
+                                        <a href="item">
                                             <img
                                                 src="./img/products/item_6.jpg"
                                                 alt="item 6"
@@ -1072,7 +1072,7 @@ const PageHome2 = () => {
                                         </div>
                                     </figure>
                                     <div className="mt-7 flex items-center justify-between">
-                                        <a href="item.html">
+                                        <a href="item">
                                             <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                 Splendid Girl
                                             </span>
@@ -1200,7 +1200,7 @@ const PageHome2 = () => {
                                         </div>
                                     </div>
                                     <figure className="relative">
-                                        <a href="item.html">
+                                        <a href="item">
                                             <img
                                                 src="./img/products/item_11.gif"
                                                 alt="item 6"
@@ -1225,7 +1225,7 @@ const PageHome2 = () => {
                                         </div>
                                     </figure>
                                     <div className="mt-7 flex items-center justify-between">
-                                        <a href="item.html">
+                                        <a href="item">
                                             <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                 Asuna #1649
                                             </span>
@@ -1353,7 +1353,7 @@ const PageHome2 = () => {
                                         </div>
                                     </div>
                                     <figure className="relative">
-                                        <a href="item.html">
+                                        <a href="item">
                                             <img
                                                 src="./img/products/item_10.jpg"
                                                 alt="item 6"
@@ -1378,7 +1378,7 @@ const PageHome2 = () => {
                                         </div>
                                     </figure>
                                     <div className="mt-7 flex items-center justify-between">
-                                        <a href="item.html">
+                                        <a href="item">
                                             <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                 Artof Eve
                                             </span>
@@ -1506,7 +1506,7 @@ const PageHome2 = () => {
                                         </div>
                                     </div>
                                     <figure className="relative">
-                                        <a href="item.html">
+                                        <a href="item">
                                             <img
                                                 src="./img/products/item_17.jpg"
                                                 alt="item 6"
@@ -1531,7 +1531,7 @@ const PageHome2 = () => {
                                         </div>
                                     </figure>
                                     <div className="mt-7 flex items-center justify-between">
-                                        <a href="item.html">
+                                        <a href="item">
                                             <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                 Azuki #4017
                                             </span>
@@ -1659,7 +1659,7 @@ const PageHome2 = () => {
                                         </div>
                                     </div>
                                     <figure className="relative">
-                                        <a href="item.html">
+                                        <a href="item">
                                             <img
                                                 src="./img/products/item_18.jpg"
                                                 alt="item 6"
@@ -1684,7 +1684,7 @@ const PageHome2 = () => {
                                         </div>
                                     </figure>
                                     <div className="mt-7 flex items-center justify-between">
-                                        <a href="item.html">
+                                        <a href="item">
                                             <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                 Block #2788
                                             </span>
@@ -1812,7 +1812,7 @@ const PageHome2 = () => {
                                         </div>
                                     </div>
                                     <figure className="relative">
-                                        <a href="item.html">
+                                        <a href="item">
                                             <img
                                                 src="./img/products/item_19.jpg"
                                                 alt="item 6"
@@ -1837,7 +1837,7 @@ const PageHome2 = () => {
                                         </div>
                                     </figure>
                                     <div className="mt-7 flex items-center justify-between">
-                                        <a href="item.html">
+                                        <a href="item">
                                             <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                 Crypto bull #6195
                                             </span>
@@ -1965,7 +1965,7 @@ const PageHome2 = () => {
                                         </div>
                                     </div>
                                     <figure className="relative">
-                                        <a href="item.html">
+                                        <a href="item">
                                             <img
                                                 src="./img/products/item_20.jpg"
                                                 alt="item 6"
@@ -1990,7 +1990,7 @@ const PageHome2 = () => {
                                         </div>
                                     </figure>
                                     <div className="mt-7 flex items-center justify-between">
-                                        <a href="item.html">
+                                        <a href="item">
                                             <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                 TSARÉVNA
                                             </span>
@@ -2056,7 +2056,7 @@ const PageHome2 = () => {
 
                         <div className="mt-10 text-center">
                             <a
-                                href="collections.html"
+                                href="collections"
                                 className="inline-block rounded-full bg-accent py-3 px-8 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark"
                             >
                                 Load More
@@ -2213,7 +2213,7 @@ const PageHome2 = () => {
                                     <div className="swiper-slide">
                                         <article>
                                             <div className="rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
-                                                <a href="collection.html" className="flex space-x-[0.625rem]">
+                                                <a href="collection" className="flex space-x-[0.625rem]">
                                                     <span className="w-[74.5%]">
                                                         <img
                                                             src="./img/collections/collection_1_1.jpg"
@@ -2245,7 +2245,7 @@ const PageHome2 = () => {
                                                 </a>
 
                                                 <a
-                                                    href="collection.html"
+                                                    href="collection"
                                                     className="mt-4 block font-display text-base text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent"
                                                 >
                                                     Art Me Outside
@@ -2253,7 +2253,7 @@ const PageHome2 = () => {
 
                                                 <div className="mt-2 flex items-center justify-between text-sm font-medium tracking-tight">
                                                     <div className="flex flex-wrap items-center">
-                                                        <a href="user.html" className="mr-2 shrink-0">
+                                                        <a href="user" className="mr-2 shrink-0">
                                                             <img
                                                                 src="img/avatars/owner_5.png"
                                                                 alt="owner"
@@ -2261,7 +2261,7 @@ const PageHome2 = () => {
                                                             />
                                                         </a>
                                                         <span className="mr-1 dark:text-jacarta-400">by</span>
-                                                        <a href="user.html" className="text-accent">
+                                                        <a href="user" className="text-accent">
                                                             <span>Wow Frens</span>
                                                         </a>
                                                     </div>
@@ -2273,7 +2273,7 @@ const PageHome2 = () => {
                                     <div className="swiper-slide">
                                         <article>
                                             <div className="rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
-                                                <a href="collection.html" className="flex space-x-[0.625rem]">
+                                                <a href="collection" className="flex space-x-[0.625rem]">
                                                     <span className="w-[74.5%]">
                                                         <img
                                                             src="./img/collections/collection_2_1.jpg"
@@ -2305,7 +2305,7 @@ const PageHome2 = () => {
                                                 </a>
 
                                                 <a
-                                                    href="collection.html"
+                                                    href="collection"
                                                     className="mt-4 block font-display text-base text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent"
                                                 >
                                                     PankySkal
@@ -2313,7 +2313,7 @@ const PageHome2 = () => {
 
                                                 <div className="mt-2 flex items-center justify-between text-sm font-medium tracking-tight">
                                                     <div className="flex flex-wrap items-center">
-                                                        <a href="user.html" className="mr-2 shrink-0">
+                                                        <a href="user" className="mr-2 shrink-0">
                                                             <img
                                                                 src="img/avatars/owner_9.png"
                                                                 alt="owner"
@@ -2321,7 +2321,7 @@ const PageHome2 = () => {
                                                             />
                                                         </a>
                                                         <span className="mr-1 dark:text-jacarta-400">by</span>
-                                                        <a href="user.html" className="text-accent">
+                                                        <a href="user" className="text-accent">
                                                             <span>NFT stars</span>
                                                         </a>
                                                     </div>
@@ -2333,7 +2333,7 @@ const PageHome2 = () => {
                                     <div className="swiper-slide">
                                         <article>
                                             <div className="rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
-                                                <a href="collection.html" className="flex space-x-[0.625rem]">
+                                                <a href="collection" className="flex space-x-[0.625rem]">
                                                     <span className="w-[74.5%]">
                                                         <img
                                                             src="./img/collections/collection_3_1.jpg"
@@ -2365,7 +2365,7 @@ const PageHome2 = () => {
                                                 </a>
 
                                                 <a
-                                                    href="collection.html"
+                                                    href="collection"
                                                     className="mt-4 block font-display text-base text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent"
                                                 >
                                                     VR Space_287
@@ -2373,7 +2373,7 @@ const PageHome2 = () => {
 
                                                 <div className="mt-2 flex items-center justify-between text-sm font-medium tracking-tight">
                                                     <div className="flex flex-wrap items-center">
-                                                        <a href="user.html" className="mr-2 shrink-0">
+                                                        <a href="user" className="mr-2 shrink-0">
                                                             <img
                                                                 src="img/avatars/owner_4.png"
                                                                 alt="owner"
@@ -2381,7 +2381,7 @@ const PageHome2 = () => {
                                                             />
                                                         </a>
                                                         <span className="mr-1 dark:text-jacarta-400">by</span>
-                                                        <a href="user.html" className="text-accent">
+                                                        <a href="user" className="text-accent">
                                                             <span>Origin Morish</span>
                                                         </a>
                                                     </div>
@@ -2393,7 +2393,7 @@ const PageHome2 = () => {
                                     <div className="swiper-slide">
                                         <article>
                                             <div className="rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
-                                                <a href="collection.html" className="flex space-x-[0.625rem]">
+                                                <a href="collection" className="flex space-x-[0.625rem]">
                                                     <span className="w-[74.5%]">
                                                         <img
                                                             src="./img/collections/collection_4_1.jpg"
@@ -2425,7 +2425,7 @@ const PageHome2 = () => {
                                                 </a>
 
                                                 <a
-                                                    href="collection.html"
+                                                    href="collection"
                                                     className="mt-4 block font-display text-base text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent"
                                                 >
                                                     Metasmorf
@@ -2433,7 +2433,7 @@ const PageHome2 = () => {
 
                                                 <div className="mt-2 flex items-center justify-between text-sm font-medium tracking-tight">
                                                     <div className="flex flex-wrap items-center">
-                                                        <a href="user.html" className="mr-2 shrink-0">
+                                                        <a href="user" className="mr-2 shrink-0">
                                                             <img
                                                                 src="img/avatars/owner_10.png"
                                                                 alt="owner"
@@ -2441,7 +2441,7 @@ const PageHome2 = () => {
                                                             />
                                                         </a>
                                                         <span className="mr-1 dark:text-jacarta-400">by</span>
-                                                        <a href="user.html" className="text-accent">
+                                                        <a href="user" className="text-accent">
                                                             <span>Lazy Panda</span>
                                                         </a>
                                                     </div>
@@ -2453,7 +2453,7 @@ const PageHome2 = () => {
                                     <div className="swiper-slide">
                                         <article>
                                             <div className="rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
-                                                <a href="collection.html" className="flex space-x-[0.625rem]">
+                                                <a href="collection" className="flex space-x-[0.625rem]">
                                                     <span className="w-[74.5%]">
                                                         <img
                                                             src="./img/collections/collection_5_1.jpg"
@@ -2485,7 +2485,7 @@ const PageHome2 = () => {
                                                 </a>
 
                                                 <a
-                                                    href="collection.html"
+                                                    href="collection"
                                                     className="mt-4 block font-display text-base text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent"
                                                 >
                                                     3Landers
@@ -2493,7 +2493,7 @@ const PageHome2 = () => {
 
                                                 <div className="mt-2 flex items-center justify-between text-sm font-medium tracking-tight">
                                                     <div className="flex flex-wrap items-center">
-                                                        <a href="user.html" className="mr-2 shrink-0">
+                                                        <a href="user" className="mr-2 shrink-0">
                                                             <img
                                                                 src="img/avatars/owner_11.png"
                                                                 alt="owner"
@@ -2501,7 +2501,7 @@ const PageHome2 = () => {
                                                             />
                                                         </a>
                                                         <span className="mr-1 dark:text-jacarta-400">by</span>
-                                                        <a href="user.html" className="text-accent">
+                                                        <a href="user" className="text-accent">
                                                             <span>051_Hart</span>
                                                         </a>
                                                     </div>

@@ -968,7 +968,7 @@ const PageUser = () => {
                                 <article>
                                     <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                         <figure className="relative">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <img
                                                     src="./img/products/item_5.jpg"
                                                     alt="item 5"
@@ -1016,7 +1016,7 @@ const PageUser = () => {
                                             </div>
                                         </figure>
                                         <div className="mt-7 flex items-center justify-between">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                     Flourishing Cat #180
                                                 </span>
@@ -1078,7 +1078,7 @@ const PageUser = () => {
                                             >
                                                 Buy now
                                             </button>
-                                            <a href="item.html" className="group flex items-center">
+                                            <a href="item" className="group flex items-center">
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 24 24"
@@ -1099,7 +1099,7 @@ const PageUser = () => {
                                 <article>
                                     <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                         <figure className="relative">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <img
                                                     src="./img/products/item_4.jpg"
                                                     alt="item 4"
@@ -1147,7 +1147,7 @@ const PageUser = () => {
                                             </div>
                                         </figure>
                                         <div className="mt-7 flex items-center justify-between">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                     Amazing NFT art
                                                 </span>
@@ -1209,7 +1209,7 @@ const PageUser = () => {
                                             >
                                                 Buy now
                                             </button>
-                                            <a href="item.html" className="group flex items-center">
+                                            <a href="item" className="group flex items-center">
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 24 24"
@@ -1230,7 +1230,7 @@ const PageUser = () => {
                                 <article>
                                     <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                         <figure className="relative">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <img
                                                     src="./img/products/item_7.jpg"
                                                     alt="item 7"
@@ -1278,7 +1278,7 @@ const PageUser = () => {
                                             </div>
                                         </figure>
                                         <div className="mt-7 flex items-center justify-between">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                     SwagFox#133
                                                 </span>
@@ -1340,7 +1340,7 @@ const PageUser = () => {
                                             >
                                                 Buy now
                                             </button>
-                                            <a href="item.html" className="group flex items-center">
+                                            <a href="item" className="group flex items-center">
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 24 24"
@@ -1361,7 +1361,7 @@ const PageUser = () => {
                                 <article>
                                     <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                         <figure className="relative">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <img
                                                     src="./img/products/item_6.jpg"
                                                     alt="item 6"
@@ -1409,7 +1409,7 @@ const PageUser = () => {
                                             </div>
                                         </figure>
                                         <div className="mt-7 flex items-center justify-between">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                     Splendid Girl
                                                 </span>
@@ -1469,7 +1469,7 @@ const PageUser = () => {
                                             >
                                                 Buy now
                                             </button>
-                                            <a href="item.html" className="group flex items-center">
+                                            <a href="item" className="group flex items-center">
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 24 24"
@@ -1490,7 +1490,7 @@ const PageUser = () => {
                                 <article>
                                     <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                         <figure className="relative">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <img
                                                     src="./img/products/item_8.jpg"
                                                     alt="item 8"
@@ -1538,7 +1538,7 @@ const PageUser = () => {
                                             </div>
                                         </figure>
                                         <div className="mt-7 flex items-center justify-between">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                     Monkeyme#155
                                                 </span>
@@ -1600,7 +1600,7 @@ const PageUser = () => {
                                             >
                                                 Buy now
                                             </button>
-                                            <a href="item.html" className="group flex items-center">
+                                            <a href="item" className="group flex items-center">
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 24 24"
@@ -1621,7 +1621,7 @@ const PageUser = () => {
                                 <article>
                                     <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                         <figure className="relative">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <img
                                                     src="./img/products/item_9.jpg"
                                                     alt="item 9"
@@ -1669,7 +1669,7 @@ const PageUser = () => {
                                             </div>
                                         </figure>
                                         <div className="mt-7 flex items-center justify-between">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                     Jedidia#149
                                                 </span>
@@ -1731,7 +1731,7 @@ const PageUser = () => {
                                             >
                                                 Buy now
                                             </button>
-                                            <a href="item.html" className="group flex items-center">
+                                            <a href="item" className="group flex items-center">
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 24 24"
@@ -1752,7 +1752,7 @@ const PageUser = () => {
                                 <article>
                                     <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                         <figure className="relative">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <img
                                                     src="./img/products/item_10.jpg"
                                                     alt="item 10"
@@ -1800,7 +1800,7 @@ const PageUser = () => {
                                             </div>
                                         </figure>
                                         <div className="mt-7 flex items-center justify-between">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                     Artof Eve
                                                 </span>
@@ -1862,7 +1862,7 @@ const PageUser = () => {
                                             >
                                                 Buy now
                                             </button>
-                                            <a href="item.html" className="group flex items-center">
+                                            <a href="item" className="group flex items-center">
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 24 24"
@@ -1883,7 +1883,7 @@ const PageUser = () => {
                                 <article>
                                     <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                         <figure className="relative">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <img
                                                     src="./img/products/item_11.gif"
                                                     alt="item 11"
@@ -1931,7 +1931,7 @@ const PageUser = () => {
                                             </div>
                                         </figure>
                                         <div className="mt-7 flex items-center justify-between">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                     Asuna #1649
                                                 </span>
@@ -1991,7 +1991,7 @@ const PageUser = () => {
                                             >
                                                 Buy now
                                             </button>
-                                            <a href="item.html" className="group flex items-center">
+                                            <a href="item" className="group flex items-center">
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 24 24"
@@ -2586,7 +2586,7 @@ const PageUser = () => {
                                 <article>
                                     <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                         <figure className="relative">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <img
                                                     src="./img/products/item_11.gif"
                                                     alt="item 11"
@@ -2634,7 +2634,7 @@ const PageUser = () => {
                                             </div>
                                         </figure>
                                         <div className="mt-7 flex items-center justify-between">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                     Asuna #1649
                                                 </span>
@@ -2694,7 +2694,7 @@ const PageUser = () => {
                                             >
                                                 Buy now
                                             </button>
-                                            <a href="item.html" className="group flex items-center">
+                                            <a href="item" className="group flex items-center">
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 24 24"
@@ -2715,7 +2715,7 @@ const PageUser = () => {
                                 <article>
                                     <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                         <figure className="relative">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <img
                                                     src="./img/products/item_10.jpg"
                                                     alt="item 10"
@@ -2763,7 +2763,7 @@ const PageUser = () => {
                                             </div>
                                         </figure>
                                         <div className="mt-7 flex items-center justify-between">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                     Artof Eve
                                                 </span>
@@ -2825,7 +2825,7 @@ const PageUser = () => {
                                             >
                                                 Buy now
                                             </button>
-                                            <a href="item.html" className="group flex items-center">
+                                            <a href="item" className="group flex items-center">
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 24 24"
@@ -2846,7 +2846,7 @@ const PageUser = () => {
                                 <article>
                                     <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                         <figure className="relative">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <img
                                                     src="./img/products/item_9.jpg"
                                                     alt="item 9"
@@ -2894,7 +2894,7 @@ const PageUser = () => {
                                             </div>
                                         </figure>
                                         <div className="mt-7 flex items-center justify-between">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                     Jedidia#149
                                                 </span>
@@ -2956,7 +2956,7 @@ const PageUser = () => {
                                             >
                                                 Buy now
                                             </button>
-                                            <a href="item.html" className="group flex items-center">
+                                            <a href="item" className="group flex items-center">
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 24 24"
@@ -2977,7 +2977,7 @@ const PageUser = () => {
                                 <article>
                                     <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                         <figure className="relative">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <img
                                                     src="./img/products/item_8.jpg"
                                                     alt="item 8"
@@ -3025,7 +3025,7 @@ const PageUser = () => {
                                             </div>
                                         </figure>
                                         <div className="mt-7 flex items-center justify-between">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                     Monkeyme#155
                                                 </span>
@@ -3087,7 +3087,7 @@ const PageUser = () => {
                                             >
                                                 Buy now
                                             </button>
-                                            <a href="item.html" className="group flex items-center">
+                                            <a href="item" className="group flex items-center">
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 24 24"
@@ -3109,7 +3109,7 @@ const PageUser = () => {
                                 <article>
                                     <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                         <figure className="relative">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <img
                                                     src="./img/products/item_5.jpg"
                                                     alt="item 5"
@@ -3157,7 +3157,7 @@ const PageUser = () => {
                                             </div>
                                         </figure>
                                         <div className="mt-7 flex items-center justify-between">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                     Flourishing Cat #180
                                                 </span>
@@ -3219,7 +3219,7 @@ const PageUser = () => {
                                             >
                                                 Buy now
                                             </button>
-                                            <a href="item.html" className="group flex items-center">
+                                            <a href="item" className="group flex items-center">
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 24 24"
@@ -3240,7 +3240,7 @@ const PageUser = () => {
                                 <article>
                                     <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                         <figure className="relative">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <img
                                                     src="./img/products/item_4.jpg"
                                                     alt="item 4"
@@ -3288,7 +3288,7 @@ const PageUser = () => {
                                             </div>
                                         </figure>
                                         <div className="mt-7 flex items-center justify-between">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                     Amazing NFT art
                                                 </span>
@@ -3350,7 +3350,7 @@ const PageUser = () => {
                                             >
                                                 Buy now
                                             </button>
-                                            <a href="item.html" className="group flex items-center">
+                                            <a href="item" className="group flex items-center">
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 24 24"
@@ -3371,7 +3371,7 @@ const PageUser = () => {
                                 <article>
                                     <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                         <figure className="relative">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <img
                                                     src="./img/products/item_7.jpg"
                                                     alt="item 7"
@@ -3419,7 +3419,7 @@ const PageUser = () => {
                                             </div>
                                         </figure>
                                         <div className="mt-7 flex items-center justify-between">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                     SwagFox#133
                                                 </span>
@@ -3481,7 +3481,7 @@ const PageUser = () => {
                                             >
                                                 Buy now
                                             </button>
-                                            <a href="item.html" className="group flex items-center">
+                                            <a href="item" className="group flex items-center">
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 24 24"
@@ -3502,7 +3502,7 @@ const PageUser = () => {
                                 <article>
                                     <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                         <figure className="relative">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <img
                                                     src="./img/products/item_6.jpg"
                                                     alt="item 6"
@@ -3550,7 +3550,7 @@ const PageUser = () => {
                                             </div>
                                         </figure>
                                         <div className="mt-7 flex items-center justify-between">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                     Splendid Girl
                                                 </span>
@@ -3610,7 +3610,7 @@ const PageUser = () => {
                                             >
                                                 Buy now
                                             </button>
-                                            <a href="item.html" className="group flex items-center">
+                                            <a href="item" className="group flex items-center">
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 24 24"
@@ -4205,7 +4205,7 @@ const PageUser = () => {
                                 <article>
                                     <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                         <figure className="relative">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <img
                                                     src="./img/products/item_5.jpg"
                                                     alt="item 5"
@@ -4253,7 +4253,7 @@ const PageUser = () => {
                                             </div>
                                         </figure>
                                         <div className="mt-7 flex items-center justify-between">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                     Flourishing Cat #180
                                                 </span>
@@ -4315,7 +4315,7 @@ const PageUser = () => {
                                             >
                                                 Buy now
                                             </button>
-                                            <a href="item.html" className="group flex items-center">
+                                            <a href="item" className="group flex items-center">
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 24 24"
@@ -4336,7 +4336,7 @@ const PageUser = () => {
                                 <article>
                                     <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                         <figure className="relative">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <img
                                                     src="./img/products/item_6.jpg"
                                                     alt="item 6"
@@ -4384,7 +4384,7 @@ const PageUser = () => {
                                             </div>
                                         </figure>
                                         <div className="mt-7 flex items-center justify-between">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                     Splendid Girl
                                                 </span>
@@ -4444,7 +4444,7 @@ const PageUser = () => {
                                             >
                                                 Buy now
                                             </button>
-                                            <a href="item.html" className="group flex items-center">
+                                            <a href="item" className="group flex items-center">
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 24 24"
@@ -4466,7 +4466,7 @@ const PageUser = () => {
                                 <article>
                                     <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                         <figure className="relative">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <img
                                                     src="./img/products/item_11.gif"
                                                     alt="item 11"
@@ -4514,7 +4514,7 @@ const PageUser = () => {
                                             </div>
                                         </figure>
                                         <div className="mt-7 flex items-center justify-between">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                     Asuna #1649
                                                 </span>
@@ -4574,7 +4574,7 @@ const PageUser = () => {
                                             >
                                                 Buy now
                                             </button>
-                                            <a href="item.html" className="group flex items-center">
+                                            <a href="item" className="group flex items-center">
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 24 24"
@@ -4595,7 +4595,7 @@ const PageUser = () => {
                                 <article>
                                     <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                         <figure className="relative">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <img
                                                     src="./img/products/item_10.jpg"
                                                     alt="item 10"
@@ -4643,7 +4643,7 @@ const PageUser = () => {
                                             </div>
                                         </figure>
                                         <div className="mt-7 flex items-center justify-between">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                     Artof Eve
                                                 </span>
@@ -4705,7 +4705,7 @@ const PageUser = () => {
                                             >
                                                 Buy now
                                             </button>
-                                            <a href="item.html" className="group flex items-center">
+                                            <a href="item" className="group flex items-center">
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 24 24"
@@ -4727,7 +4727,7 @@ const PageUser = () => {
                                 <article>
                                     <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                         <figure className="relative">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <img
                                                     src="./img/products/item_8.jpg"
                                                     alt="item 8"
@@ -4775,7 +4775,7 @@ const PageUser = () => {
                                             </div>
                                         </figure>
                                         <div className="mt-7 flex items-center justify-between">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                     Monkeyme#155
                                                 </span>
@@ -4837,7 +4837,7 @@ const PageUser = () => {
                                             >
                                                 Buy now
                                             </button>
-                                            <a href="item.html" className="group flex items-center">
+                                            <a href="item" className="group flex items-center">
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 24 24"
@@ -4859,7 +4859,7 @@ const PageUser = () => {
                                 <article>
                                     <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                         <figure className="relative">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <img
                                                     src="./img/products/item_9.jpg"
                                                     alt="item 9"
@@ -4907,7 +4907,7 @@ const PageUser = () => {
                                             </div>
                                         </figure>
                                         <div className="mt-7 flex items-center justify-between">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                     Jedidia#149
                                                 </span>
@@ -4969,7 +4969,7 @@ const PageUser = () => {
                                             >
                                                 Buy now
                                             </button>
-                                            <a href="item.html" className="group flex items-center">
+                                            <a href="item" className="group flex items-center">
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 24 24"
@@ -4990,7 +4990,7 @@ const PageUser = () => {
                                 <article>
                                     <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                         <figure className="relative">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <img
                                                     src="./img/products/item_4.jpg"
                                                     alt="item 4"
@@ -5038,7 +5038,7 @@ const PageUser = () => {
                                             </div>
                                         </figure>
                                         <div className="mt-7 flex items-center justify-between">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                     Amazing NFT art
                                                 </span>
@@ -5100,7 +5100,7 @@ const PageUser = () => {
                                             >
                                                 Buy now
                                             </button>
-                                            <a href="item.html" className="group flex items-center">
+                                            <a href="item" className="group flex items-center">
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 24 24"
@@ -5121,7 +5121,7 @@ const PageUser = () => {
                                 <article>
                                     <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                         <figure className="relative">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <img
                                                     src="./img/products/item_7.jpg"
                                                     alt="item 7"
@@ -5169,7 +5169,7 @@ const PageUser = () => {
                                             </div>
                                         </figure>
                                         <div className="mt-7 flex items-center justify-between">
-                                            <a href="item.html">
+                                            <a href="item">
                                                 <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                                     SwagFox#133
                                                 </span>
@@ -5231,7 +5231,7 @@ const PageUser = () => {
                                             >
                                                 Buy now
                                             </button>
-                                            <a href="item.html" className="group flex items-center">
+                                            <a href="item" className="group flex items-center">
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 24 24"
@@ -5264,7 +5264,7 @@ const PageUser = () => {
                             <div className="grid grid-cols-1 gap-[1.875rem] md:grid-cols-2 lg:grid-cols-4">
                                 <article>
                                     <div className="rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
-                                        <a href="collection.html" className="flex space-x-[0.625rem]">
+                                        <a href="collection" className="flex space-x-[0.625rem]">
                                             <span className="w-[74.5%]">
                                                 <img
                                                     src="./img/collections/collection_1_1.jpg"
@@ -5296,7 +5296,7 @@ const PageUser = () => {
                                         </a>
 
                                         <a
-                                            href="collection.html"
+                                            href="collection"
                                             className="mt-4 block font-display text-base text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent"
                                         >
                                             Art Me Outside
@@ -5304,7 +5304,7 @@ const PageUser = () => {
 
                                         <div className="mt-2 flex items-center justify-between text-sm font-medium tracking-tight">
                                             <div className="flex flex-wrap items-center">
-                                                <a href="user.html" className="mr-2 shrink-0">
+                                                <a href="user" className="mr-2 shrink-0">
                                                     <img
                                                         src="img/avatars/owner_5.png"
                                                         alt="owner"
@@ -5312,7 +5312,7 @@ const PageUser = () => {
                                                     />
                                                 </a>
                                                 <span className="mr-1 dark:text-jacarta-400">by</span>
-                                                <a href="user.html" className="text-accent">
+                                                <a href="user" className="text-accent">
                                                     <span>Wow Frens</span>
                                                 </a>
                                             </div>
@@ -5322,7 +5322,7 @@ const PageUser = () => {
                                 </article>
                                 <article>
                                     <div className="rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
-                                        <a href="collection.html" className="flex space-x-[0.625rem]">
+                                        <a href="collection" className="flex space-x-[0.625rem]">
                                             <span className="w-[74.5%]">
                                                 <img
                                                     src="./img/collections/collection_2_1.jpg"
@@ -5354,7 +5354,7 @@ const PageUser = () => {
                                         </a>
 
                                         <a
-                                            href="collection.html"
+                                            href="collection"
                                             className="mt-4 block font-display text-base text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent"
                                         >
                                             PankySkal
@@ -5362,7 +5362,7 @@ const PageUser = () => {
 
                                         <div className="mt-2 flex items-center justify-between text-sm font-medium tracking-tight">
                                             <div className="flex flex-wrap items-center">
-                                                <a href="user.html" className="mr-2 shrink-0">
+                                                <a href="user" className="mr-2 shrink-0">
                                                     <img
                                                         src="img/avatars/owner_9.png"
                                                         alt="owner"
@@ -5370,7 +5370,7 @@ const PageUser = () => {
                                                     />
                                                 </a>
                                                 <span className="mr-1 dark:text-jacarta-400">by</span>
-                                                <a href="user.html" className="text-accent">
+                                                <a href="user" className="text-accent">
                                                     <span>NFT stars</span>
                                                 </a>
                                             </div>
@@ -5380,7 +5380,7 @@ const PageUser = () => {
                                 </article>
                                 <article>
                                     <div className="rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
-                                        <a href="collection.html" className="flex space-x-[0.625rem]">
+                                        <a href="collection" className="flex space-x-[0.625rem]">
                                             <span className="w-[74.5%]">
                                                 <img
                                                     src="./img/collections/collection_3_1.jpg"
@@ -5412,7 +5412,7 @@ const PageUser = () => {
                                         </a>
 
                                         <a
-                                            href="collection.html"
+                                            href="collection"
                                             className="mt-4 block font-display text-base text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent"
                                         >
                                             VR Space_287
@@ -5420,7 +5420,7 @@ const PageUser = () => {
 
                                         <div className="mt-2 flex items-center justify-between text-sm font-medium tracking-tight">
                                             <div className="flex flex-wrap items-center">
-                                                <a href="user.html" className="mr-2 shrink-0">
+                                                <a href="user" className="mr-2 shrink-0">
                                                     <img
                                                         src="img/avatars/owner_4.png"
                                                         alt="owner"
@@ -5428,7 +5428,7 @@ const PageUser = () => {
                                                     />
                                                 </a>
                                                 <span className="mr-1 dark:text-jacarta-400">by</span>
-                                                <a href="user.html" className="text-accent">
+                                                <a href="user" className="text-accent">
                                                     <span>Origin Morish</span>
                                                 </a>
                                             </div>
@@ -5438,7 +5438,7 @@ const PageUser = () => {
                                 </article>
                                 <article>
                                     <div className="rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
-                                        <a href="collection.html" className="flex space-x-[0.625rem]">
+                                        <a href="collection" className="flex space-x-[0.625rem]">
                                             <span className="w-[74.5%]">
                                                 <img
                                                     src="./img/collections/collection_4_1.jpg"
@@ -5470,7 +5470,7 @@ const PageUser = () => {
                                         </a>
 
                                         <a
-                                            href="collection.html"
+                                            href="collection"
                                             className="mt-4 block font-display text-base text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent"
                                         >
                                             Metasmorf
@@ -5478,7 +5478,7 @@ const PageUser = () => {
 
                                         <div className="mt-2 flex items-center justify-between text-sm font-medium tracking-tight">
                                             <div className="flex flex-wrap items-center">
-                                                <a href="user.html" className="mr-2 shrink-0">
+                                                <a href="user" className="mr-2 shrink-0">
                                                     <img
                                                         src="img/avatars/owner_10.png"
                                                         alt="owner"
@@ -5486,7 +5486,7 @@ const PageUser = () => {
                                                     />
                                                 </a>
                                                 <span className="mr-1 dark:text-jacarta-400">by</span>
-                                                <a href="user.html" className="text-accent">
+                                                <a href="user" className="text-accent">
                                                     <span>Lazy Panda</span>
                                                 </a>
                                             </div>
@@ -5505,7 +5505,7 @@ const PageUser = () => {
                                 {/* <!-- Records --> */}
                                 <div className="mb-10 shrink-0 basis-8/12 space-y-5 lg:mb-0 lg:pr-10">
                                     <a
-                                        href="item.html"
+                                        href="item"
                                         className="relative flex items-center rounded-2.5xl border border-jacarta-100 bg-white p-8 transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700"
                                     >
                                         <figure className="mr-5 self-start">
@@ -5543,7 +5543,7 @@ const PageUser = () => {
                                         </div>
                                     </a>
                                     <a
-                                        href="item.html"
+                                        href="item"
                                         className="relative flex items-center rounded-2.5xl border border-jacarta-100 bg-white p-8 transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700"
                                     >
                                         <figure className="mr-5 self-start">
@@ -5581,7 +5581,7 @@ const PageUser = () => {
                                         </div>
                                     </a>
                                     <a
-                                        href="item.html"
+                                        href="item"
                                         className="relative flex items-center rounded-2.5xl border border-jacarta-100 bg-white p-8 transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700"
                                     >
                                         <figure className="mr-5 self-start">
@@ -5619,7 +5619,7 @@ const PageUser = () => {
                                         </div>
                                     </a>
                                     <a
-                                        href="item.html"
+                                        href="item"
                                         className="relative flex items-center rounded-2.5xl border border-jacarta-100 bg-white p-8 transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700"
                                     >
                                         <figure className="mr-5 self-start">
@@ -5657,7 +5657,7 @@ const PageUser = () => {
                                         </div>
                                     </a>
                                     <a
-                                        href="item.html"
+                                        href="item"
                                         className="relative flex items-center rounded-2.5xl border border-jacarta-100 bg-white p-8 transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700"
                                     >
                                         <figure className="mr-5 self-start">

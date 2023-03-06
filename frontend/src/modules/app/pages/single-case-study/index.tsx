@@ -11,8 +11,8 @@ const SingleCaseStudyPage = () => {
                         <header className="mx-auto mb-16 max-w-2xl text-center">
                             <div className="mb-3 inline-flex flex-wrap items-center space-x-1 text-xs">
                                 <span className="inline-flex flex-wrap items-center space-x-1 text-accent">
-                                    <a href="case-studies.html">CONTENT MARKETING</a>
-                                    <a href="case-studies.html">PPC</a>
+                                    <a href="case-studies">CONTENT MARKETING</a>
+                                    <a href="case-studies">PPC</a>
                                 </span>
                             </div>
                             <h1 className="mb-4 font-display text-2xl text-jacarta-700 dark:text-white sm:text-5xl">
@@ -495,32 +495,32 @@ const SingleCaseStudyPage = () => {
                         </div>
                         <div className="grid gap-12 md:grid-cols-2">
                             <article>
-                                <a href="single-case-study.html">
+                                <a href="single-case-study">
                                     <figure className="mb-10 overflow-hidden rounded-2.5xl transition-shadow hover:shadow-xl">
                                         <img src="../img/case-studies/case_study_3.jpg" alt="" />
                                     </figure>
                                 </a>
                                 <h2 className="group mb-2 max-w-md font-display text-lg text-jacarta-700 dark:text-white">
-                                    <a href="single-case-study.html" className="group-hover:text-accent">
+                                    <a href="single-case-study" className="group-hover:text-accent">
                                         UI/UX Designers Achieves a 31% Increase in Organic Traffic
                                     </a>
                                 </h2>
-                                <a href="single-case-study.html" className="text-sm font-bold text-accent">
+                                <a href="single-case-study" className="text-sm font-bold text-accent">
                                     View Case Study
                                 </a>
                             </article>
                             <article>
-                                <a href="single-case-study.html">
+                                <a href="single-case-study">
                                     <figure className="mb-10 overflow-hidden rounded-2.5xl transition-shadow hover:shadow-xl">
                                         <img src="../img/case-studies/case_study_4.jpg" alt="" />
                                     </figure>
                                 </a>
                                 <h2 className="group mb-2 max-w-md font-display text-lg text-jacarta-700 dark:text-white">
-                                    <a href="single-case-study.html" className="group-hover:text-accent">
+                                    <a href="single-case-study" className="group-hover:text-accent">
                                         New Social Media Platforms Marketers Should Watch in 2022
                                     </a>
                                 </h2>
-                                <a href="single-case-study.html" className="text-sm font-bold text-accent">
+                                <a href="single-case-study" className="text-sm font-bold text-accent">
                                     View Case Study
                                 </a>
                             </article>
@@ -741,7 +741,7 @@ const SingleCaseStudyPage = () => {
                                     />
                                 </figure>
                                 <div>
-                                    <a href="collection.html" className="text-sm text-accent">
+                                    <a href="collection" className="text-sm text-accent">
                                         Elon Musk #709
                                     </a>
                                     <h3 className="mb-1 font-display text-base font-semibold text-jacarta-700 dark:text-white">

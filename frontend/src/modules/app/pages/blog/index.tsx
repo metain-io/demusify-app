@@ -15,7 +15,7 @@ const BlogPage = () => {
                         <article className="mb-[1.875rem] md:mb-16">
                             <div className="flex flex-col overflow-hidden rounded-2.5xl transition-shadow hover:shadow-lg md:flex-row">
                                 <figure className="group overflow-hidden md:w-1/2">
-                                    <a href="single-post.html">
+                                    <a href="single-post">
                                         <img
                                             src="../img/blog/post_1.jpg"
                                             alt="post 1"
@@ -40,7 +40,7 @@ const BlogPage = () => {
                                         </span>
                                     </div>
                                     <h2 className="mb-4 font-display text-xl text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent sm:text-3xl">
-                                        <a href="single-post.html"> List your collection for secondary sales </a>
+                                        <a href="single-post"> List your collection for secondary sales </a>
                                     </h2>
                                     <p className="mb-8 dark:text-jacarta-200">
                                         Since we launched Tezos at the end of 2021, many awesome creators...
@@ -61,7 +61,7 @@ const BlogPage = () => {
                             <article>
                                 <div className="overflow-hidden rounded-2.5xl transition-shadow hover:shadow-lg">
                                     <figure className="group overflow-hidden">
-                                        <a href="single-post.html">
+                                        <a href="single-post">
                                             <img
                                                 src="../img/blog/post_2.jpg"
                                                 alt="post 2"
@@ -86,7 +86,7 @@ const BlogPage = () => {
                                             </span>
                                         </div>
                                         <h2 className="mb-4 font-display text-xl text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent">
-                                            <a href="single-post.html"> Mint your own Tezos collections </a>
+                                            <a href="single-post"> Mint your own Tezos collections </a>
                                         </h2>
                                         <p className="mb-8 dark:text-jacarta-200">
                                             Since we launched Tezos at the end of 2021, many awesome creators...
@@ -105,7 +105,7 @@ const BlogPage = () => {
                             <article>
                                 <div className="overflow-hidden rounded-2.5xl transition-shadow hover:shadow-lg">
                                     <figure className="group overflow-hidden">
-                                        <a href="single-post.html">
+                                        <a href="single-post">
                                             <img
                                                 src="../img/blog/post_3.jpg"
                                                 alt="post 3"
@@ -130,7 +130,7 @@ const BlogPage = () => {
                                             </span>
                                         </div>
                                         <h2 className="mb-4 font-display text-xl text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent">
-                                            <a href="single-post.html">List your collection for secondary sales</a>
+                                            <a href="single-post">List your collection for secondary sales</a>
                                         </h2>
                                         <p className="mb-8 dark:text-jacarta-200">
                                             Since we launched Tezos at the end of 2021, many awesome creators...
@@ -149,7 +149,7 @@ const BlogPage = () => {
                             <article>
                                 <div className="overflow-hidden rounded-2.5xl transition-shadow hover:shadow-lg">
                                     <figure className="group overflow-hidden">
-                                        <a href="single-post.html">
+                                        <a href="single-post">
                                             <img
                                                 src="../img/blog/post_4.jpg"
                                                 alt="post 4"
@@ -174,9 +174,7 @@ const BlogPage = () => {
                                             </span>
                                         </div>
                                         <h2 className="mb-4 font-display text-xl text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent">
-                                            <a href="single-post.html">
-                                                The biggest moves in NFTs, Bitcoin, crypto rules
-                                            </a>
+                                            <a href="single-post">The biggest moves in NFTs, Bitcoin, crypto rules</a>
                                         </h2>
                                         <p className="mb-8 dark:text-jacarta-200">
                                             Since we launched Tezos at the end of 2021, many awesome creators...
@@ -195,7 +193,7 @@ const BlogPage = () => {
                             <article>
                                 <div className="overflow-hidden rounded-2.5xl transition-shadow hover:shadow-lg">
                                     <figure className="group overflow-hidden">
-                                        <a href="single-post.html">
+                                        <a href="single-post">
                                             <img
                                                 src="../img/blog/post_5.jpg"
                                                 alt="post 5"
@@ -220,9 +218,7 @@ const BlogPage = () => {
                                             </span>
                                         </div>
                                         <h2 className="mb-4 font-display text-xl text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent">
-                                            <a href="single-post.html">
-                                                Incredible Amount of Developer Energy' in Web3
-                                            </a>
+                                            <a href="single-post">Incredible Amount of Developer Energy' in Web3</a>
                                         </h2>
                                         <p className="mb-8 dark:text-jacarta-200">
                                             Since we launched Tezos at the end of 2021, many awesome creators...
@@ -241,7 +237,7 @@ const BlogPage = () => {
                             <article>
                                 <div className="overflow-hidden rounded-2.5xl transition-shadow hover:shadow-lg">
                                     <figure className="group overflow-hidden">
-                                        <a href="single-post.html">
+                                        <a href="single-post">
                                             <img
                                                 src="../img/blog/post_6.jpg"
                                                 alt="post 6"
@@ -266,7 +262,7 @@ const BlogPage = () => {
                                             </span>
                                         </div>
                                         <h2 className="mb-4 font-display text-xl text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent">
-                                            <a href="single-post.html">
+                                            <a href="single-post">
                                                 Inflation is up, it matters: High prices plague Biden's
                                             </a>
                                         </h2>
@@ -287,7 +283,7 @@ const BlogPage = () => {
                             <article>
                                 <div className="overflow-hidden rounded-2.5xl transition-shadow hover:shadow-lg">
                                     <figure className="group overflow-hidden">
-                                        <a href="single-post.html">
+                                        <a href="single-post">
                                             <img
                                                 src="../img/blog/post_7.jpg"
                                                 alt="post 7"
@@ -312,9 +308,7 @@ const BlogPage = () => {
                                             </span>
                                         </div>
                                         <h2 className="mb-4 font-display text-xl text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent">
-                                            <a href="single-post.html">
-                                                What to do when the market is going everywhere
-                                            </a>
+                                            <a href="single-post">What to do when the market is going everywhere</a>
                                         </h2>
                                         <p className="mb-8 dark:text-jacarta-200">
                                             Since we launched Tezos at the end of 2021, many awesome creators...
@@ -334,7 +328,7 @@ const BlogPage = () => {
                         {/* Load More */}
                         <div className="mt-10 text-center">
                             <a
-                                href="blog.html"
+                                href="blog"
                                 className="inline-block rounded-full bg-accent py-3 px-8 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark"
                             >
                                 Load More
@@ -534,7 +528,7 @@ const BlogPage = () => {
                                     />
                                 </figure>
                                 <div>
-                                    <a href="collection.html" className="text-sm text-accent">
+                                    <a href="collection" className="text-sm text-accent">
                                         Elon Musk #709
                                     </a>
                                     <h3 className="mb-1 font-display text-base font-semibold text-jacarta-700 dark:text-white">

@@ -4,7 +4,7 @@ const Footer2 = () => {
             <div className="grid grid-cols-6 gap-x-7 gap-y-14 pt-24 pb-12 md:grid-cols-12">
                 <div className="col-span-full sm:col-span-3 md:col-span-4">
                     {/* <!-- Logo --> */}
-                    <a href="index.html" className="mb-6 inline-block">
+                    <a href="index" className="mb-6 inline-block">
                         <img src="img/logo_white.png" className="max-h-7" alt="Xhibiter | NFT Marketplace" />
                     </a>
                     <p className="mb-12 text-jacarta-300">

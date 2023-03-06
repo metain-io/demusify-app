@@ -27,7 +27,7 @@ const ContactPage = () => {
                                     Contact Us
                                 </h2>
                                 <p className="mb-16 text-lg leading-normal dark:text-jacarta-300">
-                                    Have a question? Need help? Don't hesitate, drop us a line
+                                    Have a question? Need help? Don&apos;t hesitate, drop us a line
                                 </p>
                                 <form id="contact-form" method="post">
                                     <div className="flex space-x-7">
@@ -114,7 +114,7 @@ const ContactPage = () => {
                                     Information
                                 </h2>
                                 <p className="mb-6 text-lg leading-normal dark:text-jacarta-300">
-                                    Don't hesitaste, drop us a line Collaboratively administrate channels whereas
+                                    Don&apos;t hesitaste, drop us a line Collaboratively administrate channels whereas
                                     virtual. Objectively seize scalable metrics whereas proactive e-services.
                                 </p>
                                 <div className="rounded-2.5xl border border-jacarta-100 bg-white p-10 dark:border-jacarta-600 dark:bg-jacarta-700">
@@ -313,7 +313,7 @@ const ContactPage = () => {
                                 />
                             </svg>
                             <p className="text-center dark:text-white">
-                                You don't have MetaMask in your browser, please download it from
+                                You don&apos;t have MetaMask in your browser, please download it from
                                 <a
                                     href="https://metamask.io/"
                                     className="text-accent"

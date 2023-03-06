@@ -1056,7 +1056,7 @@ const Home9Page = () => {
                                 />
                             </svg>
                             <p className="text-center dark:text-white">
-                                You don't have MetaMask in your browser, please download it from
+                                You don&apos;t have MetaMask in your browser, please download it from
                                 <a
                                     href="https://metamask.io/"
                                     className="text-accent"

@@ -1,3 +1,5 @@
-const configs = {};
+const configs = {
+    dynamoose: {},
+};
 
 export default configs;

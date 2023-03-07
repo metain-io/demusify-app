@@ -17,7 +17,15 @@
         "resolveJsonModule": true,
         "isolatedModules": true,
         "incremental": true,
-        "baseUrl": "./src"
+        "baseUrl": "./src",
+        "paths": {
+            "@configs/*": ["configs/*"],
+            "@controllers/*": ["controllers/*"],
+            "@middlewares/*": ["middlewares/*"],
+            "@models/*": ["models/*"],
+            "@routes/*": ["routes/*"],
+            "@services/*": ["services/*"]
+        }
     },
     "include": ["**/*.ts"],
     "exclude": ["node_modules"]

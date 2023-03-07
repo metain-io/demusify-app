@@ -6,7 +6,7 @@ export class CollectionService {
     }
 
     async listCollections() {
-        return await CollectionModel.query().exec();
+        return await CollectionModel.scan().limit(100).exec();
     }
 
     async getCollection(id: string) {

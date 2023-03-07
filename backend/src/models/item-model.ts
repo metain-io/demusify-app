@@ -1,7 +1,7 @@
 import * as dynamoose from 'dynamoose';
 
 const ItemModel = dynamoose.model(
-    'ItemModel',
+    'beta-demusify-items',
     new dynamoose.Schema({
         itemID: String,
         collectionID: String,

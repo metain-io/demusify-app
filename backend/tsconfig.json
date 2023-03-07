@@ -9,13 +9,15 @@
         "noImplicitAny": true,
         "moduleResolution": "node",
         "sourceMap": true,
-        "outDir": "dist",
+        "outDir": ".dist",
+        "rootDir": "./src",
+
+        "typeRoots": ["./node_modules/@types"],
 
         "allowJs": true,
         "skipLibCheck": true,
         "strict": true,
         "forceConsistentCasingInFileNames": true,
-        "noEmit": true,
 
         "resolveJsonModule": true,
         "isolatedModules": true,
@@ -30,6 +32,6 @@
             "@services/*": ["services/*"]
         }
     },
-    "include": ["**/*.ts"],
-    "exclude": ["node_modules"]
+    "include": ["./src/**/*.ts"],
+    "exclude": ["node_modules", "node_modules/**/*.d.ts", "node_modules/@types/node/ts4.8/test.d.ts"]
 }

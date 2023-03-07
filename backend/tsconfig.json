@@ -24,11 +24,11 @@
         "incremental": true,
         "baseUrl": "./src",
         "paths": {
-            "@configs/*": ["configs/*"],
             "@controllers/*": ["controllers/*"],
             "@middlewares/*": ["middlewares/*"],
             "@models/*": ["models/*"],
             "@routes/*": ["routes/*"],
+            "@databases/*": ["databases/*"],
             "@services/*": ["services/*"]
         }
     },

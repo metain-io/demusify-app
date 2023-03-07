@@ -1,7 +1,11 @@
 import express from 'express';
 import { apiRouter } from '@routes/index';
+import * as dynamoose from 'dynamoose';
+import { dynamoDb } from '@databases/index';
 
 require('dotenv').config();
+
+dynamoose.aws.ddb.set(dynamoDb);
 
 const app = express();
 

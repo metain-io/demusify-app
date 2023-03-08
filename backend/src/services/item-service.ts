@@ -1,23 +1,45 @@
 import { ItemModel } from '@models/index';
+import { v4 as Uuid } from 'uuid';
 
 export class ItemService {
     async createItem(data: any) {
+        data = {
+            itemID: Uuid(),
+            ...data,
+        };
+
         return await (await ItemModel.create(data)).save();
     }
 
     async listItems() {
-        return await ItemModel.query().exec();
+        return await ItemModel.scan().limit(100).exec();
     }
 
     async getItem(id: string) {
-        return await ItemModel.query({ itemID: id }).exec();
+        return (await ItemModel.query({ collectionID: id }).exec())?.[0];
     }
 
     async updateItem(id: string, data: any) {
-        return await ItemModel.update({ itemID: id, ...data });
+        const collection = await this.getItem(id);
+
+        if (!collection) {
+            throw new Error('Item is not exists');
+        }
+
+        for (let key in data) {
+            collection[key] = data[key];
+        }
+
+        return await collection.save();
     }
 
     async deleteItem(id: string) {
-        return await ItemModel.delete({ itemID: id });
+        const collection = await this.getItem(id);
+
+        if (!collection) {
+            throw new Error('Item is not exists');
+        }
+
+        return await collection.delete();
     }
 }

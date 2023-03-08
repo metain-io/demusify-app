@@ -16,7 +16,7 @@ export class CollectionService {
     }
 
     async getCollection(id: string) {
-        return await CollectionModel.query({ collectionID: id }).exec();
+        return (await CollectionModel.query({ collectionID: id }).exec())?.[0];
     }
 
     async updateCollection(id: string, data: any) {
@@ -26,12 +26,20 @@ export class CollectionService {
             throw new Error('Collection is not exists');
         }
 
-        if (data?.length == 0) return collection;
+        for (let key in data) {
+            collection[key] = data[key];
+        }
 
-        return await CollectionModel.update({ collectionID: id, ...data });
+        return await collection.save();
     }
 
     async deleteCollection(id: string) {
-        return await CollectionModel.delete({ collectionID: id });
+        const collection = await this.getCollection(id);
+
+        if (!collection) {
+            throw new Error('Collection is not exists');
+        }
+
+        return await collection.delete();
     }
 }

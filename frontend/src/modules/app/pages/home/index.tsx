@@ -1,4 +1,5 @@
 import { MainLayout } from '@modules/app/layouts';
+import { useButtonConnectPhantomWallet } from '@modules/auth/components/button-connect-phantom-wallet/use-button-connect-phantom-wallet';
 import { ReactElement } from 'react';
 
 const PageHome = () => {

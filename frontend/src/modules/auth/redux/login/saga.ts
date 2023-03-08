@@ -125,7 +125,7 @@ function* init(): any {
     const bytes = bs58.decode(walletAccount);
     const walletAccountInHex = Buffer.from(bytes).toString('hex');
 
-    if (walletAccountInHex.toLowerCase() != username.split('-')[3].toLowerCase()) {
+    if (walletAccountInHex.toLowerCase() != username.split('-')[2].toLowerCase()) {
         yield put(
             loginActions.initFinished({
                 status: LoginStatus.NotLogged,

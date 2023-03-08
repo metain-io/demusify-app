@@ -1,0 +1,37 @@
+{
+    "ts-node": {
+        "require": ["tsconfig-paths/register"]
+    },
+    "compilerOptions": {
+        "module": "commonjs",
+        "esModuleInterop": true,
+        "target": "es6",
+        "noImplicitAny": true,
+        "moduleResolution": "node",
+        "sourceMap": false,
+        "outDir": ".dist",
+        "rootDir": "./src",
+
+        "typeRoots": ["./node_modules/@types"],
+
+        "allowJs": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "incremental": true,
+        "baseUrl": "./src",
+        "paths": {
+            "@controllers/*": ["controllers/*"],
+            "@middlewares/*": ["middlewares/*"],
+            "@models/*": ["models/*"],
+            "@routes/*": ["routes/*"],
+            "@databases/*": ["databases/*"],
+            "@services/*": ["services/*"]
+        }
+    },
+    "include": ["./src/**/*.ts"],
+    "exclude": ["node_modules", "node_modules/**/*.d.ts", "node_modules/@types/node/ts4.8/test.d.ts"]
+}

@@ -1,6 +1,6 @@
 import path from 'path';
 import nodeExternals from 'webpack-node-externals';
-import { Configuration } from 'webpack';
+import { Configuration, DefinePlugin } from 'webpack';
 import WebpackShellPluginNext from 'webpack-shell-plugin-next';
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
 
@@ -19,6 +19,9 @@ const getConfig = (env: { [key: string]: string }, argv: { [key: string]: string
                     blocking: true,
                     parallel: false,
                 },
+            }),
+            new DefinePlugin({
+                'process.env': JSON.stringify(process.env),
             }),
         ],
         module: {

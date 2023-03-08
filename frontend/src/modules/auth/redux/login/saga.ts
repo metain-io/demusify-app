@@ -125,7 +125,7 @@ function* init(): any {
     const bytes = bs58.decode(walletAccount);
     const walletAccountInHex = Buffer.from(bytes).toString('hex');
 
-    if (walletAccountInHex.toLowerCase() != username.split('-')[3].toLowerCase()) {
+    if (walletAccountInHex.toLowerCase() != username.split('-')[2].toLowerCase()) {
         yield put(
             loginActions.initFinished({
                 status: LoginStatus.NotLogged,
@@ -173,8 +173,8 @@ function* handleLoginWithPhantomWallet(): any {
     const bytes = bs58.decode(walletAccount);
     const walletAccountInHex = Buffer.from(bytes).toString('hex');
 
-    const username = `w-sol-t-${walletAccountInHex}`;
-    const password = 'MetainDummyPassword' + Date.now().toString();
+    const username = `sol-test-${walletAccountInHex}`;
+    const password = 'DemusifyDummyPassword' + Date.now().toString();
 
     const [registerUserResult, registerUserError] = yield call(
         resolveGenerator,

@@ -20,6 +20,14 @@ export class CollectionService {
     }
 
     async updateCollection(id: string, data: any) {
+        const collection = await this.getCollection(id);
+
+        if (!collection) {
+            throw new Error('Collection is not exists');
+        }
+
+        if (data?.length == 0) return collection;
+
         return await CollectionModel.update({ collectionID: id, ...data });
     }
 

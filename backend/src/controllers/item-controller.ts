@@ -8,7 +8,7 @@ export class ItemController {
         const itemService = new ItemService();
         const item = await itemService.createItem(input);
 
-        return res.json({
+        res.json({
             data: item,
         });
     }
@@ -17,7 +17,7 @@ export class ItemController {
         const itemService = new ItemService();
         const items = await itemService.listItems();
 
-        return res.json({
+        res.json({
             data: items,
         });
     }
@@ -28,7 +28,7 @@ export class ItemController {
         const itemService = new ItemService();
         const item = await itemService.getItem(itemId);
 
-        return res.json({
+        res.json({
             data: item,
         });
     }
@@ -40,7 +40,7 @@ export class ItemController {
         const itemService = new ItemService();
         const item = await itemService.updateItem(itemId, input);
 
-        return res.json({
+        res.json({
             data: item,
         });
     }
@@ -51,7 +51,7 @@ export class ItemController {
         const itemService = new ItemService();
         const result = await itemService.deleteItem(itemId);
 
-        return res.json({
+        res.json({
             data: result,
         });
     }

@@ -1,6 +1,6 @@
 require('dotenv').config();
 require('express-async-errors');
-import express, { Request, Response } from 'express';
+import express, { NextFunction, Request, Response } from 'express';
 import { apiRouter } from '@routes/index';
 import * as dynamoose from 'dynamoose';
 import { dynamoDb } from '@databases/index';
@@ -19,7 +19,7 @@ app.use('/hello', (req, res, next) => {
 
 app.use('/api/v1', apiRouter);
 
-app.use((err: any, req: Request, res: Response) => {
+app.use((err: any, req: Request, res: Response, next: NextFunction) => {
     console.error('error', err.stack);
     res.status(500).send('Something broke!');
 });

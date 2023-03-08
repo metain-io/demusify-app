@@ -3,13 +3,12 @@ import { Request, Response } from 'express';
 
 export class CollectionController {
     async createCollection(req: Request, res: Response) {
-        console.log('body', req.body);
         const { username } = req.body;
 
         const collectionService = new CollectionService();
         const collection = await collectionService.createCollection({ username });
 
-        return res.json({
+        res.json({
             data: collection,
         });
     }
@@ -18,7 +17,7 @@ export class CollectionController {
         const collectionService = new CollectionService();
         const collections = await collectionService.listCollections();
 
-        return res.json({
+        res.json({
             data: collections,
         });
     }
@@ -29,7 +28,7 @@ export class CollectionController {
         const collectionService = new CollectionService();
         const collection = await collectionService.getCollection(collectionId);
 
-        return res.json({
+        res.json({
             data: collection,
         });
     }
@@ -41,7 +40,7 @@ export class CollectionController {
         const collectionService = new CollectionService();
         const collection = await collectionService.updateCollection(collectionId, input);
 
-        return res.json({
+        res.json({
             data: collection,
         });
     }
@@ -52,7 +51,7 @@ export class CollectionController {
         const collectionService = new CollectionService();
         const result = await collectionService.deleteCollection(collectionId);
 
-        return res.json({
+        res.json({
             data: result,
         });
     }

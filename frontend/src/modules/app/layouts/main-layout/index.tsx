@@ -13,10 +13,6 @@ const MainLayout = (props: MainLayoutProps) => {
     const loginStatus = useSelector(selectLoginStatus)
     const { children, handleOnLoginClicked = () => {handleOnClicked()} } = props;
 
-    React.useEffect(() => {
-        
-    }, [])
-
     return (
         <div className="overflow-x-hidden font-body text-jacarta-500 dark:bg-jacarta-900">
             <header className="js-page-header fixed top-0 z-20 w-full backdrop-blur transition-colors">

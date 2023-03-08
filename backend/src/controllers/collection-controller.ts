@@ -3,10 +3,11 @@ import { Request, Response } from 'express';
 
 export class CollectionController {
     async createCollection(req: Request, res: Response) {
-        const input = req.body;
+        console.log('body', req.body);
+        const { username } = req.body;
 
         const collectionService = new CollectionService();
-        const collection = await collectionService.createCollection(input);
+        const collection = await collectionService.createCollection({ username });
 
         return res.json({
             data: collection,

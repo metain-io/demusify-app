@@ -1,7 +1,13 @@
 import { CollectionModel } from '@models/index';
+import { v4 as Uuid } from 'uuid';
 
 export class CollectionService {
     async createCollection(data: any) {
+        data = {
+            collectionID: Uuid(),
+            ...data,
+        };
+
         return await (await CollectionModel.create(data)).save();
     }
 

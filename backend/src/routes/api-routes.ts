@@ -1,5 +1,5 @@
 import express from 'express';
-import { CollectionController, ItemController } from '@controllers/index';
+import { CollectionController, ItemController, MeController } from '@controllers/index';
 import { accessTokenAuthentication } from '@middlewares/index';
 
 const apiRouter = express.Router();
@@ -15,5 +15,7 @@ apiRouter.get('/items', new ItemController().listItems);
 apiRouter.get('/items/:itemId', new ItemController().getItem);
 apiRouter.put('/items/:itemId', accessTokenAuthentication, new ItemController().updateItem);
 apiRouter.delete('/items/:itemId', accessTokenAuthentication, new ItemController().deleteItem);
+
+apiRouter.get('/me/collections', accessTokenAuthentication, new MeController().listCollections);
 
 export { apiRouter };

@@ -10,15 +10,32 @@ export class CreatorService {
     }
 
     async get(username: string) {
-        console.log('=== username: ', username)
-        return await CreatorModel.query({ username: username }).exec();
+        return (await CreatorModel.query({ username }).exec())?.[0];
     }
 
     async update(username: string, data: any) {
-        return await CreatorModel.update({ username: username, ...data });
+        const creator = await this.get(username);
+
+        if (!creator) {
+            throw new Error('Creator is not exists');
+        }
+
+        delete data['username'];
+
+        for (let key in data) {
+            creator[key] = data[key];
+        }
+
+        return await creator.save();
     }
 
     async delete(username: string) {
-        return await CreatorModel.delete({ username: username });
+        const creator = await this.get(username);
+
+        if (!creator) {
+            throw new Error('Creator is not exists');
+        }
+
+        return await creator.delete();
     }
 }

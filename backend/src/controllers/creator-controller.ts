@@ -36,10 +36,6 @@ export class CreatorController {
     async updateCreator(req: Request, res: Response) {
         const { username } = req.params;
         const input = req.body;
-console.log('===== updateCreator: ')
-console.log('===== username: ', username)
-console.log('===== input: ', input, req.body, req.body?.username)
-console.log('========================= ')
 
         const creatorService = new CreatorService();
         const creator = await creatorService.update(username, input);

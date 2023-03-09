@@ -3,7 +3,7 @@ import { Request, Response } from 'express';
 
 export class CollectionController {
     async createCollection(req: Request, res: Response) {
-        const { username } = req.body;
+        const username = (req as any).user.username;
 
         const collectionService = new CollectionService();
         const collection = await collectionService.createCollection({ username });

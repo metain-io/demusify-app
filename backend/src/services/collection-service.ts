@@ -26,6 +26,8 @@ export class CollectionService {
             throw new Error('Collection is not exists');
         }
 
+        delete data['username'];
+
         for (let key in data) {
             collection[key] = data[key];
         }

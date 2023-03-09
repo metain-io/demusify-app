@@ -1,7 +1,11 @@
 import express from 'express';
 import { CollectionController, ItemController } from '@controllers/index';
+import { CreatorController } from '@controllers/creator-controller';
 
 const apiRouter = express.Router();
+
+apiRouter.get('/creator/:username', new CreatorController().getCreator);
+apiRouter.put('/creator/:username', new CreatorController().updateCreator);
 
 apiRouter.post('/collections', new CollectionController().createCollection);
 apiRouter.get('/collections', new CollectionController().listCollections);

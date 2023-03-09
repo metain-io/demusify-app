@@ -1,10 +1,16 @@
 const configs = {
     dynamoose: {
-        region: process.env.DYNAMOOSE_REGION || '...',
+        region: process.env.DYNAMOOSE_REGION || '',
         credentials: {
-            accessKeyId: process.env.DYNAMOOSE_ACCESS_KEY_ID || '...',
-            secretAccessKey: process.env.DYNAMOOSE_SECRET_ACCESS_KEY || '...',
+            accessKeyId: process.env.DYNAMOOSE_ACCESS_KEY_ID || '',
+            secretAccessKey: process.env.DYNAMOOSE_SECRET_ACCESS_KEY || '',
         },
+    },
+    cognito: {
+        region: process.env.COGNITO_REGION || '',
+        userPoolId: process.env.COGNITO_USER_POOL_ID || '',
+        clientId: process.env.COGNITO_CLIENT_ID || '',
+        tokenUse: process.env.COGNITO_TOKEN_USE || '',
     },
 };
 

@@ -7,15 +7,17 @@ import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
 const getConfig = (env: { [key: string]: string }, argv: { [key: string]: string }): Configuration => {
     require('dotenv').config();
 
+    const { outputPath } = argv;
+    console.log(env, argv);
+
     return {
-        entry: './src/lambda-handler.ts',
         target: 'node',
         mode: argv.mode === 'production' ? 'production' : 'development',
         externals: [nodeExternals()],
         plugins: [
             new WebpackShellPluginNext({
                 onBuildStart: {
-                    scripts: ['rimraf .dist'],
+                    scripts: [`rimraf ${outputPath}`],
                     blocking: true,
                     parallel: false,
                 },
@@ -43,7 +45,6 @@ const getConfig = (env: { [key: string]: string }, argv: { [key: string]: string
         },
         output: {
             path: path.join(__dirname, '.dist'),
-            filename: 'lambda-handler.js',
         },
         optimization: {
             moduleIds: 'deterministic',

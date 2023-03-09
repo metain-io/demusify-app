@@ -3,7 +3,9 @@
     "version": "1.0.0",
     "description": "",
     "scripts": {
-        "start": "ts-node src/index.ts"
+        "start": "ts-node src/index.ts",
+        "build:app": "npx webpack --mode production --config webpack.config.ts --entry src/index.ts --output-path .dist/app",
+        "build:lambda-handler": "npx webpack --mode production --config webpack.config.ts --entry src/lambda-handler.ts --output-path .dist/lambda-handler"
     },
     "keywords": [],
     "author": "",

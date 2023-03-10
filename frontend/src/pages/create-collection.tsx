@@ -1,3 +1,3 @@
-import { PageCreate } from '@modules/app/pages';
+import { PageCreateCollection } from '@modules/app/pages';
 
-export default PageCreate;
+export default PageCreateCollection;

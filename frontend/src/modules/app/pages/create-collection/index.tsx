@@ -11,18 +11,23 @@ const PageCreateCollection = () => {
                 </picture>
                 <div className="container">
                     <h1 className="py-16 text-center font-display text-4xl font-medium text-jacarta-700 dark:text-white">
-                        Create
+                        Create Collection
                     </h1>
 
                     <div className="mx-auto max-w-[48.125rem]">
-                        {/* <!-- File Upload --> */}
+                        {/* <!-- File Upload Logo Image --> */}
                         <div className="mb-6">
                             <label className="mb-2 block font-display text-jacarta-700 dark:text-white">
-                                Image, Video, Audio, or 3D Model<span className="text-red">*</span>
+                                Logo Image<span className="text-red">*</span>
                             </label>
-                            <p className="mb-3 text-2xs dark:text-jacarta-300">Drag or choose your file to upload</p>
+                            <p className="mb-3 text-2xs dark:text-jacarta-300">
+                                This image will also be used for navigation. 350 x 350 recommended.
+                            </p>
 
-                            <div className="group relative flex max-w-md flex-col items-center justify-center rounded-lg border-2 border-dashed border-jacarta-100 bg-white py-20 px-5 text-center dark:border-jacarta-600 dark:bg-jacarta-700">
+                            <div
+                                className="group relative flex max-w-md flex-col items-center justify-center rounded-lg border-2 border-dashed border-jacarta-100 bg-white py-20 px-5 text-center dark:border-jacarta-600 dark:bg-jacarta-700"
+                                style={{ width: '175px', height: '175px', borderRadius: '50%' }}
+                            >
                                 <div className="relative z-10 cursor-pointer">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -35,7 +40,89 @@ const PageCreateCollection = () => {
                                         <path d="M16 13l6.964 4.062-2.973.85 2.125 3.681-1.732 1-2.125-3.68-2.223 2.15L16 13zm-2-7h2v2h5a1 1 0 0 1 1 1v4h-2v-3H10v10h4v2H9a1 1 0 0 1-1-1v-5H6v-2h2V9a1 1 0 0 1 1-1h5V6zM4 14v2H2v-2h2zm0-4v2H2v-2h2zm0-4v2H2V6h2zm0-4v2H2V2h2zm4 0v2H6V2h2zm4 0v2h-2V2h2zm4 0v2h-2V2h2z" />
                                     </svg>
                                     <p className="mx-auto max-w-xs text-xs dark:text-jacarta-300">
-                                        JPG, PNG, GIF, SVG, MP4, WEBM, MP3, WAV, OGG, GLB, GLTF. Max size: 100 MB
+                                        JPG, PNG. Max size: 10 MB
+                                    </p>
+                                </div>
+                                <div
+                                    className="absolute inset-4 cursor-pointer rounded bg-jacarta-50 opacity-0 group-hover:opacity-100 dark:bg-jacarta-600"
+                                    style={{ borderRadius: '50%' }}
+                                ></div>
+                                <input
+                                    type="file"
+                                    accept="image/*,video/*,audio/*,webgl/*,.glb,.gltf"
+                                    id="file-upload"
+                                    className="absolute inset-0 z-20 cursor-pointer opacity-0"
+                                />
+                            </div>
+                        </div>
+
+                        {/* <!-- File Upload Featured Image --> */}
+                        <div className="mb-6">
+                            <label className="mb-2 block font-display text-jacarta-700 dark:text-white">
+                                Featured Image<span className="text-red">*</span>
+                            </label>
+                            <p className="mb-3 text-2xs dark:text-jacarta-300">
+                                This image will be used for featuring your collection on the homepage, category pages,
+                                or other promotional areas of Demusify. 600 x 400 recommended.
+                            </p>
+
+                            <div
+                                className="group relative flex max-w-md flex-col items-center justify-center rounded-lg border-2 border-dashed border-jacarta-100 bg-white py-20 px-5 text-center dark:border-jacarta-600 dark:bg-jacarta-700"
+                                style={{ width: '300px', height: '200px' }}
+                            >
+                                <div className="relative z-10 cursor-pointer">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24"
+                                        width="24"
+                                        height="24"
+                                        className="mb-4 inline-block fill-jacarta-500 dark:fill-white"
+                                    >
+                                        <path fill="none" d="M0 0h24v24H0z" />
+                                        <path d="M16 13l6.964 4.062-2.973.85 2.125 3.681-1.732 1-2.125-3.68-2.223 2.15L16 13zm-2-7h2v2h5a1 1 0 0 1 1 1v4h-2v-3H10v10h4v2H9a1 1 0 0 1-1-1v-5H6v-2h2V9a1 1 0 0 1 1-1h5V6zM4 14v2H2v-2h2zm0-4v2H2v-2h2zm0-4v2H2V6h2zm0-4v2H2V2h2zm4 0v2H6V2h2zm4 0v2h-2V2h2zm4 0v2h-2V2h2z" />
+                                    </svg>
+                                    <p className="mx-auto max-w-xs text-xs dark:text-jacarta-300">
+                                        JPG, PNG. Max size: 100 MB
+                                    </p>
+                                </div>
+                                <div className="absolute inset-4 cursor-pointer rounded bg-jacarta-50 opacity-0 group-hover:opacity-100 dark:bg-jacarta-600"></div>
+                                <input
+                                    type="file"
+                                    accept="image/*,video/*,audio/*,webgl/*,.glb,.gltf"
+                                    id="file-upload"
+                                    className="absolute inset-0 z-20 cursor-pointer opacity-0"
+                                />
+                            </div>
+                        </div>
+
+                        {/* <!-- File Upload Banner Image --> */}
+                        <div className="mb-6">
+                            <label className="mb-2 block font-display text-jacarta-700 dark:text-white">
+                                Featured Image<span className="text-red">*</span>
+                            </label>
+                            <p className="mb-3 text-2xs dark:text-jacarta-300">
+                                This image will appear at the top of your collection page. Avoid including too much
+                                textin this banner image, as the dimensions change on different devices. 1400 x 350
+                                recommended.
+                            </p>
+
+                            <div
+                                className="group relative flex max-w-md flex-col items-center justify-center rounded-lg border-2 border-dashed border-jacarta-100 bg-white py-20 px-5 text-center dark:border-jacarta-600 dark:bg-jacarta-700"
+                                style={{ width: '700px', height: '175px' }}
+                            >
+                                <div className="relative z-10 cursor-pointer">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24"
+                                        width="24"
+                                        height="24"
+                                        className="mb-4 inline-block fill-jacarta-500 dark:fill-white"
+                                    >
+                                        <path fill="none" d="M0 0h24v24H0z" />
+                                        <path d="M16 13l6.964 4.062-2.973.85 2.125 3.681-1.732 1-2.125-3.68-2.223 2.15L16 13zm-2-7h2v2h5a1 1 0 0 1 1 1v4h-2v-3H10v10h4v2H9a1 1 0 0 1-1-1v-5H6v-2h2V9a1 1 0 0 1 1-1h5V6zM4 14v2H2v-2h2zm0-4v2H2v-2h2zm0-4v2H2V6h2zm0-4v2H2V2h2zm4 0v2H6V2h2zm4 0v2h-2V2h2zm4 0v2h-2V2h2z" />
+                                    </svg>
+                                    <p className="mx-auto max-w-xs text-xs dark:text-jacarta-300">
+                                        JPG, PNG. Max size: 100 MB
                                     </p>
                                 </div>
                                 <div className="absolute inset-4 cursor-pointer rounded bg-jacarta-50 opacity-0 group-hover:opacity-100 dark:bg-jacarta-600"></div>
@@ -60,23 +147,21 @@ const PageCreateCollection = () => {
                                 type="text"
                                 id="item-name"
                                 className="w-full rounded-lg border-jacarta-100 py-3 hover:ring-2 hover:ring-accent/10 focus:ring-accent dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:placeholder:text-jacarta-300"
-                                placeholder="Item name"
+                                placeholder="Collection Name"
                                 required
                             />
                         </div>
 
-                        {/* <!-- External Link --> */}
+                        {/* <!-- URL --> */}
                         <div className="mb-6">
                             <label
                                 htmlFor="item-external-link"
                                 className="mb-2 block font-display text-jacarta-700 dark:text-white"
                             >
-                                External link
+                                URL
                             </label>
                             <p className="mb-3 text-2xs dark:text-jacarta-300">
-                                We will include a link to this URL on this item&apos;s detail page, so that users can
-                                click to learn more about it. You are welcome to link to your own webpage with more
-                                details.
+                                Customize your URL on Demusify. Must only contain lowercase letters, numbers and hyphens
                             </p>
                             <input
                                 type="url"
@@ -95,8 +180,7 @@ const PageCreateCollection = () => {
                                 Description
                             </label>
                             <p className="mb-3 text-2xs dark:text-jacarta-300">
-                                The description will be included on the item&apos;s detail page underneath its image.
-                                Markdown syntax is supported.
+                                <a href="#">Markdown</a> syntax is supported. 0 of 1000 charaters used
                             </p>
                             <textarea
                                 id="item-description"
@@ -107,15 +191,15 @@ const PageCreateCollection = () => {
                             ></textarea>
                         </div>
 
-                        {/* <!-- Collection --> */}
-                        <div className="relative">
+                        {/* <!-- Category --> */}
+                        <div className="mb-6 relative">
                             <div>
                                 <label className="mb-2 block font-display text-jacarta-700 dark:text-white">
-                                    Collection
+                                    Category
                                 </label>
                                 <div className="mb-3 flex items-center space-x-2">
                                     <p className="text-2xs dark:text-jacarta-300">
-                                        This is the collection where your item will appear.
+                                        Make your collection discoverable on Demusify by adding a category
                                         <span
                                             className="inline-block"
                                             data-tippy-content="Moving items to a different collection may take up to 30 minutes."
@@ -143,7 +227,7 @@ const PageCreateCollection = () => {
                                     data-bs-toggle="dropdown"
                                     aria-expanded="false"
                                 >
-                                    <span className="">Select collection</span>
+                                    <span className="">Select Category</span>
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         viewBox="0 0 24 24"
@@ -298,379 +382,39 @@ const PageCreateCollection = () => {
                             </div>
                         </div>
 
-                        {/* <!-- Properties --> */}
-                        <div className="relative border-b border-jacarta-100 py-6 dark:border-jacarta-600">
-                            <div className="flex items-center justify-between">
-                                <div className="flex">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        width="24"
-                                        height="24"
-                                        className="mr-2 mt-px h-4 w-4 shrink-0 fill-jacarta-700 dark:fill-white"
-                                    >
-                                        <path fill="none" d="M0 0h24v24H0z" />
-                                        <path d="M8 4h13v2H8V4zM5 3v3h1v1H3V6h1V4H3V3h2zM3 14v-2.5h2V11H3v-1h3v2.5H4v.5h2v1H3zm2 5.5H3v-1h2V18H3v-1h3v4H3v-1h2v-.5zM8 11h13v2H8v-2zm0 7h13v2H8v-2z" />
-                                    </svg>
-
-                                    <div>
-                                        <label className="block font-display text-jacarta-700 dark:text-white">
-                                            Properties
-                                        </label>
-                                        <p className="dark:text-jacarta-300">
-                                            Textual traits that show up as rectangles.
-                                        </p>
-                                    </div>
-                                </div>
-                                <button
-                                    className="group flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border border-accent bg-white hover:border-transparent hover:bg-accent dark:bg-jacarta-700"
-                                    type="button"
-                                    id="item-properties"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#propertiesModal"
-                                >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        width="24"
-                                        height="24"
-                                        className="fill-accent group-hover:fill-white"
-                                    >
-                                        <path fill="none" d="M0 0h24v24H0z" />
-                                        <path d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z" />
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-
-                        {/* <!-- Levels --> */}
-                        <div className="relative border-b border-jacarta-100 py-6 dark:border-jacarta-600">
-                            <div className="flex items-center justify-between">
-                                <div className="flex">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        width="24"
-                                        height="24"
-                                        className="mr-2 mt-px h-4 w-4 shrink-0 fill-jacarta-700 dark:fill-white"
-                                    >
-                                        <path fill="none" d="M0 0h24v24H0z" />
-                                        <path d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z" />
-                                    </svg>
-
-                                    <div>
-                                        <label className="block font-display text-jacarta-700 dark:text-white">
-                                            Levels
-                                        </label>
-                                        <p className="dark:text-jacarta-300">
-                                            Numerical traits that show as a progress bar.
-                                        </p>
-                                    </div>
-                                </div>
-                                <button
-                                    className="group flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border border-accent bg-white hover:border-transparent hover:bg-accent dark:bg-jacarta-700"
-                                    type="button"
-                                    id="item-levels"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#levelsModal"
-                                >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        width="24"
-                                        height="24"
-                                        className="fill-accent group-hover:fill-white"
-                                    >
-                                        <path fill="none" d="M0 0h24v24H0z" />
-                                        <path d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z" />
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-
-                        {/* <!-- Stats --> */}
-                        <div className="relative border-b border-jacarta-100 py-6 dark:border-jacarta-600">
-                            <div className="flex items-center justify-between">
-                                <div className="flex">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        width="24"
-                                        height="24"
-                                        className="mr-2 mt-px h-4 w-4 shrink-0 fill-jacarta-700 dark:fill-white"
-                                    >
-                                        <path fill="none" d="M0 0h24v24H0z" />
-                                        <path d="M2 13h6v8H2v-8zM9 3h6v18H9V3zm7 5h6v13h-6V8z" />
-                                    </svg>
-
-                                    <div>
-                                        <label className="block font-display text-jacarta-700 dark:text-white">
-                                            Stats
-                                        </label>
-                                        <p className="dark:text-jacarta-300">
-                                            Numerical traits that just show as numbers.
-                                        </p>
-                                    </div>
-                                </div>
-                                <button
-                                    className="group flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border border-accent bg-white hover:border-transparent hover:bg-accent dark:bg-jacarta-700"
-                                    type="button"
-                                    id="item-stats"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#levelsModal"
-                                >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        width="24"
-                                        height="24"
-                                        className="fill-accent group-hover:fill-white"
-                                    >
-                                        <path fill="none" d="M0 0h24v24H0z" />
-                                        <path d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z" />
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-
-                        {/* <!-- Unlockable Content --> */}
-                        <div className="relative border-b border-jacarta-100 py-6 dark:border-jacarta-600">
-                            <div className="flex items-center justify-between">
-                                <div className="flex">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        width="24"
-                                        height="24"
-                                        className="mr-2 mt-px h-4 w-4 shrink-0 fill-accent"
-                                    >
-                                        <path fill="none" d="M0 0h24v24H0z" />
-                                        <path d="M7 10h13a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V11a1 1 0 0 1 1-1h1V9a7 7 0 0 1 13.262-3.131l-1.789.894A5 5 0 0 0 7 9v1zm-2 2v8h14v-8H5zm5 3h4v2h-4v-2z" />
-                                    </svg>
-
-                                    <div>
-                                        <label className="block font-display text-jacarta-700 dark:text-white">
-                                            Unlockable Content
-                                        </label>
-                                        <p className="dark:text-jacarta-300">
-                                            Include unlockable content that can only be revealed by the owner of the
-                                            item.
-                                        </p>
-                                    </div>
-                                </div>
-                                <input
-                                    type="checkbox"
-                                    value="checkbox"
-                                    name="check"
-                                    className="relative h-6 w-[2.625rem] cursor-pointer appearance-none rounded-full border-none bg-jacarta-100 after:absolute after:top-[0.1875rem] after:left-[0.1875rem] after:h-[1.125rem] after:w-[1.125rem] after:rounded-full after:bg-jacarta-400 after:transition-all checked:bg-accent checked:bg-none checked:after:left-[1.3125rem] checked:after:bg-white checked:hover:bg-accent focus:ring-transparent focus:ring-offset-0 checked:focus:bg-accent"
-                                />
-                            </div>
-                        </div>
-
-                        {/* <!-- Explicit & Sensitive Content --> */}
-                        <div className="relative mb-6 border-b border-jacarta-100 py-6 dark:border-jacarta-600">
-                            <div className="flex items-center justify-between">
-                                <div className="flex">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        width="24"
-                                        height="24"
-                                        className="mr-2 mt-px h-4 w-4 shrink-0 fill-jacarta-700 dark:fill-white"
-                                    >
-                                        <path fill="none" d="M0 0h24v24H0z" />
-                                        <path d="M12.866 3l9.526 16.5a1 1 0 0 1-.866 1.5H2.474a1 1 0 0 1-.866-1.5L11.134 3a1 1 0 0 1 1.732 0zM11 16v2h2v-2h-2zm0-7v5h2V9h-2z" />
-                                    </svg>
-
-                                    <div>
-                                        <label className="font-display text-jacarta-700 dark:text-white">
-                                            Explicit & Sensitive Content
-                                        </label>
-
-                                        <p className="dark:text-jacarta-300">
-                                            Set this item as explicit and sensitive content.
-                                            <span
-                                                className="inline-block"
-                                                data-tippy-content="Setting your asset as explicit and sensitive content, like pornography and other not safe for work (NSFW) content, will protect users with safe search while browsing Xhibiter."
-                                            >
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    viewBox="0 0 24 24"
-                                                    width="24"
-                                                    height="24"
-                                                    className="ml-2 -mb-[2px] h-4 w-4 fill-jacarta-500 dark:fill-jacarta-300"
-                                                >
-                                                    <path fill="none" d="M0 0h24v24H0z"></path>
-                                                    <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM11 7h2v2h-2V7zm0 4h2v6h-2v-6z"></path>
-                                                </svg>
-                                            </span>
-                                        </p>
-                                    </div>
-                                </div>
-                                <input
-                                    type="checkbox"
-                                    value="checkbox"
-                                    name="check"
-                                    className="relative h-6 w-[2.625rem] cursor-pointer appearance-none rounded-full border-none bg-jacarta-100 after:absolute after:top-[0.1875rem] after:left-[0.1875rem] after:h-[1.125rem] after:w-[1.125rem] after:rounded-full after:bg-jacarta-400 after:transition-all checked:bg-accent checked:bg-none checked:after:left-[1.3125rem] checked:after:bg-white checked:hover:bg-accent focus:ring-transparent focus:ring-offset-0 checked:focus:bg-accent"
-                                />
-                            </div>
-                        </div>
-
-                        {/* <!-- Supply --> */}
+                        {/* <!-- Links --> */}
                         <div className="mb-6">
                             <label
-                                htmlFor="item-supply"
+                                htmlFor="item-name"
                                 className="mb-2 block font-display text-jacarta-700 dark:text-white"
                             >
-                                Supply
+                                Links
                             </label>
-
-                            <div className="mb-3 flex items-center space-x-2">
-                                <p className="text-2xs dark:text-jacarta-300">
-                                    The number of items that can be minted. No gas cost to you!
-                                    <span
-                                        className="inline-block"
-                                        data-tippy-content="Setting your asset as explicit and sensitive content, like pornography and other not safe for work (NSFW) content, will protect users with safe search while browsing Xhibiter."
-                                    >
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 24 24"
-                                            width="24"
-                                            height="24"
-                                            className="ml-1 -mb-[3px] h-4 w-4 fill-jacarta-500 dark:fill-jacarta-300"
-                                        >
-                                            <path fill="none" d="M0 0h24v24H0z"></path>
-                                            <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM11 7h2v2h-2V7zm0 4h2v6h-2v-6z"></path>
-                                        </svg>
-                                    </span>
-                                </p>
-                            </div>
-
                             <input
                                 type="text"
-                                id="item-supply"
+                                id="item-name"
                                 className="w-full rounded-lg border-jacarta-100 py-3 hover:ring-2 hover:ring-accent/10 focus:ring-accent dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:placeholder:text-jacarta-300"
-                                placeholder="1"
+                                placeholder="yoursite.io"
+                                required
                             />
-                        </div>
-
-                        {/* <!-- Blockchain --> */}
-                        <div className="mb-6">
-                            <label
-                                htmlFor="item-supply"
-                                className="mb-2 block font-display text-jacarta-700 dark:text-white"
-                            >
-                                Blockchain
-                            </label>
-
-                            <div className="dropdown relative mb-4 cursor-pointer">
-                                <div
-                                    className="dropdown-toggle flex items-center justify-between rounded-lg border border-jacarta-100 bg-white py-3.5 px-3 text-base dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white"
-                                    role="button"
-                                    id="item-blockchain"
-                                    data-bs-toggle="dropdown"
-                                    aria-expanded="false"
-                                >
-                                    <span className="flex items-center">
-                                        <img src="img/chains/ETH.png" alt="eth" className="mr-2 h-5 w-5 rounded-full" />
-                                        Ethereum
-                                    </span>
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        width="24"
-                                        height="24"
-                                        className="h-4 w-4 fill-jacarta-500 dark:fill-white"
-                                    >
-                                        <path fill="none" d="M0 0h24v24H0z"></path>
-                                        <path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z"></path>
-                                    </svg>
-                                </div>
-
-                                <div
-                                    className="dropdown-menu z-10 hidden w-full whitespace-nowrap rounded-xl bg-white py-4 px-2 text-left shadow-xl dark:bg-jacarta-800"
-                                    aria-labelledby="item-blockchain"
-                                >
-                                    <button className="dropdown-item flex w-full items-center justify-between rounded-xl px-5 py-2 text-left text-base text-jacarta-700 transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600">
-                                        <span className="flex items-center">
-                                            <img
-                                                src="img/chains/ETH.png"
-                                                alt="eth"
-                                                className="mr-2 h-5 w-5 rounded-full"
-                                            />
-                                            Ethereum
-                                        </span>
-                                    </button>
-                                    <button className="dropdown-item flex w-full items-center justify-between rounded-xl px-5 py-2 text-left text-base transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600">
-                                        <span className="flex items-center">
-                                            <img
-                                                src="img/chains/FLOW.png"
-                                                alt="flow"
-                                                className="mr-2 h-5 w-5 rounded-full"
-                                            />
-                                            Flow
-                                        </span>
-                                    </button>
-
-                                    <button className="dropdown-item flex w-full items-center justify-between rounded-xl px-5 py-2 text-left text-base transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600">
-                                        <span className="flex items-center">
-                                            <img
-                                                src="img/chains/FUSD.png"
-                                                alt="fusd"
-                                                className="mr-2 h-5 w-5 rounded-full"
-                                            />
-                                            FUSD
-                                        </span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* <!-- Freeze metadata --> */}
-                        <div className="mb-6">
-                            <div className="mb-2 flex items-center space-x-2">
-                                <label
-                                    htmlFor="item-freeze-metadata"
-                                    className="block font-display text-jacarta-700 dark:text-white"
-                                >
-                                    Freeze metadata
-                                </label>
-                                <span
-                                    className="inline-block"
-                                    data-tippy-content="Setting your asset as explicit and sensitive content, like pornography and other not safe for work (NSFW) content, will protect users with safe search while browsing Xhibiter."
-                                >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        width="24"
-                                        height="24"
-                                        className="mb-[2px] h-5 w-5 fill-jacarta-500 dark:fill-jacarta-300"
-                                    >
-                                        <path fill="none" d="M0 0h24v24H0z"></path>
-                                        <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM11 7h2v2h-2V7zm0 4h2v6h-2v-6z"></path>
-                                    </svg>
-                                </span>
-                            </div>
-
-                            <p className="mb-3 text-2xs dark:text-jacarta-300">
-                                Freezing your metadata will allow you to permanently lock and store all of this
-                                item&apos;s content in decentralized file storage.
-                            </p>
-
                             <input
                                 type="text"
-                                disabled
-                                id="item-freeze-metadata"
-                                className="w-full rounded-lg border-jacarta-100 bg-jacarta-50 py-3 dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:placeholder:text-jacarta-300"
-                                placeholder="To freeze your metadata, you must create your item first."
+                                id="item-name"
+                                className="w-full rounded-lg border-jacarta-100 py-3 hover:ring-2 hover:ring-accent/10 focus:ring-accent dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:placeholder:text-jacarta-300"
+                                placeholder="https://www.medium.com/@YourMediumHandle"
+                                required
+                            />
+                            <input
+                                type="text"
+                                id="item-name"
+                                className="w-full rounded-lg border-jacarta-100 py-3 hover:ring-2 hover:ring-accent/10 focus:ring-accent dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:placeholder:text-jacarta-300"
+                                placeholder="https://t.me/abcdef"
+                                required
                             />
                         </div>
 
                         {/* <!-- Submit --> */}
-                        <button
-                            disabled
-                            className="cursor-default rounded-full bg-accent-lighter py-3 px-8 text-center font-semibold text-white transition-all"
-                        >
+                        <button className="cursor-default rounded-full bg-accent-lighter py-3 px-8 text-center font-semibold text-white transition-all">
                             Create
                         </button>
                     </div>

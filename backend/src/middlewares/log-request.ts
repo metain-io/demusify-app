@@ -2,18 +2,14 @@ import { NextFunction } from 'connect';
 import { Request, Response } from 'express';
 
 export function logRequest(req: Request, res: Response, next: NextFunction) {
-    const { url, body, params, query, headers, method, path, baseUrl, originalUrl } = req;
-    console.log('Request', 'at', new Date(), '|', method, path);
-    console.log({
+    const { url, body, query, headers, method, path, originalUrl } = req;
+
+    console.log('Request', method, path, {
         url,
-        body,
-        params,
-        query,
-        headers,
-        method,
-        path,
-        baseUrl,
         originalUrl,
+        headers,
+        query,
+        body: JSON.stringify(body),
     });
 
     next();

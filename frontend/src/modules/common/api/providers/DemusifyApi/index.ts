@@ -56,14 +56,14 @@ class DemusifyApi extends BaseApiProvider implements IDemusifyApi {
 
     walletApp = {
         getCreator: async (username: string): Promise<any> => {
-            const uri = `/api/v1/creator/${username}`;
+            const uri = `/demusify/api/v1/creator/${username}`;
             const requestKey = generateRequestKey(uri);
             const rs = await this.executeRequest(requestKey, () => Client.get(uri, {}));
             return rs.data || {};
         },
 
         updateCreator: async (username: string, creator: any): Promise<any> => {
-            const uri = `/api/v1/creator/${username}`;
+            const uri = `/demusify/api/v1/creator/${username}`;
             const requestKey = generateRequestKey(uri);
             const rs = await this.executeRequest(requestKey, () =>
                 Client.put(uri, {

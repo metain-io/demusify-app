@@ -4,6 +4,7 @@ import express, { NextFunction, Request, Response } from 'express';
 import { apiRouter } from '@routes/index';
 import * as dynamoose from 'dynamoose';
 import { dynamoDb } from '@databases/index';
+import cors from 'cors';
 import bodyParser from 'body-parser';
 
 dynamoose.aws.ddb.set(dynamoDb);
@@ -12,6 +13,11 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use(cors({
+    origin: '*',
+    'methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
+}));
 
 app.use('/hello', (req, res, next) => {
     res.status(200).send('Hello!!');

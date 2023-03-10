@@ -17,7 +17,8 @@ export class CreatorService {
         const creator = await this.get(username);
 
         if (!creator) {
-            throw new Error('Creator is not exists');
+            // throw new Error('Creator is not exists');
+            return await this.create({...data, username})
         }
 
         delete data['username'];

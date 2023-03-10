@@ -154,6 +154,8 @@ function* getUserProfile(username: string): any {
     console.log('============== getUserProfile')
     if (!username) return {};
     let [userProfile, error] = yield call(resolveGenerator, DemusifyApi.walletApp.getCreator(username));
+    console.log('getUserProfile --- userProfile: ', userProfile);
+
     if (error) {
         console.log('getUserProfile --- ERROR: ', error);
         return {};

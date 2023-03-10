@@ -5,6 +5,12 @@ const CreatorModel = dynamoose.model(
     new dynamoose.Schema({
         username: String,
         name: String,
+        bio: String,
+        email: String,
+        twitterLink: String,
+        instagramLink: String,
+        yourSiteLink: String,
+        avatarUrl: String,
     }),
 );
 

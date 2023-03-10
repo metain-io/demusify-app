@@ -1,7 +1,57 @@
 import { MainLayout } from '@modules/app/layouts';
+import { selectLoginData } from '@modules/auth/redux/login/slice';
+import React from 'react';
 import { ReactElement } from 'react';
+import { useFormik, useFormikContext } from 'formik';
+import { useSelector } from 'react-redux';
+import { DemusifyApi } from '@modules/common/api';
+import logger from '@libs/logger';
 
 const PageEditProfile = () => {
+    const loginData = useSelector(selectLoginData)
+
+    const userProfileFormik = useFormik({
+        initialValues: {
+            name: '',
+            bio: '',
+            email: '',
+            twitterLink: '',
+            instagramLink: '',
+            yourSiteLink: '',
+            avatarUrl: '',
+        },
+        onSubmit: async values => {
+          alert(JSON.stringify(values, null, 2));
+          try {
+              await DemusifyApi.walletApp.updateCreator(loginData.username, {
+                  name: userProfileFormik.values.name,
+                  bio: userProfileFormik.values.bio,
+                  email: userProfileFormik.values.email,
+                  twitterLink: userProfileFormik.values.twitterLink,
+                  instagramLink: userProfileFormik.values.instagramLink,
+                  yourSiteLink: userProfileFormik.values.yourSiteLink,
+                  avatarUrl: userProfileFormik.values.avatarUrl,
+              });
+              alert('Update success');
+          } catch (err: any) {
+            logger.debug('updateCreator --- ERROR: ', err)
+            alert('Something went wrong. Update failed');
+          }
+        },
+      });
+
+    React.useEffect(() => {
+        if (loginData && loginData.username) {
+            userProfileFormik.setFieldValue('name', loginData.name);
+            userProfileFormik.setFieldValue('bio', loginData.bio);
+            userProfileFormik.setFieldValue('email', loginData.email);
+            userProfileFormik.setFieldValue('twitterLink', loginData.twitterLink);
+            userProfileFormik.setFieldValue('instagramLink', loginData.instagramLink);
+            userProfileFormik.setFieldValue('yourSiteLink', loginData.yourSiteLink);
+            userProfileFormik.setFieldValue('avatarUrl', loginData.avatarUrl);
+        }
+    }, [loginData])
+
     return (
         <main className="pt-[5.5rem] lg:pt-24">
             {/* <!-- Banner --> */}
@@ -32,7 +82,7 @@ const PageEditProfile = () => {
                     <img src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
                 </picture>
 
-                <div className="container">
+                <form className="container" onSubmit={userProfileFormik.handleSubmit}>
                     <div className="mx-auto max-w-[48.125rem] md:flex">
                         {/* <!-- Form --> */}
                         <div className="mb-12 md:w-1/2 md:pr-8">
@@ -45,10 +95,12 @@ const PageEditProfile = () => {
                                 </label>
                                 <input
                                     type="text"
-                                    id="profile-username"
+                                    id="name"
                                     className="w-full rounded-lg border-jacarta-100 py-3 hover:ring-2 hover:ring-accent/10 focus:ring-accent dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:placeholder:text-jacarta-300"
                                     placeholder="Enter username"
-                                    required
+                                    // required
+                                    onChange={userProfileFormik.handleChange}
+                                    value={userProfileFormik.values.name}
                                 />
                             </div>
                             <div className="mb-6">
@@ -59,10 +111,12 @@ const PageEditProfile = () => {
                                     Bio<span className="text-red">*</span>
                                 </label>
                                 <textarea
-                                    id="profile-bio"
+                                    id="bio"
                                     className="w-full rounded-lg border-jacarta-100 py-3 hover:ring-2 hover:ring-accent/10 focus:ring-accent dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:placeholder:text-jacarta-300"
-                                    required
+                                    // required
                                     placeholder="Tell the world your story!"
+                                    value={userProfileFormik.values.bio}
+                                    onChange={userProfileFormik.handleChange}
                                 ></textarea>
                             </div>
                             <div className="mb-6">
@@ -74,10 +128,12 @@ const PageEditProfile = () => {
                                 </label>
                                 <input
                                     type="text"
-                                    id="profile-email"
+                                    id="email"
                                     className="w-full rounded-lg border-jacarta-100 py-3 hover:ring-2 hover:ring-accent/10 focus:ring-accent dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:placeholder:text-jacarta-300"
                                     placeholder="Enter email"
-                                    required
+                                    // required
+                                    onChange={userProfileFormik.handleChange}
+                                    value={userProfileFormik.values.email}
                                 />
                             </div>
                             <div className="mb-6">
@@ -102,9 +158,11 @@ const PageEditProfile = () => {
                                     </svg>
                                     <input
                                         type="text"
-                                        id="profile-twitter"
+                                        id="twitterLink"
                                         className="w-full rounded-t-lg border-jacarta-100 py-3 pl-10 hover:ring-2 hover:ring-accent/10 focus:ring-inset focus:ring-accent dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:placeholder:text-jacarta-300"
-                                        placeholder="@twittername"
+                                        placeholder="Twitter link"
+                                        onChange={userProfileFormik.handleChange}
+                                        value={userProfileFormik.values.twitterLink}
                                     />
                                 </div>
                                 <div className="relative">
@@ -122,9 +180,11 @@ const PageEditProfile = () => {
                                     </svg>
                                     <input
                                         type="text"
-                                        id="profile-instagram"
+                                        id="instagramLink"
                                         className="-mt-px w-full border-jacarta-100 py-3 pl-10 hover:ring-2 hover:ring-accent/10 focus:ring-inset focus:ring-accent dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:placeholder:text-jacarta-300"
-                                        placeholder="instagramname"
+                                        placeholder="Instagram link"
+                                        onChange={userProfileFormik.handleChange}
+                                        value={userProfileFormik.values.instagramLink}
                                     />
                                 </div>
                                 <div className="relative">
@@ -140,9 +200,11 @@ const PageEditProfile = () => {
                                     </svg>
                                     <input
                                         type="url"
-                                        id="profile-website"
+                                        id="yourSiteLink"
                                         className="-mt-px w-full rounded-b-lg border-jacarta-100 py-3 pl-10 hover:ring-2 hover:ring-accent/10 focus:ring-inset focus:ring-accent dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:placeholder:text-jacarta-300"
                                         placeholder="yoursitename.com"
+                                        onChange={userProfileFormik.handleChange}
+                                        value={userProfileFormik.values.yourSiteLink}
                                     />
                                 </div>
                             </div>
@@ -150,11 +212,13 @@ const PageEditProfile = () => {
                                 <label className="mb-1 block font-display text-sm text-jacarta-700 dark:text-white">
                                     Wallet Address
                                 </label>
-                                <button
+                                <span
                                     className="js-copy-clipboard flex w-full select-none items-center rounded-lg border border-jacarta-100 bg-white py-3 px-4 hover:bg-jacarta-50 dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-jacarta-300"
                                     data-tippy-content="Copy"
                                 >
-                                    <span>0x7a9fe22691c811ea339401bbb2leb</span>
+                                    <span style={{ textOverflow: 'ellipsis', overflow: 'hidden' }}>
+                                        {loginData.walletAddress}
+                                    </span>
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         viewBox="0 0 24 24"
@@ -165,22 +229,26 @@ const PageEditProfile = () => {
                                         <path fill="none" d="M0 0h24v24H0z"></path>
                                         <path d="M7 7V3a1 1 0 0 1 1-1h13a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-4v3.993c0 .556-.449 1.007-1.007 1.007H3.007A1.006 1.006 0 0 1 2 20.993l.003-12.986C2.003 7.451 2.452 7 3.01 7H7zm2 0h6.993C16.549 7 17 7.449 17 8.007V15h3V4H9v3zM4.003 9L4 20h11V9H4.003z"></path>
                                     </svg>
-                                </button>
+                                </span>
                             </div>
 
-                            <button className="rounded-full bg-accent py-3 px-8 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark">
+                            <button
+                                type="submit"
+                                className="rounded-full bg-accent py-3 px-8 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark"
+                            >
                                 Update Profile
                             </button>
                         </div>
 
                         {/* <!-- Avatar --> */}
                         <div className="flex space-x-5 md:w-1/2 md:pl-8">
-                            <form className="shrink-0">
+                            <div className="shrink-0">
                                 <figure className="relative inline-block">
                                     <img
-                                        src="img/user/user_avatar.gif"
+                                        src={loginData?.avatarUrl || 'img/user/user_avatar.gif'}
                                         alt="collection avatar"
                                         className="rounded-xl border-[5px] border-white dark:border-jacarta-600"
+                                        style={{ height: '100px' }}
                                     />
                                     <div className="group absolute -right-3 -bottom-2 h-8 w-8 overflow-hidden rounded-full border border-jacarta-100 bg-white text-center hover:border-transparent hover:bg-accent">
                                         <input
@@ -202,7 +270,7 @@ const PageEditProfile = () => {
                                         </div>
                                     </div>
                                 </figure>
-                            </form>
+                            </div>
                             <div className="mt-4">
                                 <span className="mb-3 block font-display text-sm text-jacarta-700 dark:text-white">
                                     Profile Image
@@ -213,7 +281,7 @@ const PageEditProfile = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </form>
             </section>
             {/* <!-- end edit profile --> */}
         </main>

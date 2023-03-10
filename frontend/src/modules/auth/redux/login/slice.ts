@@ -16,6 +16,7 @@ type LoginState = {
     error: any;
     username: string | null;
     walletAddress: string | null;
+    name: string | null;
 };
 
 const initialState: LoginState = {
@@ -23,6 +24,7 @@ const initialState: LoginState = {
     error: null,
     username: null,
     walletAddress: null,
+    name: null,
 };
 
 export const loginSlice = createSlice({
@@ -84,6 +86,12 @@ export const loginSlice = createSlice({
             state.status = LoginStatus.AuthenticateFailed;
             state.error = error;
         },
+
+        updateProfile: (state: any, action: PayloadAction<any>) => {
+            logger.info('auth/login/update-profile', action.payload);
+
+            state.name = action.payload?.name
+        }
     },
     extraReducers: (builder) => {},
 });
@@ -96,3 +104,11 @@ export const selectLoginStatus = (state: any) => state.login.status;
 export const selectLoginError = (state: any) => state.login.error;
 export const selectLoginUsername = (state: any) => state.login.username;
 export const selectLoginWalletAddress = (state: any) => state.login.walletAddress;
+export const selectLoginData = (state: any) => {
+    return {
+        walletAddress: state.login.walletAddress,
+        username: state.login.username,
+        loginStatus: state.login.status,
+        name: state.login.name
+    }
+}

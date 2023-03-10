@@ -1,3 +1,3 @@
-import { PageHome } from '@modules/app/pages';
+import { Home3Page } from '@modules/app/pages';
 
-export default PageHome;
+export default Home3Page;

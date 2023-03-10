@@ -19,6 +19,7 @@ export * from './activity';
 export * from './collection';
 export * from './collections';
 export * from './create';
+export * from './create-collection';
 export * from './edit-profile';
 export * from './help-center';
 export * from './home';

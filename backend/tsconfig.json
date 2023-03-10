@@ -3,25 +3,18 @@
         "require": ["tsconfig-paths/register"]
     },
     "compilerOptions": {
-        "module": "commonjs",
-        "esModuleInterop": true,
-        "target": "es6",
-        "noImplicitAny": true,
-        "moduleResolution": "node",
-        "sourceMap": false,
         "outDir": ".dist",
-        "rootDir": "./src",
-
-        "typeRoots": ["./node_modules/@types"],
-
+        "noImplicitAny": false,
+        "module": "CommonJS",
+        "target": "ES2020",
         "allowJs": true,
-        "skipLibCheck": true,
-        "strict": true,
-        "forceConsistentCasingInFileNames": true,
-
+        "moduleResolution": "node",
+        "strict": false,
+        "noImplicitOverride": false,
+        "esModuleInterop": true,
         "resolveJsonModule": true,
-        "isolatedModules": true,
-        "incremental": true,
+        "allowSyntheticDefaultImports": true,
+
         "baseUrl": "./src",
         "paths": {
             "@controllers/*": ["controllers/*"],
@@ -32,6 +25,6 @@
             "@services/*": ["services/*"]
         }
     },
-    "include": ["./src/**/*.ts"],
-    "exclude": ["node_modules", "node_modules/**/*.d.ts", "node_modules/@types/node/ts4.8/test.d.ts"]
+    "include": ["./src/**/*.ts", "./src/**/*.json"],
+    "exclude": ["node_modules", "node_modules/**/*.d.ts", "**/*.test.ts"]
 }

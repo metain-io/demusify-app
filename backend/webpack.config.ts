@@ -1,19 +1,15 @@
 import path from 'path';
-import nodeExternals from 'webpack-node-externals';
-import { Configuration, DefinePlugin } from 'webpack';
+import { Configuration } from 'webpack';
 import WebpackShellPluginNext from 'webpack-shell-plugin-next';
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
+import DotenvWebpack from 'dotenv-webpack';
 
 const getConfig = (env: { [key: string]: string }, argv: { [key: string]: string }): Configuration => {
-    require('dotenv').config();
-
     const { outputPath } = argv;
-    console.log(env, argv);
 
     return {
         target: 'node',
         mode: argv.mode === 'production' ? 'production' : 'development',
-        externals: [nodeExternals()],
         plugins: [
             new WebpackShellPluginNext({
                 onBuildStart: {
@@ -22,16 +18,13 @@ const getConfig = (env: { [key: string]: string }, argv: { [key: string]: string
                     parallel: false,
                 },
             }),
-            new DefinePlugin({
-                'process.env': JSON.stringify(process.env),
-            }),
+            new DotenvWebpack(),
         ],
         module: {
             rules: [
                 {
                     test: /\.(ts|js)$/,
                     loader: 'ts-loader',
-                    options: {},
                     exclude: /node_modules/,
                 },
             ],
@@ -44,13 +37,11 @@ const getConfig = (env: { [key: string]: string }, argv: { [key: string]: string
             plugins: [new TsconfigPathsPlugin()],
         },
         output: {
-            path: path.join(__dirname, '.dist'),
+            filename: 'index.js',
+            libraryTarget: 'commonjs',
         },
         optimization: {
-            moduleIds: 'deterministic',
-            splitChunks: {
-                chunks: 'all',
-            },
+            minimize: true,
         },
     };
 };

@@ -2,6 +2,7 @@ import { useFormik } from 'formik';
 import React from 'react';
 import { PropsWithChildren } from 'react';
 import { CreateCollectionContext, CreateCollectionState, CreateCollectionStatus } from './index';
+import { v4 as uuid } from 'uuid';
 
 export type CreateCollectionProviderProps = PropsWithChildren;
 
@@ -15,7 +16,6 @@ export const CreateCollectionProvider = (props: CreateCollectionProviderProps) =
 
     const form = useFormik({
         initialValues: {
-            collectionId: '',
             logoImage: '',
             featuredImage: '',
             bannerImage: '',
@@ -32,16 +32,47 @@ export const CreateCollectionProvider = (props: CreateCollectionProviderProps) =
         onSubmit: (value) => handleSubmit(value),
     });
 
-    const handleSubmit = (value: any) => {
+    const handleSubmit = async (value: any) => {
         console.log('handleSubmit:', value);
+
+        setState(() => ({ status: CreateCollectionStatus.SUBMITTING }));
+
+        setTimeout(() => {
+            const r = Math.random() * 10;
+
+            if (r > 5) {
+                setState({
+                    status: CreateCollectionStatus.SUBMIT_SUCCEEDED,
+                });
+            } else {
+                setState({
+                    status: CreateCollectionStatus.SUBMIT_SUCCEEDED,
+                    error: 'Something went wrong!!',
+                });
+            }
+        }, 3000);
     };
+
+    React.useEffect(() => {
+        const timeout = setTimeout(() => {
+            setState({
+                status: CreateCollectionStatus.INITIALIZE_SUCCEEDED,
+                error: null,
+            });
+        }, 2000);
+
+        return () => {
+            clearTimeout(timeout);
+        };
+    }, []);
 
     return (
         <CreateCollectionContext.Provider
             value={{
+                id: uuid(),
+                categories: ['cat-1', 'cat-2', 'cat-3'],
                 state,
                 form,
-                categories: ['cat-1', 'cat-2', 'cat-3'],
             }}
         >
             {children}

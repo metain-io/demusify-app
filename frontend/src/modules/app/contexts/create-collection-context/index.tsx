@@ -13,11 +13,10 @@ export enum CreateCollectionStatus {
 
 export type CreateCollectionState = {
     status: CreateCollectionStatus;
-    error: string;
+    error?: string | null;
 };
 
 export type CreateCollectionFormState = FormikProps<{
-    collectionId: string;
     logoImage: string;
     featuredImage: string;
     bannerImage: string;
@@ -33,9 +32,10 @@ export type CreateCollectionFormState = FormikProps<{
 }>;
 
 export type CreateCollectionContextValue = {
+    id: string;
+    categories: Array<string>;
     state: CreateCollectionState;
     form: CreateCollectionFormState;
-    categories: Array<string>;
 };
 
 export const CreateCollectionContext = React.createContext<CreateCollectionContextValue>(

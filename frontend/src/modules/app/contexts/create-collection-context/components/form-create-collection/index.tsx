@@ -1,5 +1,6 @@
+import React from 'react';
 import { ChangeEventHandler, MouseEventHandler } from 'react';
-import { useCreateCollection } from '../../index';
+import { CreateCollectionStatus, useCreateCollection } from '../../index';
 
 export const FormCreateCollection = () => {
     const { state, form, categories } = useCreateCollection();
@@ -326,11 +327,27 @@ export const FormCreateCollection = () => {
 
             {/* <!-- Submit --> */}
             <button
-                className="cursor-default rounded-full bg-accent-lighter py-3 px-8 text-center font-semibold text-white transition-all"
+                className="mb-6 cursor-default rounded-full bg-accent-lighter py-3 px-8 text-center font-semibold text-white transition-all"
                 onClick={onButtonCreateClicked}
             >
-                Create
+                {state.status == CreateCollectionStatus.INITIALIZING
+                    ? 'Initializing...'
+                    : state.status == CreateCollectionStatus.SUBMITTING
+                    ? 'Submitting...'
+                    : 'Create'}
             </button>
+
+            {state.error && (
+                <div className="mb-6">
+                    <p className="mb-3 text-2xs text-red">{state.error}</p>
+                </div>
+            )}
+
+            {!state.error && state.status == CreateCollectionStatus.SUBMIT_SUCCEEDED && (
+                <div className="mb-6">
+                    <p className="mb-3 text-2xs text-green">Submit succeeded!!</p>
+                </div>
+            )}
         </form>
     );
 };

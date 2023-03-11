@@ -36,6 +36,10 @@ export type CreateCollectionContextValue = {
     categories: Array<string>;
     state: CreateCollectionState;
     form: CreateCollectionFormState;
+
+    handleUploadLogoImage: (file?: File) => Promise<void>;
+    handleUploadFeaturedImage: (file?: File) => Promise<void>;
+    handleUploadBannerImage: (file?: File) => Promise<void>;
 };
 
 export const CreateCollectionContext = React.createContext<CreateCollectionContextValue>(

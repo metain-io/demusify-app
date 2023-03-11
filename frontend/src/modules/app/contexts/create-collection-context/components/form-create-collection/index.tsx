@@ -3,34 +3,26 @@ import { ChangeEventHandler, MouseEventHandler } from 'react';
 import { CreateCollectionStatus, useCreateCollection } from '../../index';
 
 export const FormCreateCollection = () => {
-    const { state, form, categories } = useCreateCollection();
+    const { state, form, categories, handleUploadLogoImage, handleUploadFeaturedImage, handleUploadBannerImage } =
+        useCreateCollection();
 
-    const onInputNameChanged: ChangeEventHandler<HTMLInputElement> = (e) => {
-        form.setFieldValue('name', e.target.value);
+    const onFileUploadLogoImageChanged: ChangeEventHandler<HTMLInputElement> = (e) => {
+        handleUploadLogoImage(e.target.files?.[0]);
+        e.target.value = '';
     };
 
-    const onInputUrlChanged: ChangeEventHandler<HTMLInputElement> = (e) => {
-        form.setFieldValue('url', e.target.value);
+    const onFileUploadFeaturedImageChanged: ChangeEventHandler<HTMLInputElement> = (e) => {
+        handleUploadFeaturedImage(e.target.files?.[0]);
+        e.target.value = '';
     };
 
-    const onTextAreaDescriptionChanged: ChangeEventHandler<HTMLTextAreaElement> = (e) => {
-        form.setFieldValue('description', e.target.value);
+    const onFileUploadBannerImageChanged: ChangeEventHandler<HTMLInputElement> = (e) => {
+        handleUploadBannerImage(e.target.files?.[0]);
+        e.target.value = '';
     };
 
-    const handleOnCategoryItemClicked = (value: string) => {
+    const onCategoryItemClicked = (value: string) => {
         form.setFieldValue('category', value);
-    };
-
-    const onInputLinkPersonalChanged: ChangeEventHandler<HTMLInputElement> = (e) => {
-        form.setFieldValue('links.personal', e.target.value);
-    };
-
-    const onInputLinkMediumChanged: ChangeEventHandler<HTMLInputElement> = (e) => {
-        form.setFieldValue('links.medium', e.target.value);
-    };
-
-    const onInputLinkTelegramChanged: ChangeEventHandler<HTMLInputElement> = (e) => {
-        form.setFieldValue('links.telegram', e.target.value);
     };
 
     const onButtonCreateClicked: MouseEventHandler<HTMLButtonElement> = (e) => {
@@ -50,9 +42,17 @@ export const FormCreateCollection = () => {
                 </p>
 
                 <div
-                    className="group relative flex max-w-md flex-col items-center justify-center rounded-lg border-2 border-dashed border-jacarta-100 bg-white py-20 px-5 text-center dark:border-jacarta-600 dark:bg-jacarta-700"
+                    className="group relative flex max-w-md flex-col items-center justify-center rounded-lg border-2 border-dashed border-jacarta-100 bg-white py-20 px-5 text-center dark:border-jacarta-600 dark:bg-jacarta-700 overflow-hidden"
                     style={{ width: '175px', height: '175px', borderRadius: '50%' }}
                 >
+                    {form.values.logoImage && (
+                        <img
+                            className="absolute cursor-pointer rounded"
+                            style={{ borderRadius: '50%', width: '175px', height: '175px', objectFit: 'cover' }}
+                            src={form.values.logoImage}
+                        />
+                    )}
+
                     <div className="relative z-10 cursor-pointer">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -72,11 +72,14 @@ export const FormCreateCollection = () => {
                     ></div>
                     <input
                         type="file"
-                        accept="image/*,video/*,audio/*,webgl/*,.glb,.gltf"
+                        accept="image/*"
                         id="file-upload"
                         className="absolute inset-0 z-20 cursor-pointer opacity-0"
+                        onChange={onFileUploadLogoImageChanged}
                     />
                 </div>
+
+                {form.errors.logoImage && <p className="mt-1 text-2xs text-red">{form.errors.logoImage as string}</p>}
             </div>
 
             {/* <!-- File Upload Featured Image --> */}
@@ -90,9 +93,17 @@ export const FormCreateCollection = () => {
                 </p>
 
                 <div
-                    className="group relative flex max-w-md flex-col items-center justify-center rounded-lg border-2 border-dashed border-jacarta-100 bg-white py-20 px-5 text-center dark:border-jacarta-600 dark:bg-jacarta-700"
+                    className="group relative flex max-w-md flex-col items-center justify-center rounded-lg border-2 border-dashed border-jacarta-100 bg-white py-20 px-5 text-center dark:border-jacarta-600 dark:bg-jacarta-700 overflow-hidden"
                     style={{ width: '300px', height: '200px' }}
                 >
+                    {form.values.featuredImage && (
+                        <img
+                            className="absolute cursor-pointer rounded"
+                            style={{ width: '300px', height: '200px', objectFit: 'cover' }}
+                            src={form.values.featuredImage}
+                        />
+                    )}
+
                     <div className="relative z-10 cursor-pointer">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -112,8 +123,13 @@ export const FormCreateCollection = () => {
                         accept="image/*,video/*,audio/*,webgl/*,.glb,.gltf"
                         id="file-upload"
                         className="absolute inset-0 z-20 cursor-pointer opacity-0"
+                        onChange={onFileUploadFeaturedImageChanged}
                     />
                 </div>
+
+                {form.errors.featuredImage && (
+                    <p className="mt-1 text-2xs text-red">{form.errors.featuredImage as string}</p>
+                )}
             </div>
 
             {/* <!-- File Upload Banner Image --> */}
@@ -127,9 +143,17 @@ export const FormCreateCollection = () => {
                 </p>
 
                 <div
-                    className="group relative flex max-w-md flex-col items-center justify-center rounded-lg border-2 border-dashed border-jacarta-100 bg-white py-20 px-5 text-center dark:border-jacarta-600 dark:bg-jacarta-700"
+                    className="group relative flex max-w-md flex-col items-center justify-center rounded-lg border-2 border-dashed border-jacarta-100 bg-white py-20 px-5 text-center dark:border-jacarta-600 dark:bg-jacarta-700 overflow-hidden"
                     style={{ width: '700px', height: '175px' }}
                 >
+                    {form.values.bannerImage && (
+                        <img
+                            className="absolute cursor-pointer rounded"
+                            style={{ width: '700px', height: '175px', objectFit: 'cover' }}
+                            src={form.values.bannerImage}
+                        />
+                    )}
+
                     <div className="relative z-10 cursor-pointer">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -149,8 +173,13 @@ export const FormCreateCollection = () => {
                         accept="image/*,video/*,audio/*,webgl/*,.glb,.gltf"
                         id="file-upload"
                         className="absolute inset-0 z-20 cursor-pointer opacity-0"
+                        onChange={onFileUploadBannerImageChanged}
                     />
                 </div>
+
+                {form.errors.bannerImage && (
+                    <p className="mt-1 text-2xs text-red">{form.errors.bannerImage as string}</p>
+                )}
             </div>
 
             {/* <!-- Name --> */}
@@ -159,13 +188,16 @@ export const FormCreateCollection = () => {
                     Name<span className="text-red">*</span>
                 </label>
                 <input
+                    name="name"
                     type="text"
                     id="item-name"
                     className="w-full rounded-lg border-jacarta-100 py-3 hover:ring-2 hover:ring-accent/10 focus:ring-accent dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:placeholder:text-jacarta-300"
                     placeholder="Collection Name"
                     required
-                    onChange={onInputNameChanged}
+                    value={form.values.name}
+                    onChange={form.handleChange}
                 />
+                {form.errors.name && <p className="mt-1 text-2xs text-red">{form.errors.name}</p>}
             </div>
 
             {/* <!-- URL --> */}
@@ -180,12 +212,16 @@ export const FormCreateCollection = () => {
                     Customize your URL on Demusify. Must only contain lowercase letters, numbers and hyphens
                 </p>
                 <input
+                    name="url"
                     type="url"
                     id="item-external-link"
                     className="w-full rounded-lg border-jacarta-100 py-3 hover:ring-2 hover:ring-accent/10 focus:ring-accent dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:placeholder:text-jacarta-300"
                     placeholder="https://yoursite.io/item/123"
-                    onChange={onInputUrlChanged}
+                    value={form.values.url}
+                    onChange={form.handleChange}
                 />
+
+                {form.errors.url && <p className="mt-1 text-2xs text-red">{form.errors.url}</p>}
             </div>
 
             {/* <!-- Description --> */}
@@ -197,13 +233,17 @@ export const FormCreateCollection = () => {
                     <a href="#">Markdown</a> syntax is supported. 0 of 1000 charaters used
                 </p>
                 <textarea
+                    name="description"
                     id="item-description"
                     className="w-full rounded-lg border-jacarta-100 py-3 hover:ring-2 hover:ring-accent/10 focus:ring-accent dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:placeholder:text-jacarta-300"
                     rows={4}
                     required
                     placeholder="Provide a detailed description of your item."
-                    onChange={onTextAreaDescriptionChanged}
+                    value={form.values.description}
+                    onChange={form.handleChange}
                 ></textarea>
+
+                {form.errors.description && <p className="mt-1 text-2xs text-red">{form.errors.description}</p>}
             </div>
 
             {/* <!-- Category --> */}
@@ -261,7 +301,7 @@ export const FormCreateCollection = () => {
                         <ul className="scrollbar-custom flex max-h-48 flex-col overflow-y-auto">
                             {categories.map((category) => {
                                 return (
-                                    <li onClick={() => handleOnCategoryItemClicked(category)}>
+                                    <li onClick={() => onCategoryItemClicked(category)}>
                                         <a className="dropdown-item flex w-full items-center justify-between rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600">
                                             <span className="flex items-center space-x-3">
                                                 <img
@@ -292,6 +332,8 @@ export const FormCreateCollection = () => {
                         </ul>
                     </div>
                 </div>
+
+                {form.errors.category && <p className="mt-1 text-2xs text-red">{form.errors.category}</p>}
             </div>
 
             {/* <!-- Links --> */}
@@ -299,30 +341,42 @@ export const FormCreateCollection = () => {
                 <label htmlFor="item-name" className="mb-2 block font-display text-jacarta-700 dark:text-white">
                     Links
                 </label>
+
                 <input
+                    name="links.personal"
                     type="text"
                     id="item-name"
-                    className="w-full rounded-lg border-jacarta-100 py-3 hover:ring-2 hover:ring-accent/10 focus:ring-accent dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:placeholder:text-jacarta-300"
+                    className="mb-2 w-full rounded-lg border-jacarta-100 py-3 hover:ring-2 hover:ring-accent/10 focus:ring-accent dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:placeholder:text-jacarta-300"
                     placeholder="yoursite.io"
                     required
-                    onChange={onInputLinkPersonalChanged}
+                    value={form.values.links?.personal}
+                    onChange={form.handleChange}
                 />
+                {form.errors.links?.personal && <p className="mt-1 text-2xs text-red">{form.errors.links?.personal}</p>}
+
                 <input
+                    name="links.medium"
                     type="text"
                     id="item-name"
-                    className="w-full rounded-lg border-jacarta-100 py-3 hover:ring-2 hover:ring-accent/10 focus:ring-accent dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:placeholder:text-jacarta-300"
+                    className="mb-2 w-full rounded-lg border-jacarta-100 py-3 hover:ring-2 hover:ring-accent/10 focus:ring-accent dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:placeholder:text-jacarta-300"
                     placeholder="https://www.medium.com/@YourMediumHandle"
                     required
-                    onChange={onInputLinkMediumChanged}
+                    value={form.values.links?.medium}
+                    onChange={form.handleChange}
                 />
+                {form.errors.links?.medium && <p className="mt-1 text-2xs text-red">{form.errors.links?.medium}</p>}
+
                 <input
+                    name="links.telegram"
                     type="text"
                     id="item-name"
                     className="w-full rounded-lg border-jacarta-100 py-3 hover:ring-2 hover:ring-accent/10 focus:ring-accent dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:placeholder:text-jacarta-300"
                     placeholder="https://t.me/abcdef"
                     required
-                    onChange={onInputLinkTelegramChanged}
+                    value={form.values.links?.telegram}
+                    onChange={form.handleChange}
                 />
+                {form.errors.links?.telegram && <p className="mt-1 text-2xs text-red">{form.errors.links?.telegram}</p>}
             </div>
 
             {/* <!-- Submit --> */}

@@ -105,7 +105,7 @@ const PageCreateItem = () => {
                                         Fingerprint of the music
                                     </label>
                                     {/* <p className="mb-3 text-2xs dark:text-jacarta-300">
-                                        Demusify will include a link to this URL on this item's detail page, so that
+                                        Demusify will include a link to this URL on this item&apos;s detail page, so that
                                         user can click to learn more about it. You are welcome to link to your own
                                         webpage with nmore detail.
                                     </p> */}
@@ -152,8 +152,8 @@ const PageCreateItem = () => {
                                         External link
                                     </label>
                                     <p className="mb-3 text-2xs dark:text-jacarta-300">
-                                        Demusify will include a link to this URL on this item's detail page, so that
-                                        user can click to learn more about it. You are welcome to link to your own
+                                        Demusify will include a link to this URL on this item&apos;s detail page, so
+                                        that user can click to learn more about it. You are welcome to link to your own
                                         webpage with nmore detail.
                                     </p>
                                     <input
@@ -595,7 +595,7 @@ const PageCreateItem = () => {
                         <div className="modal-body p-6">
                             <p className="mb-8 dark:text-jacarta-300">
                                 Item Properties show up underneath your item, are clickable, and can be filtered in your
-                                collection's sidebar.
+                                collection&apos;s sidebar.
                             </p>
 
                             <div className="relative my-3 flex items-center">
@@ -687,7 +687,7 @@ const PageCreateItem = () => {
                         <div className="modal-body p-6">
                             <p className="mb-8 dark:text-jacarta-300">
                                 Levels show up underneath your item, are clickable, and can be filtered in your
-                                collection's sidebar.
+                                collection&apos;s sidebar.
                             </p>
 
                             <div className="relative my-3 flex items-center">

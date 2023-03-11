@@ -15,19 +15,6 @@ const MainLayout = (props: MainLayoutProps) => {
 
     const { children, handleOnLoginClicked = () => {handleOnClicked()} } = props;
 
-    React.useEffect(() => {
-        console.log('=========== TEST');
-        if (loginData.username) {
-            (async () => {
-                // let a = await DemusifyApi.walletApp.getCreator(loginData.username);
-                // console.log('=========== TEST 1: ', {username: loginData.username, a})
-
-                // let a = await DemusifyApi.walletApp.updateCreator(loginData.username, {name: 'ooo'});
-                // console.log('=========== TEST 1: ', {username: loginData.username, a})
-            })();
-        }
-    }, [loginData.username]);
-
     return (
         <div className="overflow-x-hidden font-body text-jacarta-500 dark:bg-jacarta-900">
             <header className="js-page-header fixed top-0 z-20 w-full backdrop-blur transition-colors">

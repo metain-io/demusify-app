@@ -181,7 +181,7 @@ const NavigationBar = (props: any) => {
     return (
         <div className="flex items-center px-6 py-6 xl:px-24">
             {/* <!-- Logo --> */}
-            <a href="index" className="shrink-0">
+            <a href="/" className="shrink-0">
                 <img src="img/logo.png" className="max-h-7 dark:hidden" alt="Xhibiter | NFT Marketplace" />
                 <img src="img/logo_white.png" className="hidden max-h-7 dark:block" alt="Xhibiter | NFT Marketplace" />
             </a>
@@ -265,12 +265,12 @@ const NavigationBar = (props: any) => {
                     <ul className="flex flex-col lg:flex-row">
                         <li className="js-nav-dropdown group relative">
                             <a
-                                href="#"
+                                href="/"
                                 className="dropdown-toggle flex items-center justify-between py-3.5 font-display text-base text-jacarta-700 hover:text-accent focus:text-accent dark:text-white dark:hover:text-accent dark:focus:text-accent lg:px-5"
                                 id="navDropdown-1"
                                 aria-expanded="false"
                                 role="button"
-                                data-bs-toggle="dropdown"
+                                // data-bs-toggle="dropdown"
                             >
                                 Home
                                 <i className="lg:hidden">
@@ -286,159 +286,6 @@ const NavigationBar = (props: any) => {
                                     </svg>
                                 </i>
                             </a>
-                            <ul
-                                className="dropdown-menu group-hover:visible lg:invisible left-0 top-[85%] z-10 hidden min-w-[200px] gap-x-4 whitespace-nowrap rounded-xl bg-white transition-all will-change-transform group-hover:opacity-100 dark:bg-jacarta-800 lg:absolute lg:grid lg:translate-y-4 lg:py-4 lg:px-2 lg:opacity-0 lg:shadow-2xl lg:group-hover:translate-y-2"
-                                aria-labelledby="navDropdown-1"
-                            >
-                                <li>
-                                    <a
-                                        href="index"
-                                        className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="font-display text-sm text-jacarta-700 dark:text-white">
-                                            Home 1
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="index-rtl"
-                                        className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="font-display text-sm text-jacarta-700 dark:text-white">
-                                            Home 1 RTL
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="home-2"
-                                        className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="font-display text-sm text-jacarta-700 dark:text-white">
-                                            Home 2
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="home-3"
-                                        className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="font-display text-sm text-jacarta-700 dark:text-white">
-                                            Home 3
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="home-4"
-                                        className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="font-display text-sm text-jacarta-700 dark:text-white">
-                                            Home 4
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="home-5"
-                                        className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="font-display text-sm text-jacarta-700 dark:text-white">
-                                            Home 5
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="home-6"
-                                        className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="font-display text-sm text-jacarta-700 dark:text-white">
-                                            Home 6
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="home-7"
-                                        className="flex items-center justify-between rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="mr-4 font-display text-sm text-jacarta-700 dark:text-white">
-                                            Crypto Consultant
-                                        </span>
-                                        <span className="rounded bg-green py-1 px-2 text-xxs font-bold uppercase leading-none text-white">
-                                            new
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="home-8"
-                                        className="flex items-center justify-between rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="mr-4 font-display text-sm text-jacarta-700 dark:text-white">
-                                            NFT Game
-                                        </span>
-                                        <span className="rounded bg-green py-1 px-2 text-xxs font-bold uppercase leading-none text-white">
-                                            new
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="home-9"
-                                        className="flex items-center justify-between rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="mr-4 font-display text-sm text-jacarta-700 dark:text-white">
-                                            DAO Platform
-                                        </span>
-                                        <span className="rounded bg-green py-1 px-2 text-xxs font-bold uppercase leading-none text-white">
-                                            new
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="home-10"
-                                        className="flex items-center justify-between rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="mr-4 font-display text-sm text-jacarta-700 dark:text-white">
-                                            Crypto App
-                                        </span>
-                                        <span className="rounded bg-green py-1 px-2 text-xxs font-bold uppercase leading-none text-white">
-                                            new
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="home-11"
-                                        className="flex items-center justify-between rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="mr-4 font-display text-sm text-jacarta-700 dark:text-white">
-                                            Crypto Trading
-                                        </span>
-                                        <span className="rounded bg-green py-1 px-2 text-xxs font-bold uppercase leading-none text-white">
-                                            new
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="home-12"
-                                        className="flex items-center justify-between rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="mr-4 font-display text-sm text-jacarta-700 dark:text-white">
-                                            ICO Landing
-                                        </span>
-                                        <span className="rounded bg-green py-1 px-2 text-xxs font-bold uppercase leading-none text-white">
-                                            new
-                                        </span>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
                         <li className="js-nav-dropdown group relative">
                             <a
@@ -469,45 +316,6 @@ const NavigationBar = (props: any) => {
                             >
                                 <li>
                                     <a
-                                        href="maintenance"
-                                        className="flex items-center justify-between rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="mr-4 font-display text-sm text-jacarta-700 dark:text-white">
-                                            Maintenance
-                                        </span>
-                                        <span className="rounded bg-green py-1 px-2 text-xxs font-bold uppercase leading-none text-white">
-                                            new
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="case-studies"
-                                        className="flex items-center justify-between rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="mr-4 font-display text-sm text-jacarta-700 dark:text-white">
-                                            Case Studies
-                                        </span>
-                                        <span className="rounded bg-green py-1 px-2 text-xxs font-bold uppercase leading-none text-white">
-                                            new
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="single-case-study"
-                                        className="flex items-center justify-between rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="mr-4 font-display text-sm text-jacarta-700 dark:text-white">
-                                            Single Case Study
-                                        </span>
-                                        <span className="rounded bg-green py-1 px-2 text-xxs font-bold uppercase leading-none text-white">
-                                            new
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
                                         href="careers"
                                         className="flex items-center justify-between rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
                                     >
@@ -516,16 +324,6 @@ const NavigationBar = (props: any) => {
                                         </span>
                                         <span className="rounded bg-green py-1 px-2 text-xxs font-bold uppercase leading-none text-white">
                                             new
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="item"
-                                        className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="font-display text-sm text-jacarta-700 dark:text-white">
-                                            Item Details
                                         </span>
                                     </a>
                                 </li>
@@ -571,26 +369,6 @@ const NavigationBar = (props: any) => {
                                 </li>
                                 <li>
                                     <a
-                                        href="user"
-                                        className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="font-display text-sm text-jacarta-700 dark:text-white">
-                                            User
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="edit-profile"
-                                        className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="font-display text-sm text-jacarta-700 dark:text-white">
-                                            Edit Profile
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
                                         href="about"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
                                     >
@@ -617,26 +395,6 @@ const NavigationBar = (props: any) => {
                                     >
                                         <span className="font-display text-sm text-jacarta-700 dark:text-white">
                                             Wallet
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="login"
-                                        className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="font-display text-sm text-jacarta-700 dark:text-white">
-                                            Login
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="404"
-                                        className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="font-display text-sm text-jacarta-700 dark:text-white">
-                                            Page 404
                                         </span>
                                     </a>
                                 </li>
@@ -697,7 +455,7 @@ const NavigationBar = (props: any) => {
                                             </svg>
                                         </span>
                                         <span className="font-display text-sm text-jacarta-700 dark:text-white">
-                                            All NFTs
+                                            All musics
                                         </span>
                                     </a>
                                 </li>
@@ -719,7 +477,7 @@ const NavigationBar = (props: any) => {
                                             </svg>
                                         </span>
                                         <span className="font-display text-sm text-jacarta-700 dark:text-white">
-                                            Art
+                                            Classic
                                         </span>
                                     </a>
                                 </li>
@@ -763,7 +521,7 @@ const NavigationBar = (props: any) => {
                                             </svg>
                                         </span>
                                         <span className="font-display text-sm text-jacarta-700 dark:text-white">
-                                            Domain Names
+                                            Rhythm games
                                         </span>
                                     </a>
                                 </li>
@@ -785,7 +543,7 @@ const NavigationBar = (props: any) => {
                                             </svg>
                                         </span>
                                         <span className="font-display text-sm text-jacarta-700 dark:text-white">
-                                            Music
+                                            Acoustic
                                         </span>
                                     </a>
                                 </li>
@@ -807,7 +565,7 @@ const NavigationBar = (props: any) => {
                                             </svg>
                                         </span>
                                         <span className="font-display text-sm text-jacarta-700 dark:text-white">
-                                            Photography
+                                            Beat
                                         </span>
                                     </a>
                                 </li>
@@ -830,28 +588,6 @@ const NavigationBar = (props: any) => {
                                         </span>
                                         <span className="font-display text-sm text-jacarta-700 dark:text-white">
                                             Sports
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="collections"
-                                        className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="mr-3 rounded-xl bg-[#F5FFED] p-[0.375rem]">
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 24 24"
-                                                width="24"
-                                                height="24"
-                                                className="h-4 w-4 fill-[#8DD059]"
-                                            >
-                                                <path fill="none" d="M0 0h24v24H0z" />
-                                                <path d="M2 3.993A1 1 0 0 1 2.992 3h18.016c.548 0 .992.445.992.993v16.014a1 1 0 0 1-.992.993H2.992A.993.993 0 0 1 2 20.007V3.993zM4 5v14h16V5H4zm2 2h6v6H6V7zm2 2v2h2V9H8zm-2 6h12v2H6v-2zm8-8h4v2h-4V7zm0 4h4v2h-4v-2z" />
-                                            </svg>
-                                        </span>
-                                        <span className="font-display text-sm text-jacarta-700 dark:text-white">
-                                            Trading Cards
                                         </span>
                                     </a>
                                 </li>
@@ -965,16 +701,6 @@ const NavigationBar = (props: any) => {
                                     >
                                         <span className="font-display text-sm text-jacarta-700 dark:text-white">
                                             Blog
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="single-post"
-                                        className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="font-display text-sm text-jacarta-700 dark:text-white">
-                                            Single Post
                                         </span>
                                     </a>
                                 </li>
@@ -1140,7 +866,7 @@ const NavigationBar = (props: any) => {
                     </div>
 
                     {/* <!-- Dark Mode --> */}
-                    <a
+                    {/* <a
                         href="#"
                         className="js-dark-mode-trigger group ml-2 flex h-10 w-10 items-center justify-center rounded-full border border-jacarta-100 bg-white transition-colors hover:border-transparent hover:bg-accent focus:border-transparent focus:bg-accent dark:border-transparent dark:bg-white/[.15] dark:hover:bg-accent"
                     >
@@ -1164,7 +890,7 @@ const NavigationBar = (props: any) => {
                             <path fill="none" d="M0 0h24v24H0z" />
                             <path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z" />
                         </svg>
-                    </a>
+                    </a> */}
                 </div>
             </div>
 

@@ -9,6 +9,8 @@ import logger from '@libs/logger';
 
 const PageEditProfile = () => {
     const loginData = useSelector(selectLoginData)
+    const [previewUrl, setPreviewUrl] = React.useState('');
+    const [previewCoverImageUrl, setPreviewCoverImageUrl] = React.useState('');
 
     const userProfileFormik = useFormik({
         initialValues: {
@@ -19,26 +21,27 @@ const PageEditProfile = () => {
             instagramLink: '',
             yourSiteLink: '',
             avatarUrl: '',
+            coverImageUrl: ''
         },
-        onSubmit: async values => {
-          alert(JSON.stringify(values, null, 2));
-          try {
-              await DemusifyApi.walletApp.updateCreator(loginData.username, {
-                  name: userProfileFormik.values.name,
-                  bio: userProfileFormik.values.bio,
-                  email: userProfileFormik.values.email,
-                  twitterLink: userProfileFormik.values.twitterLink,
-                  instagramLink: userProfileFormik.values.instagramLink,
-                  yourSiteLink: userProfileFormik.values.yourSiteLink,
-                  avatarUrl: userProfileFormik.values.avatarUrl,
-              });
-              alert('Update success');
-          } catch (err: any) {
-            logger.debug('updateCreator --- ERROR: ', err)
-            alert('Something went wrong. Update failed');
-          }
+        onSubmit: async (values) => {
+            try {
+                await DemusifyApi.walletApp.updateCreator(loginData.username, {
+                    name: userProfileFormik.values.name,
+                    bio: userProfileFormik.values.bio,
+                    email: userProfileFormik.values.email,
+                    twitterLink: userProfileFormik.values.twitterLink,
+                    instagramLink: userProfileFormik.values.instagramLink,
+                    yourSiteLink: userProfileFormik.values.yourSiteLink,
+                    avatarUrl: userProfileFormik.values.avatarUrl,
+                    coverImageUrl: userProfileFormik.values.coverImageUrl
+                });
+                alert('Update success');
+            } catch (err: any) {
+                logger.debug('updateCreator --- ERROR: ', err);
+                alert('Something went wrong. Update failed');
+            }
         },
-      });
+    });
 
     React.useEffect(() => {
         if (loginData && loginData.username) {
@@ -52,14 +55,38 @@ const PageEditProfile = () => {
         }
     }, [loginData])
 
+    const changeAvatarImageHandler = (event: any) => {
+        const previewUrl = URL.createObjectURL(event.target.files[0])
+        console.log('changeAvatarImageHandler: ', previewUrl)
+        previewUrl && userProfileFormik.setFieldValue('avatarUrl', previewUrl);
+        setPreviewUrl(previewUrl);
+    };
+
+    const changeCoverImageHandler = (event: any) => {
+        const previewUrl = URL.createObjectURL(event.target.files[0])
+        console.log('changeCoverImageHandler: ', previewUrl)
+        previewUrl && userProfileFormik.setFieldValue('coverImageUrl', previewUrl);
+        setPreviewCoverImageUrl(previewUrl);
+    };
+
     return (
         <main className="pt-[5.5rem] lg:pt-24">
             {/* <!-- Banner --> */}
             <div className="relative">
-                <img src="img/user/banner.jpg" alt="banner" className="h-[18.75rem] object-cover" />
+                <img
+                    src={previewCoverImageUrl || 'img/user/banner.jpg'}
+                    alt="banner"
+                    className="h-[18.75rem] object-cover"
+                    style={{width: '100%'}}
+                />
                 <div className="container relative -translate-y-4">
                     <div className="group absolute right-0 bottom-4 flex items-center rounded-lg bg-white py-2 px-4 font-display text-sm hover:bg-accent">
-                        <input type="file" accept="image/*" className="absolute inset-0 cursor-pointer opacity-0" />
+                        <input
+                            type="file"
+                            accept="image/*"
+                            className="absolute inset-0 cursor-pointer opacity-0"
+                            onChange={changeCoverImageHandler}
+                        />
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 24 24"
@@ -245,16 +272,17 @@ const PageEditProfile = () => {
                             <div className="shrink-0">
                                 <figure className="relative inline-block">
                                     <img
-                                        src={loginData?.avatarUrl || 'img/user/user_avatar.gif'}
+                                        src={previewUrl || loginData?.avatarUrl || 'img/user/user_avatar.gif'}
                                         alt="collection avatar"
                                         className="rounded-xl border-[5px] border-white dark:border-jacarta-600"
-                                        style={{ height: '100px' }}
+                                        style={{ height: '100px', width: '100px' }}
                                     />
                                     <div className="group absolute -right-3 -bottom-2 h-8 w-8 overflow-hidden rounded-full border border-jacarta-100 bg-white text-center hover:border-transparent hover:bg-accent">
                                         <input
                                             type="file"
                                             accept="image/*"
                                             className="absolute top-0 left-0 w-full cursor-pointer opacity-0"
+                                            onChange={changeAvatarImageHandler}
                                         />
                                         <div className="flex h-full items-center justify-center">
                                             <svg

@@ -74,22 +74,27 @@ export const CreateCollectionProvider = (props: CreateCollectionProviderProps) =
         setTimeout(() => {
             const r = Math.random() * 10;
 
-            if (r > 5) {
+            if (r < 3) {
                 setState({
-                    status: CreateCollectionStatus.SUBMIT_SUCCEEDED,
-                });
-
-                form.resetForm();
-            } else {
-                setState({
-                    status: CreateCollectionStatus.SUBMIT_SUCCEEDED,
+                    status: CreateCollectionStatus.SUBMIT_FAILED,
                     error: 'Something went wrong!!',
                 });
+                return;
             }
+
+            setState({
+                status: CreateCollectionStatus.SUBMIT_SUCCEEDED,
+            });
+
+            form.resetForm();
         }, 3000);
     };
 
     const handleUploadLogoImage = async (file?: File) => {
+        if (!file) {
+            return;
+        }
+
         setUploadLogoImageState(() => ({
             status: CreateCollectionUploadImageStatus.UPLOADING,
             error: '',
@@ -100,7 +105,7 @@ export const CreateCollectionProvider = (props: CreateCollectionProviderProps) =
         // TODO: Replace with real api call
         setTimeout(async () => {
             const r = Math.random() * 10;
-            if (r < 5) {
+            if (r < 3) {
                 setUploadLogoImageState(() => ({
                     status: CreateCollectionUploadImageStatus.UPLOAD_FAILED,
                     error: 'Something went wrong!',
@@ -112,12 +117,16 @@ export const CreateCollectionProvider = (props: CreateCollectionProviderProps) =
                 status: CreateCollectionUploadImageStatus.UPLOAD_SUCCEEDED,
             }));
 
-            const base64 = await fileToBase64(file);
-            form.setFieldValue('logoImage', base64);
+            const url = URL.createObjectURL(file);
+            form.setFieldValue('logoImage', url);
         }, 4000);
     };
 
     const handleUploadFeaturedImage = async (file?: File) => {
+        if (!file) {
+            return;
+        }
+
         setUploadFeaturedImageState(() => ({
             status: CreateCollectionUploadImageStatus.UPLOADING,
             error: '',
@@ -128,7 +137,7 @@ export const CreateCollectionProvider = (props: CreateCollectionProviderProps) =
         // TODO: Replace with real api call
         setTimeout(async () => {
             const r = Math.random() * 10;
-            if (r < 5) {
+            if (r < 3) {
                 setUploadFeaturedImageState(() => ({
                     status: CreateCollectionUploadImageStatus.UPLOAD_FAILED,
                     error: 'Something went wrong!',
@@ -140,12 +149,16 @@ export const CreateCollectionProvider = (props: CreateCollectionProviderProps) =
                 status: CreateCollectionUploadImageStatus.UPLOAD_SUCCEEDED,
             }));
 
-            const base64 = await fileToBase64(file);
-            form.setFieldValue('featuredImage', base64);
+            const url = URL.createObjectURL(file);
+            form.setFieldValue('featuredImage', url);
         }, 3000);
     };
 
     const handleUploadBannerImage = async (file?: File) => {
+        if (!file) {
+            return;
+        }
+
         setUploadBannerImageState(() => ({
             status: CreateCollectionUploadImageStatus.UPLOADING,
             error: '',
@@ -156,7 +169,7 @@ export const CreateCollectionProvider = (props: CreateCollectionProviderProps) =
         // TODO: Replace with real api call
         setTimeout(async () => {
             const r = Math.random() * 10;
-            if (r < 5) {
+            if (r < 3) {
                 setUploadBannerImageState(() => ({
                     status: CreateCollectionUploadImageStatus.UPLOAD_FAILED,
                     error: 'Something went wrong!',
@@ -168,8 +181,8 @@ export const CreateCollectionProvider = (props: CreateCollectionProviderProps) =
                 status: CreateCollectionUploadImageStatus.UPLOAD_SUCCEEDED,
             }));
 
-            const base64 = await fileToBase64(file);
-            form.setFieldValue('bannerImage', base64);
+            const url = URL.createObjectURL(file);
+            form.setFieldValue('bannerImage', url);
         }, 3000);
     };
 
@@ -207,22 +220,4 @@ export const CreateCollectionProvider = (props: CreateCollectionProviderProps) =
             {children}
         </CreateCollectionContext.Provider>
     );
-};
-
-const fileToBase64 = (file?: File) => {
-    return new Promise((resolve, reject) => {
-        if (!file) {
-            return resolve('');
-        }
-
-        var reader = new FileReader();
-        reader.readAsDataURL(file);
-        reader.onload = function () {
-            if (!reader.result || typeof reader.result != 'string') {
-                return resolve('');
-            }
-
-            resolve(reader.result);
-        };
-    });
 };

@@ -91,22 +91,27 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
         setTimeout(() => {
             const r = Math.random() * 10;
 
-            if (r > 5) {
+            if (r < 3) {
                 setState({
-                    status: CreateItemStatus.SUBMIT_SUCCEEDED,
-                });
-
-                // form.resetForm();
-            } else {
-                setState({
-                    status: CreateItemStatus.SUBMIT_SUCCEEDED,
+                    status: CreateItemStatus.SUBMIT_FAILED,
                     error: 'Something went wrong!!',
                 });
+                return;
             }
+
+            setState({
+                status: CreateItemStatus.SUBMIT_SUCCEEDED,
+            });
+
+            form.resetForm();
         }, 3000);
     };
 
     const handleUploadCoverArtImage = async (file?: File) => {
+        if (!file) {
+            return;
+        }
+
         setUploadCoverArtImageState(() => ({
             status: CreateItemUploadAssetStatus.UPLOADING,
             error: '',
@@ -117,7 +122,7 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
         // TODO: Replace with real api call
         setTimeout(async () => {
             const r = Math.random() * 10;
-            if (r < 5) {
+            if (r < 3) {
                 setUploadCoverArtImageState(() => ({
                     status: CreateItemUploadAssetStatus.UPLOAD_FAILED,
                     error: 'Something went wrong!',
@@ -129,12 +134,16 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
                 status: CreateItemUploadAssetStatus.UPLOAD_SUCCEEDED,
             }));
 
-            const base64 = await fileToBase64(file);
-            form.setFieldValue('coverArtImage', base64);
+            const url = URL.createObjectURL(file);
+            form.setFieldValue('coverArtImage', url);
         }, 4000);
     };
 
     const handleUploadMusic = async (file?: File) => {
+        if (!file) {
+            return;
+        }
+
         setUploadMusicState(() => ({
             status: CreateItemUploadAssetStatus.UPLOADING,
             error: '',
@@ -146,7 +155,7 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
         // TODO: Replace with real api call
         setTimeout(async () => {
             const r = Math.random() * 10;
-            if (r < 5) {
+            if (r < 3) {
                 setUploadMusicState(() => ({
                     status: CreateItemUploadAssetStatus.UPLOAD_FAILED,
                     error: 'Something went wrong!',
@@ -158,10 +167,10 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
                 status: CreateItemUploadAssetStatus.UPLOAD_SUCCEEDED,
             }));
 
-            const base64 = await fileToBase64(file);
+            const url = URL.createObjectURL(file);
 
-            form.setFieldValue('music', base64);
-            form.setFieldValue('musicFingerprint', base64.substring(0, 120));
+            form.setFieldValue('music', url);
+            form.setFieldValue('musicFingerprint', url.substring(0, 120));
         }, 3000);
     };
 
@@ -338,22 +347,4 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
             {children}
         </CreateItemContext.Provider>
     );
-};
-
-const fileToBase64 = (file?: File): Promise<string> => {
-    return new Promise((resolve, reject) => {
-        if (!file) {
-            return resolve('');
-        }
-
-        var reader = new FileReader();
-        reader.readAsDataURL(file);
-        reader.onload = function () {
-            if (!reader.result || typeof reader.result != 'string') {
-                return resolve('');
-            }
-
-            resolve(reader.result);
-        };
-    });
 };

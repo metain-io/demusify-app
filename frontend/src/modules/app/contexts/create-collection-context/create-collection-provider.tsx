@@ -70,6 +70,7 @@ export const CreateCollectionProvider = (props: CreateCollectionProviderProps) =
 
         setState(() => ({ status: CreateCollectionStatus.SUBMITTING }));
 
+        // TODO: Replace with real api call
         setTimeout(() => {
             const r = Math.random() * 10;
 
@@ -96,6 +97,7 @@ export const CreateCollectionProvider = (props: CreateCollectionProviderProps) =
 
         form.setFieldValue('logoImage', '');
 
+        // TODO: Replace with real api call
         setTimeout(async () => {
             const r = Math.random() * 10;
             if (r < 5) {
@@ -123,6 +125,7 @@ export const CreateCollectionProvider = (props: CreateCollectionProviderProps) =
 
         form.setFieldValue('featuredImage', '');
 
+        // TODO: Replace with real api call
         setTimeout(async () => {
             const r = Math.random() * 10;
             if (r < 5) {
@@ -150,6 +153,7 @@ export const CreateCollectionProvider = (props: CreateCollectionProviderProps) =
 
         form.setFieldValue('bannerImage', '');
 
+        // TODO: Replace with real api call
         setTimeout(async () => {
             const r = Math.random() * 10;
             if (r < 5) {
@@ -170,6 +174,7 @@ export const CreateCollectionProvider = (props: CreateCollectionProviderProps) =
     };
 
     React.useEffect(() => {
+        // TODO: Check if need any initial process
         const timeout = setTimeout(() => {
             setState({
                 status: CreateCollectionStatus.INITIALIZE_SUCCEEDED,

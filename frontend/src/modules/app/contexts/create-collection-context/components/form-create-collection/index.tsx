@@ -409,6 +409,10 @@ export const FormCreateCollection = () => {
             <button
                 className="mb-6 cursor-default rounded-full bg-accent-lighter py-3 px-8 text-center font-semibold text-white transition-all"
                 onClick={onButtonCreateClicked}
+                disabled={
+                    state.status == CreateCollectionStatus.INITIALIZING ||
+                    state.status == CreateCollectionStatus.SUBMITTING
+                }
             >
                 {state.status == CreateCollectionStatus.INITIALIZING
                     ? 'Initializing...'

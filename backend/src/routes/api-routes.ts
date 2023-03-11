@@ -1,8 +1,12 @@
 import express from 'express';
+import { CreatorController } from '@controllers/creator-controller';
 import { CollectionController, ItemController, MeController } from '@controllers/index';
 import { accessTokenAuthentication } from '@middlewares/index';
 
 const apiRouter = express.Router();
+
+apiRouter.get('/creator/:username', new CreatorController().getCreator);
+apiRouter.put('/creator/:username', accessTokenAuthentication, new CreatorController().updateCreator);
 
 apiRouter.post('/collections', accessTokenAuthentication, new CollectionController().createCollection);
 apiRouter.get('/collections', new CollectionController().listCollections);

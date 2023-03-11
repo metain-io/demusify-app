@@ -9,6 +9,7 @@ import CryptoWallet, { CryptoWalletEvent } from '@modules/crypto-wallet/crypto-w
 import PhantomWallet from '@modules/crypto-wallet/wallet-adapters/phantom-wallet-adapter';
 import WalletService from '@modules/crypto-wallet/services/crypto-wallet-service';
 import bs58 from 'bs58';
+import { DemusifyApi } from '@modules/common/api';
 
 function createCryptoWalletEventChannel(cryptoWallet: CryptoWallet) {
     return eventChannel(cryptoWallet.eventChannelEmitter);
@@ -144,7 +145,22 @@ function* init(): any {
         }),
     );
 
+    yield call(resolveGenerator, getUserProfile(username));
+
     yield fork(watchCryptoWalletEventChannel, WalletService.currentWallet);
+}
+
+function* getUserProfile(username: string): any {
+    console.log('============== getUserProfile')
+    if (!username) return {};
+    let [userProfile, error] = yield call(resolveGenerator, DemusifyApi.walletApp.getCreator(username));
+    if (error) {
+        console.log('getUserProfile --- ERROR: ', error);
+        return {};
+    }
+
+    yield put(loginActions.updateProfile(userProfile))
+    return userProfile
 }
 
 function* handleLoginWithPhantomWallet(): any {
@@ -235,6 +251,8 @@ function* handleLoginWithPhantomWallet(): any {
             walletAddress: walletAccount,
         }),
     );
+
+    getUserProfile(username);
 
     yield fork(watchCryptoWalletEventChannel, WalletService.currentWallet);
 }

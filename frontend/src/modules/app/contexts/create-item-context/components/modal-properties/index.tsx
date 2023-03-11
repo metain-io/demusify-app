@@ -49,13 +49,13 @@ export const ModalProperties = () => {
 
                             <div className="flex-1">
                                 <label className="mb-3 block font-display text-base font-semibold text-jacarta-700 dark:text-white">
-                                    Type
+                                    Name
                                 </label>
                             </div>
 
                             <div className="flex-1">
                                 <label className="mb-3 block font-display text-base font-semibold text-jacarta-700 dark:text-white">
-                                    Name
+                                    Value
                                 </label>
                             </div>
                         </div>
@@ -68,7 +68,7 @@ export const ModalProperties = () => {
 
                         {form.values.properties.map((property) => {
                             return (
-                                <div className="relative my-1 flex items-center">
+                                <div key={property.id} className="relative my-1 flex items-center">
                                     <button
                                         className="flex h-12 w-12 shrink-0 items-center justify-center self-end rounded-l-lg border border-r-0 border-jacarta-100 bg-jacarta-50 hover:bg-jacarta-100 dark:border-jacarta-600 dark:bg-jacarta-700"
                                         onClick={() => {

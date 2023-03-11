@@ -325,9 +325,9 @@ export const FormCreateCollection = () => {
                         aria-labelledby="item-collection"
                     >
                         <ul className="scrollbar-custom flex max-h-48 flex-col overflow-y-auto">
-                            {categories.map((category) => {
+                            {categories.map((category, index) => {
                                 return (
-                                    <li onClick={() => onCategoryItemClicked(category)}>
+                                    <li key={index} onClick={() => onCategoryItemClicked(category)}>
                                         <a className="dropdown-item flex w-full items-center justify-between rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600">
                                             <span className="flex items-center space-x-3">
                                                 <img

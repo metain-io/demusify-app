@@ -1,5 +1,5 @@
-import { ChangeEventHandler } from 'react';
-import { CreateItemUploadAssetStatus, useCreateItem } from '../../index';
+import { ChangeEventHandler, MouseEventHandler } from 'react';
+import { CreateItemStatus, CreateItemUploadAssetStatus, useCreateItem } from '../../index';
 
 const LeftSide = () => {
     const { form, uploadCoverArtImageState, uploadMusicState, handleUploadCoverArtImage, handleUploadMusic } =
@@ -141,6 +141,17 @@ const LeftSide = () => {
 };
 
 const RightSide = () => {
+    const { state, form, collections } = useCreateItem();
+
+    const onButtonCreateClicked: MouseEventHandler<HTMLButtonElement> = (e) => {
+        e.preventDefault();
+        form.handleSubmit();
+    };
+
+    const handleSelectCollection = (collection: { id: string; name: string }) => {
+        form.setFieldValue('collection', collection);
+    };
+
     return (
         <>
             {/* Right Column */}
@@ -151,12 +162,16 @@ const RightSide = () => {
                         Name<span className="text-red">*</span>
                     </label>
                     <input
+                        name="name"
                         type="text"
                         id="item-name"
                         className="w-full rounded-lg border-jacarta-100 py-3 hover:ring-2 hover:ring-accent/10 focus:ring-accent dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:placeholder:text-jacarta-300"
                         placeholder="Item name"
                         required
+                        value={form.values.name}
+                        onChange={form.handleChange}
                     />
+                    {form.errors.name && <p className="mt-1 text-2xs text-red">{form.errors.name}</p>}
                 </div>
 
                 {/* <!-- External Link --> */}
@@ -172,11 +187,15 @@ const RightSide = () => {
                         to learn more about it. You are welcome to link to your own webpage with nmore detail.
                     </p>
                     <input
+                        name="externalLink"
                         type="url"
                         id="item-external-link"
                         className="w-full rounded-lg border-jacarta-100 py-3 hover:ring-2 hover:ring-accent/10 focus:ring-accent dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:placeholder:text-jacarta-300"
                         placeholder="https://yoursite.io/item/123"
+                        value={form.values.externalLink}
+                        onChange={form.handleChange}
                     />
+                    {form.errors.externalLink && <p className="mt-1 text-2xs text-red">{form.errors.externalLink}</p>}
                 </div>
 
                 {/* <!-- Description --> */}
@@ -192,18 +211,24 @@ const RightSide = () => {
                         syntax is supported.
                     </p>
                     <textarea
+                        name="description"
                         id="item-description"
                         className="w-full rounded-lg border-jacarta-100 py-3 hover:ring-2 hover:ring-accent/10 focus:ring-accent dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:placeholder:text-jacarta-300"
                         rows={4}
                         required
                         placeholder="Provide a detailed description of your item."
+                        value={form.values.description}
+                        onChange={form.handleChange}
                     ></textarea>
+                    {form.errors.description && <p className="mt-1 text-2xs text-red">{form.errors.description}</p>}
                 </div>
 
                 {/* <!-- Collection --> */}
                 <div className="mb-6 relative">
                     <div>
-                        <label className="mb-2 block font-display text-jacarta-700 dark:text-white">Collection</label>
+                        <label className="mb-2 block font-display text-jacarta-700 dark:text-white">
+                            Collection<span className="text-red">*</span>
+                        </label>
                         <div className="mb-3 flex items-center space-x-2">
                             <p className="text-2xs dark:text-jacarta-300">
                                 This is the collection where your item will appear.
@@ -234,7 +259,9 @@ const RightSide = () => {
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                         >
-                            <span className="">Select collection</span>
+                            <span className="">
+                                {form.values.collection ? form.values.collection.name : 'Select collection'}
+                            </span>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 24 24"
@@ -252,131 +279,41 @@ const RightSide = () => {
                             aria-labelledby="item-collection"
                         >
                             <ul className="scrollbar-custom flex max-h-48 flex-col overflow-y-auto">
-                                <li>
-                                    <a
-                                        href="#"
-                                        className="dropdown-item flex w-full items-center justify-between rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="flex items-center space-x-3">
-                                            <img
-                                                src="img/avatars/collection_ava_1.png"
-                                                className="h-8 w-8 rounded-full"
-                                                loading="lazy"
-                                                alt="avatar"
-                                            />
-                                            <span className="text-jacarta-700 dark:text-white">CryptoKitties</span>
-                                        </span>
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 24 24"
-                                            width="24"
-                                            height="24"
-                                            className="mb-[3px] h-4 w-4 fill-accent"
-                                        >
-                                            <path fill="none" d="M0 0h24v24H0z"></path>
-                                            <path d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="#"
-                                        className="dropdown-item flex w-full items-center rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="flex items-center space-x-3">
-                                            <img
-                                                src="img/avatars/collection_ava_2.jpg"
-                                                className="h-8 w-8 rounded-full"
-                                                loading="lazy"
-                                                alt="avatar"
-                                            />
-                                            <span className="text-jacarta-700 dark:text-white">KaijuKings</span>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="#"
-                                        className="dropdown-item flex w-full items-center rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="flex items-center space-x-3">
-                                            <img
-                                                src="img/avatars/collection_ava_3.png"
-                                                className="h-8 w-8 rounded-full"
-                                                loading="lazy"
-                                                alt="avatar"
-                                            />
-                                            <span className="text-jacarta-700 dark:text-white">Kumo x World</span>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="#"
-                                        className="dropdown-item flex w-full items-center rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="flex items-center space-x-3">
-                                            <img
-                                                src="img/avatars/collection_ava_4.jpg"
-                                                className="h-8 w-8 rounded-full"
-                                                loading="lazy"
-                                                alt="avatar"
-                                            />
-                                            <span className="text-jacarta-700 dark:text-white">Irene DAO</span>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="#"
-                                        className="dropdown-item flex w-full items-center rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="flex items-center space-x-3">
-                                            <img
-                                                src="img/avatars/collection_ava_5.png"
-                                                className="h-8 w-8 rounded-full"
-                                                loading="lazy"
-                                                alt="avatar"
-                                            />
-                                            <span className="text-jacarta-700 dark:text-white">GenerativeDungeon</span>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="#"
-                                        className="dropdown-item flex w-full items-center rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="flex items-center space-x-3">
-                                            <img
-                                                src="img/avatars/collection_ava_6.jpg"
-                                                className="h-8 w-8 rounded-full"
-                                                loading="lazy"
-                                                alt="avatar"
-                                            />
-                                            <span className="text-jacarta-700 dark:text-white">ENS Domains</span>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="#"
-                                        className="dropdown-item flex w-full items-center rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="flex items-center space-x-3">
-                                            <img
-                                                src="img/avatars/collection_ava_7.png"
-                                                className="h-8 w-8 rounded-full"
-                                                loading="lazy"
-                                                alt="avatar"
-                                            />
-                                            <span className="text-jacarta-700 dark:text-white">Cozy Penguin</span>
-                                        </span>
-                                    </a>
-                                </li>
+                                {collections.map((collection) => (
+                                    <li key={collection.id} onClick={() => handleSelectCollection(collection)}>
+                                        <a className="dropdown-item flex w-full items-center justify-between rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600">
+                                            <span className="flex items-center space-x-3">
+                                                <img
+                                                    src="img/avatars/collection_ava_1.png"
+                                                    className="h-8 w-8 rounded-full"
+                                                    loading="lazy"
+                                                    alt="avatar"
+                                                />
+                                                <span className="text-jacarta-700 dark:text-white">
+                                                    {collection.name}
+                                                </span>
+                                            </span>
+
+                                            {form.values.collection?.id == collection.id && (
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    width="24"
+                                                    height="24"
+                                                    className="mb-[3px] h-4 w-4 fill-accent"
+                                                >
+                                                    <path fill="none" d="M0 0h24v24H0z"></path>
+                                                    <path d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+                                                </svg>
+                                            )}
+                                        </a>
+                                    </li>
+                                ))}
                             </ul>
                         </div>
                     </div>
+
+                    {form.errors.collection && <p className="mt-1 text-2xs text-red">{form.errors.collection}</p>}
                 </div>
 
                 {/* <!-- Supply --> */}
@@ -407,11 +344,16 @@ const RightSide = () => {
                     </div>
 
                     <input
+                        name="supply"
                         type="text"
                         id="item-supply"
                         className="w-full rounded-lg border-jacarta-100 py-3 hover:ring-2 hover:ring-accent/10 focus:ring-accent dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:placeholder:text-jacarta-300"
                         placeholder="1"
+                        value={form.values.supply}
+                        onChange={form.handleChange}
                     />
+
+                    {form.errors.supply && <p className="mt-1 text-2xs text-red">{form.errors.supply}</p>}
                 </div>
 
                 {/* <!-- Properties --> */}
@@ -540,9 +482,31 @@ const RightSide = () => {
                 </div>
 
                 {/* <!-- Submit --> */}
-                <button className="cursor-default rounded-full bg-accent-lighter py-3 px-8 text-center font-semibold text-white transition-all">
-                    Create
+                <button
+                    className="mb-6 cursor-default rounded-full bg-accent-lighter py-3 px-8 text-center font-semibold text-white transition-all"
+                    onClick={onButtonCreateClicked}
+                    disabled={
+                        state.status == CreateItemStatus.INITIALIZING || state.status == CreateItemStatus.SUBMITTING
+                    }
+                >
+                    {state.status == CreateItemStatus.INITIALIZING
+                        ? 'Initializing...'
+                        : state.status == CreateItemStatus.SUBMITTING
+                        ? 'Submitting...'
+                        : 'Create'}
                 </button>
+
+                {state.error && (
+                    <div className="mb-6">
+                        <p className="mb-3 text-2xs text-red">{state.error}</p>
+                    </div>
+                )}
+
+                {!state.error && state.status == CreateItemStatus.SUBMIT_SUCCEEDED && (
+                    <div className="mb-6">
+                        <p className="mb-3 text-2xs text-green">Submit succeeded!!</p>
+                    </div>
+                )}
             </div>
         </>
     );

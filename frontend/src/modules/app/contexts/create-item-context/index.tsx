@@ -31,7 +31,13 @@ export type CreateItemFormState = FormikProps<{
     name: string;
     externalLink: string;
     description: string;
-    collectionId: string;
+    collection:
+        | {
+              id: string;
+              name: string;
+          }
+        | undefined
+        | null;
     supply: number;
     properties: Array<{
         id: string;

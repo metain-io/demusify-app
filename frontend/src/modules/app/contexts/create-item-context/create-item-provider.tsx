@@ -18,7 +18,24 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
 
     const [id, setId] = React.useState(Uuid());
 
-    const [collections, setCollections] = React.useState<Array<any>>([]);
+    const [collections, setCollections] = React.useState<Array<any>>([
+        {
+            id: 'default',
+            name: 'Default',
+        },
+        {
+            id: Uuid(),
+            name: 'Collection 1',
+        },
+        {
+            id: Uuid(),
+            name: 'Collection 2',
+        },
+        {
+            id: Uuid(),
+            name: 'Collection 3',
+        },
+    ]);
 
     const [state, setState] = React.useState<CreateItemState>({
         status: CreateItemStatus.INITIALIZING,
@@ -44,7 +61,10 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
             name: '',
             externalLink: '',
             description: '',
-            collectionId: '',
+            collection: {
+                id: 'default',
+                name: 'Default',
+            } as { id: string; name: string } | undefined | null,
             supply: 1,
             properties: [] as Array<{ id: string; name: string; value: string }>,
             levels: [] as Array<{ id: string; name: string; value: string; total: string }>,
@@ -54,6 +74,7 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
             coverArtImage: Yup.string().required('Cover art image is required'),
             music: Yup.string().required('Music is required'),
             name: Yup.string().required('Name is required'),
+            collection: Yup.mixed().required('Collection is required'),
         }),
         onSubmit: (value) => handleSubmit(value),
         onReset: () => {
@@ -75,7 +96,7 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
                     status: CreateItemStatus.SUBMIT_SUCCEEDED,
                 });
 
-                form.resetForm();
+                // form.resetForm();
             } else {
                 setState({
                     status: CreateItemStatus.SUBMIT_SUCCEEDED,

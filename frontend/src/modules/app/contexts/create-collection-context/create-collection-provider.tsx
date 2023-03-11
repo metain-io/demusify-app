@@ -1,7 +1,13 @@
 import { useFormik } from 'formik';
 import React from 'react';
 import { PropsWithChildren } from 'react';
-import { CreateCollectionContext, CreateCollectionState, CreateCollectionStatus } from './index';
+import {
+    CreateCollectionContext,
+    CreateCollectionState,
+    CreateCollectionStatus,
+    CreateCollectionUploadImageState,
+    CreateCollectionUploadImageStatus,
+} from './index';
 import { v4 as Uuid } from 'uuid';
 import * as Yup from 'yup';
 
@@ -14,6 +20,21 @@ export const CreateCollectionProvider = (props: CreateCollectionProviderProps) =
 
     const [state, setState] = React.useState<CreateCollectionState>({
         status: CreateCollectionStatus.INITIALIZING,
+        error: '',
+    });
+
+    const [uploadLogoImageState, setUploadLogoImageState] = React.useState<CreateCollectionUploadImageState>({
+        status: CreateCollectionUploadImageStatus.PENDING,
+        error: '',
+    });
+
+    const [uploadFeaturedImageState, setUploadFeaturedImageState] = React.useState<CreateCollectionUploadImageState>({
+        status: CreateCollectionUploadImageStatus.PENDING,
+        error: '',
+    });
+
+    const [uploadBannerImageState, setUploadBannerImageState] = React.useState<CreateCollectionUploadImageState>({
+        status: CreateCollectionUploadImageStatus.PENDING,
         error: '',
     });
 
@@ -68,18 +89,84 @@ export const CreateCollectionProvider = (props: CreateCollectionProviderProps) =
     };
 
     const handleUploadLogoImage = async (file?: File) => {
-        const base64 = await fileToBase64(file);
-        form.setFieldValue('logoImage', base64);
+        setUploadLogoImageState(() => ({
+            status: CreateCollectionUploadImageStatus.UPLOADING,
+            error: '',
+        }));
+
+        form.setFieldValue('logoImage', '');
+
+        setTimeout(async () => {
+            const r = Math.random() * 10;
+            if (r < 5) {
+                setUploadLogoImageState(() => ({
+                    status: CreateCollectionUploadImageStatus.UPLOAD_FAILED,
+                    error: 'Something went wrong!',
+                }));
+                return;
+            }
+
+            setUploadLogoImageState(() => ({
+                status: CreateCollectionUploadImageStatus.UPLOAD_SUCCEEDED,
+            }));
+
+            const base64 = await fileToBase64(file);
+            form.setFieldValue('logoImage', base64);
+        }, 4000);
     };
 
     const handleUploadFeaturedImage = async (file?: File) => {
-        const base64 = await fileToBase64(file);
-        form.setFieldValue('featuredImage', base64);
+        setUploadFeaturedImageState(() => ({
+            status: CreateCollectionUploadImageStatus.UPLOADING,
+            error: '',
+        }));
+
+        form.setFieldValue('featuredImage', '');
+
+        setTimeout(async () => {
+            const r = Math.random() * 10;
+            if (r < 5) {
+                setUploadFeaturedImageState(() => ({
+                    status: CreateCollectionUploadImageStatus.UPLOAD_FAILED,
+                    error: 'Something went wrong!',
+                }));
+                return;
+            }
+
+            setUploadFeaturedImageState(() => ({
+                status: CreateCollectionUploadImageStatus.UPLOAD_SUCCEEDED,
+            }));
+
+            const base64 = await fileToBase64(file);
+            form.setFieldValue('featuredImage', base64);
+        }, 3000);
     };
 
     const handleUploadBannerImage = async (file?: File) => {
-        const base64 = await fileToBase64(file);
-        form.setFieldValue('bannerImage', base64);
+        setUploadBannerImageState(() => ({
+            status: CreateCollectionUploadImageStatus.UPLOADING,
+            error: '',
+        }));
+
+        form.setFieldValue('bannerImage', '');
+
+        setTimeout(async () => {
+            const r = Math.random() * 10;
+            if (r < 5) {
+                setUploadBannerImageState(() => ({
+                    status: CreateCollectionUploadImageStatus.UPLOAD_FAILED,
+                    error: 'Something went wrong!',
+                }));
+                return;
+            }
+
+            setUploadBannerImageState(() => ({
+                status: CreateCollectionUploadImageStatus.UPLOAD_SUCCEEDED,
+            }));
+
+            const base64 = await fileToBase64(file);
+            form.setFieldValue('bannerImage', base64);
+        }, 3000);
     };
 
     React.useEffect(() => {
@@ -102,6 +189,11 @@ export const CreateCollectionProvider = (props: CreateCollectionProviderProps) =
                 categories: ['cat-1', 'cat-2', 'cat-3'],
                 state,
                 form,
+
+                uploadLogoImageState,
+                uploadFeaturedImageState,
+                uploadBannerImageState,
+
                 handleUploadLogoImage,
                 handleUploadFeaturedImage,
                 handleUploadBannerImage,

@@ -11,6 +11,13 @@ export enum CreateCollectionStatus {
     SUBMIT_SUCCEEDED,
 }
 
+export enum CreateCollectionUploadImageStatus {
+    PENDING,
+    UPLOADING,
+    UPLOAD_FAILED,
+    UPLOAD_SUCCEEDED,
+}
+
 export type CreateCollectionState = {
     status: CreateCollectionStatus;
     error?: string | null;
@@ -31,11 +38,20 @@ export type CreateCollectionFormState = FormikProps<{
     };
 }>;
 
+export type CreateCollectionUploadImageState = {
+    status: CreateCollectionUploadImageStatus;
+    error?: string | null;
+};
+
 export type CreateCollectionContextValue = {
     id: string;
     categories: Array<string>;
     state: CreateCollectionState;
     form: CreateCollectionFormState;
+
+    uploadLogoImageState: CreateCollectionUploadImageState;
+    uploadFeaturedImageState: CreateCollectionUploadImageState;
+    uploadBannerImageState: CreateCollectionUploadImageState;
 
     handleUploadLogoImage: (file?: File) => Promise<void>;
     handleUploadFeaturedImage: (file?: File) => Promise<void>;

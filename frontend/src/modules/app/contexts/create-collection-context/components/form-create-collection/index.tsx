@@ -1,10 +1,19 @@
 import React from 'react';
 import { ChangeEventHandler, MouseEventHandler } from 'react';
-import { CreateCollectionStatus, useCreateCollection } from '../../index';
+import { CreateCollectionStatus, CreateCollectionUploadImageStatus, useCreateCollection } from '../../index';
 
 export const FormCreateCollection = () => {
-    const { state, form, categories, handleUploadLogoImage, handleUploadFeaturedImage, handleUploadBannerImage } =
-        useCreateCollection();
+    const {
+        state,
+        form,
+        categories,
+        uploadLogoImageState,
+        uploadFeaturedImageState,
+        uploadBannerImageState,
+        handleUploadLogoImage,
+        handleUploadFeaturedImage,
+        handleUploadBannerImage,
+    } = useCreateCollection();
 
     const onFileUploadLogoImageChanged: ChangeEventHandler<HTMLInputElement> = (e) => {
         handleUploadLogoImage(e.target.files?.[0]);
@@ -64,7 +73,11 @@ export const FormCreateCollection = () => {
                             <path fill="none" d="M0 0h24v24H0z" />
                             <path d="M16 13l6.964 4.062-2.973.85 2.125 3.681-1.732 1-2.125-3.68-2.223 2.15L16 13zm-2-7h2v2h5a1 1 0 0 1 1 1v4h-2v-3H10v10h4v2H9a1 1 0 0 1-1-1v-5H6v-2h2V9a1 1 0 0 1 1-1h5V6zM4 14v2H2v-2h2zm0-4v2H2v-2h2zm0-4v2H2V6h2zm0-4v2H2V2h2zm4 0v2H6V2h2zm4 0v2h-2V2h2zm4 0v2h-2V2h2z" />
                         </svg>
-                        <p className="mx-auto max-w-xs text-xs dark:text-jacarta-300">JPG, PNG. Max size: 10 MB</p>
+                        <p className="mx-auto max-w-xs text-xs dark:text-jacarta-300">
+                            {uploadLogoImageState.status == CreateCollectionUploadImageStatus.UPLOADING
+                                ? 'Uploading...'
+                                : 'JPG, PNG. Max size: 10 MB'}
+                        </p>
                     </div>
                     <div
                         className="absolute inset-4 cursor-pointer rounded bg-jacarta-50 opacity-0 group-hover:opacity-100 dark:bg-jacarta-600"
@@ -79,7 +92,9 @@ export const FormCreateCollection = () => {
                     />
                 </div>
 
-                {form.errors.logoImage && <p className="mt-1 text-2xs text-red">{form.errors.logoImage as string}</p>}
+                {(form.errors.logoImage || uploadLogoImageState.error) && (
+                    <p className="mt-1 text-2xs text-red">{uploadLogoImageState.error || form.errors.logoImage}</p>
+                )}
             </div>
 
             {/* <!-- File Upload Featured Image --> */}
@@ -115,7 +130,12 @@ export const FormCreateCollection = () => {
                             <path fill="none" d="M0 0h24v24H0z" />
                             <path d="M16 13l6.964 4.062-2.973.85 2.125 3.681-1.732 1-2.125-3.68-2.223 2.15L16 13zm-2-7h2v2h5a1 1 0 0 1 1 1v4h-2v-3H10v10h4v2H9a1 1 0 0 1-1-1v-5H6v-2h2V9a1 1 0 0 1 1-1h5V6zM4 14v2H2v-2h2zm0-4v2H2v-2h2zm0-4v2H2V6h2zm0-4v2H2V2h2zm4 0v2H6V2h2zm4 0v2h-2V2h2zm4 0v2h-2V2h2z" />
                         </svg>
-                        <p className="mx-auto max-w-xs text-xs dark:text-jacarta-300">JPG, PNG. Max size: 100 MB</p>
+
+                        <p className="mx-auto max-w-xs text-xs dark:text-jacarta-300">
+                            {uploadFeaturedImageState.status == CreateCollectionUploadImageStatus.UPLOADING
+                                ? 'Uploading...'
+                                : 'JPG, PNG. Max size: 100 MB'}
+                        </p>
                     </div>
                     <div className="absolute inset-4 cursor-pointer rounded bg-jacarta-50 opacity-0 group-hover:opacity-100 dark:bg-jacarta-600"></div>
                     <input
@@ -127,8 +147,10 @@ export const FormCreateCollection = () => {
                     />
                 </div>
 
-                {form.errors.featuredImage && (
-                    <p className="mt-1 text-2xs text-red">{form.errors.featuredImage as string}</p>
+                {(form.errors.featuredImage || uploadFeaturedImageState.error) && (
+                    <p className="mt-1 text-2xs text-red">
+                        {uploadFeaturedImageState.error || form.errors.featuredImage}
+                    </p>
                 )}
             </div>
 
@@ -165,7 +187,11 @@ export const FormCreateCollection = () => {
                             <path fill="none" d="M0 0h24v24H0z" />
                             <path d="M16 13l6.964 4.062-2.973.85 2.125 3.681-1.732 1-2.125-3.68-2.223 2.15L16 13zm-2-7h2v2h5a1 1 0 0 1 1 1v4h-2v-3H10v10h4v2H9a1 1 0 0 1-1-1v-5H6v-2h2V9a1 1 0 0 1 1-1h5V6zM4 14v2H2v-2h2zm0-4v2H2v-2h2zm0-4v2H2V6h2zm0-4v2H2V2h2zm4 0v2H6V2h2zm4 0v2h-2V2h2zm4 0v2h-2V2h2z" />
                         </svg>
-                        <p className="mx-auto max-w-xs text-xs dark:text-jacarta-300">JPG, PNG. Max size: 100 MB</p>
+                        <p className="mx-auto max-w-xs text-xs dark:text-jacarta-300">
+                            {uploadBannerImageState.status == CreateCollectionUploadImageStatus.UPLOADING
+                                ? 'Uploading...'
+                                : 'JPG, PNG. Max size: 100 MB'}
+                        </p>
                     </div>
                     <div className="absolute inset-4 cursor-pointer rounded bg-jacarta-50 opacity-0 group-hover:opacity-100 dark:bg-jacarta-600"></div>
                     <input
@@ -177,8 +203,8 @@ export const FormCreateCollection = () => {
                     />
                 </div>
 
-                {form.errors.bannerImage && (
-                    <p className="mt-1 text-2xs text-red">{form.errors.bannerImage as string}</p>
+                {(form.errors.bannerImage || uploadBannerImageState.error) && (
+                    <p className="mt-1 text-2xs text-red">{uploadBannerImageState.error || form.errors.bannerImage}</p>
                 )}
             </div>
 

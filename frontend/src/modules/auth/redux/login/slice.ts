@@ -17,6 +17,12 @@ type LoginState = {
     username: string | null;
     walletAddress: string | null;
     name: string | null;
+    bio: string | null;
+    email: string | null;
+    twitterLink: string | null;
+    instagramLink: string | null;
+    yourSiteLink: string | null;
+    avatarUrl: string | null;
 };
 
 const initialState: LoginState = {
@@ -25,6 +31,12 @@ const initialState: LoginState = {
     username: null,
     walletAddress: null,
     name: null,
+    bio: null,
+    email: null,
+    twitterLink: null,
+    instagramLink: null,
+    yourSiteLink: null,
+    avatarUrl: null,
 };
 
 export const loginSlice = createSlice({
@@ -91,6 +103,12 @@ export const loginSlice = createSlice({
             logger.info('auth/login/update-profile', action.payload);
 
             state.name = action.payload?.name
+            state.bio = action.payload?.bio
+            state.email = action.payload?.email
+            state.twitterLink = action.payload?.twitterLink
+            state.instagramLink = action.payload?.instagramLink
+            state.yourSiteLink = action.payload?.yourSiteLink
+            state.avatarUrl = action.payload?.avatarUrl
         }
     },
     extraReducers: (builder) => {},
@@ -109,6 +127,13 @@ export const selectLoginData = (state: any) => {
         walletAddress: state.login.walletAddress,
         username: state.login.username,
         loginStatus: state.login.status,
-        name: state.login.name
+        
+        name: state.login.name,
+        bio: state.login.bio,
+        email: state.login.email,
+        twitterLink: state.login.twitterLink,
+        instagramLink: state.login.instagramLink,
+        yourSiteLink: state.login.yourSiteLink,
+        avatarUrl: state.login.avatarUrl
     }
 }

@@ -719,7 +719,7 @@ const NavigationBar = (props: any) => {
                         </li>
                         <li className="group">
                             <a
-                                href="create"
+                                href="create-item"
                                 className="flex items-center justify-between py-3.5 font-display text-base text-jacarta-700 hover:text-accent focus:text-accent dark:text-white dark:hover:text-accent dark:focus:text-accent lg:px-5"
                             >
                                 Create

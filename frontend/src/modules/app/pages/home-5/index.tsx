@@ -45,7 +45,7 @@ const PageHome5 = () => {
                             </p>
                             <div className="flex space-x-4">
                                 <a
-                                    href="create"
+                                    href="create-item"
                                     className="w-36 rounded-full bg-accent py-3 px-8 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark"
                                 >
                                     Upload

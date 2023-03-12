@@ -406,7 +406,7 @@ const LandingPage = () => {
                                 <h3 className="py-6 text-center font-display text-base text-jacarta-700">Wallet</h3>
                             </a>
                             <a
-                                href="create"
+                                href="create-item"
                                 className="overflow-hidden rounded-2.5xl bg-white shadow-sm transition-shadow hover:shadow-lg"
                             >
                                 <img className="w-full" src="../img/pages/create.jpg" alt="create" />

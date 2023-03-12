@@ -1,8 +1,9 @@
-import { useButtonConnectPhantomWallet } from "@modules/auth/components/button-connect-phantom-wallet/use-button-connect-phantom-wallet";
-import { LoginStatus } from "@modules/auth/redux/login/slice";
+import { useButtonConnectPhantomWallet } from '@modules/auth/components/button-connect-phantom-wallet/use-button-connect-phantom-wallet';
+import { LoginStatus } from '@modules/auth/redux/login/slice';
+import Link from 'next/link';
 
 const NavigationBar = (props: any) => {
-    const { handleOnLoginClicked = () => {}, loginData = {loginData: LoginStatus.Undefined} } = props;
+    const { handleOnLoginClicked = () => {}, loginData = { loginData: LoginStatus.Undefined } } = props;
 
     const LoginedButton = () => {
         return (
@@ -181,10 +182,10 @@ const NavigationBar = (props: any) => {
     return (
         <div className="flex items-center px-6 py-6 xl:px-24">
             {/* <!-- Logo --> */}
-            <a href="/" className="shrink-0">
+            <Link href="/" className="shrink-0">
                 <img src="img/logo.png" className="max-h-7 dark:hidden" alt="Xhibiter | NFT Marketplace" />
                 <img src="img/logo_white.png" className="hidden max-h-7 dark:block" alt="Xhibiter | NFT Marketplace" />
-            </a>
+            </Link>
 
             {/* <!-- Search --> */}
             <form action="search" className="relative ml-12 mr-8 hidden basis-3/12 lg:block xl:ml-[8%]">
@@ -264,7 +265,7 @@ const NavigationBar = (props: any) => {
                 <nav className="navbar w-full">
                     <ul className="flex flex-col lg:flex-row">
                         <li className="js-nav-dropdown group relative">
-                            <a
+                            <Link
                                 href="/"
                                 className="dropdown-toggle flex items-center justify-between py-3.5 font-display text-base text-jacarta-700 hover:text-accent focus:text-accent dark:text-white dark:hover:text-accent dark:focus:text-accent lg:px-5"
                                 id="navDropdown-1"
@@ -285,7 +286,7 @@ const NavigationBar = (props: any) => {
                                         <path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z" />
                                     </svg>
                                 </i>
-                            </a>
+                            </Link>
                         </li>
                         <li className="js-nav-dropdown group relative">
                             <a
@@ -845,7 +846,7 @@ const NavigationBar = (props: any) => {
                             aria-expanded="false"
                             data-bs-toggle="dropdown"
                             aria-label="profile"
-                            style={{backgroundColor: loginData.loginStatus === LoginStatus.LoggedIn ? "#00CC66" : ""}}
+                            style={{ backgroundColor: loginData.loginStatus === LoginStatus.LoggedIn ? '#00CC66' : '' }}
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -858,11 +859,7 @@ const NavigationBar = (props: any) => {
                                 <path d="M11 14.062V20h2v-5.938c3.946.492 7 3.858 7 7.938H4a8.001 8.001 0 0 1 7-7.938zM12 13c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6z" />
                             </svg>
                         </button>
-                        {
-                            loginData.loginStatus === LoginStatus.LoggedIn 
-                                ? <LoginedButton /> 
-                                : <NotLoginedButton />
-                        }
+                        {loginData.loginStatus === LoginStatus.LoggedIn ? <LoginedButton /> : <NotLoginedButton />}
                     </div>
 
                     {/* <!-- Dark Mode --> */}

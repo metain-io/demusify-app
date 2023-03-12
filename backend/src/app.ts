@@ -15,12 +15,14 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use(cors({
-    origin: '*',
-    'methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
-}));
-
 app.use(logRequest);
+
+app.use(
+    cors({
+        origin: '*',
+        methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    }),
+);
 
 app.use('/demusify/hello', (req, res, next) => {
     res.status(200).send('Hello!!');

@@ -11,6 +11,7 @@ import {
 import { v4 as Uuid } from 'uuid';
 import * as Yup from 'yup';
 import { database } from '@modules/app/database';
+import { useRouter } from 'next/router';
 
 export type CreateItemProviderProps = PropsWithChildren;
 
@@ -105,8 +106,6 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
             setState({
                 status: CreateItemStatus.SUBMIT_SUCCEEDED,
             });
-
-            form.resetForm();
         }, 3000);
     };
 
@@ -138,6 +137,7 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
             }));
 
             const url = URL.createObjectURL(file);
+            // const url = await getBase64(file);
             form.setFieldValue('coverArtImage', url);
         }, 4000);
     };
@@ -364,3 +364,21 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
         </CreateItemContext.Provider>
     );
 };
+
+async function getBase64(file?: File) {
+    return new Promise((resolve, reject) => {
+        if (!file) {
+            resolve('');
+            return;
+        }
+
+        var reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = function () {
+            resolve(reader.result);
+        };
+        reader.onerror = function (error) {
+            resolve('');
+        };
+    });
+}

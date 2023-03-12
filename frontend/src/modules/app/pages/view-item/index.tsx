@@ -4,8 +4,20 @@ import Script from 'next/script';
 import React from 'react';
 import { Database } from '@modules/app/database';
 import { useRouter } from 'next/router';
-import { Tabs } from './tabs';
 import { ModalPurchase } from './modal-purchase';
+
+const DEFAULT_LICENSE_MONETIZATIONS = [
+    {
+        id: 'streamingPerCopy',
+        name: 'Streaming (per copy)',
+        value: '12.3',
+    },
+    {
+        id: 'synchronizationPerProduct',
+        name: 'Synchronization (per product)',
+        value: '20',
+    },
+];
 
 const PageViewItem = () => {
     const [item, setItem] = React.useState<any>(null);
@@ -39,10 +51,6 @@ const PageViewItem = () => {
         });
     }, [router]);
 
-    if (item == null) {
-        return <></>;
-    }
-
     return (
         <>
             <main className="mt-24">
@@ -54,7 +62,7 @@ const PageViewItem = () => {
                             {/* <!-- Image --> */}
                             <figure className="mb-8 md:w-2/5 md:flex-shrink-0 md:flex-grow-0 md:basis-auto lg:w-1/2">
                                 <img
-                                    src={item?.coverArtImage}
+                                    src={item?.coverArtImage || 'img/products/item_single_large.jpg'}
                                     alt="item"
                                     className="cursor-pointer rounded-2.5xl"
                                     data-bs-toggle="modal"
@@ -94,7 +102,7 @@ const PageViewItem = () => {
                                     {/* <!-- Collection --> */}
                                     <div className="flex items-center">
                                         <a href="collection" className="mr-2 text-sm font-bold text-accent">
-                                            {item?.collection?.name}
+                                            {item?.collection?.name || 'CryptoGuysNFT'}
                                         </a>
                                         <span
                                             className="inline-flex h-6 w-6 items-center justify-center rounded-full border-2 border-white bg-green dark:border-jacarta-600"
@@ -138,36 +146,41 @@ const PageViewItem = () => {
 
                                 {/* Name */}
                                 <h1 className="mb-4 font-display text-4xl font-semibold text-jacarta-700 dark:text-white">
-                                    {item?.name}
+                                    {item?.name || 'TSARÉVNA'}
                                 </h1>
 
                                 {/* Description */}
-                                <p className="mb-10 dark:text-jacarta-300">{item?.description}</p>
+                                <p className="mb-10 dark:text-jacarta-300">
+                                    {item?.description ||
+                                        'Neque aut veniam consectetur magnam libero, natus eius numquam reprehenderit hic at, excepturi repudiandae magni optio odio doloribus? Facilisi lobortisal morbi fringilla urna amet sed ipsum.'}
+                                </p>
 
                                 {/* <!-- Creator / Owner --> */}
                                 <div className="mb-8 flex flex-wrap flex-col">
-                                    {item?.licenseMonetizations?.map((lmItem: any, index: number) => (
-                                        <div key={index} className="mr-8 mb-4 flex">
-                                            <input
-                                                type="checkbox"
-                                                className="mr-2 w-1 h-1 border-jacarta-100 dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white"
-                                                onChange={onCheckBoxLicenseOptionChanged}
-                                                data-value={lmItem.value}
-                                            ></input>
-                                            <div className="flex flex-col justify-center">
-                                                <span className="block text-sm text-jacarta-400 dark:text-white">
-                                                    {lmItem.name}
-                                                </span>
-                                                <a href="user" className="block text-accent">
-                                                    <span className="text-sm font-bold">{lmItem.value} SOL</span>
-                                                </a>
+                                    {(item?.licenseMonetizations || DEFAULT_LICENSE_MONETIZATIONS)?.map(
+                                        (lmItem: any, index: number) => (
+                                            <div key={index} className="mr-8 mb-4 flex">
+                                                <input
+                                                    type="checkbox"
+                                                    className="mr-2 w-1 h-1 border-jacarta-100 dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white"
+                                                    onChange={onCheckBoxLicenseOptionChanged}
+                                                    data-value={lmItem.value}
+                                                ></input>
+                                                <div className="flex flex-col justify-center">
+                                                    <span className="block text-sm text-jacarta-400 dark:text-white">
+                                                        {lmItem.name}
+                                                    </span>
+                                                    <a href="user" className="block text-accent">
+                                                        <span className="text-sm font-bold">{lmItem.value} SOL</span>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                    ))}
+                                        ),
+                                    )}
                                 </div>
 
                                 {/* <!-- Bid --> */}
-                                {!hidePurchaseButton && (
+                                {(!hidePurchaseButton || !item) && (
                                     <div className="rounded-2lg border border-jacarta-100 bg-white p-8 dark:border-jacarta-600 dark:bg-jacarta-700">
                                         <a
                                             href="#"

@@ -1,7 +1,11 @@
 import { MainLayout } from '@modules/app/layouts';
+import { selectLoginData } from '@modules/auth/redux/login/slice';
 import { ReactElement } from 'react';
+import { useSelector } from 'react-redux';
 
 const PageUser = () => {
+    const loginData = useSelector(selectLoginData)
+    
     return (
         <main className="pt-[5.5rem] lg:pt-24">
             {/* <!-- Banner --> */}
@@ -16,7 +20,7 @@ const PageUser = () => {
                 <div className="absolute left-1/2 top-0 z-10 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center">
                     <figure className="relative">
                         <img
-                            src="img/user/user_avatar.gif"
+                            src={loginData.avatarUrl || "img/user/user_avatar.gif"}
                             alt="collection avatar"
                             className="rounded-xl border-[5px] border-white dark:border-jacarta-600"
                         />
@@ -41,7 +45,7 @@ const PageUser = () => {
                 <div className="container">
                     <div className="text-center">
                         <h2 className="mb-2 font-display text-4xl font-medium text-jacarta-700 dark:text-white">
-                            Sad Ducks
+                            { loginData.name || 'Unnamed'}
                         </h2>
                         <div className="mb-8 inline-flex items-center justify-center rounded-full border border-jacarta-100 bg-white py-1.5 px-4 dark:border-jacarta-600 dark:bg-jacarta-700">
                             <span data-tippy-content="ETH">
@@ -68,13 +72,12 @@ const PageUser = () => {
                                 className="js-copy-clipboard max-w-[10rem] select-none overflow-hidden text-ellipsis whitespace-nowrap dark:text-jacarta-200"
                                 data-tippy-content="Copy"
                             >
-                                <span>0x7a86c0b064171007716bbd6af96676935799a63e</span>
+                                <span>{loginData.walletAddress}</span>
                             </button>
                         </div>
 
                         <p className="mx-auto mb-2 max-w-xl text-lg dark:text-jacarta-300">
-                            I make art with the simple goal of giving you something pleasing to look at for a few
-                            seconds.
+                            { loginData.bio || 'I make art with the simple goal of giving you something pleasing to look at for a few seconds.'}
                         </p>
                         <span className="text-jacarta-400">Joined December 2019</span>
 

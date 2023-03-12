@@ -27,7 +27,7 @@ export const Recommend = () => {
                                     <article>
                                         <div className="block rounded-2.5xl border border-jacarta-900 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-900">
                                             <figure>
-                                                <a href="item">
+                                                <a href="view-item">
                                                     <img
                                                         src={item.image}
                                                         alt="item 1"
@@ -63,14 +63,15 @@ export const Recommend = () => {
                                                 {/* <span className="text-jacarta-700 dark:text-jacarta-100">1.3 ETH</span> */}
                                             </div>
                                             <div className="mt-8 flex items-center justify-between">
-                                                <button
-                                                    type="button"
+                                                <a
+                                                    href="view-item"
+                                                    // type="button"
                                                     className="font-display text-sm font-semibold text-accent"
-                                                    data-bs-toggle="modal"
-                                                    data-bs-target="#placeBidModal"
+                                                    // data-bs-toggle="modal"
+                                                    // data-bs-target="#placeBidModal"
                                                 >
                                                     Get it now
-                                                </button>
+                                                </a>
                                                 <div className="flex items-center space-x-1">
                                                     <span
                                                         className="js-likes relative cursor-pointer before:absolute before:h-4 before:w-4 before:bg-[url('../img/heart-fill.svg')] before:bg-cover before:bg-center before:bg-no-repeat before:opacity-0"

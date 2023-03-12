@@ -6,18 +6,28 @@ import { Database } from '@modules/app/database';
 import { useRouter } from 'next/router';
 import { ModalPurchase } from './modal-purchase';
 
-const DEFAULT_LICENSE_MONETIZATIONS = [
-    {
-        id: 'streamingPerCopy',
-        name: 'Streaming (per copy)',
-        value: '12.3',
+const DEFAULT_ITEM = {
+    coverArtImage:
+        'https://cdn5.beatstars.com/eyJidWNrZXQiOiJwcm9kLWJ0cy1wbGF5bGlzdCIsImtleSI6InByb2QvcGxheWxpc3QvYXJ0d29yay9QTDM3NzA2OTYvYXJ0d29yay5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsiZml0IjoiZmlsbCIsIndpZHRoIjo0MDAsImhlaWdodCI6NDAwfX19?t=1678473519655',
+    name: 'Worldwide Women',
+    description:
+        'Neque aut veniam consectetur magnam libero, natus eius numquam reprehenderit hic at, excepturi repudiandae magni optio odio doloribus? Facilisi lobortisal morbi fringilla urna amet sed ipsum.',
+    collection: {
+        name: 'Beatstar',
     },
-    {
-        id: 'synchronizationPerProduct',
-        name: 'Synchronization (per product)',
-        value: '20',
-    },
-];
+    licenseMonetizations: [
+        {
+            id: 'streamingPerCopy',
+            name: 'Streaming (per copy)',
+            value: '1',
+        },
+        {
+            id: 'synchronizationPerProduct',
+            name: 'Synchronization (per product)',
+            value: '2',
+        },
+    ],
+};
 
 const PageViewItem = () => {
     const [item, setItem] = React.useState<any>(null);
@@ -62,11 +72,13 @@ const PageViewItem = () => {
                             {/* <!-- Image --> */}
                             <figure className="mb-8 md:w-2/5 md:flex-shrink-0 md:flex-grow-0 md:basis-auto lg:w-1/2">
                                 <img
-                                    src={item?.coverArtImage || 'img/products/item_single_large.jpg'}
+                                    src={item?.coverArtImage || DEFAULT_ITEM.coverArtImage}
                                     alt="item"
                                     className="cursor-pointer rounded-2.5xl"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#imageModal"
+                                    // data-bs-toggle="modal"
+                                    // data-bs-target="#imageModal"
+                                    width={'100%'}
+                                    height={'100%'}
                                 />
 
                                 {/* <!-- Modal --> */}
@@ -102,7 +114,7 @@ const PageViewItem = () => {
                                     {/* <!-- Collection --> */}
                                     <div className="flex items-center">
                                         <a href="collection" className="mr-2 text-sm font-bold text-accent">
-                                            {item?.collection?.name || 'CryptoGuysNFT'}
+                                            {item?.collection?.name || DEFAULT_ITEM.collection.name}
                                         </a>
                                         <span
                                             className="inline-flex h-6 w-6 items-center justify-center rounded-full border-2 border-white bg-green dark:border-jacarta-600"
@@ -146,7 +158,7 @@ const PageViewItem = () => {
 
                                 {/* Name */}
                                 <h1 className="mb-4 font-display text-4xl font-semibold text-jacarta-700 dark:text-white">
-                                    {item?.name || 'TSARÉVNA'}
+                                    {item?.name || DEFAULT_ITEM.name}
                                 </h1>
 
                                 {/* Description */}
@@ -157,7 +169,7 @@ const PageViewItem = () => {
 
                                 {/* <!-- Creator / Owner --> */}
                                 <div className="mb-8 flex flex-wrap flex-col">
-                                    {(item?.licenseMonetizations || DEFAULT_LICENSE_MONETIZATIONS)?.map(
+                                    {(item?.licenseMonetizations || DEFAULT_ITEM.licenseMonetizations)?.map(
                                         (lmItem: any, index: number) => (
                                             <div key={index} className="mr-8 mb-4 flex">
                                                 <input

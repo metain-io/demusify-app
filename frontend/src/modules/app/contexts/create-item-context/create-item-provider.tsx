@@ -10,6 +10,7 @@ import {
 } from './index';
 import { v4 as Uuid } from 'uuid';
 import * as Yup from 'yup';
+import { database } from '@modules/app/database';
 
 export type CreateItemProviderProps = PropsWithChildren;
 
@@ -22,18 +23,6 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
         {
             id: 'default',
             name: 'Default',
-        },
-        {
-            id: Uuid(),
-            name: 'Collection 1',
-        },
-        {
-            id: Uuid(),
-            name: 'Collection 2',
-        },
-        {
-            id: Uuid(),
-            name: 'Collection 3',
         },
     ]);
 
@@ -69,6 +58,18 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
             properties: [] as Array<{ id: string; name: string; value: string }>,
             levels: [] as Array<{ id: string; name: string; value: string; total: string }>,
             stats: [] as Array<{ id: string; name: string; value: string; total: string }>,
+            licenseMonetizations: [
+                {
+                    id: 'streamingPerCopy',
+                    name: 'Streaming (per copy)',
+                    value: '',
+                },
+                {
+                    id: 'synchronizationPerProduct',
+                    name: 'Synchronization (per product)',
+                    value: '',
+                },
+            ],
         },
         validationSchema: Yup.object({
             coverArtImage: Yup.string().required('Cover art image is required'),
@@ -91,13 +92,15 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
         setTimeout(() => {
             const r = Math.random() * 10;
 
-            if (r < 3) {
+            if (r < 0) {
                 setState({
                     status: CreateItemStatus.SUBMIT_FAILED,
                     error: 'Something went wrong!!',
                 });
                 return;
             }
+
+            database.addItem({ id: id, createdAt: Date.now(), updatedAt: Date.now(), ...value });
 
             setState({
                 status: CreateItemStatus.SUBMIT_SUCCEEDED,
@@ -122,7 +125,7 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
         // TODO: Replace with real api call
         setTimeout(async () => {
             const r = Math.random() * 10;
-            if (r < 3) {
+            if (r < 0) {
                 setUploadCoverArtImageState(() => ({
                     status: CreateItemUploadAssetStatus.UPLOAD_FAILED,
                     error: 'Something went wrong!',
@@ -155,7 +158,7 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
         // TODO: Replace with real api call
         setTimeout(async () => {
             const r = Math.random() * 10;
-            if (r < 3) {
+            if (r < 0) {
                 setUploadMusicState(() => ({
                     status: CreateItemUploadAssetStatus.UPLOAD_FAILED,
                     error: 'Something went wrong!',
@@ -298,6 +301,17 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
         form.setFieldValue('stats', stats);
     };
 
+    const handleUpdateLicenseMonetizationValue = async (id: string, value: string) => {
+        const licenseMonetizations = form.values.licenseMonetizations.map((item) => {
+            if (item.id == id) {
+                item.value = value;
+            }
+
+            return item;
+        });
+        form.setFieldValue('licenseMonetizations', licenseMonetizations);
+    };
+
     React.useEffect(() => {
         // TODO: Check if need any initial process
         const timeout = setTimeout(() => {
@@ -342,6 +356,8 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
                 handleUpdateStatValue,
                 handleUpdateStatTotal,
                 handleDeleteStat,
+
+                handleUpdateLicenseMonetizationValue,
             }}
         >
             {children}

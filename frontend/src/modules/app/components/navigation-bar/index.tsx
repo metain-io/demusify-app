@@ -213,7 +213,7 @@ const NavigationBar = (props: any) => {
                 {/* <!-- Mobile Logo / Menu Close --> */}
                 <div className="t-0 fixed left-0 z-10 flex w-full items-center justify-between bg-white p-6 dark:bg-jacarta-800 lg:hidden">
                     {/* <!-- Mobile Logo --> */}
-                    <a href="index" className="shrink-0">
+                    <a href="/" className="shrink-0">
                         <img src="img/logo.png" className="max-h-7 dark:hidden" alt="Xhibiter | NFT Marketplace" />
                         <img
                             src="img/logo-white.svg"

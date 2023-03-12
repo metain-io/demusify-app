@@ -10,7 +10,7 @@ export const ModalPurchase = (props: ModalPurchaseProps) => {
     const router = useRouter();
 
     const onButtonConfirmClicked: MouseEventHandler<HTMLButtonElement> = (e) => {
-        router.replace('/profile');
+        router.push('/user');
     };
 
     return (

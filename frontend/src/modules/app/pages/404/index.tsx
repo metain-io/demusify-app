@@ -18,7 +18,7 @@ const Page404 = () => {
                             Oops! The page you are looking for does not exist. It might have been moved or deleted.
                         </p>
                         <a
-                            href="index"
+                            href="/"
                             className="inline-block rounded-full bg-accent py-3 px-8 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark"
                         >
                             Navigate Back Home

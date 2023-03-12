@@ -230,7 +230,7 @@ const NavigationBar3 = (props: any) => {
     return (
         <div className="flex items-center px-6 py-6 xl:px-24" style={{paddingBottom: "0.25rem", paddingTop: "0.25rem"}}>
             {/* <!-- Logo --> */}
-            <a href="index" className="shrink-0">
+            <a href="/" className="shrink-0">
                 <img
                     src="img/logo-white.svg"
                     style={{ height: '5rem' }}
@@ -264,7 +264,7 @@ const NavigationBar3 = (props: any) => {
                 {/* <!-- Mobile Logo / Menu Close --> */}
                 <div className="t-0 fixed left-0 z-10 flex w-full items-center justify-between bg-white p-6 dark:bg-jacarta-800 lg:hidden">
                     {/* <!-- Mobile Logo --> */}
-                    <a href="index" className="shrink-0">
+                    <a href="/" className="shrink-0">
                         <img src="img/logo.png" className="dark:hidden" alt="Xhibiter | NFT Marketplace" />
                         <img
                             src="img/logo-white.svg"

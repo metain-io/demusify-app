@@ -11,7 +11,7 @@ const PageLogin = () => {
                     <div className="relative text-center lg:w-1/2">
                         <img src="img/login.jpg" alt="login" className="absolute h-full w-full object-cover" />
                         {/* <!-- Logo --> */}
-                        <a href="index" className="relative inline-block py-36">
+                        <a href="/" className="relative inline-block py-36">
                             <img
                                 src="img/logo_white.png"
                                 className="inline-block max-h-7"

@@ -1,3 +1,5 @@
+import styles from "./heroSlider.module.css";
+
 export const HeroSlider = () => {
     return (
         <section className="relative h-screen">
@@ -5,13 +7,14 @@ export const HeroSlider = () => {
                 <div className="container relative z-10 h-full pt-40">
                     <h1
                         className="font-display font-semibold text-white text-5xl"
-                        style={{ textTransform: 'uppercase', maxWidth: '42rem', fontSize: '72px' }}
                     >
-                        The<br/>
-                        World's #1<br/>
-                        music nft platform<br/>
-                        licensing &amp; monetization<br/>
-                        <span style={{fontSize: '36px'}}>for independent creators</span>
+                        <span className={styles.bigTitle}>
+                            The<br/>
+                            World's #1<br/>
+                            music nft platform<br/>
+                            licensing &amp; monetization<br/>
+                        </span>
+                        <span className={styles.smallTitle}>for independent creators</span>
                     </h1>
 
                     <div

@@ -12,20 +12,26 @@ const DEFAULT_ITEM = {
         'https://cdn5.beatstars.com/eyJidWNrZXQiOiJwcm9kLWJ0cy1wbGF5bGlzdCIsImtleSI6InByb2QvcGxheWxpc3QvYXJ0d29yay9QTDM3NzA2OTYvYXJ0d29yay5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsiZml0IjoiZmlsbCIsIndpZHRoIjo0MDAsImhlaWdodCI6NDAwfX19?t=1678473519655',
     name: 'Worldwide Women',
     description:
-        'Neque aut veniam consectetur magnam libero, natus eius numquam reprehenderit hic at, excepturi repudiandae magni optio odio doloribus? Facilisi lobortisal morbi fringilla urna amet sed ipsum.',
+        'New Yung Bleu x YOU Type Beat. This could be the beat to your biggest song yet. Dont miss out! connect with me @wnzallday',
     collection: {
         name: 'Beatstar',
     },
     licenseMonetizations: [
         {
             id: 'streamingPerCopy',
-            name: 'Streaming (per copy)',
-            value: '1',
+            name: 'Lite',
+            value: 1,
+            copiesLimit: 2500,
+            streamsLimit: 300000,
+            radioStations: 0
         },
         {
             id: 'synchronizationPerProduct',
-            name: 'Synchronization (per product)',
-            value: '2',
+            name: 'Advanced',
+            value: 2,
+            copiesLimit: 5000,
+            streamsLimit: 750000,
+            radioStations: 2
         },
     ],
     properties: [
@@ -52,18 +58,16 @@ const DEFAULT_ITEM = {
 
 const PageViewItem = () => {
     const [item, setItem] = React.useState<any>(null);
-    const [totalPrice, setTotalPrice] = React.useState(0);
+    const [totalPrice, setTotalPrice] = React.useState(1);
+    const [selectedLicense, setSelectedLicense] = React.useState(DEFAULT_ITEM.licenseMonetizations[0]);
     const [hidePurchaseButton, setHidePurchaseButton] = React.useState(true);
     const router = useRouter();
 
-    const onCheckBoxLicenseOptionChanged: ChangeEventHandler<HTMLInputElement> = (e) => {
-        const value = e.currentTarget.getAttribute('data-value') || 0;
-        const checked = e.currentTarget.checked;
-
-        if (checked) {
-            setTotalPrice(() => totalPrice + +value);
-        } else {
-            setTotalPrice(() => totalPrice - +value);
+    const onCheckBoxLicenseOptionChanged: any = (item: any) => {
+        return () => {
+            const value = item.value;
+            setTotalPrice(parseInt(value));
+            setSelectedLicense(item);
         }
     };
 
@@ -185,31 +189,68 @@ const PageViewItem = () => {
                                 {/* Description */}
                                 <p className="mb-10 dark:text-jacarta-300">
                                     {item?.description ||
-                                        'Neque aut veniam consectetur magnam libero, natus eius numquam reprehenderit hic at, excepturi repudiandae magni optio odio doloribus? Facilisi lobortisal morbi fringilla urna amet sed ipsum.'}
+                                        'New Yung Bleu x YOU Type Beat. This could be the beat to your biggest song yet. Dont miss out! connect with me @wnzallday '}
                                 </p>
 
                                 {/* <!-- Creator / Owner --> */}
-                                <div className="mb-8 flex flex-wrap flex-col rounded-2lg border border-jacarta-100 bg-white p-8 dark:border-jacarta-600 dark:bg-jacarta-700">
+                                <div className="mb-8 flex flex-wrap flex-col rounded-2lg border border-jacarta-100 bg-white p-8 dark:border-jacarta-600 dark:bg-jacarta-700" style={{paddingBottom: 0}}>
                                     {(item?.licenseMonetizations || DEFAULT_ITEM.licenseMonetizations)?.map(
                                         (lmItem: any, index: number) => (
                                             <div key={index} className="mr-8 mb-4 flex">
                                                 <input
-                                                    type="checkbox"
+                                                    id={'license-' + index}
+                                                    name="license"
+                                                    type="radio"
                                                     className="mr-2 w-1 h-1 border-jacarta-100 dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white"
-                                                    onChange={onCheckBoxLicenseOptionChanged}
+                                                    onChange={onCheckBoxLicenseOptionChanged(lmItem)}
                                                     data-value={lmItem.value}
+                                                    checked={totalPrice === lmItem.value}
                                                 ></input>
                                                 <div className="flex flex-col justify-center">
-                                                    <span className="block text-sm text-jacarta-400 dark:text-white">
+                                                    <label className="block text-sm text-jacarta-400 dark:text-white" htmlFor={'license-' + index}>
                                                         {lmItem.name}
-                                                    </span>
-                                                    <a href="user" className="block text-accent">
+                                                    </label>
+                                                    <a href="#" className="block text-accent">
                                                         <span className="text-sm font-bold">{lmItem.value} SOL</span>
                                                     </a>
                                                 </div>
                                             </div>
                                         ),
                                     )}
+                                </div>
+
+                                <div className='mb-7'>
+                                    <ul>
+                                        <li className='flex mb-3'>
+                                            <img className='max-h-7 mr-2' src={'img/icons/recording.svg'} />
+                                            <span>USED FOR MUSIC RECORDING</span>
+                                        </li>
+
+                                        <li className='flex mb-3'>
+                                            <img className='max-h-7 mr-2' src={'img/icons/copy.svg'} />
+                                            <span>DISTRIBUTE UP TO {selectedLicense.copiesLimit} COPIES</span>
+                                        </li>
+
+                                        <li className='flex mb-3'>
+                                            <img className='max-h-7 mr-2' src={'img/icons/broadcast.svg'} />
+                                            <span>{selectedLicense.streamsLimit} ONLINE AUDIO STREAMS</span>
+                                        </li>
+
+                                        <li className='flex mb-3'>
+                                            <img className='max-h-7 mr-2' src={'img/icons/video.svg'} />
+                                            <span>1 MUSIC VIDEO</span>
+                                        </li>
+
+                                        <li className='flex mb-3'>
+                                            <img className='max-h-7 mr-2' src={'img/icons/performance.svg'} />
+                                            <span>FOR PROFIT LIVE PERFORMANCES</span>
+                                        </li>
+
+                                        {!!selectedLicense.radioStations && (<li className='flex mb-3'>
+                                            <img className='max-h-7 mr-2' src={'img/icons/radio.svg'} />
+                                            <span>RADIO BROADCASTING RIGHTS ({selectedLicense.radioStations} STATIONS)</span>
+                                        </li>)}
+                                    </ul>
                                 </div>
 
                                 {/* <!-- Bid --> */}

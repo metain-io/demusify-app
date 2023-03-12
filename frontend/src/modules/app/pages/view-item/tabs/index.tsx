@@ -37,7 +37,7 @@ export const Tabs = (props: TabsProps) => {
                                 <path fill="none" d="M0 0h24v24H0z" />
                                 <path d="M6.17 18a3.001 3.001 0 0 1 5.66 0H22v2H11.83a3.001 3.001 0 0 1-5.66 0H2v-2h4.17zm6-7a3.001 3.001 0 0 1 5.66 0H22v2h-4.17a3.001 3.001 0 0 1-5.66 0H2v-2h10.17zm-6-7a3.001 3.001 0 0 1 5.66 0H22v2H11.83a3.001 3.001 0 0 1-5.66 0H2V4h4.17z" />
                             </svg>
-                            <span className="font-display text-base font-medium">Properties</span>
+                            <span className="font-display text-base font-medium">Details</span>
                         </button>
                     </li>
 
@@ -63,7 +63,7 @@ export const Tabs = (props: TabsProps) => {
                                 <path fill="none" d="M0 0h24v24H0z" />
                                 <path d="M20 22H4a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1zm-1-2V4H5v16h14zM7 6h4v4H7V6zm0 6h10v2H7v-2zm0 4h10v2H7v-2zm6-9h4v2h-4V7z" />
                             </svg>
-                            <span className="font-display text-base font-medium">Details</span>
+                            <span className="font-display text-base font-medium">Properties</span>
                         </button>
                     </li>
 

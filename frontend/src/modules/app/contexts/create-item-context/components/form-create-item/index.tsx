@@ -317,7 +317,7 @@ const RightSide = () => {
                 </div>
 
                 {/* <!-- Supply --> */}
-                <div className="mb-6">
+                {/* <div className="mb-6">
                     <label htmlFor="item-supply" className="mb-2 block font-display text-jacarta-700 dark:text-white">
                         Supply
                     </label>
@@ -354,7 +354,7 @@ const RightSide = () => {
                     />
 
                     {form.errors.supply && <p className="mt-1 text-2xs text-red">{form.errors.supply}</p>}
-                </div>
+                </div> */}
 
                 {/* <!-- Properties --> */}
                 <div className="relative border-b border-jacarta-100 py-6 dark:border-jacarta-600">
@@ -441,7 +441,7 @@ const RightSide = () => {
                 </div>
 
                 {/* <!-- Stats --> */}
-                <div className="mb-6 relative border-b border-jacarta-100 py-6 dark:border-jacarta-600">
+                <div className="relative border-b border-jacarta-100 py-6 dark:border-jacarta-600">
                     <div className="flex items-center justify-between">
                         <div className="flex">
                             <svg
@@ -466,6 +466,49 @@ const RightSide = () => {
                             id="item-stats"
                             data-bs-toggle="modal"
                             data-bs-target="#statsModal"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                width="24"
+                                height="24"
+                                className="fill-accent group-hover:fill-white"
+                            >
+                                <path fill="none" d="M0 0h24v24H0z" />
+                                <path d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                {/* <!-- Licences & Monetization --> */}
+                <div className="mb-6 relative border-b border-jacarta-100 py-6 dark:border-jacarta-600">
+                    <div className="flex items-center justify-between">
+                        <div className="flex">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                width="24"
+                                height="24"
+                                className="mr-2 mt-px h-4 w-4 shrink-0 fill-jacarta-700 dark:fill-white"
+                            >
+                                <path fill="none" d="M0 0h24v24H0z" />
+                                <path d="M2 13h6v8H2v-8zM9 3h6v18H9V3zm7 5h6v13h-6V8z" />
+                            </svg>
+
+                            <div>
+                                <label className="block font-display text-jacarta-700 dark:text-white">
+                                    Licences & Monetization
+                                </label>
+                                <p className="dark:text-jacarta-300">Numerical traits that just show as numbers.</p>
+                            </div>
+                        </div>
+                        <button
+                            className="group flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border border-accent bg-white hover:border-transparent hover:bg-accent dark:bg-jacarta-700"
+                            type="button"
+                            id="item-license-monetization"
+                            data-bs-toggle="modal"
+                            data-bs-target="#licencesMonetizationModal"
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"

@@ -56,6 +56,11 @@ export type CreateItemFormState = FormikProps<{
         value: string;
         total: string;
     }>;
+    licenseMonetizations: Array<{
+        id: string;
+        name: string;
+        value: string;
+    }>;
 }>;
 
 export type CreateItemUploadAssetState = {
@@ -91,6 +96,8 @@ export type CreateItemContextValue = {
     handleUpdateStatValue: (id: string, value: string) => Promise<void>;
     handleUpdateStatTotal: (id: string, total: string) => Promise<void>;
     handleDeleteStat: (id: string) => Promise<void>;
+
+    handleUpdateLicenseMonetizationValue: (id: string, value: string) => Promise<void>;
 };
 
 export const CreateItemContext = React.createContext<CreateItemContextValue>({} as CreateItemContextValue);

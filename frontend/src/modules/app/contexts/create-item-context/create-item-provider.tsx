@@ -69,6 +69,18 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
             properties: [] as Array<{ id: string; name: string; value: string }>,
             levels: [] as Array<{ id: string; name: string; value: string; total: string }>,
             stats: [] as Array<{ id: string; name: string; value: string; total: string }>,
+            licenseMonetizations: [
+                {
+                    id: 'streamingPerCopy',
+                    name: 'Streaming (per copy)',
+                    value: '',
+                },
+                {
+                    id: 'synchronizationPerProduct',
+                    name: 'Synchronization (per product)',
+                    value: '',
+                },
+            ],
         },
         validationSchema: Yup.object({
             coverArtImage: Yup.string().required('Cover art image is required'),
@@ -298,6 +310,17 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
         form.setFieldValue('stats', stats);
     };
 
+    const handleUpdateLicenseMonetizationValue = async (id: string, value: string) => {
+        const licenseMonetization = form.values.licenseMonetizations.map((item) => {
+            if (item.id == id) {
+                item.value = value;
+            }
+
+            return item;
+        });
+        form.setFieldValue('licenseMonetization', licenseMonetization);
+    };
+
     React.useEffect(() => {
         // TODO: Check if need any initial process
         const timeout = setTimeout(() => {
@@ -342,6 +365,8 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
                 handleUpdateStatValue,
                 handleUpdateStatTotal,
                 handleDeleteStat,
+
+                handleUpdateLicenseMonetizationValue,
             }}
         >
             {children}

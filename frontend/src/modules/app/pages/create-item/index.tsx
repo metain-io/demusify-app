@@ -4,6 +4,7 @@ import {
     ModalLevels,
     ModalStats,
 } from '@modules/app/contexts/create-item-context/components';
+import { ModalLicenseMonetization } from '@modules/app/contexts/create-item-context/components/modal-license-monetization';
 import { CreateItemProvider } from '@modules/app/contexts/create-item-context/create-item-provider';
 import { MainLayout } from '@modules/app/layouts';
 import { ReactElement } from 'react';
@@ -38,6 +39,9 @@ const PageCreateItem = () => {
 
                 {/* <!-- Stats Modal --> */}
                 <ModalStats />
+
+                {/* <!-- License & Monetization Modal --> */}
+                <ModalLicenseMonetization />
             </CreateItemProvider>
         </>
     );

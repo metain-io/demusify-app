@@ -10,7 +10,7 @@ const MainLayout3 = (props: MainLayout3Props) => {
     return (
         <div className="overflow-x-hidden font-body text-jacarta-500">
             <header className="js-page-header page-header--transparent fixed top-0 z-20 w-full bg-white/[.15] backdrop-blur transition-colors"
-            style={{backgroundColor: "rgba(255,213,85,128)"}}>
+            style={{backgroundColor: "rgba(255,213,0,0.5) !important"}}>
                 <NavigationBar3 />
             </header>
 

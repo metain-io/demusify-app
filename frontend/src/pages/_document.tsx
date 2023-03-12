@@ -11,10 +11,12 @@ export default function Document() {
 
                 <script src="./js/darkMode.bundle.js" defer></script>
 
-                <link rel="shortcut icon" href="img/favicon.ico" />
-                <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
-                <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png" />
-                <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png" />
+                <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+                <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+                <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+                <link rel="manifest" href="/site.webmanifest" />
+                <meta name="msapplication-TileColor" content="#da532c" />
+                <meta name="theme-color" content="#ffffff" />
             </Head>
 
             <body>

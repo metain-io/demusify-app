@@ -1,5 +1,6 @@
 import logger from '@libs/logger';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import WalletService from '@modules/crypto-wallet/services/crypto-wallet-service';
 
 export enum LoginStatus {
     Undefined,
@@ -23,6 +24,8 @@ type LoginState = {
     instagramLink: string | null;
     yourSiteLink: string | null;
     avatarUrl: string | null;
+
+    balances: any
 };
 
 const initialState: LoginState = {
@@ -37,6 +40,8 @@ const initialState: LoginState = {
     instagramLink: null,
     yourSiteLink: null,
     avatarUrl: null,
+
+    balances: {}
 };
 
 export const loginSlice = createSlice({
@@ -109,6 +114,8 @@ export const loginSlice = createSlice({
             state.instagramLink = action.payload?.instagramLink
             state.yourSiteLink = action.payload?.yourSiteLink
             state.avatarUrl = action.payload?.avatarUrl
+
+            state.balances = action.payload.balances
         }
     },
     extraReducers: (builder) => {},
@@ -134,6 +141,8 @@ export const selectLoginData = (state: any) => {
         twitterLink: state.login.twitterLink,
         instagramLink: state.login.instagramLink,
         yourSiteLink: state.login.yourSiteLink,
-        avatarUrl: state.login.avatarUrl
+        avatarUrl: state.login.avatarUrl,
+
+        balances: state.login.balances
     }
 }

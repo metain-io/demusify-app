@@ -97,11 +97,11 @@ const NavigationBar = (props: any) => {
                                 d="M333.1,120.1c-2.4-2.4-5.7-3.8-9.2-3.8H6.5c-5.8,0-8.7,7-4.6,11.1l62.7,62.7c2.4,2.4,5.7,3.8,9.2,3.8h317.4  c5.8,0,8.7-7,4.6-11.1L333.1,120.1z"
                             />
                         </svg>
-                        <span className="text-lg font-bold text-green">0 SOL</span>
+                        <span className="text-lg font-bold text-green">{loginData?.balances?.['SOL'] || '0'} SOL</span>
                     </div>
                 </div>
                 <a
-                    href="edit-profile"
+                    href="user"
                     className="flex items-center space-x-2 rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
                 >
                     <svg
@@ -116,7 +116,7 @@ const NavigationBar = (props: any) => {
                     </svg>
                     <span className="mt-1 font-display text-sm text-jacarta-700 dark:text-white">My Profile</span>
                 </a>
-                {/* <a
+                <a
                     href="edit-profile"
                     className="flex items-center space-x-2 rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
                 >
@@ -131,7 +131,7 @@ const NavigationBar = (props: any) => {
                         <path d="M9.954 2.21a9.99 9.99 0 0 1 4.091-.002A3.993 3.993 0 0 0 16 5.07a3.993 3.993 0 0 0 3.457.261A9.99 9.99 0 0 1 21.5 8.876 3.993 3.993 0 0 0 20 12c0 1.264.586 2.391 1.502 3.124a10.043 10.043 0 0 1-2.046 3.543 3.993 3.993 0 0 0-3.456.261 3.993 3.993 0 0 0-1.954 2.86 9.99 9.99 0 0 1-4.091.004A3.993 3.993 0 0 0 8 18.927a3.993 3.993 0 0 0-3.457-.26A9.99 9.99 0 0 1 2.5 15.121 3.993 3.993 0 0 0 4 11.999a3.993 3.993 0 0 0-1.502-3.124 10.043 10.043 0 0 1 2.046-3.543A3.993 3.993 0 0 0 8 5.071a3.993 3.993 0 0 0 1.954-2.86zM12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
                     </svg>
                     <span className="mt-1 font-display text-sm text-jacarta-700 dark:text-white">Edit Profile</span>
-                </a> */}
+                </a>
                 <span
                     className="flex items-center space-x-2 rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
                     onClick={handleOnLoginClicked}
@@ -173,7 +173,7 @@ const NavigationBar = (props: any) => {
                         <path fill="none" d="M0 0h24v24H0z"></path>
                         <path d="M11 14.062V20h2v-5.938c3.946.492 7 3.858 7 7.938H4a8.001 8.001 0 0 1 7-7.938zM12 13c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6z"></path>
                     </svg>
-                    <span className="mt-1 font-display text-sm text-jacarta-700 dark:text-white">Login</span>
+                    <span className="mt-1 font-display text-sm text-jacarta-700 dark:text-white">Connect wallet</span>
                 </span>
             </div>
         );
@@ -863,7 +863,7 @@ const NavigationBar = (props: any) => {
                     </div>
 
                     {/* <!-- Dark Mode --> */}
-                    {/* <a
+                    <a
                         href="#"
                         className="js-dark-mode-trigger group ml-2 flex h-10 w-10 items-center justify-center rounded-full border border-jacarta-100 bg-white transition-colors hover:border-transparent hover:bg-accent focus:border-transparent focus:bg-accent dark:border-transparent dark:bg-white/[.15] dark:hover:bg-accent"
                     >
@@ -887,7 +887,7 @@ const NavigationBar = (props: any) => {
                             <path fill="none" d="M0 0h24v24H0z" />
                             <path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z" />
                         </svg>
-                    </a> */}
+                    </a>
                 </div>
             </div>
 

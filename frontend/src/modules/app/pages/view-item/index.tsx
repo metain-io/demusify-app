@@ -14,7 +14,7 @@ const DEFAULT_ITEM = {
     description:
         'New Yung Bleu x YOU Type Beat. This could be the beat to your biggest song yet. Dont miss out! connect with me @wnzallday',
     collection: {
-        name: 'Beatstar',
+        name: 'Yung Blue',
     },
     licenseMonetizations: [
         {

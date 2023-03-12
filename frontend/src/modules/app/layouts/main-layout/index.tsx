@@ -33,7 +33,8 @@ const MainLayout = (props: MainLayoutProps) => {
 
     return (
         <div className="overflow-x-hidden font-body text-jacarta-500 dark:bg-jacarta-900">
-            <header className="js-page-header fixed top-0 z-20 w-full backdrop-blur transition-colors">
+            <header className="js-page-header fixed top-0 z-20 w-full backdrop-blur transition-colors"
+            style={{backgroundColor: "rgba(255,213,0,0.5) !important"}}>
                 <NavigationBar3 handleOnLoginClicked={handleOnLoginClicked} loginData={loginData} />
             </header>
 

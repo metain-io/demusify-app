@@ -35,8 +35,7 @@ export const ModalLicenseMonetization = () => {
                     {/* <!-- Body --> */}
                     <div className="modal-body p-6">
                         <p className="mb-8 dark:text-jacarta-300">
-                            Levels show up underneath your item, are clickable, and can be filtered in your
-                            collection&apos;s sidebar.
+                            Set the right price of each license
                         </p>
 
                         <div className="relative flex items-center">
@@ -54,12 +53,6 @@ export const ModalLicenseMonetization = () => {
                                 </label>
                             </div>
                         </div>
-
-                        {form.values.licenseMonetizations.length == 0 && (
-                            <div className="relative flex items-center justify-center">
-                                <p>No Levels</p>
-                            </div>
-                        )}
 
                         {form.values.licenseMonetizations.map((item) => (
                             <div key={item.id} className="relative my-3 flex items-center">
@@ -87,6 +80,12 @@ export const ModalLicenseMonetization = () => {
                                 </div>
                             </div>
                         ))}
+
+                        <button
+                            className="mt-2 rounded-full border-2 border-accent py-2 px-8 text-center text-sm font-semibold text-accent transition-all hover:bg-accent hover:text-white"
+                        >
+                            Add More
+                        </button>
                     </div>
                 </div>
             </div>

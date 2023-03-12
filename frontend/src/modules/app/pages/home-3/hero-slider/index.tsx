@@ -41,7 +41,7 @@ export const HeroSlider = () => {
                 </div>
 
                 <video className="absolute inset-0 h-full w-full object-cover" playsInline autoPlay loop>
-                    <source _ngcontent-lua-c431="" src="/video/beatstars-home.mp4" type="video/mp4" />
+                    <source _ngcontent-lua-c431="" src="/video/home.mp4" type="video/mp4" />
                 </video>
             </div>
         </section>

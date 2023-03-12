@@ -154,12 +154,16 @@ function* getUserProfile(username: string): any {
     console.log('============== getUserProfile')
     if (!username) return {};
     let [userProfile, error] = yield call(resolveGenerator, DemusifyApi.walletApp.getCreator(username));
-    console.log('getUserProfile --- userProfile: ', userProfile);
+    const [balances, balanceError] = yield call(resolveGenerator, WalletService.currentWallet!.getBalances())
 
-    if (error) {
-        console.log('getUserProfile --- ERROR: ', error);
+    console.log('getUserProfile --- userProfile: ', userProfile);
+    console.log('getUserProfile --- getBalances: ', balances);
+
+    if (error || balanceError) {
+        console.log('getUserProfile --- ERROR: ', error, balanceError);
         return {};
     }
+    userProfile.balances = balances
 
     yield put(loginActions.updateProfile(userProfile))
     return userProfile

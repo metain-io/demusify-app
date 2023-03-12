@@ -2,7 +2,8 @@ import { useButtonConnectPhantomWallet } from "@modules/auth/components/button-c
 import { LoginStatus, selectLoginData } from "@modules/auth/redux/login/slice";
 import { useSelector } from "react-redux";
 
-const NavigationBar3 = () => {
+const NavigationBar3 = (props: any) => {
+    const {onMenuToggle = () => {}} = props
     const { handleOnClicked } = useButtonConnectPhantomWallet();
     const loginData = useSelector(selectLoginData)
 
@@ -118,7 +119,7 @@ const NavigationBar3 = () => {
                                     d="M333.1,120.1c-2.4-2.4-5.7-3.8-9.2-3.8H6.5c-5.8,0-8.7,7-4.6,11.1l62.7,62.7c2.4,2.4,5.7,3.8,9.2,3.8h317.4  c5.8,0,8.7-7,4.6-11.1L333.1,120.1z"
                                 />
                             </svg>
-                            <span className="text-lg font-bold text-green">0 SOL</span>
+                            <span className="text-lg font-bold text-green">{loginData?.balances?.['SOL'] || '0'} SOL</span>
                         </div>
                     </div>
                     <a
@@ -215,7 +216,7 @@ const NavigationBar3 = () => {
                             <path fill="none" d="M0 0h24v24H0z"></path>
                             <path d="M11 14.062V20h2v-5.938c3.946.492 7 3.858 7 7.938H4a8.001 8.001 0 0 1 7-7.938zM12 13c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6z"></path>
                         </svg>
-                        <span className="mt-1 font-display text-sm text-jacarta-700 dark:text-white">Login</span>
+                        <span className="mt-1 font-display text-sm text-jacarta-700 dark:text-white">Connect wallet</span>
                     </a>
                 </div>
             </div>
@@ -1137,6 +1138,7 @@ const NavigationBar3 = () => {
                         href="#"
                         className="group flex h-10 w-10 items-center justify-center rounded-full border border-transparent bg-white/[.15] transition-colors hover:bg-accent focus:bg-accent"
                         aria-label="wallet"
+                        onClick={onMenuToggle}
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"

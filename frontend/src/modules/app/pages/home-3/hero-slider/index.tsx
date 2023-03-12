@@ -8,7 +8,7 @@ export const HeroSlider = () => {
                         style={{ textTransform: 'uppercase', maxWidth: '30rem', fontSize: '72px' }}
                     >
                         <span>The World's&nbsp;</span>
-                        #1 Marketplace to buy &amp; sell beats
+                        #1 Marketplace to buy &amp; sell music licenses
                     </h1>
 
                     <div

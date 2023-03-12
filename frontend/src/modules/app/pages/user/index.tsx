@@ -8,7 +8,7 @@ const PageUser = () => {
     const loginData = useSelector(selectLoginData)
 
     const [createdItemTransactionList, setCreatedItemTransactionList] = React.useState<any>([])
-    
+
     const licensedData = [
         {
             imgURL: './img/musics/music-1.png',
@@ -472,7 +472,7 @@ const PageUser = () => {
                                 <span className="text-jacarta-500 dark:text-jacarta-300">2/8</span>
                             </div> */}
                             <div className="mt-1 flex items-center justify-between">
-                                <span className="text-jacarta-700 dark:text-jacarta-200">Saled</span>
+                                <span className="text-jacarta-700 dark:text-jacarta-200">Sales</span>
                                 <span className="text-jacarta-700 dark:text-jacarta-200">Revenue</span>
                             </div>
                             <div className="flex items-center justify-between">
@@ -535,7 +535,7 @@ const PageUser = () => {
                         <div className="modal-content">
                             <div className="modal-header">
                                 <h5 className="modal-title" id="buyNowModalLabel">
-                                    History
+                                    Activities
                                 </h5>
                                 <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close">
                                     <svg
@@ -749,7 +749,7 @@ const PageUser = () => {
     React.useEffect(() => {
         setCreatedItemTransactionList(createdData?.[0]?.transactions || [])
     }, [])
-    
+
     return (
         <main className="pt-[5.5rem] lg:pt-24">
             {/* <!-- Banner --> */}
@@ -764,6 +764,7 @@ const PageUser = () => {
                 <div className="absolute left-1/2 top-0 z-10 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center">
                     <figure className="relative">
                         <img
+                            style={{maxHeight: 200}}
                             src={loginData.avatarUrl || 'img/user/user_avatar.png'}
                             alt="collection avatar"
                             className="rounded-xl border-[5px] border-white dark:border-jacarta-600"
@@ -789,7 +790,7 @@ const PageUser = () => {
                 <div className="container">
                     <div className="text-center">
                         <h2 className="mb-2 font-display text-4xl font-medium text-jacarta-700 dark:text-white">
-                            {loginData.name || 'Unnamed'}
+                            {loginData.name || 'ratherruggedman'}
                         </h2>
                         <div className="mb-8 inline-flex items-center justify-center rounded-full border border-jacarta-100 bg-white py-1.5 px-4 dark:border-jacarta-600 dark:bg-jacarta-700">
                             <span data-tippy-content="ETH">
@@ -870,9 +871,9 @@ const PageUser = () => {
 
                         <p className="mx-auto mb-2 max-w-xl text-lg dark:text-jacarta-300">
                             {loginData.bio ||
-                                'I make art with the simple goal of giving you something pleasing to look at for a few seconds.'}
+                                'I make music with the simple goal of giving you something pleasing to feel for a few seconds.'}
                         </p>
-                        <span className="text-jacarta-400">Joined December 2019</span>
+                        <span className="text-jacarta-400">Joined February 2023</span>
 
                         <div className="mt-6 flex items-center justify-center space-x-2.5">
                             <div className="rounded-xl border border-jacarta-100 bg-white hover:bg-jacarta-100 dark:border-jacarta-600 dark:bg-jacarta-700 dark:hover:bg-jacarta-600">

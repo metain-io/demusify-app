@@ -17,7 +17,7 @@ const Home3Page = () => {
                 <Trending />
 
                 {/* Partners */}
-                <div className="bg-light-base dark:bg-jacarta-800">
+                <div className="bg-light-base dark:bg-jacarta-800" style={{background:"#f4b400"}}>
                     <div className="container">
                         <div className="grid grid-cols-2 py-8 sm:grid-cols-5">
                             {/* <a href="#">

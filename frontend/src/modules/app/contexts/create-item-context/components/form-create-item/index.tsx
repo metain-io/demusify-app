@@ -1,3 +1,5 @@
+import { useRouter } from 'next/router';
+import React from 'react';
 import { ChangeEventHandler, MouseEventHandler } from 'react';
 import { CreateItemStatus, CreateItemUploadAssetStatus, useCreateItem } from '../../index';
 
@@ -555,6 +557,15 @@ const RightSide = () => {
 };
 
 export const FormCreateItem = () => {
+    const { id, state } = useCreateItem();
+    const router = useRouter();
+
+    React.useEffect(() => {
+        if (state.status == CreateItemStatus.SUBMIT_SUCCEEDED) {
+            router.replace(`/view-item?itemId=${id}&hidePurchaseButton=true`);
+        }
+    }, [state]);
+
     return (
         <>
             <LeftSide />

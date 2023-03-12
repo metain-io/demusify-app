@@ -7,7 +7,7 @@ export const HeroSlider = () => {
                         className="font-display font-semibold text-white text-5xl"
                         style={{ textTransform: 'uppercase', maxWidth: '30rem', fontSize: '72px' }}
                     >
-                        <span>The World's&nbsp;</span>
+                        <span>The World&apos;s&nbsp;</span>
                         #1 Marketplace to buy &amp; sell music licenses
                     </h1>
 

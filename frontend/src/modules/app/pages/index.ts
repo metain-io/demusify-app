@@ -21,6 +21,7 @@ export * from './collections';
 export * from './create';
 export * from './create-collection';
 export * from './create-item';
+export * from './view-item';
 export * from './edit-profile';
 export * from './help-center';
 export * from './home';

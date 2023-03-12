@@ -13,7 +13,7 @@ const PageUser = () => {
         {
             imgURL: './img/musics/music-1.png',
             name: 'Afraid #1649',
-            license: 'Synchronization',
+            license: 'Streaming | Synchronization',
             liked: '31',
         },
         {
@@ -31,7 +31,7 @@ const PageUser = () => {
         {
             imgURL: './img/musics/music-4.png',
             name: 'Wait #164',
-            license: 'Streaming',
+            license: 'Streaming | Synchronization',
             liked: '21',
         },
         {
@@ -122,6 +122,98 @@ const PageUser = () => {
             totalSale: 2,
             totalRevenue: 24,
             liked: '18',
+            transactions: [
+                {
+                    license: 'Synchronization',
+                    price: 12,
+                    buyer: 'GdvNXo1ZWyvGPYen3cBQYRwwfr3KiALtvwjjLPDKLV31',
+                    date: '10/03/2023',
+                    txID: '4nuPD7tR78cdN5zUUmpgprE5FRdHZhwCPd24jSWTz9jyJ9KoPNje98SnpEPMkhL5xRVDQuTtQG6dcogDCXrCDKZ9'
+                },
+                {
+                    license: 'Synchronization',
+                    price: 12,
+                    buyer: 'Au5YWn1VkrD6YRBDGQs9CbwQqmUihvCK8Pd8DVTYcbd4',
+                    date: '10/03/2023',
+                    txID: '3p9g3iQjtpY4zCKGBeSky3MxL5P8b5Q45ogpkxMvLN2tnsUe8YMLJoTMWmSTgN6Tt6fWQ8m5u3HNcBymjzpAoJQC'
+                }
+            ]
+        },
+        {
+            imgURL: './img/musics/music-10.png',
+            name: 'Timer',
+            totalSale: 3,
+            totalRevenue: 40,
+            liked: '12',
+            transactions: [
+                {
+                    license: 'Synchronization',
+                    price: 12,
+                    buyer: 'GdvNXo1ZWyvGPYen3cBQYRwwfr3KiALtvwjjLPDKLV31',
+                    date: '10/03/2023',
+                    txID: '4nuPD7tR78cdN5zUUmpgprE5FRdHZhwCPd24jSWTz9jyJ9KoPNje98SnpEPMkhL5xRVDQuTtQG6dcogDCXrCDKZ9'
+                },
+                {
+                    license: 'Synchronization',
+                    price: 12,
+                    buyer: 'Au5YWn1VkrD6YRBDGQs9CbwQqmUihvCK8Pd8DVTYcbd4',
+                    date: '10/03/2023',
+                    txID: '3p9g3iQjtpY4zCKGBeSky3MxL5P8b5Q45ogpkxMvLN2tnsUe8YMLJoTMWmSTgN6Tt6fWQ8m5u3HNcBymjzpAoJQC'
+                }
+            ]
+        },
+        {
+            imgURL: './img/musics/music-11.png',
+            name: 'Go thru',
+            totalSale: 5,
+            totalRevenue: 66,
+            liked: '43',
+            transactions: [
+                {
+                    license: 'Synchronization',
+                    price: 12,
+                    buyer: 'GdvNXo1ZWyvGPYen3cBQYRwwfr3KiALtvwjjLPDKLV31',
+                    date: '10/03/2023',
+                    txID: '4nuPD7tR78cdN5zUUmpgprE5FRdHZhwCPd24jSWTz9jyJ9KoPNje98SnpEPMkhL5xRVDQuTtQG6dcogDCXrCDKZ9'
+                },
+                {
+                    license: 'Synchronization',
+                    price: 12,
+                    buyer: 'Au5YWn1VkrD6YRBDGQs9CbwQqmUihvCK8Pd8DVTYcbd4',
+                    date: '10/03/2023',
+                    txID: '3p9g3iQjtpY4zCKGBeSky3MxL5P8b5Q45ogpkxMvLN2tnsUe8YMLJoTMWmSTgN6Tt6fWQ8m5u3HNcBymjzpAoJQC'
+                }
+            ]
+        },
+        {
+            imgURL: './img/musics/music-12.png',
+            name: 'TRIPS',
+            totalSale: 2,
+            totalRevenue: 24,
+            liked: '6',
+            transactions: [
+                {
+                    license: 'Synchronization',
+                    price: 12,
+                    buyer: 'GdvNXo1ZWyvGPYen3cBQYRwwfr3KiALtvwjjLPDKLV31',
+                    date: '10/03/2023',
+                    txID: '4nuPD7tR78cdN5zUUmpgprE5FRdHZhwCPd24jSWTz9jyJ9KoPNje98SnpEPMkhL5xRVDQuTtQG6dcogDCXrCDKZ9'
+                },
+                {
+                    license: 'Synchronization',
+                    price: 12,
+                    buyer: 'Au5YWn1VkrD6YRBDGQs9CbwQqmUihvCK8Pd8DVTYcbd4',
+                    date: '10/03/2023',
+                    txID: '3p9g3iQjtpY4zCKGBeSky3MxL5P8b5Q45ogpkxMvLN2tnsUe8YMLJoTMWmSTgN6Tt6fWQ8m5u3HNcBymjzpAoJQC'
+                }
+            ]
+        },
+        {
+            imgURL: './img/musics/music-13.png',
+            name: 'ALONE',
+            totalSale: 4,
+            totalRevenue: 85,
+            liked: '1',
             transactions: [
                 {
                     license: 'Synchronization',
@@ -389,6 +481,14 @@ const PageUser = () => {
                             </div>
 
                             <div className="mt-8 flex items-center justify-between">
+                                <a
+                                    href="item"
+                                    className="font-display text-sm font-semibold text-accent"
+                                    // data-bs-toggle="modal"
+                                    // data-bs-target="#buyNowModal"
+                                >
+                                    Details
+                                </a>
                                 <button
                                     className="group flex items-center"
                                     data-bs-toggle="modal"
@@ -431,7 +531,7 @@ const PageUser = () => {
                     aria-labelledby="buyNowModalLabel"
                     aria-hidden="true"
                 >
-                    <div className="modal-dialog max-w">
+                    <div className="modal-dialog max-w" style={{width: 'calc(100% - 80px)'}}>
                         <div className="modal-content">
                             <div className="modal-header">
                                 <h5 className="modal-title" id="buyNowModalLabel">
@@ -654,7 +754,7 @@ const PageUser = () => {
         <main className="pt-[5.5rem] lg:pt-24">
             {/* <!-- Banner --> */}
             <div className="relative">
-                <img src="img/user/banner.jpg" alt="banner" className="h-[18.75rem] object-cover" />
+                <img src="img/user/banner.jpg" alt="banner" className="h-[18.75rem] object-cover" style={{width: '100%'}}/>
             </div>
             {/* <!-- end banner --> */}
 
@@ -664,7 +764,7 @@ const PageUser = () => {
                 <div className="absolute left-1/2 top-0 z-10 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center">
                     <figure className="relative">
                         <img
-                            src={loginData.avatarUrl || 'img/user/user_avatar.gif'}
+                            src={loginData.avatarUrl || 'img/user/user_avatar.png'}
                             alt="collection avatar"
                             className="rounded-xl border-[5px] border-white dark:border-jacarta-600"
                         />
@@ -1009,7 +1109,7 @@ const PageUser = () => {
                                     <path fill="none" d="M0 0h24v24H0z" />
                                     <path d="M5 5v3h14V5H5zM4 3h16a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm2 9h6a1 1 0 0 1 1 1v3h1v6h-4v-6h1v-2H5a1 1 0 0 1-1-1v-2h2v1zm11.732 1.732l1.768-1.768 1.768 1.768a2.5 2.5 0 1 1-3.536 0z" />
                                 </svg>
-                                <span className="font-display text-base font-medium">Created (20)</span>
+                                <span className="font-display text-base font-medium">Created</span>
                             </button>
                         </li>
                         <li className="nav-item" role="presentation">

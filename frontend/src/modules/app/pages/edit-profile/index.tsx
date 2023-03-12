@@ -272,7 +272,7 @@ const PageEditProfile = () => {
                             <div className="shrink-0">
                                 <figure className="relative inline-block">
                                     <img
-                                        src={previewUrl || loginData?.avatarUrl || 'img/user/user_avatar.gif'}
+                                        src={previewUrl || loginData?.avatarUrl || 'img/user/user_avatar.png'}
                                         alt="collection avatar"
                                         className="rounded-xl border-[5px] border-white dark:border-jacarta-600"
                                         style={{ height: '100px', width: '100px' }}

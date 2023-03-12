@@ -22,7 +22,7 @@ const LeftSide = () => {
             {/* <!-- File Upload Cover Art Image --> */}
             <div className="mb-6">
                 <label className="mb-2 block font-display text-jacarta-700 dark:text-white">
-                    Cover Art Image<span className="text-red">*</span>
+                    Cover Art<span className="text-red">*</span>
                 </label>
 
                 <div
@@ -82,13 +82,13 @@ const LeftSide = () => {
                 >
                     {form.values.music && (
                         <img
-                            className="absolute cursor-pointer rounded"
+                            className="absolute cursor-pointer rounded p-2"
                             style={{ objectFit: 'cover' }}
                             src={'img/logo_white.png'}
                         />
                     )}
 
-                    <div className="relative z-10 cursor-pointer">
+                    {!form.values.music && <div className="relative z-10 cursor-pointer">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 24 24"
@@ -102,9 +102,9 @@ const LeftSide = () => {
                         <p className="mx-auto max-w-xs text-xs dark:text-jacarta-300">
                             {uploadMusicState.status == CreateItemUploadAssetStatus.UPLOADING
                                 ? 'Uploading...'
-                                : 'MP3. Max size: 10 MB'}
+                                : 'Max size: 10 MB'}
                         </p>
-                    </div>
+                    </div>}
                     <div className="absolute inset-4 cursor-pointer rounded bg-jacarta-50 opacity-0 group-hover:opacity-100 dark:bg-jacarta-600"></div>
                     <input
                         type="file"
@@ -121,7 +121,7 @@ const LeftSide = () => {
             </div>
 
             {/* <!-- External Link --> */}
-            <div className="mb-6">
+            {/* <div className="mb-6">
                 <label
                     htmlFor="item-external-link"
                     className="mb-2 block font-display text-jacarta-700 dark:text-white"
@@ -137,7 +137,7 @@ const LeftSide = () => {
                     placeholder="https://yoursite.io/item/123"
                     value={form.values.musicFingerprint}
                 />
-            </div>
+            </div> */}
         </div>
     );
 };
@@ -501,7 +501,7 @@ const RightSide = () => {
                                 <label className="block font-display text-jacarta-700 dark:text-white">
                                     Licences & Monetization
                                 </label>
-                                <p className="dark:text-jacarta-300">Numerical traits that just show as numbers.</p>
+                                <p className="dark:text-jacarta-300">Pricing for each specific license.</p>
                             </div>
                         </div>
                         <button

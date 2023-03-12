@@ -5,7 +5,7 @@ const Footer2 = () => {
                 <div className="col-span-full sm:col-span-3 md:col-span-4">
                     {/* <!-- Logo --> */}
                     <a href="index" className="mb-6 inline-block">
-                        <img src="img/logo_white.png" className="max-h-7" alt="Xhibiter | NFT Marketplace" />
+                        <img src="img/logo-white.svg" className="max-h-7" alt="Xhibiter | NFT Marketplace" />
                     </a>
                     <p className="mb-12 text-jacarta-300">
                         Explore Monetization Opportunities for Independent Music Creators

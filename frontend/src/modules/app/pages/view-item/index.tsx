@@ -5,6 +5,7 @@ import React from 'react';
 import { Database } from '@modules/app/database';
 import { useRouter } from 'next/router';
 import { ModalPurchase } from './modal-purchase';
+import { Tabs } from './tabs';
 
 const DEFAULT_ITEM = {
     coverArtImage:
@@ -25,6 +26,26 @@ const DEFAULT_ITEM = {
             id: 'synchronizationPerProduct',
             name: 'Synchronization (per product)',
             value: '2',
+        },
+    ],
+    properties: [
+        {
+            name: 'props 1',
+            value: 'value 1',
+        },
+    ],
+    levels: [
+        {
+            name: 'level 1',
+            value: '1',
+            total: '10',
+        },
+    ],
+    stats: [
+        {
+            name: 'stat 1',
+            value: '1',
+            total: '10',
         },
     ],
 };
@@ -168,7 +189,7 @@ const PageViewItem = () => {
                                 </p>
 
                                 {/* <!-- Creator / Owner --> */}
-                                <div className="mb-8 flex flex-wrap flex-col">
+                                <div className="mb-8 flex flex-wrap flex-col rounded-2lg border border-jacarta-100 bg-white p-8 dark:border-jacarta-600 dark:bg-jacarta-700">
                                     {(item?.licenseMonetizations || DEFAULT_ITEM.licenseMonetizations)?.map(
                                         (lmItem: any, index: number) => (
                                             <div key={index} className="mr-8 mb-4 flex">
@@ -193,22 +214,22 @@ const PageViewItem = () => {
 
                                 {/* <!-- Bid --> */}
                                 {(!hidePurchaseButton || !item) && (
-                                    <div className="rounded-2lg border border-jacarta-100 bg-white p-8 dark:border-jacarta-600 dark:bg-jacarta-700">
-                                        <a
-                                            href="#"
-                                            data-bs-toggle="modal"
-                                            data-bs-target="#placeBidModal"
-                                            className="inline-block w-full rounded-full bg-accent py-3 px-8 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark"
-                                        >
-                                            PURCHASE LICENSE ({totalPrice} SOL)
-                                        </a>
-                                    </div>
+                                    // <div className="rounded-2lg border border-jacarta-100 bg-white p-8 dark:border-jacarta-600 dark:bg-jacarta-700">
+                                    <a
+                                        href="#"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#placeBidModal"
+                                        className="inline-block w-full rounded-full bg-accent py-3 px-8 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark"
+                                    >
+                                        PURCHASE LICENSE ({totalPrice} SOL)
+                                    </a>
+                                    // </div>
                                 )}
                             </div>
                         </div>
 
                         {/* <!-- Tabs --> */}
-                        {/* <Tabs /> */}
+                        <Tabs item={item || DEFAULT_ITEM} />
                     </div>
                 </section>
             </main>

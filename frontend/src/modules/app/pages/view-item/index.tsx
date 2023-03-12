@@ -5,6 +5,7 @@ import React from 'react';
 import { Database } from '@modules/app/database';
 import { useRouter } from 'next/router';
 import { Tabs } from './tabs';
+import { ModalPurchase } from './modal-purchase';
 
 const PageViewItem = () => {
     const [item, setItem] = React.useState<any>(null);
@@ -186,6 +187,8 @@ const PageViewItem = () => {
                     </div>
                 </section>
             </main>
+
+            <ModalPurchase price={totalPrice} />
 
             <Script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js" />
             <Script src="./js/countdown.bundle.js" />

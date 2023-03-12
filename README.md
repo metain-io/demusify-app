@@ -15,11 +15,15 @@ yarn dev:beta
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Beta hosting
+## Documentations
 
-The project is deployed at [https://demusify.xyz](https://demusify.xyz) for beta testing.
+Pitch deck document of the project is at the root of this git repository.
+
+Introduction video can be found here: [https://www.youtube.com/watch?v=lvzVNWixAt8](https://www.youtube.com/watch?v=lvzVNWixAt8)
 
 ## Demo
+
+The project is deployed at [https://demusify.xyz](https://demusify.xyz) for beta testing.
 
 1. Connect to Phantom Wallet to sign-in.
 2. Go to `Create` page to upload music and mint new NFT. The Dynamic NFT represents utilization licenses of the music.

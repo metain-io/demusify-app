@@ -10,6 +10,7 @@ import {
 } from './index';
 import { v4 as Uuid } from 'uuid';
 import * as Yup from 'yup';
+import { database } from '@modules/app/database';
 
 export type CreateItemProviderProps = PropsWithChildren;
 
@@ -22,18 +23,6 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
         {
             id: 'default',
             name: 'Default',
-        },
-        {
-            id: Uuid(),
-            name: 'Collection 1',
-        },
-        {
-            id: Uuid(),
-            name: 'Collection 2',
-        },
-        {
-            id: Uuid(),
-            name: 'Collection 3',
         },
     ]);
 
@@ -110,6 +99,8 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
                 });
                 return;
             }
+
+            database.addItem({ id: id, createdAt: Date.now(), updatedAt: Date.now(), ...value });
 
             setState({
                 status: CreateItemStatus.SUBMIT_SUCCEEDED,
@@ -311,14 +302,14 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
     };
 
     const handleUpdateLicenseMonetizationValue = async (id: string, value: string) => {
-        const licenseMonetization = form.values.licenseMonetizations.map((item) => {
+        const licenseMonetizations = form.values.licenseMonetizations.map((item) => {
             if (item.id == id) {
                 item.value = value;
             }
 
             return item;
         });
-        form.setFieldValue('licenseMonetization', licenseMonetization);
+        form.setFieldValue('licenseMonetizations', licenseMonetizations);
     };
 
     React.useEffect(() => {

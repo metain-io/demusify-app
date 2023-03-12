@@ -22,8 +22,8 @@ export const Trending = () => {
                     <div className="swiper card-slider-4-columns !py-5">
                         <div className="swiper-wrapper">
                             {/* Slides */}
-                            {trendingItems.map((item) => (
-                                <div className="swiper-slide">
+                            {trendingItems.map((item, index) => (
+                                <div key={index} className="swiper-slide">
                                     <article>
                                         <div className="block rounded-2.5xl border border-jacarta-900 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-900">
                                             <figure>

@@ -1,4 +1,228 @@
-const NavigationBar3 = () => {
+import { useButtonConnectPhantomWallet } from "@modules/auth/components/button-connect-phantom-wallet/use-button-connect-phantom-wallet";
+import { LoginStatus, selectLoginData } from "@modules/auth/redux/login/slice";
+import { useSelector } from "react-redux";
+
+const NavigationBar3 = (props: any) => {
+    const {onMenuToggle = () => {}} = props
+    const { handleOnClicked } = useButtonConnectPhantomWallet();
+    const loginData = useSelector(selectLoginData)
+
+    const LoginedButton = () => {
+        return (
+            <div className="js-nav-dropdown group-dropdown relative">
+                <button
+                    className="dropdown-toggle group ml-2 flex h-10 w-10 items-center justify-center rounded-full border border-transparent bg-white/[.15] transition-colors hover:bg-accent focus:bg-accent"
+                    id="profileDropdown"
+                    aria-expanded="false"
+                    data-bs-toggle="dropdown"
+                    aria-label="profile"
+                    style={{backgroundColor: "#00CC66"}}
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                        className="h-4 w-4 fill-white transition-colors group-hover:fill-white group-focus:fill-white"
+                    >
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path d="M11 14.062V20h2v-5.938c3.946.492 7 3.858 7 7.938H4a8.001 8.001 0 0 1 7-7.938zM12 13c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6z" />
+                    </svg>
+                </button>
+                <div
+                    className="dropdown-menu group-dropdown-hover:visible lg:invisible !-right-4 !top-[85%] !left-auto z-10 hidden min-w-[14rem] whitespace-nowrap rounded-xl bg-white transition-all will-change-transform before:absolute before:-top-3 before:h-3 before:w-full group-dropdown-hover:opacity-100 dark:bg-jacarta-800 lg:absolute lg:grid lg:!translate-y-4 lg:py-4 lg:px-2 lg:opacity-0 lg:shadow-2xl"
+                    aria-labelledby="profileDropdown"
+                >
+                    <button
+                        className="js-copy-clipboard my-4 flex select-none items-center whitespace-nowrap px-5 font-display leading-none text-jacarta-700 dark:text-white"
+                        data-tippy-content="Copy"
+                    >
+                        <span className="max-w-[10rem] overflow-hidden text-ellipsis">{loginData.walletAddress}</span>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            height="24"
+                            className="ml-1 mb-px h-4 w-4 fill-jacarta-500 dark:fill-jacarta-300"
+                        >
+                            <path fill="none" d="M0 0h24v24H0z" />
+                            <path d="M7 7V3a1 1 0 0 1 1-1h13a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-4v3.993c0 .556-.449 1.007-1.007 1.007H3.007A1.006 1.006 0 0 1 2 20.993l.003-12.986C2.003 7.451 2.452 7 3.01 7H7zm2 0h6.993C16.549 7 17 7.449 17 8.007V15h3V4H9v3zM4.003 9L4 20h11V9H4.003z" />
+                        </svg>
+                    </button>
+
+                    <div className="mx-5 mb-6 rounded-lg border border-jacarta-100 p-4 dark:border-jacarta-600">
+                        <span className="text-sm font-medium tracking-tight dark:text-jacarta-200">Balance</span>
+                        <div className="flex items-center">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlnsXlink="http://www.w3.org/1999/xlink"
+                                version="1.1"
+                                id="Layer_1"
+                                x="0px"
+                                y="0px"
+                                viewBox="0 0 397.7 311.7"
+                                style={{ height: '20px', width: '20px', marginRight: '6px' }}
+                                xmlSpace="preserve"
+                            >
+                                <style
+                                    type="text/css"
+                                    dangerouslySetInnerHTML={{
+                                        __html: '\n\t.st0{fill:url(#SVGID_1_);}\n\t.st1{fill:url(#SVGID_2_);}\n\t.st2{fill:url(#SVGID_3_);}\n',
+                                    }}
+                                />
+                                <linearGradient
+                                    id="SVGID_1_"
+                                    gradientUnits="userSpaceOnUse"
+                                    x1="360.8791"
+                                    y1="351.4553"
+                                    x2="141.213"
+                                    y2="-69.2936"
+                                    gradientTransform="matrix(1 0 0 -1 0 314)"
+                                >
+                                    <stop offset={0} style={{ stopColor: '#00FFA3' }} />
+                                    <stop offset={1} style={{ stopColor: '#DC1FFF' }} />
+                                </linearGradient>
+                                <path
+                                    className="st0"
+                                    d="M64.6,237.9c2.4-2.4,5.7-3.8,9.2-3.8h317.4c5.8,0,8.7,7,4.6,11.1l-62.7,62.7c-2.4,2.4-5.7,3.8-9.2,3.8H6.5  c-5.8,0-8.7-7-4.6-11.1L64.6,237.9z"
+                                />
+                                <linearGradient
+                                    id="SVGID_2_"
+                                    gradientUnits="userSpaceOnUse"
+                                    x1="264.8291"
+                                    y1="401.6014"
+                                    x2="45.163"
+                                    y2="-19.1475"
+                                    gradientTransform="matrix(1 0 0 -1 0 314)"
+                                >
+                                    <stop offset={0} style={{ stopColor: '#00FFA3' }} />
+                                    <stop offset={1} style={{ stopColor: '#DC1FFF' }} />
+                                </linearGradient>
+                                <path
+                                    className="st1"
+                                    d="M64.6,3.8C67.1,1.4,70.4,0,73.8,0h317.4c5.8,0,8.7,7,4.6,11.1l-62.7,62.7c-2.4,2.4-5.7,3.8-9.2,3.8H6.5  c-5.8,0-8.7-7-4.6-11.1L64.6,3.8z"
+                                />
+                                <linearGradient
+                                    id="SVGID_3_"
+                                    gradientUnits="userSpaceOnUse"
+                                    x1="312.5484"
+                                    y1="376.688"
+                                    x2="92.8822"
+                                    y2="-44.061"
+                                    gradientTransform="matrix(1 0 0 -1 0 314)"
+                                >
+                                    <stop offset={0} style={{ stopColor: '#00FFA3' }} />
+                                    <stop offset={1} style={{ stopColor: '#DC1FFF' }} />
+                                </linearGradient>
+                                <path
+                                    className="st2"
+                                    d="M333.1,120.1c-2.4-2.4-5.7-3.8-9.2-3.8H6.5c-5.8,0-8.7,7-4.6,11.1l62.7,62.7c2.4,2.4,5.7,3.8,9.2,3.8h317.4  c5.8,0,8.7-7,4.6-11.1L333.1,120.1z"
+                                />
+                            </svg>
+                            <span className="text-lg font-bold text-green">{loginData?.balances?.['SOL'] || '0'} SOL</span>
+                        </div>
+                    </div>
+                    <a
+                        href="user"
+                        className="flex items-center space-x-2 rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            height="24"
+                            className="h-4 w-4 fill-jacarta-700 transition-colors dark:fill-white"
+                        >
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path d="M11 14.062V20h2v-5.938c3.946.492 7 3.858 7 7.938H4a8.001 8.001 0 0 1 7-7.938zM12 13c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6z"></path>
+                        </svg>
+                        <span className="mt-1 font-display text-sm text-jacarta-700 dark:text-white">My Profile</span>
+                    </a>
+                    <a
+                        href="edit-profile"
+                        className="flex items-center space-x-2 rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            height="24"
+                            className="h-4 w-4 fill-jacarta-700 transition-colors dark:fill-white"
+                        >
+                            <path fill="none" d="M0 0h24v24H0z" />
+                            <path d="M9.954 2.21a9.99 9.99 0 0 1 4.091-.002A3.993 3.993 0 0 0 16 5.07a3.993 3.993 0 0 0 3.457.261A9.99 9.99 0 0 1 21.5 8.876 3.993 3.993 0 0 0 20 12c0 1.264.586 2.391 1.502 3.124a10.043 10.043 0 0 1-2.046 3.543 3.993 3.993 0 0 0-3.456.261 3.993 3.993 0 0 0-1.954 2.86 9.99 9.99 0 0 1-4.091.004A3.993 3.993 0 0 0 8 18.927a3.993 3.993 0 0 0-3.457-.26A9.99 9.99 0 0 1 2.5 15.121 3.993 3.993 0 0 0 4 11.999a3.993 3.993 0 0 0-1.502-3.124 10.043 10.043 0 0 1 2.046-3.543A3.993 3.993 0 0 0 8 5.071a3.993 3.993 0 0 0 1.954-2.86zM12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                        </svg>
+                        <span className="mt-1 font-display text-sm text-jacarta-700 dark:text-white">Edit Profile</span>
+                    </a>
+                    <a
+                        href="#"
+                        className="flex items-center space-x-2 rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
+                        onClick={handleOnClicked}
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            height="24"
+                            className="h-4 w-4 fill-jacarta-700 transition-colors dark:fill-white"
+                        >
+                            <path fill="none" d="M0 0h24v24H0z" />
+                            <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zM7 11V8l-5 4 5 4v-3h8v-2H7z" />
+                        </svg>
+                        <span className="mt-1 font-display text-sm text-jacarta-700 dark:text-white">Sign out</span>
+                    </a>
+                </div>
+            </div>
+        );
+    }
+
+    const NotLoginedButton = () => {
+        return (
+            <div className="js-nav-dropdown group-dropdown relative">
+                <button
+                    className="dropdown-toggle group ml-2 flex h-10 w-10 items-center justify-center rounded-full border border-transparent bg-white/[.15] transition-colors hover:bg-accent focus:bg-accent"
+                    id="profileDropdown"
+                    aria-expanded="false"
+                    data-bs-toggle="dropdown"
+                    aria-label="profile"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                        className="h-4 w-4 fill-white transition-colors group-hover:fill-white group-focus:fill-white"
+                    >
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path d="M11 14.062V20h2v-5.938c3.946.492 7 3.858 7 7.938H4a8.001 8.001 0 0 1 7-7.938zM12 13c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6z" />
+                    </svg>
+                </button>
+                <div
+                    className="dropdown-menu group-dropdown-hover:visible lg:invisible !-right-4 !top-[85%] !left-auto z-10 hidden min-w-[14rem] whitespace-nowrap rounded-xl bg-white transition-all will-change-transform before:absolute before:-top-3 before:h-3 before:w-full group-dropdown-hover:opacity-100 dark:bg-jacarta-800 lg:absolute lg:grid lg:!translate-y-4 lg:py-4 lg:px-2 lg:opacity-0 lg:shadow-2xl"
+                    aria-labelledby="profileDropdown"
+                >
+                    <a
+                        href="#"
+                        className="flex items-center space-x-2 rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
+                        onClick={handleOnClicked}
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            height="24"
+                            className="h-4 w-4 fill-jacarta-700 transition-colors dark:fill-white"
+                        >
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path d="M11 14.062V20h2v-5.938c3.946.492 7 3.858 7 7.938H4a8.001 8.001 0 0 1 7-7.938zM12 13c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6z"></path>
+                        </svg>
+                        <span className="mt-1 font-display text-sm text-jacarta-700 dark:text-white">Connect wallet</span>
+                    </a>
+                </div>
+            </div>
+        );
+    };
+    
     return (
         <div className="flex items-center px-6 py-6 xl:px-24" style={{ paddingBottom: '1rem', paddingTop: '1rem' }}>
             {/* <!-- Logo --> */}
@@ -528,6 +752,7 @@ const NavigationBar3 = () => {
                         href="#"
                         className="group flex h-10 w-10 items-center justify-center rounded-full border border-transparent bg-white/[.15] transition-colors hover:bg-accent focus:bg-accent"
                         aria-label="wallet"
+                        onClick={onMenuToggle}
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -542,130 +767,10 @@ const NavigationBar3 = () => {
                     </a>
 
                     {/* <!-- Profile --> */}
-                    <div className="js-nav-dropdown group-dropdown relative">
-                        <button
-                            className="dropdown-toggle group ml-2 flex h-10 w-10 items-center justify-center rounded-full border border-transparent bg-white/[.15] transition-colors hover:bg-accent focus:bg-accent"
-                            id="profileDropdown"
-                            aria-expanded="false"
-                            data-bs-toggle="dropdown"
-                            aria-label="profile"
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24"
-                                width="24"
-                                height="24"
-                                className="h-4 w-4 fill-white transition-colors group-hover:fill-white group-focus:fill-white"
-                            >
-                                <path fill="none" d="M0 0h24v24H0z" />
-                                <path d="M11 14.062V20h2v-5.938c3.946.492 7 3.858 7 7.938H4a8.001 8.001 0 0 1 7-7.938zM12 13c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6z" />
-                            </svg>
-                        </button>
-                        <div
-                            className="dropdown-menu group-dropdown-hover:visible lg:invisible !-right-4 !top-[85%] !left-auto z-10 hidden min-w-[14rem] whitespace-nowrap rounded-xl bg-white transition-all will-change-transform before:absolute before:-top-3 before:h-3 before:w-full group-dropdown-hover:opacity-100 dark:bg-jacarta-800 lg:absolute lg:grid lg:!translate-y-4 lg:py-4 lg:px-2 lg:opacity-0 lg:shadow-2xl"
-                            aria-labelledby="profileDropdown"
-                        >
-                            <button
-                                className="js-copy-clipboard my-4 flex select-none items-center whitespace-nowrap px-5 font-display leading-none text-jacarta-700 dark:text-white"
-                                data-tippy-content="Copy"
-                            >
-                                <span className="max-w-[10rem] overflow-hidden text-ellipsis">
-                                    0x7a86c0b064171007716bbd6af96676935799a63e
-                                </span>
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
-                                    width="24"
-                                    height="24"
-                                    className="ml-1 mb-px h-4 w-4 fill-jacarta-500 dark:fill-jacarta-300"
-                                >
-                                    <path fill="none" d="M0 0h24v24H0z" />
-                                    <path d="M7 7V3a1 1 0 0 1 1-1h13a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-4v3.993c0 .556-.449 1.007-1.007 1.007H3.007A1.006 1.006 0 0 1 2 20.993l.003-12.986C2.003 7.451 2.452 7 3.01 7H7zm2 0h6.993C16.549 7 17 7.449 17 8.007V15h3V4H9v3zM4.003 9L4 20h11V9H4.003z" />
-                                </svg>
-                            </button>
-
-                            <div className="mx-5 mb-6 rounded-lg border border-jacarta-100 p-4 dark:border-jacarta-600">
-                                <span className="text-sm font-medium tracking-tight dark:text-jacarta-200">
-                                    Balance
-                                </span>
-                                <div className="flex items-center">
-                                    <svg
-                                        version="1.1"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        x="0"
-                                        y="0"
-                                        viewBox="0 0 1920 1920"
-                                        xmlSpace="preserve"
-                                        className="-ml-1 mr-1 h-[1.125rem] w-[1.125rem]"
-                                    >
-                                        <path fill="#8A92B2" d="M959.8 80.7L420.1 976.3 959.8 731z"></path>
-                                        <path
-                                            fill="#62688F"
-                                            d="M959.8 731L420.1 976.3l539.7 319.1zm539.8 245.3L959.8 80.7V731z"
-                                        ></path>
-                                        <path fill="#454A75" d="M959.8 1295.4l539.8-319.1L959.8 731z"></path>
-                                        <path fill="#8A92B2" d="M420.1 1078.7l539.7 760.6v-441.7z"></path>
-                                        <path fill="#62688F" d="M959.8 1397.6v441.7l540.1-760.6z"></path>
-                                    </svg>
-                                    <span className="text-lg font-bold text-green">10 ETH</span>
-                                </div>
-                            </div>
-                            <a
-                                href="user"
-                                className="flex items-center space-x-2 rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
-                                    width="24"
-                                    height="24"
-                                    className="h-4 w-4 fill-jacarta-700 transition-colors dark:fill-white"
-                                >
-                                    <path fill="none" d="M0 0h24v24H0z"></path>
-                                    <path d="M11 14.062V20h2v-5.938c3.946.492 7 3.858 7 7.938H4a8.001 8.001 0 0 1 7-7.938zM12 13c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6z"></path>
-                                </svg>
-                                <span className="mt-1 font-display text-sm text-jacarta-700 dark:text-white">
-                                    My Profile
-                                </span>
-                            </a>
-                            <a
-                                href="edit-profile"
-                                className="flex items-center space-x-2 rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
-                                    width="24"
-                                    height="24"
-                                    className="h-4 w-4 fill-jacarta-700 transition-colors dark:fill-white"
-                                >
-                                    <path fill="none" d="M0 0h24v24H0z" />
-                                    <path d="M9.954 2.21a9.99 9.99 0 0 1 4.091-.002A3.993 3.993 0 0 0 16 5.07a3.993 3.993 0 0 0 3.457.261A9.99 9.99 0 0 1 21.5 8.876 3.993 3.993 0 0 0 20 12c0 1.264.586 2.391 1.502 3.124a10.043 10.043 0 0 1-2.046 3.543 3.993 3.993 0 0 0-3.456.261 3.993 3.993 0 0 0-1.954 2.86 9.99 9.99 0 0 1-4.091.004A3.993 3.993 0 0 0 8 18.927a3.993 3.993 0 0 0-3.457-.26A9.99 9.99 0 0 1 2.5 15.121 3.993 3.993 0 0 0 4 11.999a3.993 3.993 0 0 0-1.502-3.124 10.043 10.043 0 0 1 2.046-3.543A3.993 3.993 0 0 0 8 5.071a3.993 3.993 0 0 0 1.954-2.86zM12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                                </svg>
-                                <span className="mt-1 font-display text-sm text-jacarta-700 dark:text-white">
-                                    Edit Profile
-                                </span>
-                            </a>
-                            <a
-                                href="#"
-                                className="flex items-center space-x-2 rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
-                                    width="24"
-                                    height="24"
-                                    className="h-4 w-4 fill-jacarta-700 transition-colors dark:fill-white"
-                                >
-                                    <path fill="none" d="M0 0h24v24H0z" />
-                                    <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zM7 11V8l-5 4 5 4v-3h8v-2H7z" />
-                                </svg>
-                                <span className="mt-1 font-display text-sm text-jacarta-700 dark:text-white">
-                                    Sign out
-                                </span>
-                            </a>
-                        </div>
-                    </div>
+                    {
+                        loginData.loginStatus === LoginStatus.LoggedIn 
+                            ? <LoginedButton /> 
+                            : <NotLoginedButton />}
 
                     {/* <!-- Dark Mode --> */}
                     {/* <a

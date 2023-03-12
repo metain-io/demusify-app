@@ -1,0 +1,48 @@
+/*
+  MOBILE
+*/
+.bigTitle {
+  text-transform: uppercase;
+  max-width: 42rem;
+  font-size: 42px;
+}
+
+.smallTitle {
+  text-transform: uppercase;
+  max-width: 42rem;
+  font-size: 24px;
+}
+
+/*
+  TABLET
+*/
+@media only screen and (min-width: 480px) {
+  .bigTitle {
+    text-transform: uppercase;
+    max-width: 42rem;
+    font-size: 64px;
+  }
+
+  .smallTitle {
+    text-transform: uppercase;
+    max-width: 42rem;
+    font-size: 36px;
+  }
+}
+
+/*
+  DESKTOP
+*/
+@media only screen and (min-width: 1152px) {
+  .bigTitle {
+    text-transform: uppercase;
+    max-width: 42rem;
+    font-size: 72px;
+  }
+
+  .smallTitle {
+    text-transform: uppercase;
+    max-width: 42rem;
+    font-size: 48px;
+  }
+}

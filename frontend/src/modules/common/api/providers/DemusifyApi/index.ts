@@ -35,7 +35,7 @@ class DemusifyApi extends BaseApiProvider implements IDemusifyApi {
 
         let [response, error] = await resolvePromise(this._mapProcessingRequest[key]!);
 
-        if (error && error.response?.status == 401) {
+        if (error && (error as any).response?.status == 401) {
             [response, error] = await resolvePromise(this._authService.refreshUserSession());
             [response, error] = await resolvePromise(this.retryRequest(request, 2));
             error && error.response?.status == 401 && this._onRetriedRequestFailedWithError401?.(error);

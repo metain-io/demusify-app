@@ -103,7 +103,7 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
         setTimeout(() => {
             const r = Math.random() * 10;
 
-            if (r < 3) {
+            if (r < 0) {
                 setState({
                     status: CreateItemStatus.SUBMIT_FAILED,
                     error: 'Something went wrong!!',
@@ -134,7 +134,7 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
         // TODO: Replace with real api call
         setTimeout(async () => {
             const r = Math.random() * 10;
-            if (r < 3) {
+            if (r < 0) {
                 setUploadCoverArtImageState(() => ({
                     status: CreateItemUploadAssetStatus.UPLOAD_FAILED,
                     error: 'Something went wrong!',
@@ -167,7 +167,7 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
         // TODO: Replace with real api call
         setTimeout(async () => {
             const r = Math.random() * 10;
-            if (r < 3) {
+            if (r < 0) {
                 setUploadMusicState(() => ({
                     status: CreateItemUploadAssetStatus.UPLOAD_FAILED,
                     error: 'Something went wrong!',

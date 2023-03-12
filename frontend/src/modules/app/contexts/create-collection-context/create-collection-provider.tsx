@@ -74,7 +74,7 @@ export const CreateCollectionProvider = (props: CreateCollectionProviderProps) =
         setTimeout(() => {
             const r = Math.random() * 10;
 
-            if (r < 3) {
+            if (r < 0) {
                 setState({
                     status: CreateCollectionStatus.SUBMIT_FAILED,
                     error: 'Something went wrong!!',
@@ -105,7 +105,7 @@ export const CreateCollectionProvider = (props: CreateCollectionProviderProps) =
         // TODO: Replace with real api call
         setTimeout(async () => {
             const r = Math.random() * 10;
-            if (r < 3) {
+            if (r < 0) {
                 setUploadLogoImageState(() => ({
                     status: CreateCollectionUploadImageStatus.UPLOAD_FAILED,
                     error: 'Something went wrong!',
@@ -137,7 +137,7 @@ export const CreateCollectionProvider = (props: CreateCollectionProviderProps) =
         // TODO: Replace with real api call
         setTimeout(async () => {
             const r = Math.random() * 10;
-            if (r < 3) {
+            if (r < 0) {
                 setUploadFeaturedImageState(() => ({
                     status: CreateCollectionUploadImageStatus.UPLOAD_FAILED,
                     error: 'Something went wrong!',
@@ -169,7 +169,7 @@ export const CreateCollectionProvider = (props: CreateCollectionProviderProps) =
         // TODO: Replace with real api call
         setTimeout(async () => {
             const r = Math.random() * 10;
-            if (r < 3) {
+            if (r < 0) {
                 setUploadBannerImageState(() => ({
                     status: CreateCollectionUploadImageStatus.UPLOAD_FAILED,
                     error: 'Something went wrong!',

@@ -1,0 +1,30 @@
+{
+    "ts-node": {
+        "require": ["tsconfig-paths/register"]
+    },
+    "compilerOptions": {
+        "outDir": ".dist",
+        "noImplicitAny": false,
+        "module": "CommonJS",
+        "target": "ES2020",
+        "allowJs": true,
+        "moduleResolution": "node",
+        "strict": false,
+        "noImplicitOverride": false,
+        "esModuleInterop": true,
+        "resolveJsonModule": true,
+        "allowSyntheticDefaultImports": true,
+
+        "baseUrl": "./src",
+        "paths": {
+            "@controllers/*": ["controllers/*"],
+            "@middlewares/*": ["middlewares/*"],
+            "@models/*": ["models/*"],
+            "@routes/*": ["routes/*"],
+            "@databases/*": ["databases/*"],
+            "@services/*": ["services/*"]
+        }
+    },
+    "include": ["./src/**/*.ts", "./src/**/*.json"],
+    "exclude": ["node_modules", "node_modules/**/*.d.ts", "**/*.test.ts"]
+}

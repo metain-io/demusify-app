@@ -5,15 +5,16 @@ const Footer = () => {
                 <div className="col-span-full sm:col-span-3 md:col-span-4">
                     {/* <!-- Logo --> */}
                     <a href="index" className="mb-6 inline-block">
-                        <img src="img/logo.png" className="max-h-7 dark:hidden" alt="Xhibiter | NFT Marketplace" />
+                        <img src="img/logo.png" className="dark:hidden" alt="Xhibiter | NFT Marketplace" />
                         <img
-                            src="img/logo_white.png"
-                            className="hidden max-h-7 dark:block"
+                            src="img/logo-white.svg"
+                            className="hidden dark:block"
+                            style={{height: "8rem"}}
                             alt="Xhibiter | NFT Marketplace"
                         />
                     </a>
                     <p className="mb-12 dark:text-jacarta-300">
-                        Create, sell and collect truly rare digital artworks. Powered by blockchain technology.
+                        Explore Monetization Opportunities for Independent Music Creators.
                     </p>
                     {/* <!-- Socials --> */}
                     <div className="flex space-x-5">
@@ -95,32 +96,32 @@ const Footer = () => {
                     <ul className="flex flex-col space-y-1 dark:text-jacarta-300">
                         <li>
                             <a href="#" className="hover:text-accent dark:hover:text-white">
-                                All NFTs
+                                All
                             </a>
                         </li>
                         <li>
                             <a href="#" className="hover:text-accent dark:hover:text-white">
-                                Art
+                                Tracks
                             </a>
                         </li>
                         <li>
                             <a href="#" className="hover:text-accent dark:hover:text-white">
-                                Music
+                                Musicians
                             </a>
                         </li>
                         <li>
                             <a href="#" className="hover:text-accent dark:hover:text-white">
-                                Domain Names
+                                Playlists
                             </a>
                         </li>
                         <li>
                             <a href="#" className="hover:text-accent dark:hover:text-white">
-                                Collectibles
+                                Albumns
                             </a>
                         </li>
                         <li>
                             <a href="#" className="hover:text-accent dark:hover:text-white">
-                                Virtual World
+                                Gaming
                             </a>
                         </li>
                     </ul>
@@ -162,17 +163,12 @@ const Footer = () => {
                     <ul className="flex flex-col space-y-1 dark:text-jacarta-300">
                         <li>
                             <a href="#" className="hover:text-accent dark:hover:text-white">
-                                Authors
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" className="hover:text-accent dark:hover:text-white">
                                 Collection
                             </a>
                         </li>
                         <li>
                             <a href="#" className="hover:text-accent dark:hover:text-white">
-                                Author Profile
+                                Profile
                             </a>
                         </li>
                         <li>
@@ -184,14 +180,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="flex flex-col items-center justify-between space-y-2 py-8 sm:flex-row sm:space-y-0">
-                <span className="text-sm dark:text-jacarta-400">
-                    &copy;
-                    <script>document.write(new Date().getFullYear())</script>
-                    Xhibiter — Made by
-                    <a href="https://deothemes.com" className="hover:text-accent dark:hover:text-white">
-                        DeoThemes
-                    </a>
-                </span>
+                <span className="text-sm dark:text-jacarta-400">&copy; 2023 Demusify</span>
                 <ul className="flex flex-wrap space-x-4 text-sm dark:text-jacarta-400">
                     <li>
                         <a href="#" className="hover:text-accent dark:hover:text-white">

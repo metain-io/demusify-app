@@ -1,11 +1,191 @@
-const NavigationBar = () => {
+import { useButtonConnectPhantomWallet } from '@modules/auth/components/button-connect-phantom-wallet/use-button-connect-phantom-wallet';
+import { LoginStatus } from '@modules/auth/redux/login/slice';
+import Link from 'next/link';
+
+const NavigationBar = (props: any) => {
+    const { handleOnLoginClicked = () => {}, loginData = { loginData: LoginStatus.Undefined } } = props;
+
+    const LoginedButton = () => {
+        return (
+            <div
+                className="dropdown-menu group-dropdown-hover:visible lg:invisible !-right-4 !top-[85%] !left-auto z-10 hidden min-w-[14rem] whitespace-nowrap rounded-xl bg-white transition-all will-change-transform before:absolute before:-top-3 before:h-3 before:w-full group-dropdown-hover:opacity-100 dark:bg-jacarta-800 lg:absolute lg:grid lg:!translate-y-4 lg:py-4 lg:px-2 lg:opacity-0 lg:shadow-2xl"
+                aria-labelledby="profileDropdown"
+            >
+                <button
+                    className="js-copy-clipboard my-4 flex select-none items-center whitespace-nowrap px-5 font-display leading-none text-jacarta-700 dark:text-white"
+                    data-tippy-content="Copy"
+                >
+                    <span className="max-w-[10rem] overflow-hidden text-ellipsis">{loginData.walletAddress}</span>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                        className="ml-1 mb-px h-4 w-4 fill-jacarta-500 dark:fill-jacarta-300"
+                    >
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path d="M7 7V3a1 1 0 0 1 1-1h13a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-4v3.993c0 .556-.449 1.007-1.007 1.007H3.007A1.006 1.006 0 0 1 2 20.993l.003-12.986C2.003 7.451 2.452 7 3.01 7H7zm2 0h6.993C16.549 7 17 7.449 17 8.007V15h3V4H9v3zM4.003 9L4 20h11V9H4.003z" />
+                    </svg>
+                </button>
+
+                <div className="mx-5 mb-6 rounded-lg border border-jacarta-100 p-4 dark:border-jacarta-600">
+                    <span className="text-sm font-medium tracking-tight dark:text-jacarta-200">Balance</span>
+                    <div className="flex items-center">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlnsXlink="http://www.w3.org/1999/xlink"
+                            version="1.1"
+                            id="Layer_1"
+                            x="0px"
+                            y="0px"
+                            viewBox="0 0 397.7 311.7"
+                            style={{ height: '20px', width: '20px', marginRight: '6px' }}
+                            xmlSpace="preserve"
+                        >
+                            <style
+                                type="text/css"
+                                dangerouslySetInnerHTML={{
+                                    __html: '\n\t.st0{fill:url(#SVGID_1_);}\n\t.st1{fill:url(#SVGID_2_);}\n\t.st2{fill:url(#SVGID_3_);}\n',
+                                }}
+                            />
+                            <linearGradient
+                                id="SVGID_1_"
+                                gradientUnits="userSpaceOnUse"
+                                x1="360.8791"
+                                y1="351.4553"
+                                x2="141.213"
+                                y2="-69.2936"
+                                gradientTransform="matrix(1 0 0 -1 0 314)"
+                            >
+                                <stop offset={0} style={{ stopColor: '#00FFA3' }} />
+                                <stop offset={1} style={{ stopColor: '#DC1FFF' }} />
+                            </linearGradient>
+                            <path
+                                className="st0"
+                                d="M64.6,237.9c2.4-2.4,5.7-3.8,9.2-3.8h317.4c5.8,0,8.7,7,4.6,11.1l-62.7,62.7c-2.4,2.4-5.7,3.8-9.2,3.8H6.5  c-5.8,0-8.7-7-4.6-11.1L64.6,237.9z"
+                            />
+                            <linearGradient
+                                id="SVGID_2_"
+                                gradientUnits="userSpaceOnUse"
+                                x1="264.8291"
+                                y1="401.6014"
+                                x2="45.163"
+                                y2="-19.1475"
+                                gradientTransform="matrix(1 0 0 -1 0 314)"
+                            >
+                                <stop offset={0} style={{ stopColor: '#00FFA3' }} />
+                                <stop offset={1} style={{ stopColor: '#DC1FFF' }} />
+                            </linearGradient>
+                            <path
+                                className="st1"
+                                d="M64.6,3.8C67.1,1.4,70.4,0,73.8,0h317.4c5.8,0,8.7,7,4.6,11.1l-62.7,62.7c-2.4,2.4-5.7,3.8-9.2,3.8H6.5  c-5.8,0-8.7-7-4.6-11.1L64.6,3.8z"
+                            />
+                            <linearGradient
+                                id="SVGID_3_"
+                                gradientUnits="userSpaceOnUse"
+                                x1="312.5484"
+                                y1="376.688"
+                                x2="92.8822"
+                                y2="-44.061"
+                                gradientTransform="matrix(1 0 0 -1 0 314)"
+                            >
+                                <stop offset={0} style={{ stopColor: '#00FFA3' }} />
+                                <stop offset={1} style={{ stopColor: '#DC1FFF' }} />
+                            </linearGradient>
+                            <path
+                                className="st2"
+                                d="M333.1,120.1c-2.4-2.4-5.7-3.8-9.2-3.8H6.5c-5.8,0-8.7,7-4.6,11.1l62.7,62.7c2.4,2.4,5.7,3.8,9.2,3.8h317.4  c5.8,0,8.7-7,4.6-11.1L333.1,120.1z"
+                            />
+                        </svg>
+                        <span className="text-lg font-bold text-green">{loginData?.balances?.['SOL'] || '0'} SOL</span>
+                    </div>
+                </div>
+                <a
+                    href="user"
+                    className="flex items-center space-x-2 rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                        className="h-4 w-4 fill-jacarta-700 transition-colors dark:fill-white"
+                    >
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path d="M11 14.062V20h2v-5.938c3.946.492 7 3.858 7 7.938H4a8.001 8.001 0 0 1 7-7.938zM12 13c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6z"></path>
+                    </svg>
+                    <span className="mt-1 font-display text-sm text-jacarta-700 dark:text-white">My Profile</span>
+                </a>
+                <a
+                    href="edit-profile"
+                    className="flex items-center space-x-2 rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                        className="h-4 w-4 fill-jacarta-700 transition-colors dark:fill-white"
+                    >
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path d="M9.954 2.21a9.99 9.99 0 0 1 4.091-.002A3.993 3.993 0 0 0 16 5.07a3.993 3.993 0 0 0 3.457.261A9.99 9.99 0 0 1 21.5 8.876 3.993 3.993 0 0 0 20 12c0 1.264.586 2.391 1.502 3.124a10.043 10.043 0 0 1-2.046 3.543 3.993 3.993 0 0 0-3.456.261 3.993 3.993 0 0 0-1.954 2.86 9.99 9.99 0 0 1-4.091.004A3.993 3.993 0 0 0 8 18.927a3.993 3.993 0 0 0-3.457-.26A9.99 9.99 0 0 1 2.5 15.121 3.993 3.993 0 0 0 4 11.999a3.993 3.993 0 0 0-1.502-3.124 10.043 10.043 0 0 1 2.046-3.543A3.993 3.993 0 0 0 8 5.071a3.993 3.993 0 0 0 1.954-2.86zM12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                    </svg>
+                    <span className="mt-1 font-display text-sm text-jacarta-700 dark:text-white">Edit Profile</span>
+                </a>
+                <span
+                    className="flex items-center space-x-2 rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
+                    onClick={handleOnLoginClicked}
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                        className="h-4 w-4 fill-jacarta-700 transition-colors dark:fill-white"
+                    >
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zM7 11V8l-5 4 5 4v-3h8v-2H7z" />
+                    </svg>
+                    <span className="mt-1 font-display text-sm text-jacarta-700 dark:text-white">Sign out</span>
+                </span>
+            </div>
+        );
+    };
+
+    const NotLoginedButton = () => {
+        return (
+            <div
+                className="dropdown-menu group-dropdown-hover:visible lg:invisible !-right-4 !top-[85%] !left-auto z-10 hidden min-w-[14rem] whitespace-nowrap rounded-xl bg-white transition-all will-change-transform before:absolute before:-top-3 before:h-3 before:w-full group-dropdown-hover:opacity-100 dark:bg-jacarta-800 lg:absolute lg:grid lg:!translate-y-4 lg:py-4 lg:px-2 lg:opacity-0 lg:shadow-2xl"
+                aria-labelledby="profileDropdown"
+                onClick={handleOnLoginClicked}
+            >
+                <span
+                    className="flex items-center space-x-2 rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
+                    onClick={handleOnLoginClicked}
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                        className="h-4 w-4 fill-jacarta-700 transition-colors dark:fill-white"
+                    >
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path d="M11 14.062V20h2v-5.938c3.946.492 7 3.858 7 7.938H4a8.001 8.001 0 0 1 7-7.938zM12 13c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6z"></path>
+                    </svg>
+                    <span className="mt-1 font-display text-sm text-jacarta-700 dark:text-white">Connect wallet</span>
+                </span>
+            </div>
+        );
+    };
+
     return (
-        <div className="flex items-center px-6 py-6 xl:px-24">
+        <div className="flex items-center px-6 py-6 xl:px-24" style={{paddingBottom: "0.25rem", paddingTop: "0.25rem"}}>
             {/* <!-- Logo --> */}
-            <a href="index" className="shrink-0">
+            <Link href="/" className="shrink-0">
                 <img src="img/logo.png" className="max-h-7 dark:hidden" alt="Xhibiter | NFT Marketplace" />
-                <img src="img/logo_white.png" className="hidden max-h-7 dark:block" alt="Xhibiter | NFT Marketplace" />
-            </a>
+                <img src="img/logo-white.svg" className="hidden dark:block" alt="Xhibiter | NFT Marketplace" style={{height: "5rem"}} />
+            </Link>
 
             {/* <!-- Search --> */}
             <form action="search" className="relative ml-12 mr-8 hidden basis-3/12 lg:block xl:ml-[8%]">
@@ -36,7 +216,7 @@ const NavigationBar = () => {
                     <a href="index" className="shrink-0">
                         <img src="img/logo.png" className="max-h-7 dark:hidden" alt="Xhibiter | NFT Marketplace" />
                         <img
-                            src="img/logo_white.png"
+                            src="img/logo-white.svg"
                             className="hidden max-h-7 dark:block"
                             alt="Xhibiter | NFT Marketplace"
                         />
@@ -85,13 +265,13 @@ const NavigationBar = () => {
                 <nav className="navbar w-full">
                     <ul className="flex flex-col lg:flex-row">
                         <li className="js-nav-dropdown group relative">
-                            <a
-                                href="#"
+                            <Link
+                                href="/"
                                 className="dropdown-toggle flex items-center justify-between py-3.5 font-display text-base text-jacarta-700 hover:text-accent focus:text-accent dark:text-white dark:hover:text-accent dark:focus:text-accent lg:px-5"
                                 id="navDropdown-1"
                                 aria-expanded="false"
                                 role="button"
-                                data-bs-toggle="dropdown"
+                                // data-bs-toggle="dropdown"
                             >
                                 Home
                                 <i className="lg:hidden">
@@ -106,160 +286,7 @@ const NavigationBar = () => {
                                         <path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z" />
                                     </svg>
                                 </i>
-                            </a>
-                            <ul
-                                className="dropdown-menu group-hover:visible lg:invisible left-0 top-[85%] z-10 hidden min-w-[200px] gap-x-4 whitespace-nowrap rounded-xl bg-white transition-all will-change-transform group-hover:opacity-100 dark:bg-jacarta-800 lg:absolute lg:grid lg:translate-y-4 lg:py-4 lg:px-2 lg:opacity-0 lg:shadow-2xl lg:group-hover:translate-y-2"
-                                aria-labelledby="navDropdown-1"
-                            >
-                                <li>
-                                    <a
-                                        href="index"
-                                        className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="font-display text-sm text-jacarta-700 dark:text-white">
-                                            Home 1
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="index-rtl"
-                                        className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="font-display text-sm text-jacarta-700 dark:text-white">
-                                            Home 1 RTL
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="home-2"
-                                        className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="font-display text-sm text-jacarta-700 dark:text-white">
-                                            Home 2
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="home-3"
-                                        className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="font-display text-sm text-jacarta-700 dark:text-white">
-                                            Home 3
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="home-4"
-                                        className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="font-display text-sm text-jacarta-700 dark:text-white">
-                                            Home 4
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="home-5"
-                                        className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="font-display text-sm text-jacarta-700 dark:text-white">
-                                            Home 5
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="home-6"
-                                        className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="font-display text-sm text-jacarta-700 dark:text-white">
-                                            Home 6
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="home-7"
-                                        className="flex items-center justify-between rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="mr-4 font-display text-sm text-jacarta-700 dark:text-white">
-                                            Crypto Consultant
-                                        </span>
-                                        <span className="rounded bg-green py-1 px-2 text-xxs font-bold uppercase leading-none text-white">
-                                            new
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="home-8"
-                                        className="flex items-center justify-between rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="mr-4 font-display text-sm text-jacarta-700 dark:text-white">
-                                            NFT Game
-                                        </span>
-                                        <span className="rounded bg-green py-1 px-2 text-xxs font-bold uppercase leading-none text-white">
-                                            new
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="home-9"
-                                        className="flex items-center justify-between rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="mr-4 font-display text-sm text-jacarta-700 dark:text-white">
-                                            DAO Platform
-                                        </span>
-                                        <span className="rounded bg-green py-1 px-2 text-xxs font-bold uppercase leading-none text-white">
-                                            new
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="home-10"
-                                        className="flex items-center justify-between rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="mr-4 font-display text-sm text-jacarta-700 dark:text-white">
-                                            Crypto App
-                                        </span>
-                                        <span className="rounded bg-green py-1 px-2 text-xxs font-bold uppercase leading-none text-white">
-                                            new
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="home-11"
-                                        className="flex items-center justify-between rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="mr-4 font-display text-sm text-jacarta-700 dark:text-white">
-                                            Crypto Trading
-                                        </span>
-                                        <span className="rounded bg-green py-1 px-2 text-xxs font-bold uppercase leading-none text-white">
-                                            new
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="home-12"
-                                        className="flex items-center justify-between rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="mr-4 font-display text-sm text-jacarta-700 dark:text-white">
-                                            ICO Landing
-                                        </span>
-                                        <span className="rounded bg-green py-1 px-2 text-xxs font-bold uppercase leading-none text-white">
-                                            new
-                                        </span>
-                                    </a>
-                                </li>
-                            </ul>
+                            </Link>
                         </li>
                         <li className="js-nav-dropdown group relative">
                             <a
@@ -290,45 +317,6 @@ const NavigationBar = () => {
                             >
                                 <li>
                                     <a
-                                        href="maintenance"
-                                        className="flex items-center justify-between rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="mr-4 font-display text-sm text-jacarta-700 dark:text-white">
-                                            Maintenance
-                                        </span>
-                                        <span className="rounded bg-green py-1 px-2 text-xxs font-bold uppercase leading-none text-white">
-                                            new
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="case-studies"
-                                        className="flex items-center justify-between rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="mr-4 font-display text-sm text-jacarta-700 dark:text-white">
-                                            Case Studies
-                                        </span>
-                                        <span className="rounded bg-green py-1 px-2 text-xxs font-bold uppercase leading-none text-white">
-                                            new
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="single-case-study"
-                                        className="flex items-center justify-between rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="mr-4 font-display text-sm text-jacarta-700 dark:text-white">
-                                            Single Case Study
-                                        </span>
-                                        <span className="rounded bg-green py-1 px-2 text-xxs font-bold uppercase leading-none text-white">
-                                            new
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
                                         href="careers"
                                         className="flex items-center justify-between rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
                                     >
@@ -337,16 +325,6 @@ const NavigationBar = () => {
                                         </span>
                                         <span className="rounded bg-green py-1 px-2 text-xxs font-bold uppercase leading-none text-white">
                                             new
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="item"
-                                        className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="font-display text-sm text-jacarta-700 dark:text-white">
-                                            Item Details
                                         </span>
                                     </a>
                                 </li>
@@ -392,26 +370,6 @@ const NavigationBar = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="user"
-                                        className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="font-display text-sm text-jacarta-700 dark:text-white">
-                                            User
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="edit-profile"
-                                        className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="font-display text-sm text-jacarta-700 dark:text-white">
-                                            Edit Profile
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
                                         href="about"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
                                     >
@@ -438,26 +396,6 @@ const NavigationBar = () => {
                                     >
                                         <span className="font-display text-sm text-jacarta-700 dark:text-white">
                                             Wallet
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="login"
-                                        className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="font-display text-sm text-jacarta-700 dark:text-white">
-                                            Login
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="404"
-                                        className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="font-display text-sm text-jacarta-700 dark:text-white">
-                                            Page 404
                                         </span>
                                     </a>
                                 </li>
@@ -518,7 +456,7 @@ const NavigationBar = () => {
                                             </svg>
                                         </span>
                                         <span className="font-display text-sm text-jacarta-700 dark:text-white">
-                                            All NFTs
+                                            All musics
                                         </span>
                                     </a>
                                 </li>
@@ -540,7 +478,7 @@ const NavigationBar = () => {
                                             </svg>
                                         </span>
                                         <span className="font-display text-sm text-jacarta-700 dark:text-white">
-                                            Art
+                                            Classic
                                         </span>
                                     </a>
                                 </li>
@@ -584,7 +522,7 @@ const NavigationBar = () => {
                                             </svg>
                                         </span>
                                         <span className="font-display text-sm text-jacarta-700 dark:text-white">
-                                            Domain Names
+                                            Rhythm games
                                         </span>
                                     </a>
                                 </li>
@@ -606,7 +544,7 @@ const NavigationBar = () => {
                                             </svg>
                                         </span>
                                         <span className="font-display text-sm text-jacarta-700 dark:text-white">
-                                            Music
+                                            Acoustic
                                         </span>
                                     </a>
                                 </li>
@@ -628,7 +566,7 @@ const NavigationBar = () => {
                                             </svg>
                                         </span>
                                         <span className="font-display text-sm text-jacarta-700 dark:text-white">
-                                            Photography
+                                            Beat
                                         </span>
                                     </a>
                                 </li>
@@ -651,28 +589,6 @@ const NavigationBar = () => {
                                         </span>
                                         <span className="font-display text-sm text-jacarta-700 dark:text-white">
                                             Sports
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="collections"
-                                        className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="mr-3 rounded-xl bg-[#F5FFED] p-[0.375rem]">
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 24 24"
-                                                width="24"
-                                                height="24"
-                                                className="h-4 w-4 fill-[#8DD059]"
-                                            >
-                                                <path fill="none" d="M0 0h24v24H0z" />
-                                                <path d="M2 3.993A1 1 0 0 1 2.992 3h18.016c.548 0 .992.445.992.993v16.014a1 1 0 0 1-.992.993H2.992A.993.993 0 0 1 2 20.007V3.993zM4 5v14h16V5H4zm2 2h6v6H6V7zm2 2v2h2V9H8zm-2 6h12v2H6v-2zm8-8h4v2h-4V7zm0 4h4v2h-4v-2z" />
-                                            </svg>
-                                        </span>
-                                        <span className="font-display text-sm text-jacarta-700 dark:text-white">
-                                            Trading Cards
                                         </span>
                                     </a>
                                 </li>
@@ -786,16 +702,6 @@ const NavigationBar = () => {
                                     >
                                         <span className="font-display text-sm text-jacarta-700 dark:text-white">
                                             Blog
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="single-post"
-                                        className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                                    >
-                                        <span className="font-display text-sm text-jacarta-700 dark:text-white">
-                                            Single Post
                                         </span>
                                     </a>
                                 </li>
@@ -940,6 +846,7 @@ const NavigationBar = () => {
                             aria-expanded="false"
                             data-bs-toggle="dropdown"
                             aria-label="profile"
+                            style={{ backgroundColor: loginData.loginStatus === LoginStatus.LoggedIn ? '#00CC66' : '' }}
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -952,114 +859,11 @@ const NavigationBar = () => {
                                 <path d="M11 14.062V20h2v-5.938c3.946.492 7 3.858 7 7.938H4a8.001 8.001 0 0 1 7-7.938zM12 13c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6z" />
                             </svg>
                         </button>
-                        <div
-                            className="dropdown-menu group-dropdown-hover:visible lg:invisible !-right-4 !top-[85%] !left-auto z-10 hidden min-w-[14rem] whitespace-nowrap rounded-xl bg-white transition-all will-change-transform before:absolute before:-top-3 before:h-3 before:w-full group-dropdown-hover:opacity-100 dark:bg-jacarta-800 lg:absolute lg:grid lg:!translate-y-4 lg:py-4 lg:px-2 lg:opacity-0 lg:shadow-2xl"
-                            aria-labelledby="profileDropdown"
-                        >
-                            <button
-                                className="js-copy-clipboard my-4 flex select-none items-center whitespace-nowrap px-5 font-display leading-none text-jacarta-700 dark:text-white"
-                                data-tippy-content="Copy"
-                            >
-                                <span className="max-w-[10rem] overflow-hidden text-ellipsis">
-                                    0x7a86c0b064171007716bbd6af96676935799a63e
-                                </span>
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
-                                    width="24"
-                                    height="24"
-                                    className="ml-1 mb-px h-4 w-4 fill-jacarta-500 dark:fill-jacarta-300"
-                                >
-                                    <path fill="none" d="M0 0h24v24H0z" />
-                                    <path d="M7 7V3a1 1 0 0 1 1-1h13a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-4v3.993c0 .556-.449 1.007-1.007 1.007H3.007A1.006 1.006 0 0 1 2 20.993l.003-12.986C2.003 7.451 2.452 7 3.01 7H7zm2 0h6.993C16.549 7 17 7.449 17 8.007V15h3V4H9v3zM4.003 9L4 20h11V9H4.003z" />
-                                </svg>
-                            </button>
-
-                            <div className="mx-5 mb-6 rounded-lg border border-jacarta-100 p-4 dark:border-jacarta-600">
-                                <span className="text-sm font-medium tracking-tight dark:text-jacarta-200">
-                                    Balance
-                                </span>
-                                <div className="flex items-center">
-                                    <svg
-                                        version="1.1"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        x="0"
-                                        y="0"
-                                        viewBox="0 0 1920 1920"
-                                        xmlSpace="preserve"
-                                        className="-ml-1 mr-1 h-[1.125rem] w-[1.125rem]"
-                                    >
-                                        <path fill="#8A92B2" d="M959.8 80.7L420.1 976.3 959.8 731z"></path>
-                                        <path
-                                            fill="#62688F"
-                                            d="M959.8 731L420.1 976.3l539.7 319.1zm539.8 245.3L959.8 80.7V731z"
-                                        ></path>
-                                        <path fill="#454A75" d="M959.8 1295.4l539.8-319.1L959.8 731z"></path>
-                                        <path fill="#8A92B2" d="M420.1 1078.7l539.7 760.6v-441.7z"></path>
-                                        <path fill="#62688F" d="M959.8 1397.6v441.7l540.1-760.6z"></path>
-                                    </svg>
-                                    <span className="text-lg font-bold text-green">10 ETH</span>
-                                </div>
-                            </div>
-                            <a
-                                href="user"
-                                className="flex items-center space-x-2 rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
-                                    width="24"
-                                    height="24"
-                                    className="h-4 w-4 fill-jacarta-700 transition-colors dark:fill-white"
-                                >
-                                    <path fill="none" d="M0 0h24v24H0z"></path>
-                                    <path d="M11 14.062V20h2v-5.938c3.946.492 7 3.858 7 7.938H4a8.001 8.001 0 0 1 7-7.938zM12 13c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6z"></path>
-                                </svg>
-                                <span className="mt-1 font-display text-sm text-jacarta-700 dark:text-white">
-                                    My Profile
-                                </span>
-                            </a>
-                            <a
-                                href="edit-profile"
-                                className="flex items-center space-x-2 rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
-                                    width="24"
-                                    height="24"
-                                    className="h-4 w-4 fill-jacarta-700 transition-colors dark:fill-white"
-                                >
-                                    <path fill="none" d="M0 0h24v24H0z" />
-                                    <path d="M9.954 2.21a9.99 9.99 0 0 1 4.091-.002A3.993 3.993 0 0 0 16 5.07a3.993 3.993 0 0 0 3.457.261A9.99 9.99 0 0 1 21.5 8.876 3.993 3.993 0 0 0 20 12c0 1.264.586 2.391 1.502 3.124a10.043 10.043 0 0 1-2.046 3.543 3.993 3.993 0 0 0-3.456.261 3.993 3.993 0 0 0-1.954 2.86 9.99 9.99 0 0 1-4.091.004A3.993 3.993 0 0 0 8 18.927a3.993 3.993 0 0 0-3.457-.26A9.99 9.99 0 0 1 2.5 15.121 3.993 3.993 0 0 0 4 11.999a3.993 3.993 0 0 0-1.502-3.124 10.043 10.043 0 0 1 2.046-3.543A3.993 3.993 0 0 0 8 5.071a3.993 3.993 0 0 0 1.954-2.86zM12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                                </svg>
-                                <span className="mt-1 font-display text-sm text-jacarta-700 dark:text-white">
-                                    Edit Profile
-                                </span>
-                            </a>
-                            <a
-                                href="#"
-                                className="flex items-center space-x-2 rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
-                                    width="24"
-                                    height="24"
-                                    className="h-4 w-4 fill-jacarta-700 transition-colors dark:fill-white"
-                                >
-                                    <path fill="none" d="M0 0h24v24H0z" />
-                                    <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zM7 11V8l-5 4 5 4v-3h8v-2H7z" />
-                                </svg>
-                                <span className="mt-1 font-display text-sm text-jacarta-700 dark:text-white">
-                                    Sign out
-                                </span>
-                            </a>
-                        </div>
+                        {loginData.loginStatus === LoginStatus.LoggedIn ? <LoginedButton /> : <NotLoginedButton />}
                     </div>
 
                     {/* <!-- Dark Mode --> */}
-                    <a
+                    {/* <a
                         href="#"
                         className="js-dark-mode-trigger group ml-2 flex h-10 w-10 items-center justify-center rounded-full border border-jacarta-100 bg-white transition-colors hover:border-transparent hover:bg-accent focus:border-transparent focus:bg-accent dark:border-transparent dark:bg-white/[.15] dark:hover:bg-accent"
                     >
@@ -1083,7 +887,7 @@ const NavigationBar = () => {
                             <path fill="none" d="M0 0h24v24H0z" />
                             <path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z" />
                         </svg>
-                    </a>
+                    </a> */}
                 </div>
             </div>
 
@@ -1108,7 +912,7 @@ const NavigationBar = () => {
                 </a>
 
                 {/* <!-- Dark Mode --> */}
-                <a
+                {/* <a
                     href="#"
                     className="js-dark-mode-trigger group ml-2 flex h-10 w-10 items-center justify-center rounded-full border border-jacarta-100 bg-white transition-colors hover:border-transparent hover:bg-accent focus:border-transparent focus:bg-accent dark:border-transparent dark:bg-white/[.15] dark:hover:bg-accent"
                 >
@@ -1132,7 +936,7 @@ const NavigationBar = () => {
                         <path fill="none" d="M0 0h24v24H0z" />
                         <path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z" />
                     </svg>
-                </a>
+                </a> */}
 
                 {/* <!-- Mobile Menu Toggle --> */}
                 <button

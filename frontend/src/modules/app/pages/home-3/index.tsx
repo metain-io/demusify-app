@@ -1107,7 +1107,7 @@ const Home3Page = () => {
                 <div className="bg-light-base dark:bg-jacarta-800">
                     <div className="container">
                         <div className="grid grid-cols-2 py-8 sm:grid-cols-5">
-                            <a href="#">
+                            {/* <a href="#">
                                 <img src="../img/partners/partner_logo_1.png" alt="partner 1" />{' '}
                             </a>
                             <a href="#">
@@ -1121,7 +1121,7 @@ const Home3Page = () => {
                             </a>
                             <a href="#">
                                 <img src="../img/partners/partner_logo_5.png" alt="partner 1" />{' '}
-                            </a>
+                            </a> */}
                         </div>
                     </div>
                 </div>

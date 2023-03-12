@@ -1,4 +1,4 @@
-import { Footer2, NavigationBar2 } from '@modules/app/components';
+import { Footer2, NavigationBar3 } from '@modules/app/components';
 import Script from 'next/script';
 import { PropsWithChildren } from 'react';
 
@@ -10,7 +10,7 @@ const MainLayout2 = (props: MainLayout2Props) => {
     return (
         <div className="overflow-x-hidden bg-jacarta-900 font-body text-jacarta-500">
             <header className="js-page-header page-header--transparent fixed top-0 z-20 w-full backdrop-blur transition-colors">
-                <NavigationBar2 />
+                <NavigationBar3 />
             </header>
 
             {children}

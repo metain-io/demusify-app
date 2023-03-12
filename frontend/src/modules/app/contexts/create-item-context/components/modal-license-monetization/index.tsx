@@ -78,7 +78,6 @@ export const ModalLicenseMonetization = () => {
                                         <input
                                             type="number"
                                             className="h-12 w-full border border-jacarta-100 focus:ring-inset focus:ring-accent dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:placeholder-jacarta-300"
-                                            placeholder="3"
                                             value={item.value}
                                             onChange={(e) =>
                                                 handleUpdateLicenseMonetizationValue(item.id, e.target.value)

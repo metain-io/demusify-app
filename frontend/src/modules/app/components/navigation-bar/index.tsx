@@ -180,11 +180,11 @@ const NavigationBar = (props: any) => {
     };
 
     return (
-        <div className="flex items-center px-6 py-6 xl:px-24">
+        <div className="flex items-center px-6 py-6 xl:px-24" style={{paddingBottom: "0.25rem", paddingTop: "0.25rem"}}>
             {/* <!-- Logo --> */}
             <Link href="/" className="shrink-0">
                 <img src="img/logo.png" className="max-h-7 dark:hidden" alt="Xhibiter | NFT Marketplace" />
-                <img src="img/logo_white.png" className="hidden max-h-7 dark:block" alt="Xhibiter | NFT Marketplace" />
+                <img src="img/logo-white.svg" className="hidden dark:block" alt="Xhibiter | NFT Marketplace" style={{height: "5rem"}} />
             </Link>
 
             {/* <!-- Search --> */}
@@ -216,7 +216,7 @@ const NavigationBar = (props: any) => {
                     <a href="index" className="shrink-0">
                         <img src="img/logo.png" className="max-h-7 dark:hidden" alt="Xhibiter | NFT Marketplace" />
                         <img
-                            src="img/logo_white.png"
+                            src="img/logo-white.svg"
                             className="hidden max-h-7 dark:block"
                             alt="Xhibiter | NFT Marketplace"
                         />

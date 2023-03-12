@@ -5,10 +5,11 @@ const Footer = () => {
                 <div className="col-span-full sm:col-span-3 md:col-span-4">
                     {/* <!-- Logo --> */}
                     <a href="index" className="mb-6 inline-block">
-                        <img src="img/logo.png" className="max-h-7 dark:hidden" alt="Xhibiter | NFT Marketplace" />
+                        <img src="img/logo.png" className="dark:hidden" alt="Xhibiter | NFT Marketplace" />
                         <img
-                            src="img/logo_white.png"
-                            className="hidden max-h-7 dark:block"
+                            src="img/logo-white.svg"
+                            className="hidden dark:block"
+                            style={{height: "8rem"}}
                             alt="Xhibiter | NFT Marketplace"
                         />
                     </a>

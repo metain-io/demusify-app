@@ -1,5 +1,6 @@
 import logger from '@libs/logger';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import WalletService from '@modules/crypto-wallet/services/crypto-wallet-service';
 
 export enum LoginStatus {
     Undefined,
@@ -16,6 +17,15 @@ type LoginState = {
     error: any;
     username: string | null;
     walletAddress: string | null;
+    name: string | null;
+    bio: string | null;
+    email: string | null;
+    twitterLink: string | null;
+    instagramLink: string | null;
+    yourSiteLink: string | null;
+    avatarUrl: string | null;
+
+    balances: any
 };
 
 const initialState: LoginState = {
@@ -23,6 +33,15 @@ const initialState: LoginState = {
     error: null,
     username: null,
     walletAddress: null,
+    name: null,
+    bio: null,
+    email: null,
+    twitterLink: null,
+    instagramLink: null,
+    yourSiteLink: null,
+    avatarUrl: null,
+
+    balances: {}
 };
 
 export const loginSlice = createSlice({
@@ -84,6 +103,20 @@ export const loginSlice = createSlice({
             state.status = LoginStatus.AuthenticateFailed;
             state.error = error;
         },
+
+        updateProfile: (state: any, action: PayloadAction<any>) => {
+            logger.info('auth/login/update-profile', action.payload);
+
+            state.name = action.payload?.name
+            state.bio = action.payload?.bio
+            state.email = action.payload?.email
+            state.twitterLink = action.payload?.twitterLink
+            state.instagramLink = action.payload?.instagramLink
+            state.yourSiteLink = action.payload?.yourSiteLink
+            state.avatarUrl = action.payload?.avatarUrl
+
+            state.balances = action.payload.balances
+        }
     },
     extraReducers: (builder) => {},
 });
@@ -96,3 +129,20 @@ export const selectLoginStatus = (state: any) => state.login.status;
 export const selectLoginError = (state: any) => state.login.error;
 export const selectLoginUsername = (state: any) => state.login.username;
 export const selectLoginWalletAddress = (state: any) => state.login.walletAddress;
+export const selectLoginData = (state: any) => {
+    return {
+        walletAddress: state.login.walletAddress,
+        username: state.login.username,
+        loginStatus: state.login.status,
+        
+        name: state.login.name,
+        bio: state.login.bio,
+        email: state.login.email,
+        twitterLink: state.login.twitterLink,
+        instagramLink: state.login.instagramLink,
+        yourSiteLink: state.login.yourSiteLink,
+        avatarUrl: state.login.avatarUrl,
+
+        balances: state.login.balances
+    }
+}

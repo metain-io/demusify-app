@@ -9,6 +9,7 @@ import CryptoWallet, { CryptoWalletEvent } from '@modules/crypto-wallet/crypto-w
 import PhantomWallet from '@modules/crypto-wallet/wallet-adapters/phantom-wallet-adapter';
 import WalletService from '@modules/crypto-wallet/services/crypto-wallet-service';
 import bs58 from 'bs58';
+import { DemusifyApi } from '@modules/common/api';
 
 function createCryptoWalletEventChannel(cryptoWallet: CryptoWallet) {
     return eventChannel(cryptoWallet.eventChannelEmitter);
@@ -125,7 +126,7 @@ function* init(): any {
     const bytes = bs58.decode(walletAccount);
     const walletAccountInHex = Buffer.from(bytes).toString('hex');
 
-    if (walletAccountInHex.toLowerCase() != username.split('-')[3].toLowerCase()) {
+    if (walletAccountInHex.toLowerCase() != username.split('-')[2].toLowerCase()) {
         yield put(
             loginActions.initFinished({
                 status: LoginStatus.NotLogged,
@@ -144,7 +145,28 @@ function* init(): any {
         }),
     );
 
+    yield call(resolveGenerator, getUserProfile(username));
+
     yield fork(watchCryptoWalletEventChannel, WalletService.currentWallet);
+}
+
+function* getUserProfile(username: string): any {
+    console.log('============== getUserProfile')
+    if (!username) return {};
+    let [userProfile, error] = yield call(resolveGenerator, DemusifyApi.walletApp.getCreator(username));
+    const [balances, balanceError] = yield call(resolveGenerator, WalletService.currentWallet!.getBalances())
+
+    console.log('getUserProfile --- userProfile: ', userProfile);
+    console.log('getUserProfile --- getBalances: ', balances);
+
+    if (error || balanceError) {
+        console.log('getUserProfile --- ERROR: ', error, balanceError);
+        return {};
+    }
+    userProfile.balances = balances
+
+    yield put(loginActions.updateProfile(userProfile))
+    return userProfile
 }
 
 function* handleLoginWithPhantomWallet(): any {
@@ -173,8 +195,8 @@ function* handleLoginWithPhantomWallet(): any {
     const bytes = bs58.decode(walletAccount);
     const walletAccountInHex = Buffer.from(bytes).toString('hex');
 
-    const username = `w-sol-t-${walletAccountInHex}`;
-    const password = 'MetainDummyPassword' + Date.now().toString();
+    const username = `sol-test-${walletAccountInHex}`;
+    const password = 'DemusifyDummyPassword' + Date.now().toString();
 
     const [registerUserResult, registerUserError] = yield call(
         resolveGenerator,
@@ -235,6 +257,8 @@ function* handleLoginWithPhantomWallet(): any {
             walletAddress: walletAccount,
         }),
     );
+
+    getUserProfile(username);
 
     yield fork(watchCryptoWalletEventChannel, WalletService.currentWallet);
 }

@@ -5,10 +5,13 @@ export const HeroSlider = () => {
                 <div className="container relative z-10 h-full pt-40">
                     <h1
                         className="font-display font-semibold text-white text-5xl"
-                        style={{ textTransform: 'uppercase', maxWidth: '30rem', fontSize: '72px' }}
+                        style={{ textTransform: 'uppercase', maxWidth: '42rem', fontSize: '72px' }}
                     >
-                        <span>The World&apos;s&nbsp;</span>
-                        #1 Marketplace to buy &amp; sell music licenses
+                        The<br/>
+                        World's #1<br/>
+                        music nft platform<br/>
+                        licensing &amp; monetization<br/>
+                        <span style={{fontSize: '36px'}}>for independent creators</span>
                     </h1>
 
                     <div
@@ -40,7 +43,7 @@ export const HeroSlider = () => {
                     </div>
                 </div>
 
-                <video className="absolute inset-0 h-full w-full object-cover" playsInline autoPlay loop>
+                <video className="absolute inset-0 h-full w-full object-cover" playsInline autoPlay loop muted>
                     <source _ngcontent-lua-c431="" src="/video/home.mp4" type="video/mp4" />
                 </video>
             </div>

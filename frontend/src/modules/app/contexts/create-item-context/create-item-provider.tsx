@@ -62,12 +62,12 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
             licenseMonetizations: [
                 {
                     id: 'streamingPerCopy',
-                    name: 'Streaming (per copy)',
+                    name: 'Lite',
                     value: '',
                 },
                 {
                     id: 'synchronizationPerProduct',
-                    name: 'Synchronization (per product)',
+                    name: 'Advanced',
                     value: '',
                 },
             ],

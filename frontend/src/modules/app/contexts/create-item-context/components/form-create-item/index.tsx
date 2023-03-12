@@ -144,10 +144,12 @@ const LeftSide = () => {
 
 const RightSide = () => {
     const { state, form, collections } = useCreateItem();
+    const router = useRouter();
 
     const onButtonCreateClicked: MouseEventHandler<HTMLButtonElement> = (e) => {
         e.preventDefault();
         form.handleSubmit();
+        router.push('/user');
     };
 
     const handleSelectCollection = (collection: { id: string; name: string }) => {

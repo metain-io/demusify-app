@@ -2,7 +2,7 @@ const NavigationBar2 = () => {
     return (
         <div className="flex items-center px-6 py-6 xl:px-24">
             {/* <!-- Logo --> */}
-            <a href="index" className="flex-1 shrink-0">
+            <a href="/" className="flex-1 shrink-0">
                 <img src="img/logo-white.svg" className="max-h-7" alt="Xhibiter | NFT Marketplace" />
             </a>
 
@@ -11,7 +11,7 @@ const NavigationBar2 = () => {
                 {/* <!-- Mobile Logo / Menu Close --> */}
                 <div className="t-0 fixed left-0 z-10 flex w-full items-center justify-between bg-jacarta-800 p-6 lg:hidden">
                     {/* <!-- Mobile Logo --> */}
-                    <a href="index" className="shrink-0">
+                    <a href="/" className="shrink-0">
                         <img src="img/logo-white.svg" className="max-h-7" alt="Xhibiter | NFT Marketplace" />
                     </a>
 
@@ -65,7 +65,7 @@ const NavigationBar2 = () => {
                             >
                                 <li>
                                     <a
-                                        href="index"
+                                        href="/"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-600 hover:text-accent focus:text-accent"
                                     >
                                         <span className="font-display text-sm text-white">Home 1</span>

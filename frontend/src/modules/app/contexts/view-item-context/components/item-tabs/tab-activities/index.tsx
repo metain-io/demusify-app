@@ -1,8 +1,4 @@
-type TabActivitiesProps = {
-    item?: any;
-};
-
-export const TabActivities = (props: TabActivitiesProps) => {
+export const TabActivities = () => {
     return (
         <div className="tab-pane fade" id="activity" role="tabpanel" aria-labelledby="activity-tab">
             {/* <!-- Filter --> */}

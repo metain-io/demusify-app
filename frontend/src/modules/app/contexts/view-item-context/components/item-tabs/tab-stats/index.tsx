@@ -1,9 +1,7 @@
-type TabStatsProps = {
-    item?: any;
-};
+import { useViewItem } from '../../../index';
 
-export const TabStats = (props: TabStatsProps) => {
-    const { item } = props;
+export const TabStats = () => {
+    const { item } = useViewItem();
 
     return (
         <div className="tab-pane fade" id="stats" role="tabpanel" aria-labelledby="properties-tab">

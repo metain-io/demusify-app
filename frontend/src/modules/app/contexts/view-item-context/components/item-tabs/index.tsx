@@ -4,12 +4,7 @@ import { TabLevels } from './tab-levels';
 import { TabProperties } from './tab-properties';
 import { TabStats } from './tab-stats';
 
-type TabsProps = {
-    item?: any;
-};
-
-export const Tabs = (props: TabsProps) => {
-    const { item } = props;
+export const ItemTabs = () => {
     return (
         <div className="scrollbar-custom mt-14 overflow-x-auto rounded-lg">
             <div className="min-w-fit">
@@ -149,19 +144,19 @@ export const Tabs = (props: TabsProps) => {
                 {/* <!-- Tab Content --> */}
                 <div className="tab-content">
                     {/* <!-- Properties --> */}
-                    <TabProperties item={item} />
+                    <TabProperties />
 
                     {/* <!-- Details --> */}
-                    <TabDetails item={item} />
+                    <TabDetails />
 
                     {/* <!-- Activity --> */}
-                    <TabActivities item={item} />
+                    <TabActivities />
 
                     {/* <!-- Stats --> */}
-                    <TabStats item={item} />
+                    <TabStats />
 
                     {/* <!-- Levels --> */}
-                    <TabLevels item={item} />
+                    <TabLevels />
                 </div>
             </div>
         </div>

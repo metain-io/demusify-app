@@ -1,9 +1,7 @@
-type TabLevelsProps = {
-    item?: any;
-};
+import { useViewItem } from '../../../index';
 
-export const TabLevels = (props: TabLevelsProps) => {
-    const { item } = props;
+export const TabLevels = () => {
+    const { item } = useViewItem();
 
     return (
         <div className="tab-pane fade" id="levels" role="tabpanel" aria-labelledby="properties-tab">

@@ -1,16 +1,13 @@
-import { useRouter } from 'next/router';
+import { useViewItem, ViewItemMode } from '@modules/app/contexts/view-item-context';
 import { MouseEventHandler } from 'react';
+import { PurchaseItemStatus, usePurchaseItem } from '../../index';
 
-export type ModalPurchaseProps = {
-    price: number;
-};
-
-export const ModalPurchase = (props: ModalPurchaseProps) => {
-    const { price } = props;
-    const router = useRouter();
+export const ModalPurchaseItem = () => {
+    const { state, handlePurchase } = usePurchaseItem();
+    const { selectedLicense } = useViewItem();
 
     const onButtonConfirmClicked: MouseEventHandler<HTMLButtonElement> = (e) => {
-        router.push('/user');
+        handlePurchase();
     };
 
     return (
@@ -53,7 +50,7 @@ export const ModalPurchase = (props: ModalPurchaseProps) => {
                                 type="text"
                                 className="h-12 w-full flex-[3] border-0 focus:ring-inset focus:ring-accent"
                                 placeholder="Amount"
-                                value={price}
+                                value={selectedLicense?.value || 'N/A'}
                             />
                         </div>
 
@@ -84,8 +81,10 @@ export const ModalPurchase = (props: ModalPurchaseProps) => {
                                 type="button"
                                 className="rounded-full bg-accent py-3 px-8 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark"
                                 onClick={onButtonConfirmClicked}
+                                disabled={state.status == PurchaseItemStatus.PROCESSING}
                             >
-                                Confirm
+                                {state.status == PurchaseItemStatus.PROCESSING ? 'Processing...' : 'Confirm'}
+                                {state.error && <p className="mb-3 text-2xs text-red">{state.error}</p>}
                             </button>
                         </div>
                     </div>

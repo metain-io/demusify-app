@@ -4,8 +4,8 @@ export const GridCollections = () => {
     const { collections } = useViewCollections();
     return (
         <div className="grid grid-cols-1 gap-[1.875rem] md:grid-cols-3 lg:grid-cols-4">
-            {collections.map((item) => (
-                <article>
+            {collections.map((item, index) => (
+                <article key={index}>
                     <div className="block rounded-2.5xl border border-jacarta-900 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-900">
                         <figure>
                             <a href="view-item">

@@ -7,12 +7,19 @@ import {
 import { ModalLicenseMonetization } from '@modules/app/contexts/create-item-context/components/modal-license-monetization';
 import { CreateItemProvider } from '@modules/app/contexts/create-item-context/create-item-provider';
 import { MainLayout } from '@modules/app/layouts';
+import { useRouter } from 'next/router';
 import { ReactElement } from 'react';
 
 const PageCreateItem = () => {
+    const router = useRouter();
+
+    const onCreateItemSucceeded = (item: any) => {
+        router.push(`view-item?itemId=${item.id}&viewOnly=true`);
+    };
+
     return (
         <>
-            <CreateItemProvider>
+            <CreateItemProvider onCreateItemSucceeded={onCreateItemSucceeded}>
                 <main>
                     {/* <!-- Create --> */}
                     <section className="relative py-24">

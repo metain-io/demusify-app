@@ -1,7 +1,13 @@
-import { useViewItem } from '../../index';
+import { useViewItem, ViewItemStatus } from '../../index';
 
 export const ItemCoverArtImage = () => {
-    const { item } = useViewItem();
+    const { state, item } = useViewItem();
+
+    if (state.status == ViewItemStatus.LOADING) {
+        return (
+            <figure className="mb-8 md:w-2/5 md:flex-shrink-0 md:flex-grow-0 md:basis-auto lg:w-1/2 bg-jacarta-700 rounded-2xl"></figure>
+        );
+    }
 
     return (
         <figure className="mb-8 md:w-2/5 md:flex-shrink-0 md:flex-grow-0 md:basis-auto lg:w-1/2">

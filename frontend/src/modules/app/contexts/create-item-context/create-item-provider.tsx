@@ -11,12 +11,13 @@ import {
 import { v4 as Uuid } from 'uuid';
 import * as Yup from 'yup';
 import { database } from '@modules/app/database';
-import { useRouter } from 'next/router';
 
-export type CreateItemProviderProps = PropsWithChildren;
+export type CreateItemProviderProps = PropsWithChildren<{
+    onCreateItemSucceeded?: (item: any) => void;
+}>;
 
 export const CreateItemProvider = (props: CreateItemProviderProps) => {
-    const { children } = props;
+    const { children, onCreateItemSucceeded } = props;
 
     const [id, setId] = React.useState(Uuid());
 
@@ -101,11 +102,14 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
                 return;
             }
 
-            database.addItem({ id: id, createdAt: Date.now(), updatedAt: Date.now(), ...value });
+            const item = { id: id, createdAt: Date.now(), updatedAt: Date.now(), ...value };
+            database.addItem(item);
 
             setState({
                 status: CreateItemStatus.SUBMIT_SUCCEEDED,
             });
+
+            onCreateItemSucceeded?.(item);
         }, 3000);
     };
 

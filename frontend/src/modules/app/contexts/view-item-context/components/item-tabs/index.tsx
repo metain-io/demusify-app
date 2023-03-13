@@ -1,3 +1,4 @@
+import { useViewItem, ViewItemStatus } from '../../index';
 import { TabActivities } from './tab-activities';
 import { TabDetails } from './tab-detail';
 import { TabLevels } from './tab-levels';
@@ -5,6 +6,12 @@ import { TabProperties } from './tab-properties';
 import { TabStats } from './tab-stats';
 
 export const ItemTabs = () => {
+    const { state } = useViewItem();
+
+    if (state.status == ViewItemStatus.LOADING) {
+        return <></>;
+    }
+
     return (
         <div className="scrollbar-custom mt-14 overflow-x-auto rounded-lg">
             <div className="min-w-fit">

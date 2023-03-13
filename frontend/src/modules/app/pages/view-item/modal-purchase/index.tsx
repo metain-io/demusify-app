@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import React from 'react';
 import { MouseEventHandler } from 'react';
 
 export type ModalPurchaseProps = {
@@ -7,10 +8,14 @@ export type ModalPurchaseProps = {
 
 export const ModalPurchase = (props: ModalPurchaseProps) => {
     const { price } = props;
+    const closeButtonRef = React.useRef(null);
     const router = useRouter();
 
     const onButtonConfirmClicked: MouseEventHandler<HTMLButtonElement> = (e) => {
-        router.push('/user');
+        // Cheating: close modal before move to other page with Next Router
+        // @ts-ignore
+        closeButtonRef.current?.click?.()
+        setTimeout(() => router.push('/user'), 200);
     };
 
     return (
@@ -21,7 +26,7 @@ export const ModalPurchase = (props: ModalPurchaseProps) => {
                         <h5 className="modal-title" id="placeBidLabel">
                             Confirm Purchase
                         </h5>
-                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <button ref={closeButtonRef} type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 24 24"

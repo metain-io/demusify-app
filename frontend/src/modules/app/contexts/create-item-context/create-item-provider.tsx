@@ -12,6 +12,8 @@ import { v4 as Uuid } from 'uuid';
 import * as Yup from 'yup';
 import { database } from '@modules/app/database';
 import { DemusifyApi } from '@modules/common/api';
+import { useSelector } from 'react-redux';
+import { selectLoginData } from '@modules/auth/redux/login/slice';
 
 export type CreateItemProviderProps = PropsWithChildren<{
     onCreateItemSucceeded?: (item: any) => void;
@@ -21,6 +23,8 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
     const { children, onCreateItemSucceeded } = props;
 
     const [id, setId] = React.useState(Uuid());
+
+    const loginData = useSelector(selectLoginData);
 
     const [collections, setCollections] = React.useState<Array<any>>([
         {
@@ -99,7 +103,7 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
                 updatedAt: Date.now(),
                 ...value,
             };
-            const result = await DemusifyApi.walletApp.createItem(item);
+            const result = await DemusifyApi.walletApp.createItem({ item, userWalletAddress: loginData.walletAddress });
             console.log('handleSubmit | api result:', result);
             database.addItem(item);
 

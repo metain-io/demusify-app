@@ -11,6 +11,7 @@ import {
 import { v4 as Uuid } from 'uuid';
 import * as Yup from 'yup';
 import { database } from '@modules/app/database';
+import { DemusifyApi } from '@modules/common/api';
 
 export type CreateItemProviderProps = PropsWithChildren<{
     onCreateItemSucceeded?: (item: any) => void;
@@ -88,21 +89,18 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
     const handleSubmit = async (value: any) => {
         console.log('handleSubmit:', id, value);
 
-        setState(() => ({ status: CreateItemStatus.SUBMITTING }));
+        try {
+            setState(() => ({ status: CreateItemStatus.SUBMITTING }));
 
-        // TODO: Replace with real api call
-        setTimeout(() => {
-            const r = Math.random() * 10;
-
-            if (r < 0) {
-                setState({
-                    status: CreateItemStatus.SUBMIT_FAILED,
-                    error: 'Something went wrong!!',
-                });
-                return;
-            }
-
-            const item = { id: id, createdAt: Date.now(), updatedAt: Date.now(), ...value };
+            const item = {
+                itemID: id,
+                collectionID: value.collection.id,
+                createdAt: Date.now(),
+                updatedAt: Date.now(),
+                ...value,
+            };
+            const result = await DemusifyApi.walletApp.createItem(item);
+            console.log('handleSubmit | api result:', result);
             database.addItem(item);
 
             setState({
@@ -110,7 +108,9 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
             });
 
             onCreateItemSucceeded?.(item);
-        }, 3000);
+        } catch (error: any) {
+            setState(() => ({ status: CreateItemStatus.SUBMIT_FAILED, error: error.toString() }));
+        }
     };
 
     const handleUploadCoverArtImage = async (file?: File) => {

@@ -1,13 +1,7 @@
 import { ItemModel } from '@models/index';
-import { v4 as Uuid } from 'uuid';
 
 export class ItemService {
     async createItem(data: any) {
-        data = {
-            itemID: Uuid(),
-            ...data,
-        };
-
         return await (await ItemModel.create(data)).save();
     }
 

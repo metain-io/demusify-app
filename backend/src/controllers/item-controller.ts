@@ -1,15 +1,28 @@
-import { ItemService } from '@services/index';
+import { ItemService, NFTCreationService } from '@services/index';
+import { NFTService } from '@services/nft-service';
 import { Request, Response } from 'express';
 
 export class ItemController {
     async createItem(req: Request, res: Response) {
-        const input = req.body;
+        const { item, userWalletAddress } = req.body;
+        const user = (req as any).user;
 
         const itemService = new ItemService();
-        const item = await itemService.createItem(input);
+        const createdItem = await itemService.createItem({ username: user.username, ...item });
+
+        const nftService = new NFTService();
+        const { tokenMint, creationSignature } = await nftService.createItem(userWalletAddress);
+        console.log({ tokenMint, creationSignature });
+
+        // const nftCreationService = new NFTCreationService();
+        // await nftCreationService.createNFTCreation({
+        //     creatorID: user.username,
+        //     nftID: tokenMint.publicKey.toBase58(),
+        //     txID: creationSignature.publicKey.toBase58(),
+        // });
 
         res.json({
-            data: item,
+            data: createdItem,
         });
     }
 

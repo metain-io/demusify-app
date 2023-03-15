@@ -23,7 +23,8 @@ const NFTCreationModel = dynamoose.model(
             musicUrl: String,
             liked: Number,
             totalSale: Number,
-            totalRevenue: Number
+            totalRevenue: Number,
+            transactions: String
         },
         {
             saveUnknown: true,

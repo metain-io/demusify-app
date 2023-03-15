@@ -3,7 +3,7 @@ import { LoginStatus } from '@modules/auth/redux/login/slice';
 import Link from 'next/link';
 
 const NavigationBar = (props: any) => {
-    const { handleOnLoginClicked = () => {}, loginData = { loginData: LoginStatus.Undefined } } = props;
+    const { handleOnLoginClicked = () => {}, loginData = { loginData: LoginStatus.Undefined }, onMenuToggle = () => {} } = props;
 
     const LoginedButton = () => {
         return (
@@ -819,12 +819,13 @@ const NavigationBar = (props: any) => {
                 {/* <!-- Actions --> */}
                 <div className="ml-8 hidden lg:flex xl:ml-12">
                     {/* <!-- Wallet --> */}
-                    <a
-                        href="#"
+                    <button
+                        // href="#"
                         className="js-wallet group flex h-10 w-10 items-center justify-center rounded-full border border-jacarta-100 bg-white transition-colors hover:border-transparent hover:bg-accent focus:border-transparent focus:bg-accent dark:border-transparent dark:bg-white/[.15] dark:hover:bg-accent"
                         data-bs-toggle="modal"
-                        data-bs-target="#walletModal"
-                        aria-label="wallet"
+                        // data-bs-target="#walletModal"
+                        // aria-label="wallet"
+                        onClick={onMenuToggle}
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -836,7 +837,7 @@ const NavigationBar = (props: any) => {
                             <path fill="none" d="M0 0h24v24H0z" />
                             <path d="M22 6h-7a6 6 0 1 0 0 12h7v2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v2zm-7 2h8v8h-8a4 4 0 1 1 0-8zm0 3v2h3v-2h-3z" />
                         </svg>
-                    </a>
+                    </button>
 
                     {/* <!-- Profile --> */}
                     <div className="js-nav-dropdown group-dropdown relative">

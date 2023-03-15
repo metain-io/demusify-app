@@ -752,8 +752,8 @@ const NavigationBar3 = (props: any) => {
                 {/* <!-- Actions --> */}
                 <div className="ml-8 hidden lg:flex xl:ml-12">
                     {/* <!-- Wallet --> */}
-                    <a
-                        href="#"
+                    <button
+                        // href="#"
                         className="group flex h-10 w-10 items-center justify-center rounded-full border border-transparent bg-white/[.15] transition-colors hover:bg-accent focus:bg-accent"
                         aria-label="wallet"
                         onClick={onMenuToggle}
@@ -768,7 +768,7 @@ const NavigationBar3 = (props: any) => {
                             <path fill="none" d="M0 0h24v24H0z" />
                             <path d="M22 6h-7a6 6 0 1 0 0 12h7v2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v2zm-7 2h8v8h-8a4 4 0 1 1 0-8zm0 3v2h3v-2h-3z" />
                         </svg>
-                    </a>
+                    </button>
 
                     {/* <!-- Profile --> */}
                     {loginData.loginStatus === LoginStatus.LoggedIn ? <LoginedButton /> : <NotLoginedButton />}

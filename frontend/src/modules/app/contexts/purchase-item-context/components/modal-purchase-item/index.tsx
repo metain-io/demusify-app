@@ -1,3 +1,5 @@
+import { useRouter } from 'next/router';
+import React from 'react';
 import { useViewItem, ViewItemMode } from '@modules/app/contexts/view-item-context';
 import { MouseEventHandler } from 'react';
 import { PurchaseItemStatus, usePurchaseItem } from '../../index';
@@ -5,9 +7,12 @@ import { PurchaseItemStatus, usePurchaseItem } from '../../index';
 export const ModalPurchaseItem = () => {
     const { state, handlePurchase } = usePurchaseItem();
     const { selectedLicense } = useViewItem();
+    const closeButtonRef = React.useRef(null);
 
     const onButtonConfirmClicked: MouseEventHandler<HTMLButtonElement> = (e) => {
-        handlePurchase();
+        // @ts-ignore
+        closeButtonRef.current?.click?.()
+        setTimeout(() => handlePurchase());
     };
 
     return (
@@ -18,7 +23,7 @@ export const ModalPurchaseItem = () => {
                         <h5 className="modal-title" id="placeBidLabel">
                             Confirm Purchase
                         </h5>
-                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <button ref={closeButtonRef} type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 24 24"

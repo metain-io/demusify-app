@@ -12,6 +12,47 @@ export enum LoginStatus {
     LoggedIn,
 }
 
+export type UserNftActivities = {
+    creatorID: string,
+    nftID: string,
+    behavior: string,
+    description: string,
+    createTime: number
+}
+
+export type UserNftCreation = {
+    creatorID: string,
+    nftID: string,
+    name: string,
+    externalLink: string,
+    description: string,
+    collectionId: string,
+    properties: string,
+    levels: string,
+    licences: string,
+    artCoverUrl: string,
+    musicUrl: string,
+    liked: number,
+    totalSale: number,
+    totalRevenue: number,
+    transactions: Array<any>
+}
+
+export type UserNftLicensed = {
+    creatorID: string,
+    nftID: string,
+    name: string,
+    externalLink: string,
+    description: string,
+    collectionId: string,
+    properties: string,
+    levels: string,
+    licences: string,
+    artCoverUrl: string,
+    musicUrl: string,
+    liked: number
+}
+
 type LoginState = {
     status: LoginStatus;
     error: any;
@@ -26,6 +67,11 @@ type LoginState = {
     avatarUrl: string | null;
 
     balances: any
+
+    nftActivities: Array<UserNftActivities> | undefined,
+    nftCreation: Array<UserNftCreation> | undefined,
+    nftLicensed: Array<UserNftLicensed> | undefined,
+
 };
 
 const initialState: LoginState = {
@@ -41,7 +87,10 @@ const initialState: LoginState = {
     yourSiteLink: null,
     avatarUrl: null,
 
-    balances: {}
+    balances: {},
+    nftActivities: [],
+    nftCreation: [],
+    nftLicensed: [],
 };
 
 export const loginSlice = createSlice({
@@ -116,6 +165,14 @@ export const loginSlice = createSlice({
             state.avatarUrl = action.payload?.avatarUrl
 
             state.balances = action.payload.balances
+        },
+
+        updateUserData: (state: any, action: PayloadAction<any>) => {
+            logger.info('auth/login/update-userData', action.payload);
+
+            state.nftActivities = action.payload?.nftActivities || []
+            state.nftLicensed = action.payload?.nftLicensed || []
+            state.nftCreation = action.payload?.nftCreation || []
         }
     },
     extraReducers: (builder) => {},
@@ -129,6 +186,17 @@ export const selectLoginStatus = (state: any) => state.login.status;
 export const selectLoginError = (state: any) => state.login.error;
 export const selectLoginUsername = (state: any) => state.login.username;
 export const selectLoginWalletAddress = (state: any) => state.login.walletAddress;
+export const selectUserNftData = (state: any): {
+    nftCreation: Array<UserNftCreation>,
+    nftLicensed: Array<UserNftLicensed>,
+    nftActivities: Array<UserNftActivities>
+} => {
+    return {
+        nftCreation: state.login.nftCreation,
+        nftLicensed: state.login.nftLicensed,
+        nftActivities: state.login.nftActivities,
+    }
+}
 export const selectLoginData = (state: any) => {
     return {
         walletAddress: state.login.walletAddress,

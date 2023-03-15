@@ -9,6 +9,7 @@ interface IDemusifyApi extends IBaseApiProvider {
     walletApp: {
         getCreator(username: string): Promise<any>;
         updateCreator(username: string, creator: any): Promise<any>;
+        getUserNftData(username: string): Promise<any>;
     };
 }
 
@@ -61,7 +62,6 @@ class DemusifyApi extends BaseApiProvider implements IDemusifyApi {
             const rs = await this.executeRequest(requestKey, () => Client.get(uri, {}));
             return rs.data || {};
         },
-
         updateCreator: async (username: string, creator: any): Promise<any> => {
             const uri = `/demusify/api/v1/creator/${username}`;
             const requestKey = generateRequestKey(uri);
@@ -72,6 +72,14 @@ class DemusifyApi extends BaseApiProvider implements IDemusifyApi {
             );
             return rs;
         },
+        getUserNftData: async (username: string): Promise<any> => {
+            const uri = `/demusify/api/v1/user/nftData/${username}`;
+            const requestKey = generateRequestKey(uri);
+            const rs = await this.executeRequest(requestKey, () => Client.get(uri, {}));
+            return rs.data || {};
+        },
+
+
     };
 }
 

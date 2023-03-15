@@ -1,11 +1,6 @@
-type TabPropertiesProps = {
-    item?: any;
-};
-
-export const TabProperties = (props: TabPropertiesProps) => {
-    const { item } = props;
+export const TabDetails = () => {
     return (
-        <div className="tab-pane fade show active" id="properties" role="tabpanel" aria-labelledby="properties-tab">
+        <div className="tab-pane fade" id="details" role="tabpanel" aria-labelledby="details-tab">
             <div className="rounded-t-2lg rounded-b-2lg rounded-tl-none border border-jacarta-100 bg-white p-6 dark:border-jacarta-600 dark:bg-jacarta-700 md:p-10">
                 <div className="mb-2 flex items-center">
                     <span className="mr-2 min-w-[9rem] dark:text-jacarta-300">Contract Address:</span>

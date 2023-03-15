@@ -1,10 +1,9 @@
-type TabDetailsProps = {
-    item?: any;
-};
+import { useViewItem } from '../../../index';
 
-export const TabDetails = (props: TabDetailsProps) => {
+export const TabProperties = () => {
+    const { item } = useViewItem();
     return (
-        <div className="tab-pane fade" id="details" role="tabpanel" aria-labelledby="details-tab">
+        <div className="tab-pane fade show active" id="properties" role="tabpanel" aria-labelledby="properties-tab">
             <div className="rounded-t-2lg rounded-b-2lg rounded-tl-none border border-jacarta-100 bg-white p-6 dark:border-jacarta-600 dark:bg-jacarta-700 md:p-10">
                 <div className="mb-2 flex items-center">
                     <span className="mr-2 min-w-[9rem] dark:text-jacarta-300">Contract Address:</span>

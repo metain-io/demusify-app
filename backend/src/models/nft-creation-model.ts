@@ -12,8 +12,9 @@ const NFTCreationModel = dynamoose.model(
                 type: String,
                 rangeKey: true,
             },
-            txID: String,
-            metadata: Object
+            mintToMasterSignature: String,
+            transferToCreatorSignature: String,
+            metadata: Object,
         },
         {
             saveUnknown: true,

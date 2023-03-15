@@ -8,7 +8,7 @@ export class SolanaService {
         const payer = getMasterAccount();
         const tokenMint = await splToken.createMint(connection, payer, payer.publicKey, payer.publicKey, 0);
 
-        return tokenMint;
+        return tokenMint.toBase58();
     }
 
     async mintTokenToMaster(tokenMintAddress: string, amount: number | bigint = MAX_AMOUNT_TO_MINT) {

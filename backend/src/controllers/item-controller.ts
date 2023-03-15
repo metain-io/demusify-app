@@ -1,3 +1,4 @@
+import { dynamoDb } from '@databases/dynamo-db';
 import { ItemService, NFTCreationService, SolanaService } from '@services/index';
 import { Request, Response } from 'express';
 
@@ -7,29 +8,32 @@ export class ItemController {
         const user = (req as any).user;
 
         const solanaService = new SolanaService();
-        const tokenMint = await solanaService.createTokenMint();
-        console.log({ tokenMint });
-        const mintToSignature = await solanaService.mintTokenToMaster(tokenMint.toBase58());
-        console.log({ mintToSignature });
-        const transferSignature = await solanaService.transferTokenFromMaster(
-            tokenMint.toBase58(),
+        const tokenMintAddress = await solanaService.createTokenMint();
+        const mintToMasterSignature = await solanaService.mintTokenToMaster(tokenMintAddress);
+        const transferToCreatorSignature = await solanaService.transferTokenFromMaster(
+            tokenMintAddress,
             userWalletAddress,
             1,
         );
-        console.log({ transferSignature });
 
-        // const itemService = new ItemService();
-        // const createdItem = await itemService.createItem({ username: user.username, ...item });
+        const itemService = new ItemService();
+        const createdItem = await itemService.createItem({
+            ...item,
+            username: user.username,
+            tokenMintAddress: tokenMintAddress,
+        });
 
-        // const nftCreationService = new NFTCreationService();
-        // await nftCreationService.createNFTCreation({
-        //     creatorID: user.username,
-        //     nftID: tokenMint.publicKey.toBase58(),
-        //     txID: creationSignature.publicKey.toBase58(),
-        // });
+        const nftCreationService = new NFTCreationService();
+        await nftCreationService.createNFTCreation({
+            creatorID: user.username,
+            nftID: tokenMintAddress,
+            itemID: item.itemID,
+            mintToMasterSignature: mintToMasterSignature,
+            transferToCreatorSignature: transferToCreatorSignature,
+        });
 
         res.json({
-            // data: createdItem,
+            data: createdItem,
         });
     }
 

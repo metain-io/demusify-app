@@ -12,6 +12,10 @@ const configs = {
         clientId: process.env.COGNITO_CLIENT_ID || '',
         tokenUse: process.env.COGNITO_TOKEN_USE || '',
     },
+    solana: {
+        cluster: process.env.SOLANA_CLUSTER || '',
+        masterPrivateKey: process.env.SOLANA_MASTER_PRIVATE_KEY || '',
+    },
 };
 
 export default configs;

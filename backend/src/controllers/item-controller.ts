@@ -1,5 +1,4 @@
-import { ItemService, NFTCreationService } from '@services/index';
-import { NFTService } from '@services/nft-service';
+import { ItemService, NFTCreationService, SolanaService } from '@services/index';
 import { Request, Response } from 'express';
 
 export class ItemController {
@@ -7,12 +6,20 @@ export class ItemController {
         const { item, userWalletAddress } = req.body;
         const user = (req as any).user;
 
-        const itemService = new ItemService();
-        const createdItem = await itemService.createItem({ username: user.username, ...item });
+        const solanaService = new SolanaService();
+        const tokenMint = await solanaService.createTokenMint();
+        console.log({ tokenMint });
+        const mintToSignature = await solanaService.mintTokenToMaster(tokenMint.toBase58());
+        console.log({ mintToSignature });
+        const transferSignature = await solanaService.transferTokenFromMaster(
+            tokenMint.toBase58(),
+            userWalletAddress,
+            1,
+        );
+        console.log({ transferSignature });
 
-        const nftService = new NFTService();
-        const { tokenMint, creationSignature } = await nftService.createItem(userWalletAddress);
-        console.log({ tokenMint, creationSignature });
+        // const itemService = new ItemService();
+        // const createdItem = await itemService.createItem({ username: user.username, ...item });
 
         // const nftCreationService = new NFTCreationService();
         // await nftCreationService.createNFTCreation({
@@ -22,7 +29,7 @@ export class ItemController {
         // });
 
         res.json({
-            data: createdItem,
+            // data: createdItem,
         });
     }
 

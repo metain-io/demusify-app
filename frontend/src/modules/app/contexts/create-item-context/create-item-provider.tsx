@@ -52,8 +52,6 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
         initialValues: {
             coverArtImage: '',
             music: '',
-            musicFingerprint: '',
-
             name: '',
             externalLink: '',
             description: '',
@@ -61,7 +59,6 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
                 id: 'default',
                 name: 'Default',
             } as { id: string; name: string } | undefined | null,
-            supply: 1,
             properties: [] as Array<{ id: string; name: string; value: string }>,
             levels: [] as Array<{ id: string; name: string; value: string; total: string }>,
             stats: [] as Array<{ id: string; name: string; value: string; total: string }>,
@@ -69,12 +66,12 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
                 {
                     id: 'streamingPerCopy',
                     name: 'Lite',
-                    value: '',
+                    value: 0,
                 },
                 {
                     id: 'synchronizationPerProduct',
                     name: 'Advanced',
-                    value: '',
+                    value: 0,
                 },
             ],
         },
@@ -83,6 +80,13 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
             music: Yup.string().required('Music is required'),
             name: Yup.string().required('Name is required'),
             collection: Yup.mixed().required('Collection is required'),
+            licenseMonetizations: Yup.array().of(
+                Yup.object({
+                    id: Yup.string().required(),
+                    name: Yup.string().required(),
+                    value: Yup.number().positive(),
+                }),
+            ),
         }),
         onSubmit: (value) => handleSubmit(value),
         onReset: () => {
@@ -312,7 +316,7 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
     const handleUpdateLicenseMonetizationValue = async (id: string, value: string) => {
         const licenseMonetizations = form.values.licenseMonetizations.map((item) => {
             if (item.id == id) {
-                item.value = value;
+                item.value = +value;
             }
 
             return item;

@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router';
 import React from 'react';
 import { ChangeEventHandler, MouseEventHandler } from 'react';
 import { CreateItemStatus, CreateItemUploadAssetStatus, useCreateItem } from '../../index';
@@ -121,25 +120,6 @@ const LeftSide = () => {
                     <p className="mt-1 text-2xs text-red">{uploadMusicState.error || form.errors.music}</p>
                 )}
             </div>
-
-            {/* <!-- External Link --> */}
-            {/* <div className="mb-6">
-                <label
-                    htmlFor="item-external-link"
-                    className="mb-2 block font-display text-jacarta-700 dark:text-white"
-                >
-                    Fingerprint of the music
-                </label>
-
-                <input
-                    readOnly
-                    type="url"
-                    id="item-external-link"
-                    className="w-full rounded-lg border-jacarta-100 py-3 hover:ring-2 hover:ring-accent/10 focus:ring-accent dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:placeholder:text-jacarta-300"
-                    placeholder="https://yoursite.io/item/123"
-                    value={form.values.musicFingerprint}
-                />
-            </div> */}
         </div>
     );
 };
@@ -155,7 +135,7 @@ const RightSide = () => {
     const handleSelectCollection = (collection: { id: string; name: string }) => {
         form.setFieldValue('collection', collection);
     };
-
+    console.log(form.errors);
     return (
         <>
             {/* Right Column */}
@@ -320,46 +300,6 @@ const RightSide = () => {
                     {form.errors.collection && <p className="mt-1 text-2xs text-red">{form.errors.collection}</p>}
                 </div>
 
-                {/* <!-- Supply --> */}
-                {/* <div className="mb-6">
-                    <label htmlFor="item-supply" className="mb-2 block font-display text-jacarta-700 dark:text-white">
-                        Supply
-                    </label>
-
-                    <div className="mb-3 flex items-center space-x-2">
-                        <p className="text-2xs dark:text-jacarta-300">
-                            The number of items that can be minted. No gas cost to you!
-                            <span
-                                className="inline-block"
-                                data-tippy-content="Setting your asset as explicit and sensitive content, like pornography and other not safe for work (NSFW) content, will protect users with safe search while browsing Xhibiter."
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
-                                    width="24"
-                                    height="24"
-                                    className="ml-1 -mb-[3px] h-4 w-4 fill-jacarta-500 dark:fill-jacarta-300"
-                                >
-                                    <path fill="none" d="M0 0h24v24H0z"></path>
-                                    <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM11 7h2v2h-2V7zm0 4h2v6h-2v-6z"></path>
-                                </svg>
-                            </span>
-                        </p>
-                    </div>
-
-                    <input
-                        name="supply"
-                        type="text"
-                        id="item-supply"
-                        className="w-full rounded-lg border-jacarta-100 py-3 hover:ring-2 hover:ring-accent/10 focus:ring-accent dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:placeholder:text-jacarta-300"
-                        placeholder="1"
-                        value={form.values.supply}
-                        onChange={form.handleChange}
-                    />
-
-                    {form.errors.supply && <p className="mt-1 text-2xs text-red">{form.errors.supply}</p>}
-                </div> */}
-
                 {/* <!-- Properties --> */}
                 <div className="relative border-b border-jacarta-100 py-6 dark:border-jacarta-600">
                     <div className="flex items-center justify-between">
@@ -501,7 +441,7 @@ const RightSide = () => {
 
                             <div>
                                 <label className="block font-display text-jacarta-700 dark:text-white">
-                                    Licences & Monetization
+                                    Licences & Monetization<span className="text-red">*</span>
                                 </label>
                                 <p className="dark:text-jacarta-300">Pricing for each specific license.</p>
                             </div>
@@ -525,6 +465,10 @@ const RightSide = () => {
                             </svg>
                         </button>
                     </div>
+
+                    {form.errors.licenseMonetizations && (
+                        <p className="mt-1 text-2xs text-red">{'Setting license monetization is required'}</p>
+                    )}
                 </div>
 
                 {/* <!-- Submit --> */}

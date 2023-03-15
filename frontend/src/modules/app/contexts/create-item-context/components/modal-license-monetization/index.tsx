@@ -34,9 +34,7 @@ export const ModalLicenseMonetization = () => {
 
                     {/* <!-- Body --> */}
                     <div className="modal-body p-6">
-                        <p className="mb-8 dark:text-jacarta-300">
-                            Set the right price of each license
-                        </p>
+                        <p className="mb-8 dark:text-jacarta-300">Set the right price of each license</p>
 
                         <div className="relative flex items-center">
                             <div className="flex h-12 w-12 shrink-0 items-center justify-center self-end rounded-l-lg bg-jacarta-50 hover:bg-jacarta-100 dark:border-jacarta-600 dark:bg-jacarta-700"></div>
@@ -81,11 +79,11 @@ export const ModalLicenseMonetization = () => {
                             </div>
                         ))}
 
-                        <button
+                        {/* <button
                             className="mt-2 rounded-full border-2 border-accent py-2 px-8 text-center text-sm font-semibold text-accent transition-all hover:bg-accent hover:text-white"
                         >
                             Add More
-                        </button>
+                        </button> */}
                     </div>
                 </div>
             </div>

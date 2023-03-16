@@ -5,7 +5,8 @@
     "scripts": {
         "start": "npx nodemon src/index.ts",
         "build:app": "npx webpack --mode production --config webpack.config.ts --entry src/index.ts --output-path .dist/app",
-        "build:lambda-handler": "npx webpack --mode production --config webpack.config.ts --entry src/lambda-handler.ts --output-path .dist/lambda-handler"
+        "build:lambda-handler": "npx webpack --mode production --config webpack.config.ts --entry src/lambda-handler.ts --output-path .dist/lambda-handler",
+        "test:mint": "ts-node src/test/testMint.ts"
     },
     "keywords": [],
     "author": "",

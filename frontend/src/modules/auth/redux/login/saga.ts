@@ -152,16 +152,16 @@ function* init(): any {
 }
 
 function* getUserProfile(username: string): any {
-    console.log('============== getUserProfile')
+    logger.debug('============== getUserProfile')
     if (!username) return {};
     let [userProfile, error] = yield call(resolveGenerator, DemusifyApi.walletApp.getCreator(username));
     const [balances, balanceError] = yield call(resolveGenerator, WalletService.currentWallet!.getBalances())
 
-    console.log('getUserProfile --- userProfile: ', userProfile);
-    console.log('getUserProfile --- getBalances: ', balances);
+    logger.debug('getUserProfile --- userProfile: ', userProfile);
+    logger.debug('getUserProfile --- getBalances: ', balances);
 
     if (error || balanceError) {
-        console.log('getUserProfile --- ERROR: ', error, balanceError);
+        logger.debug('getUserProfile --- ERROR: ', error, balanceError);
         return {};
     }
     userProfile.balances = balances
@@ -171,25 +171,15 @@ function* getUserProfile(username: string): any {
 }
 
 function* getUserNftData(username: string): any {
-    console.log('============== getUserNftData')
+    logger.debug('============== getUserNftData')
     if (!username) return {};
     let [userNftData, error] = yield call(resolveGenerator, DemusifyApi.walletApp.getUserNftData(username));
 
-    console.log('getUserNftData --- userNftData: ', userNftData);
+    logger.debug('getUserNftData --- userNftData: ', userNftData);
 
     if (error) {
-        console.log('getUserNftData --- ERROR: ', error);
+        logger.debug('getUserNftData --- ERROR: ', error);
         return {};
-    }
-
-    if (userNftData.nftCreation && userNftData.nftCreation.length > 0) {
-        userNftData.nftCreation.forEach((item: any, index: any) => {
-            try {
-                item.transactions = JSON.parse(item.transactions)
-            } catch {
-                item.transactions = []
-            }
-        });
     }
 
     yield put(loginActions.updateUserData(userNftData))

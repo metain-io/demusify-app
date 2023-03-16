@@ -243,7 +243,7 @@ const PageUser = () => {
                             <figure className="relative">
                                 <a href="item">
                                     <img
-                                        src={item.artCoverUrl || '/img/logo_white.png'}
+                                        src={item?.detail?.coverArtImage || '/img/logo_white.png'}
                                         alt="item 11"
                                         className="w-full rounded-[0.625rem]"
                                         loading="lazy"
@@ -265,7 +265,7 @@ const PageUser = () => {
                                             <path d="M12.001 4.529c2.349-2.109 5.979-2.039 8.242.228 2.262 2.268 2.34 5.88.236 8.236l-8.48 8.492-8.478-8.492c-2.104-2.356-2.025-5.974.236-8.236 2.265-2.264 5.888-2.34 8.244-.228zm6.826 1.641c-1.5-1.502-3.92-1.563-5.49-.153l-1.335 1.198-1.336-1.197c-1.575-1.412-3.99-1.35-5.494.154-1.49 1.49-1.565 3.875-.192 5.451L12 18.654l7.02-7.03c1.374-1.577 1.299-3.959-.193-5.454z" />
                                         </svg>
                                     </span>
-                                    <span className="text-sm dark:text-jacarta-200">{item.liked || '0'}</span>
+                                    <span className="text-sm dark:text-jacarta-200">{item?.detail?.liked || '0'}</span>
                                 </div>
                                 {/* <div className="absolute left-3 -bottom-3">
                                     <div className="flex -space-x-2">
@@ -291,7 +291,7 @@ const PageUser = () => {
                             <div className="mt-7 flex items-center justify-between">
                                 <a href="item">
                                     <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
-                                        {item.name || 'Unknown'}
+                                        {item?.detail?.name || 'Unknown'}
                                     </span>
                                 </a>
                                 <div className="dropup rounded-full hover:bg-jacarta-100 dark:hover:bg-jacarta-600">
@@ -334,7 +334,7 @@ const PageUser = () => {
                                 </div>
                             </div>
                             <div className="mt-2 text-sm">
-                                <span className="mr-1 text-jacarta-700 dark:text-jacarta-200">{item.licences}</span>
+                                <span className="mr-1 text-jacarta-700 dark:text-jacarta-200">{item.licenses}</span>
                             </div>
 
                             <div className="mt-8 flex items-center justify-between">
@@ -370,7 +370,6 @@ const PageUser = () => {
     };
 
     const renderCreatedItemGrid = () => {
-        console.log('======= nftCreation: ', nftCreation)
         return nftCreation.map((item, index) => {
             return (
                 <>
@@ -379,7 +378,7 @@ const PageUser = () => {
                             <figure className="relative">
                                 <a href="item">
                                     <img
-                                        src={item.artCoverUrl || '/img/logo_white.png'}
+                                        src={item?.detail?.coverArtImage || '/img/logo_white.png'}
                                         alt="item 5"
                                         className="w-full rounded-[0.625rem]"
                                         loading="lazy"
@@ -401,7 +400,7 @@ const PageUser = () => {
                                             <path d="M12.001 4.529c2.349-2.109 5.979-2.039 8.242.228 2.262 2.268 2.34 5.88.236 8.236l-8.48 8.492-8.478-8.492c-2.104-2.356-2.025-5.974.236-8.236 2.265-2.264 5.888-2.34 8.244-.228zm6.826 1.641c-1.5-1.502-3.92-1.563-5.49-.153l-1.335 1.198-1.336-1.197c-1.575-1.412-3.99-1.35-5.494.154-1.49 1.49-1.565 3.875-.192 5.451L12 18.654l7.02-7.03c1.374-1.577 1.299-3.959-.193-5.454z" />
                                         </svg>
                                     </span>
-                                    <span className="text-sm dark:text-jacarta-200">{item.liked || '0'}</span>
+                                    <span className="text-sm dark:text-jacarta-200">{item?.detail?.liked || '0'}</span>
                                 </div>
                                 {/* <div className="absolute left-3 -bottom-3">
                                     <div className="flex -space-x-2">
@@ -427,7 +426,7 @@ const PageUser = () => {
                             <div className="mt-7 flex items-center justify-between">
                                 <a href="item">
                                     <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
-                                        {item.name || 'Unknown'}
+                                        {item?.detail?.name || 'Unknown'}
                                     </span>
                                 </a>
                                 <div className="dropup rounded-full hover:bg-jacarta-100 dark:hover:bg-jacarta-600">
@@ -518,6 +517,56 @@ const PageUser = () => {
                             </div>
                         </div>
                     </article>
+                </>
+            );
+        })
+    }
+
+    const renderActivitiesItemGrid = () => {
+        return nftActivities?.map((item, idx) => {
+            return (
+                <>
+                    <a
+                        href="item"
+                        className="relative flex items-center rounded-2.5xl border border-jacarta-100 bg-white p-8 transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700"
+                    >
+                        <figure className="mr-5 self-start">
+                            <img
+                                src={item.coverArtImage || 'img/avatars/avatar_2.jpg'}
+                                alt="avatar 2"
+                                className="rounded-2lg"
+                                loading="lazy"
+                                style={{
+                                    width: '60px',
+                                    height: '60px',
+                                    objectFit: 'cover',
+                                }}
+                            />
+                        </figure>
+
+                        <div>
+                            <h3 className="mb-1 font-display text-base font-semibold text-jacarta-700 dark:text-white">
+                                {item.nftName || 'Unknown'}
+                            </h3>
+                            <span className="mb-3 block text-sm text-jacarta-500">{item.description}</span>
+                            <span className="block text-xs text-jacarta-300">
+                                {item.createAt && new Date(item.createAt).toDateString()}
+                            </span>
+                        </div>
+
+                        <div className="ml-auto rounded-full border border-jacarta-100 p-3 dark:border-jacarta-600">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                width="24"
+                                height="24"
+                                className="fill-jacarta-700 dark:fill-white"
+                            >
+                                <path fill="none" d="M0 0h24v24H0z" />
+                                <path d="M6.5 2h11a1 1 0 0 1 .8.4L21 6v15a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6l2.7-3.6a1 1 0 0 1 .8-.4zM19 8H5v12h14V8zm-.5-2L17 4H7L5.5 6h13zM9 10v2a3 3 0 0 0 6 0v-2h2v2a5 5 0 0 1-10 0v-2h2z" />
+                            </svg>
+                        </div>
+                    </a>
                 </>
             );
         })
@@ -708,30 +757,30 @@ const PageUser = () => {
                                                                 </svg>
                                                             </span>
                                                             <span className="text-sm font-medium tracking-tight text-green">
-                                                                {item.price} SOL
+                                                                {item.value} SOL
                                                             </span>
                                                         </div>
                                                         <div
                                                             className="flex items-center border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
                                                             role="cell"
                                                         >
-                                                            {item.buyer && item.buyer.substring(0, 8)}...
+                                                            {item.consumerID && item.consumerID.substring(0, 12)}...
                                                         </div>
                                                         <div
                                                             className="flex items-center border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
                                                             role="cell"
                                                         >
-                                                            {item.date}
+                                                            {item.createTime && (new Date(item.createTime))?.toDateString()}
                                                         </div>
                                                         <div
                                                             className="flex items-center border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
                                                             role="cell"
                                                         >
                                                             <a
-                                                                href={`https://solscan.io/tx/${item.txID}`}
+                                                                href={`https://solscan.io/tx/${item.transactionSignature}`}
                                                                 className="text-accent"
                                                             >
-                                                                {item.txID && item.txID.substring(0, 12)}...
+                                                                {item.transactionSignature && item.transactionSignature.substring(0, 12)}...
                                                             </a>
                                                         </div>
                                                     </div>
@@ -756,7 +805,12 @@ const PageUser = () => {
         <main className="pt-[5.5rem] lg:pt-24">
             {/* <!-- Banner --> */}
             <div className="relative">
-                <img src="img/user/banner.jpg" alt="banner" className="h-[18.75rem] object-cover" style={{width: '100%'}}/>
+                <img
+                    src="img/user/banner.jpg"
+                    alt="banner"
+                    className="h-[18.75rem] object-cover"
+                    style={{ width: '100%' }}
+                />
             </div>
             {/* <!-- end banner --> */}
 
@@ -766,7 +820,7 @@ const PageUser = () => {
                 <div className="absolute left-1/2 top-0 z-10 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center">
                     <figure className="relative">
                         <img
-                            style={{maxHeight: 200}}
+                            style={{ maxHeight: 200 }}
                             src={loginData.avatarUrl || 'img/user/user_avatar.png'}
                             alt="collection avatar"
                             className="rounded-xl border-[5px] border-white dark:border-jacarta-600"
@@ -1166,7 +1220,7 @@ const PageUser = () => {
                     </ul>
 
                     <div className="tab-content">
-                        {/* <!-- Owned Tab --> */}
+                        {/* <!-- Licensed Tab --> */}
                         <div
                             className="tab-pane fade show active"
                             id="owned"
@@ -2571,196 +2625,7 @@ const PageUser = () => {
                             <div className="lg:flex">
                                 {/* <!-- Records --> */}
                                 <div className="mb-10 shrink-0 basis-8/12 space-y-5 lg:mb-0 lg:pr-10">
-                                    <a
-                                        href="item"
-                                        className="relative flex items-center rounded-2.5xl border border-jacarta-100 bg-white p-8 transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700"
-                                    >
-                                        <figure className="mr-5 self-start">
-                                            <img
-                                                src="img/avatars/avatar_2.jpg"
-                                                alt="avatar 2"
-                                                className="rounded-2lg"
-                                                loading="lazy"
-                                            />
-                                        </figure>
-
-                                        <div>
-                                            <h3 className="mb-1 font-display text-base font-semibold text-jacarta-700 dark:text-white">
-                                                Lazyone Panda
-                                            </h3>
-                                            <span className="mb-3 block text-sm text-jacarta-500">
-                                                sold for 1.515 ETH
-                                            </span>
-                                            <span className="block text-xs text-jacarta-300">
-                                                30 minutes 45 seconds ago
-                                            </span>
-                                        </div>
-
-                                        <div className="ml-auto rounded-full border border-jacarta-100 p-3 dark:border-jacarta-600">
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 24 24"
-                                                width="24"
-                                                height="24"
-                                                className="fill-jacarta-700 dark:fill-white"
-                                            >
-                                                <path fill="none" d="M0 0h24v24H0z" />
-                                                <path d="M6.5 2h11a1 1 0 0 1 .8.4L21 6v15a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6l2.7-3.6a1 1 0 0 1 .8-.4zM19 8H5v12h14V8zm-.5-2L17 4H7L5.5 6h13zM9 10v2a3 3 0 0 0 6 0v-2h2v2a5 5 0 0 1-10 0v-2h2z" />
-                                            </svg>
-                                        </div>
-                                    </a>
-                                    <a
-                                        href="item"
-                                        className="relative flex items-center rounded-2.5xl border border-jacarta-100 bg-white p-8 transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700"
-                                    >
-                                        <figure className="mr-5 self-start">
-                                            <img
-                                                src="img/products/item_21_sm.jpg"
-                                                alt="item 2"
-                                                className="rounded-2lg"
-                                                loading="lazy"
-                                            />
-                                        </figure>
-
-                                        <div>
-                                            <h3 className="mb-1 font-display text-base font-semibold text-jacarta-700 dark:text-white">
-                                                NFT Funny Cat
-                                            </h3>
-                                            <span className="mb-3 block text-sm text-jacarta-500">
-                                                listed by 051_Hart .08095 ETH
-                                            </span>
-                                            <span className="block text-xs text-jacarta-300">
-                                                40 minutes 36 seconds ago
-                                            </span>
-                                        </div>
-
-                                        <div className="ml-auto rounded-full border border-jacarta-100 p-3 dark:border-jacarta-600">
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 24 24"
-                                                width="24"
-                                                height="24"
-                                                className="fill-jacarta-700 dark:fill-white"
-                                            >
-                                                <path fill="none" d="M0 0h24v24H0z" />
-                                                <path d="M10.9 2.1l9.899 1.415 1.414 9.9-9.192 9.192a1 1 0 0 1-1.414 0l-9.9-9.9a1 1 0 0 1 0-1.414L10.9 2.1zm.707 2.122L3.828 12l8.486 8.485 7.778-7.778-1.06-7.425-7.425-1.06zm2.12 6.364a2 2 0 1 1 2.83-2.829 2 2 0 0 1-2.83 2.829z" />
-                                            </svg>
-                                        </div>
-                                    </a>
-                                    <a
-                                        href="item"
-                                        className="relative flex items-center rounded-2.5xl border border-jacarta-100 bg-white p-8 transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700"
-                                    >
-                                        <figure className="mr-5 self-start">
-                                            <img
-                                                src="img/products/item_22_sm.jpg"
-                                                alt="item 3"
-                                                className="rounded-2lg"
-                                                loading="lazy"
-                                            />
-                                        </figure>
-
-                                        <div>
-                                            <h3 className="mb-1 font-display text-base font-semibold text-jacarta-700 dark:text-white">
-                                                Prince Ape Planet
-                                            </h3>
-                                            <span className="mb-3 block text-sm text-jacarta-500">
-                                                tranferred from 027ab52
-                                            </span>
-                                            <span className="block text-xs text-jacarta-300">
-                                                1 hour 15 minutes ago
-                                            </span>
-                                        </div>
-
-                                        <div className="ml-auto rounded-full border border-jacarta-100 p-3 dark:border-jacarta-600">
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 24 24"
-                                                width="24"
-                                                height="24"
-                                                className="fill-jacarta-700 dark:fill-white"
-                                            >
-                                                <path fill="none" d="M0 0h24v24H0z" />
-                                                <path d="M16.05 12.05L21 17l-4.95 4.95-1.414-1.414 2.536-2.537L4 18v-2h13.172l-2.536-2.536 1.414-1.414zm-8.1-10l1.414 1.414L6.828 6 20 6v2H6.828l2.536 2.536L7.95 11.95 3 7l4.95-4.95z" />
-                                            </svg>
-                                        </div>
-                                    </a>
-                                    <a
-                                        href="item"
-                                        className="relative flex items-center rounded-2.5xl border border-jacarta-100 bg-white p-8 transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700"
-                                    >
-                                        <figure className="mr-5 self-start">
-                                            <img
-                                                src="img/products/item_23_sm.jpg"
-                                                alt="item 3"
-                                                className="rounded-2lg"
-                                                loading="lazy"
-                                            />
-                                        </figure>
-
-                                        <div>
-                                            <h3 className="mb-1 font-display text-base font-semibold text-jacarta-700 dark:text-white">
-                                                Origin Morish
-                                            </h3>
-                                            <span className="mb-3 block text-sm text-jacarta-500">
-                                                bid cancelled by 0397fd
-                                            </span>
-                                            <span className="block text-xs text-jacarta-300">
-                                                1 hour 55 minutes ago
-                                            </span>
-                                        </div>
-
-                                        <div className="ml-auto rounded-full border border-jacarta-100 p-3 dark:border-jacarta-600">
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 24 24"
-                                                width="24"
-                                                height="24"
-                                                className="fill-jacarta-700 dark:fill-white"
-                                            >
-                                                <path fill="none" d="M0 0h24v24H0z" />
-                                                <path d="M14 20v2H2v-2h12zM14.586.686l7.778 7.778L20.95 9.88l-1.06-.354L17.413 12l5.657 5.657-1.414 1.414L16 13.414l-2.404 2.404.283 1.132-1.415 1.414-7.778-7.778 1.415-1.414 1.13.282 6.294-6.293-.353-1.06L14.586.686zm.707 3.536l-7.071 7.07 3.535 3.536 7.071-7.07-3.535-3.536z" />
-                                            </svg>
-                                        </div>
-                                    </a>
-                                    <a
-                                        href="item"
-                                        className="relative flex items-center rounded-2.5xl border border-jacarta-100 bg-white p-8 transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700"
-                                    >
-                                        <figure className="mr-5 self-start">
-                                            <img
-                                                src="img/products/item_24_sm.jpg"
-                                                alt="item 3"
-                                                className="rounded-2lg"
-                                                loading="lazy"
-                                            />
-                                        </figure>
-
-                                        <div>
-                                            <h3 className="mb-1 font-display text-base font-semibold text-jacarta-700 dark:text-white">
-                                                Portrait Gallery#029
-                                            </h3>
-                                            <span className="mb-3 block text-sm text-jacarta-500">
-                                                liked by Trina_more
-                                            </span>
-                                            <span className="block text-xs text-jacarta-300">
-                                                2 hours 24 minutes ago
-                                            </span>
-                                        </div>
-
-                                        <div className="ml-auto rounded-full border border-jacarta-100 p-3 dark:border-jacarta-600">
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 24 24"
-                                                width="24"
-                                                height="24"
-                                                className="fill-jacarta-700 dark:fill-white"
-                                            >
-                                                <path fill="none" d="M0 0H24V24H0z" />
-                                                <path d="M12.001 4.529c2.349-2.109 5.979-2.039 8.242.228 2.262 2.268 2.34 5.88.236 8.236l-8.48 8.492-8.478-8.492c-2.104-2.356-2.025-5.974.236-8.236 2.265-2.264 5.888-2.34 8.244-.228zm6.826 1.641c-1.5-1.502-3.92-1.563-5.49-.153l-1.335 1.198-1.336-1.197c-1.575-1.412-3.99-1.35-5.494.154-1.49 1.49-1.565 3.875-.192 5.451L12 18.654l7.02-7.03c1.374-1.577 1.299-3.959-.193-5.454z" />
-                                            </svg>
-                                        </div>
-                                    </a>
+                                    {renderActivitiesItemGrid()}
                                 </div>
 
                                 {/* <!-- Filters --> */}

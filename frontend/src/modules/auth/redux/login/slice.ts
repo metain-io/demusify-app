@@ -12,45 +12,60 @@ export enum LoginStatus {
     LoggedIn,
 }
 
-export type UserNftActivities = {
-    creatorID: string,
-    nftID: string,
-    behavior: string,
+export type UserNFTDetail = {
+    itemID: string,
+    collectionID: string,
+    collection: any,
+    coverArtImage: string,
+    createdAt: number,
+    creatorAddress: string,
     description: string,
-    createTime: number
+    externalLink: string,
+    levels: any,
+    licenseMonetizations: any,
+    music: string,
+    musicFingerprint: string,
+    name: string,
+    properties: any,
+    stats: any,
+    supply: number,
+    tokenMintAddress: string,
+    updatedAt: number,
+    username: string,
+    liked: number
+}
+
+export type UserNftActivities = {
+    userID: string,
+    nftID: string,
+    nftName: string,
+    coverArtImage: string,
+    type: string,
+    description: string,
+    createAt: number
 }
 
 export type UserNftCreation = {
     creatorID: string,
     nftID: string,
-    name: string,
-    externalLink: string,
-    description: string,
-    collectionId: string,
-    properties: string,
-    levels: string,
-    licences: string,
-    artCoverUrl: string,
-    musicUrl: string,
-    liked: number,
+    itemID: string,
+    mintToMasterSignature: string,
+    transferToCreatorSignature: string,
     totalSale: number,
     totalRevenue: number,
-    transactions: Array<any>
+    detail: UserNFTDetail,
+    transactions: any,
+    createdAt: number,
+    updatedAt: number
 }
 
 export type UserNftLicensed = {
-    creatorID: string,
+    consumerID: string,
     nftID: string,
-    name: string,
-    externalLink: string,
-    description: string,
-    collectionId: string,
-    properties: string,
-    levels: string,
-    licences: string,
-    artCoverUrl: string,
-    musicUrl: string,
-    liked: number
+    createAt: string,
+    transactions: any,
+    detail: UserNFTDetail,
+    licenses: string
 }
 
 type LoginState = {

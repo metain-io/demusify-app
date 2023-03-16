@@ -1,4 +1,4 @@
-import { NFTCreationModel } from '@models/index';
+import { ItemModel, NFTCreationModel } from '@models/index';
 
 export class NFTCreationService {
     async create(data: any) {
@@ -14,7 +14,19 @@ export class NFTCreationService {
     }
 
     async getByUsername(username: string) {
-        return (await NFTCreationModel.query({ creatorID: username }).exec());
+        const rs = await this.getAll();
+        return rs?.filter((item) => item.creatorID === username) || [];
+    }
+
+    async getAll() {
+        const [creations, items] = await Promise.all([NFTCreationModel.scan().exec(), ItemModel.scan().exec()]);
+
+        creations?.forEach((creation) => {
+            let item = items.find((value) => value.tokenMintAddress === creation.nftID);
+            creation.detail = item || {};
+        });
+
+        return creations;
     }
 
     async update(username: string, data: any) {
@@ -22,7 +34,7 @@ export class NFTCreationService {
 
         if (!NFTCreation) {
             // throw new Error('NFTCreation is not exists');
-            return await this.create({...data, username})
+            return await this.create({ ...data, username });
         }
 
         delete data['username'];

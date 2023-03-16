@@ -9,12 +9,6 @@ import { UserController } from '@controllers/user-controller';
 
 const apiRouter = express.Router();
 
-apiRouter.get('/creation/:username', accessTokenAuthentication, new NFTCreationController().getNFTCreationByUsername);
-
-apiRouter.get('/licensed/:username', accessTokenAuthentication, new NFTLicensedController().getNFTLicensedByUsername);
-
-apiRouter.get('/activities/:username', accessTokenAuthentication, new NFTActivitiesController().getNFTActivitiesByUsername);
-
 apiRouter.get('/user/nftData/:username', accessTokenAuthentication, new UserController().getNftData);
 
 apiRouter.get('/creator/:username', new CreatorController().getCreator);

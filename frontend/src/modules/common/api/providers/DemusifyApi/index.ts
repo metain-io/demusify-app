@@ -3,6 +3,7 @@ import { generateRequestKey, resolvePromise } from '@modules/common/api/utils';
 import AuthService, { IAuthService } from '@modules/auth/services/auth';
 import BaseApiProvider, { IBaseApiProvider } from '../BaseProvider';
 import { OnRequestFailedCallBack } from '../BaseProvider/@types';
+import { v4 as Uuid } from 'uuid';
 
 interface IDemusifyApi extends IBaseApiProvider {
     onRetriedRequestFailedWithErrorCode401: OnRequestFailedCallBack;
@@ -102,14 +103,12 @@ class DemusifyApi extends BaseApiProvider implements IDemusifyApi {
     };
 
     s3 = {
-        getSignedUrl: async (resource: 'items' | 'collections', resourceId: string, fileType: string) => {
+        getSignedUrl: async (fileType: string) => {
             const uri = `/demusify/api/v1/s3/signed-url`;
-            const requestKey = generateRequestKey(uri, resource, resourceId, fileType);
+            const requestKey = generateRequestKey(fileType, Uuid());
             const rs = await this.executeRequest(requestKey, () =>
                 Client.get(uri, {
                     params: {
-                        resource,
-                        resourceId,
                         fileType,
                     },
                 }),

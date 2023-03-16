@@ -127,7 +127,7 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
 
             form.setFieldValue('coverArtImage', '');
 
-            const { signedUrl, s3Url } = await DemusifyApi.s3.getSignedUrl('items', id, file.type);
+            const { signedUrl, s3Url } = await DemusifyApi.s3.getSignedUrl(file.type);
 
             await axios.put(signedUrl, file, {
                 headers: {
@@ -157,7 +157,7 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
 
             form.setFieldValue('music', '');
 
-            const { signedUrl, s3Url } = await DemusifyApi.s3.getSignedUrl('items', id, file.type);
+            const { signedUrl, s3Url } = await DemusifyApi.s3.getSignedUrl(file.type);
 
             await axios.put(signedUrl, file, {
                 headers: {

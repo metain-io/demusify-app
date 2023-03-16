@@ -11,6 +11,7 @@ const CreatorModel = dynamoose.model(
         instagramLink: String,
         yourSiteLink: String,
         avatarUrl: String,
+        coverImageUrl: String,
     }),
 );
 

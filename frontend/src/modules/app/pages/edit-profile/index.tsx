@@ -1,11 +1,12 @@
+import logger from '@libs/logger';
 import { MainLayout } from '@modules/app/layouts';
 import { selectLoginData } from '@modules/auth/redux/login/slice';
-import React from 'react';
-import { ReactElement } from 'react';
-import { useFormik, useFormikContext } from 'formik';
-import { useSelector } from 'react-redux';
 import { DemusifyApi } from '@modules/common/api';
-import logger from '@libs/logger';
+import axios from 'axios';
+import { useFormik } from 'formik';
+import React, { ReactElement } from 'react';
+import { useSelector } from 'react-redux';
+import { v4 as Uuid } from 'uuid';
 
 const PageEditProfile = () => {
     const loginData = useSelector(selectLoginData)
@@ -52,19 +53,59 @@ const PageEditProfile = () => {
             userProfileFormik.setFieldValue('instagramLink', loginData.instagramLink);
             userProfileFormik.setFieldValue('yourSiteLink', loginData.yourSiteLink);
             userProfileFormik.setFieldValue('avatarUrl', loginData.avatarUrl);
+            userProfileFormik.setFieldValue('coverImageUrl', loginData.coverImageUrl);
         }
     }, [loginData])
 
-    const changeAvatarImageHandler = (event: any) => {
-        const previewUrl = URL.createObjectURL(event.target.files[0])
-        console.log('changeAvatarImageHandler: ', previewUrl)
+    const changeAvatarImageHandler = async (event: any) => {
+        let previewUrl = ''
+
+        try {
+            const id = Uuid();
+            const file = event.target.files[0]
+            
+            if (!file) throw new Error('File is empty');
+
+            const { signedUrl, s3Url } = await DemusifyApi.s3.getSignedUrl(file.type);
+
+            await axios.put(signedUrl, file, {
+                headers: {
+                    'content-type': encodeURIComponent(file.type),
+                    'x-amz-acl': 'public-read',
+                },
+            });
+            previewUrl = s3Url
+        } catch (error) {
+            console.log('Something went wrong went upload file: ', error)
+            alert('Something went wrong went upload file');
+        }
+
         previewUrl && userProfileFormik.setFieldValue('avatarUrl', previewUrl);
         setPreviewUrl(previewUrl);
     };
 
-    const changeCoverImageHandler = (event: any) => {
-        const previewUrl = URL.createObjectURL(event.target.files[0])
-        console.log('changeCoverImageHandler: ', previewUrl)
+    const changeCoverImageHandler = async (event: any) => {
+        let previewUrl = ''
+
+        try {
+            const id = Uuid();
+            const file = event.target.files[0]
+            
+            if (!file) throw new Error('File is empty');
+
+            const { signedUrl, s3Url } = await DemusifyApi.s3.getSignedUrl(file.type);
+console.log('changeCoverImageHandler: ', {signedUrl, s3Url})
+            await axios.put(signedUrl, file, {
+                headers: {
+                    'content-type': encodeURIComponent(file.type),
+                    'x-amz-acl': 'public-read',
+                },
+            });
+            previewUrl = s3Url
+        } catch (error) {
+            console.log('Something went wrong went upload file: ', error)
+            alert('Something went wrong went upload file');
+        }
         previewUrl && userProfileFormik.setFieldValue('coverImageUrl', previewUrl);
         setPreviewCoverImageUrl(previewUrl);
     };
@@ -74,7 +115,7 @@ const PageEditProfile = () => {
             {/* <!-- Banner --> */}
             <div className="relative">
                 <img
-                    src={previewCoverImageUrl || 'img/user/banner.jpg'}
+                    src={previewCoverImageUrl || loginData?.coverImageUrl || 'img/user/banner.jpg'}
                     alt="banner"
                     className="h-[18.75rem] object-cover"
                     style={{width: '100%'}}

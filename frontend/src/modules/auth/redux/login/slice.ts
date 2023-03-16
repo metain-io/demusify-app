@@ -80,6 +80,7 @@ type LoginState = {
     instagramLink: string | null;
     yourSiteLink: string | null;
     avatarUrl: string | null;
+    coverImageUrl: string | null;
 
     balances: any
 
@@ -101,6 +102,7 @@ const initialState: LoginState = {
     instagramLink: null,
     yourSiteLink: null,
     avatarUrl: null,
+    coverImageUrl: null,
 
     balances: {},
     nftActivities: [],
@@ -178,6 +180,7 @@ export const loginSlice = createSlice({
             state.instagramLink = action.payload?.instagramLink
             state.yourSiteLink = action.payload?.yourSiteLink
             state.avatarUrl = action.payload?.avatarUrl
+            state.coverImageUrl = action.payload?.coverImageUrl
 
             state.balances = action.payload.balances
         },
@@ -225,6 +228,7 @@ export const selectLoginData = (state: any) => {
         instagramLink: state.login.instagramLink,
         yourSiteLink: state.login.yourSiteLink,
         avatarUrl: state.login.avatarUrl,
+        coverImageUrl: state.login.coverImageUrl,
 
         balances: state.login.balances
     }

@@ -16,6 +16,22 @@ const Home3Page = () => {
                 {/* Trending */}
                 <Trending />
 
+                {/* Boast */}
+                <section className="relative py-24 dark:bg-jacarta-800">
+                    <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
+                        <img src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
+                    </picture>
+                    <div className="container">
+                        <h2 className="mb-7 text-center font-display text-3xl text-jacarta-700 dark:text-white">
+                            The Power of Collaboration with Demusify Splits
+                        </h2>
+
+                        <p className="mx-auto max-w-2xl text-center text-lg text-jacarta-700 dark:text-white">
+                            Split streaming and download royalties easily between collaborators on any track or album. It's free for breakout, rising, and pro artists. Get paid for your collaboration hassle-free.
+                        </p>
+                    </div>
+                </section>
+
                 {/* Partners */}
                 <div className="bg-light-base dark:bg-jacarta-800" style={{background:"#f4b400"}}>
                     <div className="container">

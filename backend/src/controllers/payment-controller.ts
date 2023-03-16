@@ -16,7 +16,7 @@ export class PaymentController {
             return;
         }
 
-        const selectedLicense = item?.licenseMonetization?.find((l) => (l.id = licenseId));
+        const selectedLicense = item?.licenseMonetizations?.find((l) => (l.id = licenseId));
         if (!selectedLicense || !selectedLicense?.value) {
             res.status(400).json({
                 code: 401,
@@ -27,19 +27,17 @@ export class PaymentController {
 
         const solanaService = new SolanaService();
 
-        // TODO: get payment info from blockchain and compare with selected license price, payerAddress
-
         const amountSolTransferedToCreator = selectedLicense.value * 0.9;
         const transferSolFromMasterSignature = await solanaService.transferSolFromMaster(
             item.creatorAddress,
             amountSolTransferedToCreator,
         );
 
-        const amountTokenTransferToPayer = 1;
+        const amountTokenTransferedToPayer = 1;
         const transferTokenFromMasterSignature = await solanaService.transferTokenFromMaster(
-            item.tokenMinAddress,
+            item.tokenMintAddress,
             payerAddress,
-            amountTokenTransferToPayer,
+            amountTokenTransferedToPayer,
         );
 
         // TODO: save nft-license
@@ -51,7 +49,7 @@ export class PaymentController {
             username: user.username,
             payerAddress,
             amountSolTransferedToCreator,
-            amountTokenTransferToPayer,
+            amountTokenTransferedToPayer,
             transferSolFromMasterSignature,
             transferTokenFromMasterSignature,
         };

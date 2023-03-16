@@ -107,7 +107,7 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
                 ...value,
             };
 
-            await DemusifyApi.walletApp.createItem({ item, userWalletAddress: loginData.walletAddress });
+            await DemusifyApi.items.createItem({ item, userWalletAddress: loginData.walletAddress });
 
             setState(() => ({ status: CreateItemStatus.SUBMIT_SUCCEEDED }));
 

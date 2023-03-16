@@ -25,7 +25,7 @@ export const ViewItemProvider = (props: ViewItemProviderProps) => {
             return null;
         }
 
-        const item = await DemusifyApi.walletApp.getItem(itemId);
+        const item = await DemusifyApi.items.getItem(itemId);
 
         return item;
     };

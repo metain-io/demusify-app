@@ -11,6 +11,10 @@ import {
 import { v4 as Uuid } from 'uuid';
 import * as Yup from 'yup';
 import { database } from '@modules/app/database';
+import { DemusifyApi } from '@modules/common/api';
+import { useSelector } from 'react-redux';
+import { selectLoginData } from '@modules/auth/redux/login/slice';
+import axios from 'axios';
 
 export type CreateItemProviderProps = PropsWithChildren<{
     onCreateItemSucceeded?: (item: any) => void;
@@ -20,6 +24,8 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
     const { children, onCreateItemSucceeded } = props;
 
     const [id, setId] = React.useState(Uuid());
+
+    const loginData = useSelector(selectLoginData);
 
     const [collections, setCollections] = React.useState<Array<any>>([
         {
@@ -47,8 +53,6 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
         initialValues: {
             coverArtImage: '',
             music: '',
-            musicFingerprint: '',
-
             name: '',
             externalLink: '',
             description: '',
@@ -56,7 +60,6 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
                 id: 'default',
                 name: 'Default',
             } as { id: string; name: string } | undefined | null,
-            supply: 1,
             properties: [] as Array<{ id: string; name: string; value: string }>,
             levels: [] as Array<{ id: string; name: string; value: string; total: string }>,
             stats: [] as Array<{ id: string; name: string; value: string; total: string }>,
@@ -64,12 +67,12 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
                 {
                     id: 'streamingPerCopy',
                     name: 'Lite',
-                    value: '',
+                    value: 0,
                 },
                 {
                     id: 'synchronizationPerProduct',
                     name: 'Advanced',
-                    value: '',
+                    value: 0,
                 },
             ],
         },
@@ -78,6 +81,13 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
             music: Yup.string().required('Music is required'),
             name: Yup.string().required('Name is required'),
             collection: Yup.mixed().required('Collection is required'),
+            licenseMonetizations: Yup.array().of(
+                Yup.object({
+                    id: Yup.string().required(),
+                    name: Yup.string().required(),
+                    value: Yup.number().positive(),
+                }),
+            ),
         }),
         onSubmit: (value) => handleSubmit(value),
         onReset: () => {
@@ -86,31 +96,25 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
     });
 
     const handleSubmit = async (value: any) => {
-        console.log('handleSubmit:', id, value);
+        try {
+            setState(() => ({ status: CreateItemStatus.SUBMITTING }));
 
-        setState(() => ({ status: CreateItemStatus.SUBMITTING }));
+            const item = {
+                itemID: id,
+                collectionID: value.collection.id,
+                createdAt: Date.now(),
+                updatedAt: Date.now(),
+                ...value,
+            };
 
-        // TODO: Replace with real api call
-        setTimeout(() => {
-            const r = Math.random() * 10;
+            await DemusifyApi.items.createItem({ item, userWalletAddress: loginData.walletAddress });
 
-            if (r < 0) {
-                setState({
-                    status: CreateItemStatus.SUBMIT_FAILED,
-                    error: 'Something went wrong!!',
-                });
-                return;
-            }
-
-            const item = { id: id, createdAt: Date.now(), updatedAt: Date.now(), ...value };
-            database.addItem(item);
-
-            setState({
-                status: CreateItemStatus.SUBMIT_SUCCEEDED,
-            });
+            setState(() => ({ status: CreateItemStatus.SUBMIT_SUCCEEDED }));
 
             onCreateItemSucceeded?.(item);
-        }, 3000);
+        } catch (error: any) {
+            setState(() => ({ status: CreateItemStatus.SUBMIT_FAILED, error: error.toString() }));
+        }
     };
 
     const handleUploadCoverArtImage = async (file?: File) => {
@@ -118,32 +122,29 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
             return;
         }
 
-        setUploadCoverArtImageState(() => ({
-            status: CreateItemUploadAssetStatus.UPLOADING,
-            error: '',
-        }));
+        try {
+            setUploadCoverArtImageState(() => ({ status: CreateItemUploadAssetStatus.UPLOADING, error: '' }));
 
-        form.setFieldValue('coverArtImage', '');
+            form.setFieldValue('coverArtImage', '');
 
-        // TODO: Replace with real api call
-        setTimeout(async () => {
-            const r = Math.random() * 10;
-            if (r < 0) {
-                setUploadCoverArtImageState(() => ({
-                    status: CreateItemUploadAssetStatus.UPLOAD_FAILED,
-                    error: 'Something went wrong!',
-                }));
-                return;
-            }
+            const { signedUrl, s3Url } = await DemusifyApi.s3.getSignedUrl('items', id, file.type);
 
+            await axios.put(signedUrl, file, {
+                headers: {
+                    'content-type': encodeURIComponent(file.type),
+                    'x-amz-acl': 'public-read',
+                },
+            });
+
+            form.setFieldValue('coverArtImage', s3Url);
+
+            setUploadCoverArtImageState(() => ({ status: CreateItemUploadAssetStatus.UPLOAD_SUCCEEDED }));
+        } catch (error) {
             setUploadCoverArtImageState(() => ({
-                status: CreateItemUploadAssetStatus.UPLOAD_SUCCEEDED,
+                status: CreateItemUploadAssetStatus.UPLOAD_FAILED,
+                error: 'Something went wrong!',
             }));
-
-            const url = URL.createObjectURL(file);
-            // const url = await getBase64(file);
-            form.setFieldValue('coverArtImage', url);
-        }, 4000);
+        }
     };
 
     const handleUploadMusic = async (file?: File) => {
@@ -151,34 +152,29 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
             return;
         }
 
-        setUploadMusicState(() => ({
-            status: CreateItemUploadAssetStatus.UPLOADING,
-            error: '',
-        }));
+        try {
+            setUploadMusicState(() => ({ status: CreateItemUploadAssetStatus.UPLOADING, error: '' }));
 
-        form.setFieldValue('music', '');
-        form.setFieldValue('musicFingerprint', '');
+            form.setFieldValue('music', '');
 
-        // TODO: Replace with real api call
-        setTimeout(async () => {
-            const r = Math.random() * 10;
-            if (r < 0) {
-                setUploadMusicState(() => ({
-                    status: CreateItemUploadAssetStatus.UPLOAD_FAILED,
-                    error: 'Something went wrong!',
-                }));
-                return;
-            }
+            const { signedUrl, s3Url } = await DemusifyApi.s3.getSignedUrl('items', id, file.type);
 
-            setUploadMusicState(() => ({
-                status: CreateItemUploadAssetStatus.UPLOAD_SUCCEEDED,
+            await axios.put(signedUrl, file, {
+                headers: {
+                    'content-type': encodeURIComponent(file.type),
+                    'x-amz-acl': 'public-read',
+                },
+            });
+
+            form.setFieldValue('music', s3Url);
+
+            setUploadCoverArtImageState(() => ({ status: CreateItemUploadAssetStatus.UPLOAD_SUCCEEDED }));
+        } catch (error) {
+            setUploadCoverArtImageState(() => ({
+                status: CreateItemUploadAssetStatus.UPLOAD_FAILED,
+                error: 'Something went wrong!',
             }));
-
-            const url = URL.createObjectURL(file);
-
-            form.setFieldValue('music', url);
-            form.setFieldValue('musicFingerprint', url.substring(0, 120));
-        }, 3000);
+        }
     };
 
     const handleAddNewProperty = async () => {
@@ -308,7 +304,7 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
     const handleUpdateLicenseMonetizationValue = async (id: string, value: string) => {
         const licenseMonetizations = form.values.licenseMonetizations.map((item) => {
             if (item.id == id) {
-                item.value = value;
+                item.value = +value;
             }
 
             return item;

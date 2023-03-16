@@ -1,15 +1,40 @@
-import { ItemService } from '@services/index';
+import { dynamoDb } from '@databases/dynamo-db';
+import { ItemService, NFTCreationService, SolanaService } from '@services/index';
 import { Request, Response } from 'express';
 
 export class ItemController {
     async createItem(req: Request, res: Response) {
-        const input = req.body;
+        const { item, userWalletAddress } = req.body;
+        const user = (req as any).user;
+
+        const solanaService = new SolanaService();
+        const tokenMintAddress = await solanaService.createTokenMint();
+        const mintToMasterSignature = await solanaService.mintTokenToMaster(tokenMintAddress);
+        const transferToCreatorSignature = await solanaService.transferTokenFromMaster(
+            tokenMintAddress,
+            userWalletAddress,
+            1,
+        );
 
         const itemService = new ItemService();
-        const item = await itemService.createItem(input);
+        const createdItem = await itemService.createItem({
+            ...item,
+            username: user.username,
+            tokenMintAddress: tokenMintAddress,
+            creatorAddress: userWalletAddress,
+        });
+
+        const nftCreationService = new NFTCreationService();
+        await nftCreationService.createNFTCreation({
+            creatorID: user.username,
+            nftID: tokenMintAddress,
+            itemID: item.itemID,
+            mintToMasterSignature: mintToMasterSignature,
+            transferToCreatorSignature: transferToCreatorSignature,
+        });
 
         res.json({
-            data: item,
+            data: createdItem,
         });
     }
 

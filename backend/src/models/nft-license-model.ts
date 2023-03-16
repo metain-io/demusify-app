@@ -1,10 +1,10 @@
 import * as dynamoose from 'dynamoose';
 
-const NFTCreationModel = dynamoose.model(
-    'beta-demusify-nft-creations',
+const NFTLicenseModel = dynamoose.model(
+    'beta-demusify-nft-licenses',
     new dynamoose.Schema(
         {
-            creatorID: {
+            consumerID: {
                 type: String,
                 hashKey: true,
             },
@@ -12,9 +12,8 @@ const NFTCreationModel = dynamoose.model(
                 type: String,
                 rangeKey: true,
             },
-            mintToMasterSignature: String,
-            transferToCreatorSignature: String,
-            metadata: Object,
+            txID: String,
+            metadata: Object
         },
         {
             saveUnknown: true,
@@ -23,4 +22,4 @@ const NFTCreationModel = dynamoose.model(
     ),
 );
 
-export { NFTCreationModel };
+export { NFTLicenseModel };

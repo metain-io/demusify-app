@@ -26,8 +26,6 @@ export type CreateItemState = {
 export type CreateItemFormState = FormikProps<{
     coverArtImage: string;
     music: string;
-    musicFingerprint: string;
-
     name: string;
     externalLink: string;
     description: string;
@@ -38,7 +36,6 @@ export type CreateItemFormState = FormikProps<{
           }
         | undefined
         | null;
-    supply: number;
     properties: Array<{
         id: string;
         name: string;
@@ -59,7 +56,7 @@ export type CreateItemFormState = FormikProps<{
     licenseMonetizations: Array<{
         id: string;
         name: string;
-        value: string;
+        value: number;
     }>;
 }>;
 

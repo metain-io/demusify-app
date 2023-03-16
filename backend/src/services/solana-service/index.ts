@@ -1,5 +1,5 @@
 import * as splToken from '@solana/spl-token';
-import { PublicKey } from '@solana/web3.js';
+import { PublicKey, Transaction, SystemProgram, sendAndConfirmTransaction, LAMPORTS_PER_SOL } from '@solana/web3.js';
 import { getConnection, getMasterAccount, findOrCreateAssociatedTokenAccount, MAX_AMOUNT_TO_MINT } from './utils';
 
 export class SolanaService {
@@ -55,5 +55,23 @@ export class SolanaService {
         );
 
         return transferSignature;
+    }
+
+    async transferSolFromMaster(receiverAddress: string, amount: number) {
+        const connection = getConnection();
+        const payer = getMasterAccount();
+        const receiver = new PublicKey(receiverAddress);
+
+        const transaction = new Transaction().add(
+            SystemProgram.transfer({
+                fromPubkey: payer.publicKey,
+                toPubkey: receiver,
+                lamports: amount * LAMPORTS_PER_SOL,
+            }),
+        );
+
+        const signature = await sendAndConfirmTransaction(connection, transaction, [payer]);
+
+        return signature;
     }
 }

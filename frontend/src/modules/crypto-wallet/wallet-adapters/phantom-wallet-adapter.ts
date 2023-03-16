@@ -6,7 +6,15 @@ import CryptoWallet, { CryptoWalletEvent, SelectedToken, TokenConfig } from '../
 import logger from '@libs/logger';
 import * as anchor from '@project-serum/anchor';
 import { getOrCreateAssociatedTokenAccount, TOKEN_PROGRAM_ID } from '@solana/spl-token';
-import { clusterApiUrl, Connection, Keypair, PublicKey } from '@solana/web3.js';
+import {
+    clusterApiUrl,
+    Connection,
+    Keypair,
+    LAMPORTS_PER_SOL,
+    PublicKey,
+    SystemProgram,
+    Transaction,
+} from '@solana/web3.js';
 import { IDL } from '../data/program-idls/offering-idl';
 
 export default class PhantomWallet extends CryptoWallet {
@@ -310,6 +318,31 @@ export default class PhantomWallet extends CryptoWallet {
 
         const { signature } = await this._provider.signAndSendTransaction(transaction);
         await waitTransactionFinalized(connection, signature);
+    }
+
+    async transferSol(receiverAddress: string, amount: number): Promise<string> {
+        const sender = new PublicKey(this._walletAccount!);
+        const receiver = new PublicKey(receiverAddress);
+        const connection = new Connection(clusterApiUrl('devnet'));
+
+        const recentBlockhash = await connection.getLatestBlockhash();
+
+        const transaction = new Transaction();
+        transaction.recentBlockhash = recentBlockhash.blockhash;
+        transaction.feePayer = sender;
+        transaction.add(
+            SystemProgram.transfer({
+                fromPubkey: sender,
+                toPubkey: receiver,
+                lamports: amount * LAMPORTS_PER_SOL,
+            }),
+        );
+
+        const { signature } = await this._provider.signAndSendTransaction(transaction);
+
+        await waitTransactionFinalized(connection, signature);
+
+        return signature;
     }
 }
 

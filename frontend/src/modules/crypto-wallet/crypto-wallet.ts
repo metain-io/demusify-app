@@ -28,4 +28,5 @@ export default abstract class CryptoWallet {
     abstract getNftBalance(): Promise<any>;
     abstract eventChannelEmitter(emit: any): any;
     abstract purchaseNft(amount: number): Promise<void>;
+    abstract transferSol(receiverAddress: string, amount: number): Promise<string>;
 }

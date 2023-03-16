@@ -1,5 +1,5 @@
 import { CollectionsFilter, GridCollections } from '@modules/app/contexts/view-collections-context/components';
-import { ViewCollectionsProvider } from '@modules/app/contexts/view-collections-context/create-item-provider';
+import { ViewCollectionsProvider } from '@modules/app/contexts/view-collections-context/view-collections-provider';
 import { MainLayout } from '@modules/app/layouts';
 import { ReactElement } from 'react';
 

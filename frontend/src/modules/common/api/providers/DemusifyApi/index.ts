@@ -118,6 +118,32 @@ class DemusifyApi extends BaseApiProvider implements IDemusifyApi {
             return rs;
         },
     };
+
+    payment = {
+        createPayment: async ({
+            itemId,
+            licenseId,
+            paymentSignature,
+            payerAddress,
+        }: {
+            itemId: string;
+            licenseId: string;
+            paymentSignature: string;
+            payerAddress: string;
+        }) => {
+            const uri = `/demusify/api/v1/payments`;
+            const requestKey = generateRequestKey(uri);
+            const rs = await this.executeRequest(requestKey, () =>
+                Client.post(uri, {
+                    itemId,
+                    licenseId,
+                    paymentSignature,
+                    payerAddress,
+                }),
+            );
+            return rs;
+        },
+    };
 }
 
 export default new DemusifyApi(AuthService);

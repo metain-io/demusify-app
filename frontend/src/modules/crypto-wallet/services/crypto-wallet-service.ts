@@ -34,6 +34,14 @@ class CryptoWalletService {
 
         return await this._currentWallet.signMessage(message);
     }
+
+    async transferSol(receiverAddresS: string, amount: number) {
+        if (!this._currentWallet) {
+            throw new Error('_currentWallet is undefined');
+        }
+
+        return await this._currentWallet.transferSol(receiverAddresS, amount);
+    }
 }
 
 const instance = new CryptoWalletService();

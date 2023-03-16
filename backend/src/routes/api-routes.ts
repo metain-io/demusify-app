@@ -1,6 +1,12 @@
 import express from 'express';
 import { CreatorController } from '@controllers/creator-controller';
-import { CollectionController, ItemController, MeController, S3Controller } from '@controllers/index';
+import {
+    CollectionController,
+    ItemController,
+    MeController,
+    PaymentController,
+    S3Controller,
+} from '@controllers/index';
 import { accessTokenAuthentication } from '@middlewares/index';
 import { NFTCreationController } from '@controllers/nft-creation-controller';
 import { NFTLicensedController } from '@controllers/nft-licensed-controller';
@@ -13,7 +19,11 @@ apiRouter.get('/creation/:username', accessTokenAuthentication, new NFTCreationC
 
 apiRouter.get('/licensed/:username', accessTokenAuthentication, new NFTLicensedController().getNFTLicensedByUsername);
 
-apiRouter.get('/activities/:username', accessTokenAuthentication, new NFTActivitiesController().getNFTActivitiesByUsername);
+apiRouter.get(
+    '/activities/:username',
+    accessTokenAuthentication,
+    new NFTActivitiesController().getNFTActivitiesByUsername,
+);
 
 apiRouter.get('/user/nftData/:username', accessTokenAuthentication, new UserController().getNftData);
 
@@ -35,5 +45,7 @@ apiRouter.delete('/items/:itemId', accessTokenAuthentication, new ItemController
 apiRouter.get('/me/collections', accessTokenAuthentication, new MeController().listCollections);
 
 apiRouter.get('/s3/signed-url', accessTokenAuthentication, new S3Controller().getSignedUrl);
+
+apiRouter.post('/payments', accessTokenAuthentication, new PaymentController().createPayment);
 
 export { apiRouter };

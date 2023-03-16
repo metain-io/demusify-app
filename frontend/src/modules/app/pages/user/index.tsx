@@ -1,11 +1,12 @@
 import { MainLayout } from '@modules/app/layouts';
-import { selectLoginData } from '@modules/auth/redux/login/slice';
+import { selectLoginData, selectUserNftData } from '@modules/auth/redux/login/slice';
 import React from 'react';
 import { ReactElement } from 'react';
 import { useSelector } from 'react-redux';
 
 const PageUser = () => {
     const loginData = useSelector(selectLoginData)
+    const { nftCreation = [], nftActivities = [], nftLicensed = [] } = useSelector(selectUserNftData);
 
     const [createdItemTransactionList, setCreatedItemTransactionList] = React.useState<any>([])
 
@@ -234,7 +235,7 @@ const PageUser = () => {
     ];
 
     const renderLicensedItemsGrid = () => {
-        return licensedData.map((item, index) => {
+        return nftLicensed.map((item, index) => {
             return (
                 <>
                     <article>
@@ -242,7 +243,7 @@ const PageUser = () => {
                             <figure className="relative">
                                 <a href="item">
                                     <img
-                                        src={item.imgURL}
+                                        src={item.artCoverUrl || '/img/logo_white.png'}
                                         alt="item 11"
                                         className="w-full rounded-[0.625rem]"
                                         loading="lazy"
@@ -264,7 +265,7 @@ const PageUser = () => {
                                             <path d="M12.001 4.529c2.349-2.109 5.979-2.039 8.242.228 2.262 2.268 2.34 5.88.236 8.236l-8.48 8.492-8.478-8.492c-2.104-2.356-2.025-5.974.236-8.236 2.265-2.264 5.888-2.34 8.244-.228zm6.826 1.641c-1.5-1.502-3.92-1.563-5.49-.153l-1.335 1.198-1.336-1.197c-1.575-1.412-3.99-1.35-5.494.154-1.49 1.49-1.565 3.875-.192 5.451L12 18.654l7.02-7.03c1.374-1.577 1.299-3.959-.193-5.454z" />
                                         </svg>
                                     </span>
-                                    <span className="text-sm dark:text-jacarta-200">{item.liked}</span>
+                                    <span className="text-sm dark:text-jacarta-200">{item.liked || '0'}</span>
                                 </div>
                                 {/* <div className="absolute left-3 -bottom-3">
                                     <div className="flex -space-x-2">
@@ -290,7 +291,7 @@ const PageUser = () => {
                             <div className="mt-7 flex items-center justify-between">
                                 <a href="item">
                                     <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
-                                        {item.name}
+                                        {item.name || 'Unknown'}
                                     </span>
                                 </a>
                                 <div className="dropup rounded-full hover:bg-jacarta-100 dark:hover:bg-jacarta-600">
@@ -333,7 +334,7 @@ const PageUser = () => {
                                 </div>
                             </div>
                             <div className="mt-2 text-sm">
-                                <span className="mr-1 text-jacarta-700 dark:text-jacarta-200">{item.license}</span>
+                                <span className="mr-1 text-jacarta-700 dark:text-jacarta-200">{item.licences}</span>
                             </div>
 
                             <div className="mt-8 flex items-center justify-between">
@@ -369,7 +370,8 @@ const PageUser = () => {
     };
 
     const renderCreatedItemGrid = () => {
-        return createdData.map((item, index) => {
+        console.log('======= nftCreation: ', nftCreation)
+        return nftCreation.map((item, index) => {
             return (
                 <>
                     <article>
@@ -377,7 +379,7 @@ const PageUser = () => {
                             <figure className="relative">
                                 <a href="item">
                                     <img
-                                        src={item.imgURL}
+                                        src={item.artCoverUrl || '/img/logo_white.png'}
                                         alt="item 5"
                                         className="w-full rounded-[0.625rem]"
                                         loading="lazy"
@@ -399,7 +401,7 @@ const PageUser = () => {
                                             <path d="M12.001 4.529c2.349-2.109 5.979-2.039 8.242.228 2.262 2.268 2.34 5.88.236 8.236l-8.48 8.492-8.478-8.492c-2.104-2.356-2.025-5.974.236-8.236 2.265-2.264 5.888-2.34 8.244-.228zm6.826 1.641c-1.5-1.502-3.92-1.563-5.49-.153l-1.335 1.198-1.336-1.197c-1.575-1.412-3.99-1.35-5.494.154-1.49 1.49-1.565 3.875-.192 5.451L12 18.654l7.02-7.03c1.374-1.577 1.299-3.959-.193-5.454z" />
                                         </svg>
                                     </span>
-                                    <span className="text-sm dark:text-jacarta-200">{item.liked}</span>
+                                    <span className="text-sm dark:text-jacarta-200">{item.liked || '0'}</span>
                                 </div>
                                 {/* <div className="absolute left-3 -bottom-3">
                                     <div className="flex -space-x-2">
@@ -425,7 +427,7 @@ const PageUser = () => {
                             <div className="mt-7 flex items-center justify-between">
                                 <a href="item">
                                     <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
-                                        {item.name}
+                                        {item.name || 'Unknown'}
                                     </span>
                                 </a>
                                 <div className="dropup rounded-full hover:bg-jacarta-100 dark:hover:bg-jacarta-600">
@@ -476,8 +478,8 @@ const PageUser = () => {
                                 <span className="text-jacarta-700 dark:text-jacarta-200">Revenue</span>
                             </div>
                             <div className="flex items-center justify-between">
-                                <span className="text-jacarta-500 dark:text-jacarta-300">{item.totalSale}</span>
-                                <span className="text-jacarta-500 dark:text-jacarta-300">{item.totalRevenue} SOL</span>
+                                <span className="text-jacarta-500 dark:text-jacarta-300">{item.totalSale || '0'}</span>
+                                <span className="text-jacarta-500 dark:text-jacarta-300">{item.totalRevenue || '0'} SOL</span>
                             </div>
 
                             <div className="mt-8 flex items-center justify-between">
@@ -746,9 +748,9 @@ const PageUser = () => {
         );
     }
 
-    React.useEffect(() => {
-        setCreatedItemTransactionList(createdData?.[0]?.transactions || [])
-    }, [])
+    // React.useEffect(() => {
+    //     setCreatedItemTransactionList(createdData?.[0]?.transactions || [])
+    // }, [])
 
     return (
         <main className="pt-[5.5rem] lg:pt-24">

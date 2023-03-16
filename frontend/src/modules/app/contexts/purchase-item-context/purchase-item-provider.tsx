@@ -1,6 +1,5 @@
 import { selectLoginData } from '@modules/auth/redux/login/slice';
 import { DemusifyApi } from '@modules/common/api';
-import CryptoWallet from '@modules/crypto-wallet/crypto-wallet';
 import React from 'react';
 import { PropsWithChildren } from 'react';
 import { useSelector } from 'react-redux';
@@ -23,8 +22,6 @@ export const PurchaseItemProvider = (props: PurchaseItemProviderProps) => {
     });
 
     const handlePurchase = async () => {
-        // console.log(item, item.itemID);
-        // return;
         if (!item || !item.itemID || !selectedLicense || !loginData) {
             console.log('Not enough condition to run this function');
             return;
@@ -34,7 +31,7 @@ export const PurchaseItemProvider = (props: PurchaseItemProviderProps) => {
             setState(() => ({ status: PurchaseItemStatus.PROCESSING }));
 
             const signature = await CryptoWalletService.transferSol(
-                'DNE5hn3SQCWodqbpnCRqydjaMVzrL1fMffnGTYXwteww',
+                process.env.NEXT_PUBLIC_DEMUSIFY_SOLANA_TREASURY_WALLET as string,
                 selectedLicense.value,
             );
             console.log('handlePurchase', { signature });

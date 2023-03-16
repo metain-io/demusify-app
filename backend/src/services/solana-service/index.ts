@@ -107,7 +107,7 @@ export class SolanaService {
             SystemProgram.transfer({
                 fromPubkey: payer.publicKey,
                 toPubkey: receiver,
-                lamports: amount * LAMPORTS_PER_SOL,
+                lamports: parseInt(amount * LAMPORTS_PER_SOL + ''),
             }),
         );
 

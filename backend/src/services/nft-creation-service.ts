@@ -35,7 +35,6 @@ export class NFTCreationService {
         });
 
         return creations;
-        return await NFTCreationModel.query({ creatorID: username }).exec();
     }
 
     async update(username: string, data: any) {

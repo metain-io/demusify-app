@@ -12,24 +12,12 @@ const NFTCreationModel = dynamoose.model(
                 type: String,
                 rangeKey: true,
             },
-            name: String,
-            externalLink: String,
-            description: String,
-            collectionId: String,
-            properties: String,
-            levels: String,
-            licences: String,
-            artCoverUrl: String,
-            musicUrl: String,
-            liked: Number,
-            totalSale: Number,
-            totalRevenue: Number,
-            transactions: String
-        },
-        {
-            saveUnknown: true,
-            timestamps: true,
-        },
+            mintToMasterSignature: String,
+            transferToCreatorSignature: String,
+            itemID: String,
+            createdAt: Number,
+            updatedAt: Number
+        }
     ),
 );
 

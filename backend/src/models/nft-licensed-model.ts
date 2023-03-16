@@ -4,7 +4,7 @@ const NFTLicensedModel = dynamoose.model(
     'beta-demusify-nft-licensed',
     new dynamoose.Schema(
         {
-            creatorID: {
+            consumerID: {
                 hashKey: true,
                 type: String
             },
@@ -12,21 +12,8 @@ const NFTLicensedModel = dynamoose.model(
                 type: String,
                 rangeKey: true,
             },
-            name: String,
-            externalLink: String,
-            description: String,
-            collectionId: String,
-            properties: String,
-            levels: String,
-            licences: String,
-            artCoverUrl: String,
-            musicUrl: String,
-            liked: Number
-        },
-        {
-            saveUnknown: true,
-            timestamps: true,
-        },
+            createAt: Number
+        }
     ),
 );
 

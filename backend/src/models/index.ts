@@ -1,3 +1,4 @@
+export * from './nft-licensed-transactions-model';
 export * from './nft-activities-model';
 export * from './nft-licensed-model';
 export * from './nft-creation-model';

@@ -14,7 +14,7 @@ export class NFTActivitiesService {
     }
 
     async getByUsername(username: string) {
-        return (await NFTActivitiesModel.query({ creatorID: username }).exec());
+        return [];//(await NFTActivitiesModel.query({ userID: username }).exec());
     }
 
     async update(username: string, data: any) {

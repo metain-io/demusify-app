@@ -14,7 +14,7 @@ export class NFTLicensedService {
     }
 
     async getByUsername(username: string) {
-        return (await NFTLicensedModel.query({ creatorID: username }).exec());
+        return (await NFTLicensedModel.query({ consumerID: username }).exec());
     }
 
     async update(username: string, data: any) {

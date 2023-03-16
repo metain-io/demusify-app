@@ -1,5 +1,6 @@
 import { dynamoDb } from '@databases/dynamo-db';
 import { ItemService, NFTCreationService, SolanaService } from '@services/index';
+import { waitFor } from '@services/solana-service/utils';
 import { Request, Response } from 'express';
 
 export class ItemController {
@@ -9,12 +10,15 @@ export class ItemController {
 
         const solanaService = new SolanaService();
         const tokenMintAddress = await solanaService.createTokenMint();
+        console.log('MINT ACCOUNT:', tokenMintAddress);
         const mintToMasterSignature = await solanaService.mintTokenToMaster(tokenMintAddress);
+        console.log('TO MASTER:', mintToMasterSignature);
         const transferToCreatorSignature = await solanaService.transferTokenFromMaster(
             tokenMintAddress,
             userWalletAddress,
             1,
         );
+        console.log('TO CREATOR:', transferToCreatorSignature);
 
         const itemService = new ItemService();
         const createdItem = await itemService.createItem({
@@ -32,6 +36,8 @@ export class ItemController {
             mintToMasterSignature: mintToMasterSignature,
             transferToCreatorSignature: transferToCreatorSignature,
         });
+
+        console.log(createdItem)
 
         res.json({
             data: createdItem,

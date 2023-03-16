@@ -40,19 +40,50 @@ export async function findOrCreateAssociatedTokenAccount(
     walletAddress: PublicKey,
     tokenMintAddress: PublicKey,
 ) {
-    let token = await findAssociatedTokenAccount(walletAddress, tokenMintAddress);
+    const MAX_LOOPS = 5;
+    const REFRESH_TIME_MS = 5000;
 
-    const tokenAccountsByOwner = await connection.getTokenAccountsByOwner(walletAddress, { mint: tokenMintAddress });
+    let count = 0;
+    let token = null;
+    while (count < MAX_LOOPS) {
+        try {
+            token = await findAssociatedTokenAccount(walletAddress, tokenMintAddress);
 
-    const exists = tokenAccountsByOwner.value.find((ta) => ta.pubkey.toBase58() == token.toBase58());
+            const tokenAccountsByOwner = await connection.getTokenAccountsByOwner(walletAddress, { mint: tokenMintAddress });
 
-    if (!exists) {
-        token = await createAssociatedTokenAccount(connection, payer, walletAddress, tokenMintAddress);
-    }
+            const exists = tokenAccountsByOwner.value.find((ta) => ta.pubkey.toBase58() == token.toBase58());
 
-    if (!token) {
-        throw new Error('AssociatedTokenNotFound');
+            if (!exists) {
+                token = await createAssociatedTokenAccount(connection, payer, walletAddress, tokenMintAddress);
+                await waitFor(REFRESH_TIME_MS);
+            }
+
+            if (!token) {
+                ++count;
+
+                if (count > MAX_LOOPS) {
+                    throw new Error('AssociatedTokenNotFound');
+                }
+
+                await waitFor(REFRESH_TIME_MS);
+            } else {
+                break;
+            }
+        } catch (ex) {
+            ++count;
+            if (count > MAX_LOOPS) {
+                throw ex;
+            } else {
+                console.error('PENDING:', ex);
+            }
+
+            await waitFor(REFRESH_TIME_MS);
+        }
     }
 
     return token;
+}
+
+export function waitFor(ms: number) {
+    return new Promise((resolve) => setTimeout(() => resolve(null), ms));
 }

@@ -84,6 +84,13 @@ class DemusifyApi extends BaseApiProvider implements IDemusifyApi {
             return rs;
         },
 
+        getItem: async (itemId: string) => {
+            const uri = `/demusify/api/v1/items/${itemId}`;
+            const requestKey = generateRequestKey(uri);
+            const rs = await this.executeRequest(requestKey, () => Client.get(uri, {}));
+            return rs.data || {};
+        },
+
         getUserNftData: async (username: string): Promise<any> => {
             const uri = `/demusify/api/v1/user/nftData/${username}`;
             const requestKey = generateRequestKey(uri);

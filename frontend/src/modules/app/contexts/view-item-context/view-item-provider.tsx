@@ -1,8 +1,7 @@
 import React from 'react';
 import { PropsWithChildren } from 'react';
 import { ViewItemContext, ViewItemMode, ViewItemState, ViewItemStatus } from './index';
-import { DEFAULT_ITEM_DATA } from './data';
-import { database } from '@modules/app/database';
+import { DemusifyApi } from '@modules/common/api';
 
 export type ViewItemProviderProps = PropsWithChildren<{
     itemId?: string;
@@ -22,20 +21,13 @@ export const ViewItemProvider = (props: ViewItemProviderProps) => {
     const [selectedLicense, setSelectedLicense] = React.useState<any>(null);
 
     const fetchItem = async (itemId?: string) => {
-        return new Promise((resolve, reject) => {
-            if (!itemId) {
-                setTimeout(() => {
-                    resolve(DEFAULT_ITEM_DATA);
-                }, 3000);
-                return;
-            }
+        if (!itemId) {
+            return null;
+        }
 
-            database.loadItems().then((items: Array<any>) => {
-                const item = items.find((item) => item.id == itemId);
-                resolve(item);
-            });
-            return DEFAULT_ITEM_DATA;
-        });
+        const item = await DemusifyApi.walletApp.getItem(itemId);
+
+        return item;
     };
 
     const handleReload = async () => {
@@ -55,7 +47,6 @@ export const ViewItemProvider = (props: ViewItemProviderProps) => {
     };
 
     React.useEffect(() => {
-        // TODO: Check if need any initial process
         setState({ status: ViewItemStatus.LOADING });
 
         fetchItem(itemId).then((item) => {

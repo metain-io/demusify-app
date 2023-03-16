@@ -36,6 +36,7 @@
         "@solana/web3.js": "^1.73.3",
         "aws-crt": "^1.15.9",
         "aws-jwt-verify": "^3.4.0",
+        "aws-sdk": "^2.1335.0",
         "cors": "^2.8.5",
         "dotenv": "^16.0.3",
         "dotenv-webpack": "^8.0.1",

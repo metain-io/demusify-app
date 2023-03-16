@@ -10,30 +10,30 @@ export class ItemService {
     }
 
     async getItem(id: string) {
-        return (await ItemModel.query({ collectionID: id }).exec())?.[0];
+        return (await ItemModel.query({ itemID: id }).exec())?.[0];
     }
 
     async updateItem(id: string, data: any) {
-        const collection = await this.getItem(id);
+        const item = await this.getItem(id);
 
-        if (!collection) {
+        if (!item) {
             throw new Error('Item is not exists');
         }
 
         for (let key in data) {
-            collection[key] = data[key];
+            item[key] = data[key];
         }
 
-        return await collection.save();
+        return await item.save();
     }
 
     async deleteItem(id: string) {
-        const collection = await this.getItem(id);
+        const item = await this.getItem(id);
 
-        if (!collection) {
+        if (!item) {
             throw new Error('Item is not exists');
         }
 
-        return await collection.delete();
+        return await item.delete();
     }
 }

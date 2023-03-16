@@ -1,6 +1,6 @@
 import express from 'express';
 import { CreatorController } from '@controllers/creator-controller';
-import { CollectionController, ItemController, MeController } from '@controllers/index';
+import { CollectionController, ItemController, MeController, S3Controller } from '@controllers/index';
 import { accessTokenAuthentication } from '@middlewares/index';
 
 const apiRouter = express.Router();
@@ -21,5 +21,7 @@ apiRouter.put('/items/:itemId', accessTokenAuthentication, new ItemController().
 apiRouter.delete('/items/:itemId', accessTokenAuthentication, new ItemController().deleteItem);
 
 apiRouter.get('/me/collections', accessTokenAuthentication, new MeController().listCollections);
+
+apiRouter.get('/s3/signed-url', accessTokenAuthentication, new S3Controller().getSignedUrl);
 
 export { apiRouter };

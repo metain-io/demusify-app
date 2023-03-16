@@ -84,6 +84,24 @@ class DemusifyApi extends BaseApiProvider implements IDemusifyApi {
             return rs;
         },
     };
+
+    s3 = {
+        getSignedUrl: async (resource: 'items' | 'collections', resourceId: string, fileType: string) => {
+            const uri = `/demusify/api/v1/s3/signed-url`;
+            const requestKey = generateRequestKey(uri, resource, resourceId, fileType);
+            const rs = await this.executeRequest(requestKey, () =>
+                Client.get(uri, {
+                    params: {
+                        resource,
+                        resourceId,
+                        fileType,
+                    },
+                }),
+            );
+
+            return rs;
+        },
+    };
 }
 
 export default new DemusifyApi(AuthService);

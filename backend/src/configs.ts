@@ -16,6 +16,14 @@ const configs = {
         cluster: process.env.SOLANA_CLUSTER || '',
         masterPrivateKey: process.env.SOLANA_MASTER_PRIVATE_KEY || '',
     },
+    awsSdk: {
+        accessKeyId: process.env.AWS_SDK_ACCESS_KEY,
+        secretAccessKey: process.env.AWS_SDK_SECRET_KEY,
+        region: process.env.AWS_SDK_REGION,
+    },
+    s3: {
+        bucket: process.env.AWS_S3_BUCKET || '',
+    },
 };
 
 export default configs;

@@ -21,6 +21,7 @@ export class ItemController {
             ...item,
             username: user.username,
             tokenMintAddress: tokenMintAddress,
+            creatorAddress: userWalletAddress,
         });
 
         const nftCreationService = new NFTCreationService();

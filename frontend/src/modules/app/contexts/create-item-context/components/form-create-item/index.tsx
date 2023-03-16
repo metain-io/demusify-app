@@ -30,8 +30,7 @@ const LeftSide = () => {
                 >
                     {form.values.coverArtImage && (
                         <img
-                            className="absolute cursor-pointer rounded"
-                            style={{ objectFit: 'cover' }}
+                            className="absolute cursor-pointer rounded object-cover w-full h-full"
                             src={form.values.coverArtImage}
                         />
                     )}
@@ -81,8 +80,7 @@ const LeftSide = () => {
                 >
                     {form.values.music && (
                         <img
-                            className="absolute cursor-pointer rounded p-2"
-                            style={{ objectFit: 'cover' }}
+                            className="absolute cursor-pointer rounded p-2 object-cover w-full h-full inset-2"
                             src={'img/logo_white.png'}
                         />
                     )}
@@ -135,7 +133,7 @@ const RightSide = () => {
     const handleSelectCollection = (collection: { id: string; name: string }) => {
         form.setFieldValue('collection', collection);
     };
-    console.log(form.errors);
+
     return (
         <>
             {/* Right Column */}

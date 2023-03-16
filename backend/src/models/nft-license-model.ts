@@ -8,12 +8,10 @@ const NFTLicenseModel = dynamoose.model(
                 type: String,
                 hashKey: true,
             },
-            nftID: {
+            txID: {
                 type: String,
                 rangeKey: true,
             },
-            txID: String,
-            metadata: Object
         },
         {
             saveUnknown: true,

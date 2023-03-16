@@ -9,3 +9,4 @@ export * from './me-service';
 export * from './nft-creation-service';
 export * from './solana-service';
 export * from './aws-s3-service';
+export * from './nft-license-service';

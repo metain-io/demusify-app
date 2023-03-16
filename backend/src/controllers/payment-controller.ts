@@ -1,4 +1,4 @@
-import { ItemService, SolanaService } from '@services/index';
+import { ItemService, NFTLicenseService, SolanaService } from '@services/index';
 import { Request, Response } from 'express';
 
 export class PaymentController {
@@ -16,7 +16,7 @@ export class PaymentController {
             return;
         }
 
-        const selectedLicense = item?.licenseMonetizations?.find((l) => (l.id = licenseId));
+        const selectedLicense = item?.licenseMonetizations?.find((l) => l.id == licenseId);
         if (!selectedLicense || !selectedLicense?.value) {
             res.status(400).json({
                 code: 401,
@@ -40,21 +40,21 @@ export class PaymentController {
             amountTokenTransferedToPayer,
         );
 
-        // TODO: save nft-license
         const nftLicenseData = {
+            consumerID: user.username,
+            txID: paymentSignature,
+            nftID: item.tokenMintAddress,
             itemId,
             licenseId,
             price: selectedLicense.value,
-            paymentSignature,
-            username: user.username,
             payerAddress,
             amountSolTransferedToCreator,
             amountTokenTransferedToPayer,
             transferSolFromMasterSignature,
             transferTokenFromMasterSignature,
         };
-
-        console.log({ nftLicenseData });
+        const nftLicenseService = new NFTLicenseService();
+        await nftLicenseService.create(nftLicenseData);
 
         res.json(nftLicenseData);
     }

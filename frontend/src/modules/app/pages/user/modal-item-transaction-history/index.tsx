@@ -11,6 +11,8 @@ export const ModalItemHistoryTransaction = (props: ModalItemHistoryTransactionPr
     const [transactions, setTransactions] = React.useState<Array<any>>([]);
 
     React.useEffect(() => {
+        setTransactions(() => []);
+
         if (!item) return;
 
         DemusifyApi.items.getListItemTransactions(item.itemID).then((transactions) => setTransactions(transactions));

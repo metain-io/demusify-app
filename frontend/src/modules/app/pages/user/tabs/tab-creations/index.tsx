@@ -114,7 +114,7 @@ export const TabCreations = (props: TabCreationsProps) => {
                                                 {creation.sales || '0'}
                                             </span>
                                             <span className="text-jacarta-500 dark:text-jacarta-300">
-                                                {(creation.revenue && (creation.revenue * 10000) / 10000) || '0'} SOL
+                                                {(creation.revenue && (creation.revenue / 10000) * 10000) || '0'} SOL
                                             </span>
                                         </div>
 

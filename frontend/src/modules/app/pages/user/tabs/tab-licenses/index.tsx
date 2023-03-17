@@ -34,7 +34,8 @@ export const TabLicenses = (props: TabLicensesProps) => {
                                                 <img
                                                     src={license.item?.coverArtImage || '/img/logo_white.png'}
                                                     alt="item 11"
-                                                    className="w-full rounded-[0.625rem]"
+                                                    className="w-full rounded-[0.625rem] object-cover"
+                                                    style={{ height: '150px' }}
                                                     loading="lazy"
                                                 />
                                             </a>

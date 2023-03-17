@@ -34,7 +34,8 @@ export const TabCreations = (props: TabCreationsProps) => {
                                                 <img
                                                     src={creation.item?.coverArtImage || '/img/logo_white.png'}
                                                     alt="item 5"
-                                                    className="w-full rounded-[0.625rem]"
+                                                    className="w-full rounded-[0.625rem] object-cover"
+                                                    style={{ height: '150px' }}
                                                     loading="lazy"
                                                 />
                                             </a>
@@ -225,6 +226,7 @@ const Filters = () => {
                                             <img
                                                 src="img/avatars/collection_ava_1.png"
                                                 className="h-8 w-8 rounded-full"
+                                                style={{ height: '230px' }}
                                                 loading="lazy"
                                                 alt="avatar"
                                             />

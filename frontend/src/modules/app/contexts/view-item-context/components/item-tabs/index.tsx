@@ -17,36 +17,10 @@ export const ItemTabs = () => {
             <div className="min-w-fit">
                 {/* <!-- Tabs Nav --> */}
                 <ul className="nav nav-tabs flex items-center" role="tablist">
-                    {/* <!-- Properties --> */}
-                    <li className="nav-item" role="presentation">
-                        <button
-                            className="nav-link active relative flex items-center whitespace-nowrap py-3 px-6 text-jacarta-400 hover:text-jacarta-700 dark:hover:text-white"
-                            id="properties-tab"
-                            data-bs-toggle="tab"
-                            data-bs-target="#properties"
-                            type="button"
-                            role="tab"
-                            aria-controls="properties"
-                            aria-selected="false"
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24"
-                                width="24"
-                                height="24"
-                                className="mr-1 h-5 w-5 fill-current"
-                            >
-                                <path fill="none" d="M0 0h24v24H0z" />
-                                <path d="M6.17 18a3.001 3.001 0 0 1 5.66 0H22v2H11.83a3.001 3.001 0 0 1-5.66 0H2v-2h4.17zm6-7a3.001 3.001 0 0 1 5.66 0H22v2h-4.17a3.001 3.001 0 0 1-5.66 0H2v-2h10.17zm-6-7a3.001 3.001 0 0 1 5.66 0H22v2H11.83a3.001 3.001 0 0 1-5.66 0H2V4h4.17z" />
-                            </svg>
-                            <span className="font-display text-base font-medium">Details</span>
-                        </button>
-                    </li>
-
                     {/* <!-- Details --> */}
                     <li className="nav-item" role="presentation">
                         <button
-                            className="nav-link relative flex items-center whitespace-nowrap py-3 px-6 text-jacarta-400 hover:text-jacarta-700 dark:hover:text-white"
+                            className="nav-link active relative flex items-center whitespace-nowrap py-3 px-6 text-jacarta-400 hover:text-jacarta-700 dark:hover:text-white"
                             id="details-tab"
                             data-bs-toggle="tab"
                             data-bs-target="#details"
@@ -65,12 +39,38 @@ export const ItemTabs = () => {
                                 <path fill="none" d="M0 0h24v24H0z" />
                                 <path d="M20 22H4a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1zm-1-2V4H5v16h14zM7 6h4v4H7V6zm0 6h10v2H7v-2zm0 4h10v2H7v-2zm6-9h4v2h-4V7z" />
                             </svg>
+                            <span className="font-display text-base font-medium">Details</span>
+                        </button>
+                    </li>
+
+                    {/* <!-- Properties --> */}
+                    <li className="nav-item" role="presentation">
+                        <button
+                            className="nav-link relative flex items-center whitespace-nowrap py-3 px-6 text-jacarta-400 hover:text-jacarta-700 dark:hover:text-white"
+                            id="properties-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#properties"
+                            type="button"
+                            role="tab"
+                            aria-controls="properties"
+                            aria-selected="false"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                width="24"
+                                height="24"
+                                className="mr-1 h-5 w-5 fill-current"
+                            >
+                                <path fill="none" d="M0 0h24v24H0z" />
+                                <path d="M6.17 18a3.001 3.001 0 0 1 5.66 0H22v2H11.83a3.001 3.001 0 0 1-5.66 0H2v-2h4.17zm6-7a3.001 3.001 0 0 1 5.66 0H22v2h-4.17a3.001 3.001 0 0 1-5.66 0H2v-2h10.17zm-6-7a3.001 3.001 0 0 1 5.66 0H22v2H11.83a3.001 3.001 0 0 1-5.66 0H2V4h4.17z" />
+                            </svg>
                             <span className="font-display text-base font-medium">Properties</span>
                         </button>
                     </li>
 
                     {/* <!-- Activity --> */}
-                    <li className="nav-item" role="presentation">
+                    {/* <li className="nav-item" role="presentation">
                         <button
                             className="nav-link relative flex items-center whitespace-nowrap py-3 px-6 text-jacarta-400 hover:text-jacarta-700 dark:hover:text-white"
                             id="activity-tab"
@@ -93,7 +93,7 @@ export const ItemTabs = () => {
                             </svg>
                             <span className="font-display text-base font-medium">Activity</span>
                         </button>
-                    </li>
+                    </li> */}
 
                     {/* <!-- Stats --> */}
                     <li className="nav-item" role="presentation">
@@ -150,14 +150,14 @@ export const ItemTabs = () => {
 
                 {/* <!-- Tab Content --> */}
                 <div className="tab-content">
-                    {/* <!-- Properties --> */}
-                    <TabProperties />
-
                     {/* <!-- Details --> */}
                     <TabDetails />
 
+                    {/* <!-- Properties --> */}
+                    <TabProperties />
+
                     {/* <!-- Activity --> */}
-                    <TabActivities />
+                    {/* <TabActivities /> */}
 
                     {/* <!-- Stats --> */}
                     <TabStats />

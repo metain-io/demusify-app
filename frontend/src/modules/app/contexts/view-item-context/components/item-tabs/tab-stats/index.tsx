@@ -10,7 +10,7 @@ export const TabStats = () => {
                     {item?.stats?.map((stat: any, index: number) => (
                         <a
                             key={index}
-                            href="collection"
+                            href="#"
                             className="flex flex-col space-y-2 rounded-2lg border border-jacarta-100 bg-light-base p-5 text-center transition-shadow hover:shadow-lg dark:border-jacarta-600 dark:bg-jacarta-800"
                         >
                             <span className="text-sm uppercase text-accent">{stat.name}</span>

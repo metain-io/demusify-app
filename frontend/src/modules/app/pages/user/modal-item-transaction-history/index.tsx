@@ -93,13 +93,6 @@ export const ModalItemHistoryTransaction = (props: ModalItemHistoryTransactionPr
                                             Price
                                         </span>
                                     </div>
-
-                                    {/* <div
-                                        className="sticky top-0 bg-light-base py-2 px-4 dark:bg-jacarta-600"
-                                        role="columnheader"
-                                    >
-                                        <span className="w-full overflow-hidden text-ellipsis text-jacarta-700 dark:text-jacarta-100"></span>
-                                    </div> */}
                                 </div>
 
                                 {transactions &&
@@ -241,11 +234,6 @@ export const ModalItemHistoryTransaction = (props: ModalItemHistoryTransactionPr
                                                             </>
                                                         )}
                                                     </div>
-
-                                                    {/* <div
-                                                        className="flex items-center border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
-                                                        role="cell"
-                                                    ></div> */}
                                                 </div>
                                             </>
                                         );

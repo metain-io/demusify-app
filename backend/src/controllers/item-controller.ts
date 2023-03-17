@@ -21,13 +21,7 @@ export class ItemController {
             symbol: '',
             uri: onChainMetadataUri,
             sellerFeeBasisPoints: 0,
-            creators: [
-                {
-                    address: userWalletAddress,
-                    verified: true,
-                    share: 100,
-                },
-            ],
+            creators: null,
             collection: null,
             uses: null,
         });

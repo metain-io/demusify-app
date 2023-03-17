@@ -52,14 +52,7 @@ export class SolanaService {
                 },
                 {
                     createMetadataAccountArgsV2: {
-                        data: {
-                            ...onChainTokenMetadata,
-                            creators:
-                                onChainTokenMetadata.creators?.map((i) => ({
-                                    ...i,
-                                    address: new PublicKey(i.address),
-                                })) || null,
-                        },
+                        data: onChainTokenMetadata,
                         isMutable: true,
                     },
                 },

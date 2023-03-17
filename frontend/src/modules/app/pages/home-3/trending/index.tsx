@@ -1,9 +1,12 @@
-import { selectUserNftData } from '@modules/auth/redux/login/slice';
-import { useSelector } from 'react-redux';
-import { trendingItems } from './data';
+import { DemusifyApi } from '@modules/common/api';
+import React from 'react';
 
 export const Trending = () => {
-    const userNftData = useSelector(selectUserNftData);
+    const [items, setItems] = React.useState<Array<any>>([]);
+
+    React.useEffect(() => {
+        DemusifyApi.items.getListItems().then((items) => setItems(items));
+    }, []);
 
     const getNRandomElement = (arr: Array<any>, n: number) => {
         var result = new Array(n),
@@ -39,8 +42,8 @@ export const Trending = () => {
                     <div className="swiper card-slider-4-columns !py-5">
                         <div className="swiper-wrapper">
                             {/* Slides */}
-                            {userNftData?.items?.length &&
-                                getNRandomElement(userNftData.items, 6).map((item, index) => (
+                            {items?.length > 0 &&
+                                getNRandomElement(items, 6).map((item, index) => (
                                     <div key={index} className="swiper-slide">
                                         <article>
                                             <div className="block rounded-2.5xl border border-jacarta-900 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-900">
@@ -54,7 +57,6 @@ export const Trending = () => {
                                                             className="w-full rounded-[0.625rem]"
                                                             loading="lazy"
                                                             style={{
-                                                                width: '230px',
                                                                 height: '230px',
                                                                 objectFit: 'cover',
                                                             }}

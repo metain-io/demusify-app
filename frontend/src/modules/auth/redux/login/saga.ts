@@ -146,16 +146,16 @@ function* init(): any {
     );
 
     yield call(resolveGenerator, getUserProfile(username));
-    yield call(resolveGenerator, getUserNftData(username));
+    // yield call(resolveGenerator, getUserNftData(username));
 
     yield fork(watchCryptoWalletEventChannel, WalletService.currentWallet);
 }
 
 function* getUserProfile(username: string): any {
-    logger.debug('============== getUserProfile')
+    logger.debug('============== getUserProfile');
     if (!username) return {};
     let [userProfile, error] = yield call(resolveGenerator, DemusifyApi.walletApp.getCreator(username));
-    const [balances, balanceError] = yield call(resolveGenerator, WalletService.currentWallet!.getBalances())
+    const [balances, balanceError] = yield call(resolveGenerator, WalletService.currentWallet!.getBalances());
 
     logger.debug('getUserProfile --- userProfile: ', userProfile);
     logger.debug('getUserProfile --- getBalances: ', balances);
@@ -164,35 +164,35 @@ function* getUserProfile(username: string): any {
         logger.debug('getUserProfile --- ERROR: ', error, balanceError);
         return {};
     }
-    userProfile.balances = balances
+    userProfile.balances = balances;
 
-    yield put(loginActions.updateProfile(userProfile))
-    return userProfile
+    yield put(loginActions.updateProfile(userProfile));
+    return userProfile;
 }
 
-function* getUserNftData(username: string): any {
-    logger.debug('============== getUserNftData')
-    if (!username) return {};
-    let [userNftData, error] = yield call(resolveGenerator, DemusifyApi.walletApp.getUserNftData(username));
+// function* getUserNftData(username: string): any {
+//     logger.debug('============== getUserNftData');
+//     if (!username) return {};
+//     let [userNftData, error] = yield call(resolveGenerator, DemusifyApi.walletApp.getUserNftData(username));
 
-    let [rs, err] = yield call(resolveGenerator, DemusifyApi.items.getListItem());
+//     let [rs, err] = yield call(resolveGenerator, DemusifyApi.items.getListItem());
 
-    logger.debug('getUserNftData --- userNftData: ', userNftData);
+//     logger.debug('getUserNftData --- userNftData: ', userNftData);
 
-    if (error || err) {
-        logger.debug('getUserNftData --- ERROR: ', error);
-        logger.debug('getListItem --- ERROR: ', err)
-        return {};
-    }
+//     if (error || err) {
+//         logger.debug('getUserNftData --- ERROR: ', error);
+//         logger.debug('getListItem --- ERROR: ', err);
+//         return {};
+//     }
 
-    userNftData.items =
-        rs?.sort(
-            (a: any, b: any) =>
-                ((b.createdAt && new Date(b.createdAt)) || 0) - ((a.createdAt && new Date(a.createdAt)) || 0),
-        ) || [];
-    yield put(loginActions.updateUserData(userNftData))
-    return userNftData
-}
+//     userNftData.items =
+//         rs?.sort(
+//             (a: any, b: any) =>
+//                 ((b.createdAt && new Date(b.createdAt)) || 0) - ((a.createdAt && new Date(a.createdAt)) || 0),
+//         ) || [];
+//     yield put(loginActions.updateUserData(userNftData));
+//     return userNftData;
+// }
 
 function* handleLoginWithPhantomWallet(): any {
     WalletService.currentWallet = new PhantomWallet();
@@ -284,7 +284,7 @@ function* handleLoginWithPhantomWallet(): any {
     );
 
     yield call(resolveGenerator, getUserProfile(username));
-    yield call(resolveGenerator, getUserNftData(username));
+    // yield call(resolveGenerator, getUserNftData(username));
 
     yield fork(watchCryptoWalletEventChannel, WalletService.currentWallet);
 }

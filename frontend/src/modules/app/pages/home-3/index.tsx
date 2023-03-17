@@ -1,5 +1,6 @@
 import { MainLayout4 } from '@modules/app/layouts';
 import { ReactElement } from 'react';
+import { Collaboration } from './collaboration';
 import { HeroSlider } from './hero-slider';
 import { Latest } from './lastest';
 import { Recommend } from './recommend';
@@ -17,8 +18,11 @@ const Home3Page = () => {
                 {/* Trending */}
                 <Trending />
 
-                {/* Trending */}
+                {/* Latest */}
                 <Latest />
+
+                {/* Collaboration */}
+                {/* <Collaboration /> */}
 
                 {/* Boast */}
                 <section className="relative py-24 dark:bg-jacarta-800">

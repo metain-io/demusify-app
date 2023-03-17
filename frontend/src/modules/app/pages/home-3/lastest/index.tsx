@@ -37,8 +37,8 @@ export const Latest = () => {
                                                         className="w-full rounded-[0.625rem]"
                                                         loading="lazy"
                                                         style={{
-                                                            width: '270px',
-                                                            height: '270px',
+                                                            width: '230px',
+                                                            height: '230px',
                                                             objectFit: 'cover',
                                                         }}
                                                     />

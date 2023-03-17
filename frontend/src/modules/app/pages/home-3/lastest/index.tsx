@@ -1,8 +1,12 @@
-import { selectUserNftData } from '@modules/auth/redux/login/slice';
-import { useSelector } from 'react-redux';
+import { DemusifyApi } from '@modules/common/api';
+import React from 'react';
 
 export const Latest = () => {
-    const userNftData = useSelector(selectUserNftData);
+    const [items, setItems] = React.useState<Array<any>>([]);
+
+    React.useEffect(() => {
+        DemusifyApi.items.getListItems().then((items) => setItems(items));
+    }, []);
 
     return (
         <section className="relative py-24 dark:bg-jacarta-900">
@@ -25,7 +29,7 @@ export const Latest = () => {
                     <div className="swiper card-slider-4-columns !py-5">
                         <div className="swiper-wrapper">
                             {/* Slides */}
-                            {userNftData?.items?.slice(0, 6).map((item, index) => (
+                            {items?.slice(0, 6).map((item, index) => (
                                 <div key={index} className="swiper-slide">
                                     <article>
                                         <div className="block rounded-2.5xl border border-jacarta-900 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-900">
@@ -37,7 +41,6 @@ export const Latest = () => {
                                                         className="w-full rounded-[0.625rem]"
                                                         loading="lazy"
                                                         style={{
-                                                            width: '230px',
                                                             height: '230px',
                                                             objectFit: 'cover',
                                                         }}

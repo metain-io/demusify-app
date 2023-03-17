@@ -101,7 +101,7 @@ class DemusifyApi extends BaseApiProvider implements IDemusifyApi {
             return rs.data || {};
         },
 
-        getListItem: async () => {
+        getListItems: async () => {
             const uri = `/demusify/api/v1/items`;
             const requestKey = generateRequestKey(uri);
             const rs = await this.executeRequest(requestKey, () => Client.get(uri, {}));

@@ -11,6 +11,22 @@ export class MeService {
             .in(creations.map((i) => i.itemID))
             .exec();
 
+        const licenses = await NFTLicenseModel.scan('itemId')
+            .in(items.map((i) => i.itemID))
+            .exec();
+
+        const mapSales = licenses.reduce((prev, cur) => {
+            if (!prev[cur.itemId]) prev[cur.itemId] = 0;
+            prev[cur.itemId]++;
+            return prev;
+        }, {});
+
+        const mapRevenue = licenses.reduce((prev, cur) => {
+            if (!prev[cur.itemId]) prev[cur.itemId] = cur.amountSolTransferedToCreator;
+            prev[cur.itemId] += cur.amountSolTransferedToCreator;
+            return prev;
+        }, {});
+
         const mapItems = items.reduce((prev, cur) => {
             prev[cur.itemID] = cur;
             return prev;
@@ -19,6 +35,8 @@ export class MeService {
         const transformedCreations = creations.map((i) => ({
             ...i,
             item: mapItems[i.itemID] || null,
+            sales: mapSales[i.itemID] || 0,
+            revenue: mapRevenue[i.itemID] || 0,
         }));
 
         return transformedCreations;

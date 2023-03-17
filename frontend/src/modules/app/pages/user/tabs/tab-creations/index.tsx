@@ -111,10 +111,10 @@ export const TabCreations = (props: TabCreationsProps) => {
                                         </div>
                                         <div className="flex items-center justify-between">
                                             <span className="text-jacarta-500 dark:text-jacarta-300">
-                                                {creation.item.totalSale || '0'}
+                                                {creation.sales || '0'}
                                             </span>
                                             <span className="text-jacarta-500 dark:text-jacarta-300">
-                                                {creation.item.totalRevenue || '0'} SOL
+                                                {(creation.revenue && (creation.revenue * 10000) / 10000) || '0'} SOL
                                             </span>
                                         </div>
 

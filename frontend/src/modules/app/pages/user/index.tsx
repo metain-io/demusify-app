@@ -10,230 +10,6 @@ const PageUser = () => {
 
     const [createdItemTransactionList, setCreatedItemTransactionList] = React.useState<any>([])
 
-    const licensedData = [
-        {
-            imgURL: './img/musics/music-1.png',
-            name: 'Afraid #1649',
-            license: 'Streaming | Synchronization',
-            liked: '31',
-        },
-        {
-            imgURL: './img/musics/music-2.png',
-            name: 'Summertime BOP',
-            license: 'Synchronization',
-            liked: '3',
-        },
-        {
-            imgURL: './img/musics/music-3.png',
-            name: 'Bye bye #69',
-            license: 'Synchronization',
-            liked: '112',
-        },
-        {
-            imgURL: './img/musics/music-4.png',
-            name: 'Wait #164',
-            license: 'Streaming | Synchronization',
-            liked: '21',
-        },
-        {
-            imgURL: './img/musics/music-5.png',
-            name: 'Pushin me #14',
-            license: 'Streaming',
-            liked: '10',
-        },
-        {
-            imgURL: './img/musics/music-6.png',
-            name: 'Shining #49',
-            license: 'Synchronization',
-            liked: '10',
-        }
-    ]
-
-    const createdData = [
-        {
-            imgURL: './img/musics/music-7.png',
-            name: 'Villain (Dark Pop) #23',
-            totalSale: 4,
-            totalRevenue: 71,
-            liked: '16',
-            transactions: [
-                {
-                    license: 'Synchronization',
-                    price: 22,
-                    buyer: 'Aek6y6d5F3JvT8WBKHyZpF1PyCf48E9dZ43MDfRSZCBz',
-                    date: '10/03/2023',
-                    txID: '5z2eAUgSc8kVSX2kscgk9Q4gDhhGie78h2Khp7jfAVq14Awmiu6vCuR7DpnJK3TXZLLYNMAXdqxd8ATuke27MC8A'
-                },
-                {
-                    license: 'Streaming',
-                    price: 5,
-                    buyer: 'DPrun7fQfC6LrWNLSYtMq8Y9YTDECnP4MSoasgjk5Byv',
-                    date: '10/03/2023',
-                    txID: '4nuPD7tR78cdN5zUUmpgprE5FRdHZhwCPd24jSWTz9jyJ9KoPNje98SnpEPMkhL5xRVDQuTtQG6dcogDCXrCDKZ9'
-                },
-                {
-                    license: 'Synchronization',
-                    price: 22,
-                    buyer: 'BCyMNpvtd4rE3dYTfTTizxrMDWyAGxmMdEb5PRWC3Fko',
-                    date: '10/03/2023',
-                    txID: '3q5vXpnRXgivVyfTNKH47ubXK1iXhFTjzCevSKHcEM1m8DVYXK1xFeMS6jVjbKT7ppSpP1nrPgco9M4ggCamSkBs'
-                },
-                {
-                    license: 'Synchronization',
-                    price: 22,
-                    buyer: '3uGkkWVY4Mhz8wtS4LRYVZGJddJAn3dUyS2Fpas2WM2f',
-                    date: '10/03/2023',
-                    txID: '3p9g3iQjtpY4zCKGBeSky3MxL5P8b5Q45ogpkxMvLN2tnsUe8YMLJoTMWmSTgN6Tt6fWQ8m5u3HNcBymjzpAoJQC'
-                }
-            ]
-        },
-        {
-            imgURL: './img/musics/music-8.png',
-            name: 'Sweet Dreams #32',
-            totalSale: 3,
-            totalRevenue: 22,
-            liked: '9',
-            transactions: [
-                {
-                    license: 'Streaming',
-                    price: 2,
-                    buyer: 'DPrun7fQfC6LrWNLSYtMq8Y9YTDECnP4MSoasgjk5Byv',
-                    date: '10/03/2023',
-                    txID: '4nuPD7tR78cdN5zUUmpgprE5FRdHZhwCPd24jSWTz9jyJ9KoPNje98SnpEPMkhL5xRVDQuTtQG6dcogDCXrCDKZ9'
-                },
-                {
-                    license: 'Synchronization',
-                    price: 10,
-                    buyer: 'BCyMNpvtd4rE3dYTfTTizxrMDWyAGxmMdEb5PRWC3Fko',
-                    date: '10/03/2023',
-                    txID: '3q5vXpnRXgivVyfTNKH47ubXK1iXhFTjzCevSKHcEM1m8DVYXK1xFeMS6jVjbKT7ppSpP1nrPgco9M4ggCamSkBs'
-                },
-                {
-                    license: 'Synchronization',
-                    price: 10,
-                    buyer: '3uGkkWVY4Mhz8wtS4LRYVZGJddJAn3dUyS2Fpas2WM2f',
-                    date: '10/03/2023',
-                    txID: '3p9g3iQjtpY4zCKGBeSky3MxL5P8b5Q45ogpkxMvLN2tnsUe8YMLJoTMWmSTgN6Tt6fWQ8m5u3HNcBymjzpAoJQC'
-                }
-            ]
-        },
-        {
-            imgURL: './img/musics/music-9.png',
-            name: '30 YEARS #88',
-            totalSale: 2,
-            totalRevenue: 24,
-            liked: '18',
-            transactions: [
-                {
-                    license: 'Synchronization',
-                    price: 12,
-                    buyer: 'GdvNXo1ZWyvGPYen3cBQYRwwfr3KiALtvwjjLPDKLV31',
-                    date: '10/03/2023',
-                    txID: '4nuPD7tR78cdN5zUUmpgprE5FRdHZhwCPd24jSWTz9jyJ9KoPNje98SnpEPMkhL5xRVDQuTtQG6dcogDCXrCDKZ9'
-                },
-                {
-                    license: 'Synchronization',
-                    price: 12,
-                    buyer: 'Au5YWn1VkrD6YRBDGQs9CbwQqmUihvCK8Pd8DVTYcbd4',
-                    date: '10/03/2023',
-                    txID: '3p9g3iQjtpY4zCKGBeSky3MxL5P8b5Q45ogpkxMvLN2tnsUe8YMLJoTMWmSTgN6Tt6fWQ8m5u3HNcBymjzpAoJQC'
-                }
-            ]
-        },
-        {
-            imgURL: './img/musics/music-10.png',
-            name: 'Timer',
-            totalSale: 3,
-            totalRevenue: 40,
-            liked: '12',
-            transactions: [
-                {
-                    license: 'Synchronization',
-                    price: 12,
-                    buyer: 'GdvNXo1ZWyvGPYen3cBQYRwwfr3KiALtvwjjLPDKLV31',
-                    date: '10/03/2023',
-                    txID: '4nuPD7tR78cdN5zUUmpgprE5FRdHZhwCPd24jSWTz9jyJ9KoPNje98SnpEPMkhL5xRVDQuTtQG6dcogDCXrCDKZ9'
-                },
-                {
-                    license: 'Synchronization',
-                    price: 12,
-                    buyer: 'Au5YWn1VkrD6YRBDGQs9CbwQqmUihvCK8Pd8DVTYcbd4',
-                    date: '10/03/2023',
-                    txID: '3p9g3iQjtpY4zCKGBeSky3MxL5P8b5Q45ogpkxMvLN2tnsUe8YMLJoTMWmSTgN6Tt6fWQ8m5u3HNcBymjzpAoJQC'
-                }
-            ]
-        },
-        {
-            imgURL: './img/musics/music-11.png',
-            name: 'Go thru',
-            totalSale: 5,
-            totalRevenue: 66,
-            liked: '43',
-            transactions: [
-                {
-                    license: 'Synchronization',
-                    price: 12,
-                    buyer: 'GdvNXo1ZWyvGPYen3cBQYRwwfr3KiALtvwjjLPDKLV31',
-                    date: '10/03/2023',
-                    txID: '4nuPD7tR78cdN5zUUmpgprE5FRdHZhwCPd24jSWTz9jyJ9KoPNje98SnpEPMkhL5xRVDQuTtQG6dcogDCXrCDKZ9'
-                },
-                {
-                    license: 'Synchronization',
-                    price: 12,
-                    buyer: 'Au5YWn1VkrD6YRBDGQs9CbwQqmUihvCK8Pd8DVTYcbd4',
-                    date: '10/03/2023',
-                    txID: '3p9g3iQjtpY4zCKGBeSky3MxL5P8b5Q45ogpkxMvLN2tnsUe8YMLJoTMWmSTgN6Tt6fWQ8m5u3HNcBymjzpAoJQC'
-                }
-            ]
-        },
-        {
-            imgURL: './img/musics/music-12.png',
-            name: 'TRIPS',
-            totalSale: 2,
-            totalRevenue: 24,
-            liked: '6',
-            transactions: [
-                {
-                    license: 'Synchronization',
-                    price: 12,
-                    buyer: 'GdvNXo1ZWyvGPYen3cBQYRwwfr3KiALtvwjjLPDKLV31',
-                    date: '10/03/2023',
-                    txID: '4nuPD7tR78cdN5zUUmpgprE5FRdHZhwCPd24jSWTz9jyJ9KoPNje98SnpEPMkhL5xRVDQuTtQG6dcogDCXrCDKZ9'
-                },
-                {
-                    license: 'Synchronization',
-                    price: 12,
-                    buyer: 'Au5YWn1VkrD6YRBDGQs9CbwQqmUihvCK8Pd8DVTYcbd4',
-                    date: '10/03/2023',
-                    txID: '3p9g3iQjtpY4zCKGBeSky3MxL5P8b5Q45ogpkxMvLN2tnsUe8YMLJoTMWmSTgN6Tt6fWQ8m5u3HNcBymjzpAoJQC'
-                }
-            ]
-        },
-        {
-            imgURL: './img/musics/music-13.png',
-            name: 'ALONE',
-            totalSale: 4,
-            totalRevenue: 85,
-            liked: '1',
-            transactions: [
-                {
-                    license: 'Synchronization',
-                    price: 12,
-                    buyer: 'GdvNXo1ZWyvGPYen3cBQYRwwfr3KiALtvwjjLPDKLV31',
-                    date: '10/03/2023',
-                    txID: '4nuPD7tR78cdN5zUUmpgprE5FRdHZhwCPd24jSWTz9jyJ9KoPNje98SnpEPMkhL5xRVDQuTtQG6dcogDCXrCDKZ9'
-                },
-                {
-                    license: 'Synchronization',
-                    price: 12,
-                    buyer: 'Au5YWn1VkrD6YRBDGQs9CbwQqmUihvCK8Pd8DVTYcbd4',
-                    date: '10/03/2023',
-                    txID: '3p9g3iQjtpY4zCKGBeSky3MxL5P8b5Q45ogpkxMvLN2tnsUe8YMLJoTMWmSTgN6Tt6fWQ8m5u3HNcBymjzpAoJQC'
-                }
-            ]
-        },
-    ];
-
     const renderLicensedItemsGrid = () => {
         return nftLicensed.map((item, index) => {
             return (
@@ -241,7 +17,7 @@ const PageUser = () => {
                     <article>
                         <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                             <figure className="relative">
-                                <a href="item">
+                                <a href={`view-item?itemId=${item.detail.itemID}`}>
                                     <img
                                         src={item?.detail?.coverArtImage || '/img/logo_white.png'}
                                         alt="item 11"
@@ -269,7 +45,7 @@ const PageUser = () => {
                                 </div>
                                 {/* <div className="absolute left-3 -bottom-3">
                                     <div className="flex -space-x-2">
-                                        <a href="#">
+                                        <a href="javascript:void(0)">
                                             <img
                                                 src="img/avatars/creator_8.png"
                                                 alt="creator"
@@ -277,7 +53,7 @@ const PageUser = () => {
                                                 data-tippy-content="Creator: Sussygirl"
                                             />
                                         </a>
-                                        <a href="#">
+                                        <a href="javascript:void(0)">
                                             <img
                                                 src="img/avatars/owner_5.png"
                                                 alt="owner"
@@ -289,14 +65,14 @@ const PageUser = () => {
                                 </div> */}
                             </figure>
                             <div className="mt-7 flex items-center justify-between">
-                                <a href="item">
+                                <a href={`view-item?itemId=${item.detail.itemID}`}>
                                     <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                         {item?.detail?.name || 'Unknown'}
                                     </span>
                                 </a>
                                 <div className="dropup rounded-full hover:bg-jacarta-100 dark:hover:bg-jacarta-600">
                                     <a
-                                        href="#"
+                                        href="javascript:void(0)"
                                         className="dropdown-toggle inline-flex h-8 w-8 items-center justify-center text-sm"
                                         role="button"
                                         id="itemActions8"
@@ -339,14 +115,14 @@ const PageUser = () => {
 
                             <div className="mt-8 flex items-center justify-between">
                                 <a
-                                    href='item'
+                                    href={`view-item?itemId=${item.detail.itemID}`}
                                     className="font-display text-sm font-semibold text-accent"
                                     // data-bs-toggle="modal"
                                     // data-bs-target="#buyNowModal"
                                 >
                                     Details
                                 </a>
-                                <a href="item" className="group flex items-center">
+                                <a href={`view-item?itemId=${item.detail.itemID}`} className="group flex items-center">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         viewBox="0 0 24 24"
@@ -376,7 +152,7 @@ const PageUser = () => {
                     <article>
                         <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                             <figure className="relative">
-                                <a href="item">
+                                <a href={`view-item?itemId=${item.detail.itemID}`}>
                                     <img
                                         src={item?.detail?.coverArtImage || '/img/logo_white.png'}
                                         alt="item 5"
@@ -404,7 +180,7 @@ const PageUser = () => {
                                 </div>
                                 {/* <div className="absolute left-3 -bottom-3">
                                     <div className="flex -space-x-2">
-                                        <a href="#">
+                                        <a href="javascript:void(0)">
                                             <img
                                                 src="img/avatars/creator_1.png"
                                                 alt="creator"
@@ -412,7 +188,7 @@ const PageUser = () => {
                                                 data-tippy-content="Creator: Sussygirl"
                                             />
                                         </a>
-                                        <a href="#">
+                                        <a href="javascript:void(0)">
                                             <img
                                                 src="img/avatars/owner_1.png"
                                                 alt="owner"
@@ -424,14 +200,14 @@ const PageUser = () => {
                                 </div> */}
                             </figure>
                             <div className="mt-7 flex items-center justify-between">
-                                <a href="item">
+                                <a href={`view-item?itemId=${item.detail.itemID}`}>
                                     <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
                                         {item?.detail?.name || 'Unknown'}
                                     </span>
                                 </a>
                                 <div className="dropup rounded-full hover:bg-jacarta-100 dark:hover:bg-jacarta-600">
                                     <a
-                                        href="#"
+                                        href="javascript:void(0)"
                                         className="dropdown-toggle inline-flex h-8 w-8 items-center justify-center text-sm"
                                         role="button"
                                         id="itemActions"
@@ -483,7 +259,7 @@ const PageUser = () => {
 
                             <div className="mt-8 flex items-center justify-between">
                                 <a
-                                    href="item"
+                                    href={`view-item?itemId=${item.detail.itemID}`}
                                     className="font-display text-sm font-semibold text-accent"
                                     // data-bs-toggle="modal"
                                     // data-bs-target="#buyNowModal"
@@ -527,7 +303,7 @@ const PageUser = () => {
             return (
                 <>
                     <a
-                        href="item"
+                        href='javascript:void(0)'
                         className="relative flex items-center rounded-2.5xl border border-jacarta-100 bg-white p-8 transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700"
                     >
                         <figure className="mr-5 self-start">
@@ -1009,7 +785,7 @@ const PageUser = () => {
                             </div>
                             <div className="dropdown rounded-xl border border-jacarta-100 bg-white hover:bg-jacarta-100 dark:border-jacarta-600 dark:bg-jacarta-700 dark:hover:bg-jacarta-600">
                                 <a
-                                    href="#"
+                                    href="javascript:void(0)"
                                     className="dropdown-toggle inline-flex h-10 w-10 items-center justify-center text-sm"
                                     role="button"
                                     id="collectionShare"
@@ -1033,7 +809,7 @@ const PageUser = () => {
                                     aria-labelledby="collectionShare"
                                 >
                                     <a
-                                        href="#"
+                                        href="javascript:void(0)"
                                         className="flex w-full items-center rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
                                     >
                                         <svg
@@ -1051,7 +827,7 @@ const PageUser = () => {
                                         <span className="mt-1 inline-block">Facebook</span>
                                     </a>
                                     <a
-                                        href="#"
+                                        href="javascript:void(0)"
                                         className="flex w-full items-center rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
                                     >
                                         <svg
@@ -1069,7 +845,7 @@ const PageUser = () => {
                                         <span className="mt-1 inline-block">Twitter</span>
                                     </a>
                                     <a
-                                        href="#"
+                                        href="javascript:void(0)"
                                         className="flex w-full items-center rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
                                     >
                                         <svg
@@ -1087,7 +863,7 @@ const PageUser = () => {
                                         <span className="mt-1 inline-block">Discord</span>
                                     </a>
                                     <a
-                                        href="#"
+                                        href="javascript:void(0)"
                                         className="flex w-full items-center rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
                                     >
                                         <svg
@@ -1103,7 +879,7 @@ const PageUser = () => {
                                         <span className="mt-1 inline-block">Email</span>
                                     </a>
                                     <a
-                                        href="#"
+                                        href="javascript:void(0)"
                                         className="flex w-full items-center rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
                                     >
                                         <svg
@@ -1122,7 +898,7 @@ const PageUser = () => {
                             </div>
                             <div className="dropdown rounded-xl border border-jacarta-100 bg-white hover:bg-jacarta-100 dark:border-jacarta-600 dark:bg-jacarta-700 dark:hover:bg-jacarta-600">
                                 <a
-                                    href="#"
+                                    href="javascript:void(0)"
                                     className="dropdown-toggle inline-flex h-10 w-10 items-center justify-center text-sm"
                                     role="button"
                                     id="collectionActions"
@@ -1339,7 +1115,7 @@ const PageUser = () => {
                                             <ul className="scrollbar-custom flex max-h-48 flex-col overflow-y-auto">
                                                 <li>
                                                     <a
-                                                        href="#"
+                                                        href="javascript:void(0)"
                                                         className="dropdown-item flex w-full items-center justify-between rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
                                                     >
                                                         <span className="flex items-center space-x-3">
@@ -1367,7 +1143,7 @@ const PageUser = () => {
                                                 </li>
                                                 <li>
                                                     <a
-                                                        href="#"
+                                                        href="javascript:void(0)"
                                                         className="dropdown-item flex w-full items-center rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
                                                     >
                                                         <span className="flex items-center space-x-3">
@@ -1385,7 +1161,7 @@ const PageUser = () => {
                                                 </li>
                                                 <li>
                                                     <a
-                                                        href="#"
+                                                        href="javascript:void(0)"
                                                         className="dropdown-item flex w-full items-center rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
                                                     >
                                                         <span className="flex items-center space-x-3">
@@ -1403,7 +1179,7 @@ const PageUser = () => {
                                                 </li>
                                                 <li>
                                                     <a
-                                                        href="#"
+                                                        href="javascript:void(0)"
                                                         className="dropdown-item flex w-full items-center rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
                                                     >
                                                         <span className="flex items-center space-x-3">
@@ -1421,7 +1197,7 @@ const PageUser = () => {
                                                 </li>
                                                 <li>
                                                     <a
-                                                        href="#"
+                                                        href="javascript:void(0)"
                                                         className="dropdown-item flex w-full items-center rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
                                                     >
                                                         <span className="flex items-center space-x-3">
@@ -1439,7 +1215,7 @@ const PageUser = () => {
                                                 </li>
                                                 <li>
                                                     <a
-                                                        href="#"
+                                                        href="javascript:void(0)"
                                                         className="dropdown-item flex w-full items-center rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
                                                     >
                                                         <span className="flex items-center space-x-3">
@@ -1457,7 +1233,7 @@ const PageUser = () => {
                                                 </li>
                                                 <li>
                                                     <a
-                                                        href="#"
+                                                        href="javascript:void(0)"
                                                         className="dropdown-item flex w-full items-center rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
                                                     >
                                                         <span className="flex items-center space-x-3">
@@ -1520,7 +1296,7 @@ const PageUser = () => {
                                             <ul className="flex flex-col flex-wrap">
                                                 <li>
                                                     <a
-                                                        href="#"
+                                                        href="javascript:void(0)"
                                                         className="dropdown-item flex w-full items-center justify-between rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
                                                     >
                                                         <span className="text-jacarta-700 dark:text-white">All</span>
@@ -1538,7 +1314,7 @@ const PageUser = () => {
                                                 </li>
                                                 <li>
                                                     <a
-                                                        href="#"
+                                                        href="javascript:void(0)"
                                                         className="dropdown-item flex w-full items-center rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
                                                     >
                                                         Art
@@ -1546,7 +1322,7 @@ const PageUser = () => {
                                                 </li>
                                                 <li>
                                                     <a
-                                                        href="#"
+                                                        href="javascript:void(0)"
                                                         className="dropdown-item flex w-full items-center rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
                                                     >
                                                         Collectibles
@@ -1554,7 +1330,7 @@ const PageUser = () => {
                                                 </li>
                                                 <li>
                                                     <a
-                                                        href="#"
+                                                        href="javascript:void(0)"
                                                         className="dropdown-item flex w-full items-center rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
                                                     >
                                                         Domain
@@ -1562,7 +1338,7 @@ const PageUser = () => {
                                                 </li>
                                                 <li>
                                                     <a
-                                                        href="#"
+                                                        href="javascript:void(0)"
                                                         className="dropdown-item flex w-full items-center rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
                                                     >
                                                         Music
@@ -1570,7 +1346,7 @@ const PageUser = () => {
                                                 </li>
                                                 <li>
                                                     <a
-                                                        href="#"
+                                                        href="javascript:void(0)"
                                                         className="dropdown-item flex w-full items-center rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
                                                     >
                                                         Photography
@@ -1578,7 +1354,7 @@ const PageUser = () => {
                                                 </li>
                                                 <li>
                                                     <a
-                                                        href="#"
+                                                        href="javascript:void(0)"
                                                         className="dropdown-item flex w-full items-center rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
                                                     >
                                                         Virtual World
@@ -1914,7 +1690,7 @@ const PageUser = () => {
                                             <ul className="scrollbar-custom flex max-h-48 flex-col overflow-y-auto">
                                                 <li>
                                                     <a
-                                                        href="#"
+                                                        href="javascript:void(0)"
                                                         className="dropdown-item flex w-full items-center justify-between rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
                                                     >
                                                         <span className="flex items-center space-x-3">
@@ -1942,7 +1718,7 @@ const PageUser = () => {
                                                 </li>
                                                 <li>
                                                     <a
-                                                        href="#"
+                                                        href="javascript:void(0)"
                                                         className="dropdown-item flex w-full items-center rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
                                                     >
                                                         <span className="flex items-center space-x-3">
@@ -1960,7 +1736,7 @@ const PageUser = () => {
                                                 </li>
                                                 <li>
                                                     <a
-                                                        href="#"
+                                                        href="javascript:void(0)"
                                                         className="dropdown-item flex w-full items-center rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
                                                     >
                                                         <span className="flex items-center space-x-3">
@@ -1978,7 +1754,7 @@ const PageUser = () => {
                                                 </li>
                                                 <li>
                                                     <a
-                                                        href="#"
+                                                        href="javascript:void(0)"
                                                         className="dropdown-item flex w-full items-center rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
                                                     >
                                                         <span className="flex items-center space-x-3">
@@ -1996,7 +1772,7 @@ const PageUser = () => {
                                                 </li>
                                                 <li>
                                                     <a
-                                                        href="#"
+                                                        href="javascript:void(0)"
                                                         className="dropdown-item flex w-full items-center rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
                                                     >
                                                         <span className="flex items-center space-x-3">
@@ -2014,7 +1790,7 @@ const PageUser = () => {
                                                 </li>
                                                 <li>
                                                     <a
-                                                        href="#"
+                                                        href="javascript:void(0)"
                                                         className="dropdown-item flex w-full items-center rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
                                                     >
                                                         <span className="flex items-center space-x-3">
@@ -2032,7 +1808,7 @@ const PageUser = () => {
                                                 </li>
                                                 <li>
                                                     <a
-                                                        href="#"
+                                                        href="javascript:void(0)"
                                                         className="dropdown-item flex w-full items-center rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
                                                     >
                                                         <span className="flex items-center space-x-3">
@@ -2095,7 +1871,7 @@ const PageUser = () => {
                                             <ul className="flex flex-col flex-wrap">
                                                 <li>
                                                     <a
-                                                        href="#"
+                                                        href="javascript:void(0)"
                                                         className="dropdown-item flex w-full items-center justify-between rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
                                                     >
                                                         <span className="text-jacarta-700 dark:text-white">All</span>
@@ -2113,7 +1889,7 @@ const PageUser = () => {
                                                 </li>
                                                 <li>
                                                     <a
-                                                        href="#"
+                                                        href="javascript:void(0)"
                                                         className="dropdown-item flex w-full items-center rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
                                                     >
                                                         Art
@@ -2121,7 +1897,7 @@ const PageUser = () => {
                                                 </li>
                                                 <li>
                                                     <a
-                                                        href="#"
+                                                        href="javascript:void(0)"
                                                         className="dropdown-item flex w-full items-center rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
                                                     >
                                                         Collectibles
@@ -2129,7 +1905,7 @@ const PageUser = () => {
                                                 </li>
                                                 <li>
                                                     <a
-                                                        href="#"
+                                                        href="javascript:void(0)"
                                                         className="dropdown-item flex w-full items-center rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
                                                     >
                                                         Domain
@@ -2137,7 +1913,7 @@ const PageUser = () => {
                                                 </li>
                                                 <li>
                                                     <a
-                                                        href="#"
+                                                        href="javascript:void(0)"
                                                         className="dropdown-item flex w-full items-center rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
                                                     >
                                                         Music
@@ -2145,7 +1921,7 @@ const PageUser = () => {
                                                 </li>
                                                 <li>
                                                     <a
-                                                        href="#"
+                                                        href="javascript:void(0)"
                                                         className="dropdown-item flex w-full items-center rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
                                                     >
                                                         Photography
@@ -2153,7 +1929,7 @@ const PageUser = () => {
                                                 </li>
                                                 <li>
                                                     <a
-                                                        href="#"
+                                                        href="javascript:void(0)"
                                                         className="dropdown-item flex w-full items-center rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
                                                     >
                                                         Virtual World

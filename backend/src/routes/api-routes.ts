@@ -4,7 +4,7 @@ import {
     ItemController,
     MeController,
     PaymentController,
-    S3Controller
+    S3Controller,
 } from '@controllers/index';
 import { UserController } from '@controllers/user-controller';
 import { accessTokenAuthentication } from '@middlewares/index';
@@ -26,10 +26,13 @@ apiRouter.delete('/collections/:collectionId', accessTokenAuthentication, new Co
 apiRouter.post('/items', accessTokenAuthentication, new ItemController().createItem);
 apiRouter.get('/items', new ItemController().listItems);
 apiRouter.get('/items/:itemId', new ItemController().getItem);
+apiRouter.get('/items/:itemId/transactions', new ItemController().listItemTransactions);
 apiRouter.put('/items/:itemId', accessTokenAuthentication, new ItemController().updateItem);
 apiRouter.delete('/items/:itemId', accessTokenAuthentication, new ItemController().deleteItem);
 
 apiRouter.get('/me/collections', accessTokenAuthentication, new MeController().listCollections);
+apiRouter.get('/me/creations', accessTokenAuthentication, new MeController().listCreations);
+apiRouter.get('/me/licenses', accessTokenAuthentication, new MeController().listLicenses);
 
 apiRouter.get('/s3/signed-url', accessTokenAuthentication, new S3Controller().getSignedUrl);
 

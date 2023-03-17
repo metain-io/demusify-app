@@ -1,4 +1,4 @@
-import { ItemModel } from '@models/index';
+import { ItemModel, NFTCreationModel, NFTLicenseModel } from '@models/index';
 
 export class ItemService {
     async createItem(data: any) {
@@ -35,5 +35,24 @@ export class ItemService {
         }
 
         return await item.delete();
+    }
+
+    async listItemTransactions(id: string) {
+        const creations = await NFTCreationModel.scan('itemID').eq(id).exec();
+        const licenses = await NFTLicenseModel.scan('itemId').eq(id).exec();
+
+        const result = [
+            ...creations.map((i) => ({ type: 'create', txId: i.mintToMasterSignature, createdAt: i.createdAt })),
+            ...licenses.map((i) => ({ type: 'buy', txId: i.txID, createdAt: i.createdAt, price: i.price })),
+        ].sort((a, b) => {
+            const dateA = new Date(a.createdAt);
+            const dateB = new Date(b.createdAt);
+
+            if (dateA > dateB) return -1;
+            if (dateA < dateB) return 1;
+            return 0;
+        });
+
+        return result;
     }
 }

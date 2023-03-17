@@ -23,10 +23,10 @@ export class ItemController {
                 files: [
                     {
                         type: 'audio/mpeg',
-                        uri: item.music
-                    }
-                ]
-            }
+                        uri: item.music,
+                    },
+                ],
+            },
         });
 
         const createTokenMintMetadataSignature = await solanaService.createTokenMintMetadata(tokenMintAddress, {
@@ -106,6 +106,17 @@ export class ItemController {
 
         const itemService = new ItemService();
         const result = await itemService.deleteItem(itemId);
+
+        res.json({
+            data: result,
+        });
+    }
+
+    async listItemTransactions(req: Request, res: Response) {
+        const { itemId } = req.params;
+
+        const itemService = new ItemService();
+        const result = await itemService.listItemTransactions(itemId);
 
         res.json({
             data: result,

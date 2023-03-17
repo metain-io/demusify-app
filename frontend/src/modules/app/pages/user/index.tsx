@@ -679,7 +679,7 @@ const PageUser = () => {
                 <div className="container">
                     <div className="text-center">
                         <h2 className="mb-2 font-display text-4xl font-medium text-jacarta-700 dark:text-white">
-                            {loginData.name || 'ratherruggedman'}
+                            {loginData.name || 'unknown'}
                         </h2>
                         <div className="mb-8 inline-flex items-center justify-center rounded-full border border-jacarta-100 bg-white py-1.5 px-4 dark:border-jacarta-600 dark:bg-jacarta-700">
                             <span data-tippy-content="ETH">
@@ -760,7 +760,7 @@ const PageUser = () => {
 
                         <p className="mx-auto mb-2 max-w-xl text-lg dark:text-jacarta-300">
                             {loginData.bio ||
-                                'Nothing to say.'}
+                                '...'}
                         </p>
                         <span className="text-jacarta-400">Joined February 2023</span>
 

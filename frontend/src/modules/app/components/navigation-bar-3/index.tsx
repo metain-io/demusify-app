@@ -345,7 +345,7 @@ const NavigationBar3 = (props: any) => {
                             >
                                 <li>
                                     <a
-                                        href="home-7"
+                                        href="#"
                                         className="flex items-center justify-between rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
                                     >
                                         <span className="mr-4 font-display text-sm text-jacarta-700 dark:text-white">
@@ -355,7 +355,7 @@ const NavigationBar3 = (props: any) => {
                                 </li>
                                 <li>
                                     <a
-                                        href="home-8"
+                                        href="#"
                                         className="flex items-center justify-between rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
                                     >
                                         <span className="mr-4 font-display text-sm text-jacarta-700 dark:text-white">
@@ -365,7 +365,7 @@ const NavigationBar3 = (props: any) => {
                                 </li>
                                 <li>
                                     <a
-                                        href="home-10"
+                                        href="#"
                                         className="flex items-center justify-between rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
                                     >
                                         <span className="mr-4 font-display text-sm text-jacarta-700 dark:text-white">
@@ -600,7 +600,7 @@ const NavigationBar3 = (props: any) => {
                             >
                                 <li>
                                     <a
-                                        href="help-center"
+                                        href="#"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
                                     >
                                         <span className="font-display text-sm text-jacarta-700 dark:text-white">
@@ -610,7 +610,7 @@ const NavigationBar3 = (props: any) => {
                                 </li>
                                 <li>
                                     <a
-                                        href="platform-status"
+                                        href="#"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
                                     >
                                         <span className="font-display text-sm text-jacarta-700 dark:text-white">
@@ -620,7 +620,7 @@ const NavigationBar3 = (props: any) => {
                                 </li>
                                 <li>
                                     <a
-                                        href="partners"
+                                        href="#"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
                                     >
                                         <span className="font-display text-sm text-jacarta-700 dark:text-white">
@@ -630,7 +630,7 @@ const NavigationBar3 = (props: any) => {
                                 </li>
                                 <li>
                                     <a
-                                        href="blog"
+                                        href="#"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
                                     >
                                         <span className="font-display text-sm text-jacarta-700 dark:text-white">
@@ -640,7 +640,7 @@ const NavigationBar3 = (props: any) => {
                                 </li>
                                 <li>
                                     <a
-                                        href="newsletter"
+                                        href="#"
                                         className="flex items-center rounded-xl px-5 py-2 transition-colors hover:bg-jacarta-50 hover:text-accent focus:text-accent dark:hover:bg-jacarta-600"
                                     >
                                         <span className="font-display text-sm text-jacarta-700 dark:text-white">

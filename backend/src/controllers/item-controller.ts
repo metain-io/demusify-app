@@ -9,11 +9,24 @@ export class ItemController {
         const solanaService = new SolanaService();
         const tokenMintAddress = await solanaService.createTokenMint();
 
+        const attributes = [];
+
         const onChainMetadataUri = await solanaService.uploadMetadata({
+            attributes,
             name: item.name,
             symbol: ``,
             description: item.description,
             image: item.coverArtImage,
+            seller_fee_basis_points: 0,
+            external_url: item.externalLink,
+            properties: {
+                files: [
+                    {
+                        type: 'audio/mpeg',
+                        uri: item.music
+                    }
+                ]
+            }
         });
 
         const createTokenMintMetadataSignature = await solanaService.createTokenMintMetadata(tokenMintAddress, {

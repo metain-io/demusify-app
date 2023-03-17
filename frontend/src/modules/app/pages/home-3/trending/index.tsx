@@ -42,7 +42,7 @@ export const Trending = () => {
                     <div className="swiper card-slider-4-columns !py-5">
                         <div className="swiper-wrapper">
                             {/* Slides */}
-                            {items?.length &&
+                            {items?.length > 0 &&
                                 getNRandomElement(items, 6).map((item, index) => (
                                     <div key={index} className="swiper-slide">
                                         <article>

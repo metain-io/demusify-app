@@ -175,13 +175,21 @@ function* getUserNftData(username: string): any {
     if (!username) return {};
     let [userNftData, error] = yield call(resolveGenerator, DemusifyApi.walletApp.getUserNftData(username));
 
+    let [rs, err] = yield call(resolveGenerator, DemusifyApi.items.getListItem());
+
     logger.debug('getUserNftData --- userNftData: ', userNftData);
 
-    if (error) {
+    if (error || err) {
         logger.debug('getUserNftData --- ERROR: ', error);
+        logger.debug('getListItem --- ERROR: ', err)
         return {};
     }
 
+    userNftData.items =
+        rs?.sort(
+            (a: any, b: any) =>
+                ((b.createdAt && new Date(b.createdAt)) || 0) - ((a.createdAt && new Date(a.createdAt)) || 0),
+        ) || [];
     yield put(loginActions.updateUserData(userNftData))
     return userNftData
 }

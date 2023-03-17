@@ -1,29 +1,16 @@
-import express from 'express';
 import { CreatorController } from '@controllers/creator-controller';
 import {
     CollectionController,
     ItemController,
     MeController,
     PaymentController,
-    S3Controller,
+    S3Controller
 } from '@controllers/index';
-import { accessTokenAuthentication } from '@middlewares/index';
-import { NFTCreationController } from '@controllers/nft-creation-controller';
-import { NFTLicensedController } from '@controllers/nft-licensed-controller';
-import { NFTActivitiesController } from '@controllers/nft-activities-controller';
 import { UserController } from '@controllers/user-controller';
+import { accessTokenAuthentication } from '@middlewares/index';
+import express from 'express';
 
 const apiRouter = express.Router();
-
-apiRouter.get('/creation/:username', accessTokenAuthentication, new NFTCreationController().getNFTCreationByUsername);
-
-apiRouter.get('/licensed/:username', accessTokenAuthentication, new NFTLicensedController().getNFTLicensedByUsername);
-
-apiRouter.get(
-    '/activities/:username',
-    accessTokenAuthentication,
-    new NFTActivitiesController().getNFTActivitiesByUsername,
-);
 
 apiRouter.get('/user/nftData/:username', accessTokenAuthentication, new UserController().getNftData);
 

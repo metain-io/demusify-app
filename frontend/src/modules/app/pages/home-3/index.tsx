@@ -1,36 +1,12 @@
 import { MainLayout4 } from '@modules/app/layouts';
-import { ReactElement, useEffect } from 'react';
+import { ReactElement } from 'react';
+import { Collaboration } from './collaboration';
 import { HeroSlider } from './hero-slider';
+import { Latest } from './lastest';
 import { Recommend } from './recommend';
 import { Trending } from './trending';
 
 const Home3Page = () => {
-    const { children, filterQuery } = props;
-
-    const [state, setState] = React.useState<ViewCollectionsState>({
-        status: 0,
-        error: ''
-    });
-
-    useEffect(() => {
-        // TODO: Check if need any initial process
-        setState({ status: 0 });
-
-        const timeout = setTimeout(() => {
-            const fetchedCollections: Array<any> = collectionsData;
-
-            setState({
-                status: 1,
-            });
-
-            setCollections(fetchedCollections);
-        }, 2000);
-
-        return () => {
-            clearTimeout(timeout);
-        };
-    })
-
     return (
         <>
             <main>
@@ -41,6 +17,12 @@ const Home3Page = () => {
 
                 {/* Trending */}
                 <Trending />
+
+                {/* Latest */}
+                <Latest />
+
+                {/* Collaboration */}
+                {/* <Collaboration /> */}
 
                 {/* Boast */}
                 <section className="relative py-24 dark:bg-jacarta-800">

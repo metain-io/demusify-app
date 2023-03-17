@@ -191,6 +191,7 @@ export const loginSlice = createSlice({
             state.nftActivities = action.payload?.nftActivities || []
             state.nftLicensed = action.payload?.nftLicensed || []
             state.nftCreation = action.payload?.nftCreation || []
+            state.items = action.payload?.items || []
         }
     },
     extraReducers: (builder) => {},
@@ -207,12 +208,14 @@ export const selectLoginWalletAddress = (state: any) => state.login.walletAddres
 export const selectUserNftData = (state: any): {
     nftCreation: Array<UserNftCreation>,
     nftLicensed: Array<UserNftLicensed>,
-    nftActivities: Array<UserNftActivities>
+    nftActivities: Array<UserNftActivities>,
+    items: Array<UserNFTDetail>
 } => {
     return {
         nftCreation: state.login.nftCreation,
         nftLicensed: state.login.nftLicensed,
         nftActivities: state.login.nftActivities,
+        items: state.login.items,
     }
 }
 export const selectLoginData = (state: any) => {

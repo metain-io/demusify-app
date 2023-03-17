@@ -1,8 +1,6 @@
 import { MainLayout } from '@modules/app/layouts';
-import { selectLoginData, selectUserNftData } from '@modules/auth/redux/login/slice';
 import React from 'react';
 import { ReactElement } from 'react';
-import { useSelector } from 'react-redux';
 import { Tabs } from './tabs';
 import { UserBanner } from './user-banner';
 import { UserProfile } from './user-profile';

@@ -3,6 +3,7 @@ import { Connection, Signer, Keypair, PublicKey, Cluster, clusterApiUrl } from '
 import { TOKEN_PROGRAM_ID, ASSOCIATED_TOKEN_PROGRAM_ID } from '@solana/spl-token';
 import * as splToken from '@solana/spl-token';
 import base58 from 'bs58';
+import { bundlrStorage, keypairIdentity, Metaplex, UploadMetadataInput } from '@metaplex-foundation/js';
 
 export const MAX_AMOUNT_TO_MINT: bigint = 1000000000000000n;
 
@@ -49,7 +50,9 @@ export async function findOrCreateAssociatedTokenAccount(
         try {
             token = await findAssociatedTokenAccount(walletAddress, tokenMintAddress);
 
-            const tokenAccountsByOwner = await connection.getTokenAccountsByOwner(walletAddress, { mint: tokenMintAddress });
+            const tokenAccountsByOwner = await connection.getTokenAccountsByOwner(walletAddress, {
+                mint: tokenMintAddress,
+            });
 
             const exists = tokenAccountsByOwner.value.find((ta) => ta.pubkey.toBase58() == token.toBase58());
 
@@ -86,4 +89,18 @@ export async function findOrCreateAssociatedTokenAccount(
 
 export function waitFor(ms: number) {
     return new Promise((resolve) => setTimeout(() => resolve(null), ms));
+}
+
+export function getMetaplex(connection: Connection, wallet: Keypair) {
+    const metaplex = Metaplex.make(connection)
+        .use(keypairIdentity(wallet))
+        .use(
+            bundlrStorage({
+                address: 'https://devnet.bundlr.network',
+                providerUrl: clusterApiUrl(configs.solana.cluster as Cluster),
+                timeout: 60000,
+            }),
+        );
+
+    return metaplex;
 }

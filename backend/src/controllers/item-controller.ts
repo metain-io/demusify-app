@@ -6,28 +6,24 @@ export class ItemController {
         const { item, userWalletAddress } = req.body;
         const user = (req as any).user;
 
+        console.log('CREATE ITEM', item);
+
         const solanaService = new SolanaService();
         const tokenMintAddress = await solanaService.createTokenMint();
 
         const attributes = [];
 
+        console.log('MINT ACCOUNT:', tokenMintAddress);
+
         const onChainMetadataUri = await solanaService.uploadMetadata({
-            attributes,
             name: item.name,
             symbol: ``,
             description: item.description,
             image: item.coverArtImage,
-            seller_fee_basis_points: 0,
-            external_url: item.externalLink,
-            properties: {
-                files: [
-                    {
-                        type: 'audio/mpeg',
-                        uri: item.music,
-                    },
-                ],
-            },
+            external_url: item.externalLink
         });
+
+        console.log('METADATA URI:', onChainMetadataUri);
 
         const createTokenMintMetadataSignature = await solanaService.createTokenMintMetadata(tokenMintAddress, {
             name: item.name,
@@ -39,13 +35,19 @@ export class ItemController {
             uses: null,
         });
 
+        console.log('METADATA MINT:', createTokenMintMetadataSignature);
+
         const mintToMasterSignature = await solanaService.mintTokenToMaster(tokenMintAddress);
+
+        console.log('MINT TO MASTER:', mintToMasterSignature);
 
         const transferToCreatorSignature = await solanaService.transferTokenFromMaster(
             tokenMintAddress,
             userWalletAddress,
             1,
         );
+
+        console.log('MINT TO CREATOR:', transferToCreatorSignature);
 
         const itemService = new ItemService();
         const createdItem = await itemService.createItem({

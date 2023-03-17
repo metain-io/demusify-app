@@ -113,7 +113,7 @@ export const ItemDetail = () => {
             {/* Description */}
             <p className="mb-10 dark:text-jacarta-300">
                 {item?.description ||
-                    'New Yung Bleu x YOU Type Beat. This could be the beat to your biggest song yet. Dont miss out! connect with me @wnzallday '}
+                    'A good music.'}
             </p>
 
             {/* <!-- License Options --> */}
@@ -157,12 +157,12 @@ export const ItemDetail = () => {
 
                     <li className="flex mb-3">
                         <img className="max-h-7 mr-2" src={'img/icons/copy.svg'} />
-                        <span>DISTRIBUTE UP TO {selectedLicense?.copiesLimit} COPIES</span>
+                        <span>DISTRIBUTE UP TO {selectedLicense?.copiesLimit || 5000} COPIES</span>
                     </li>
 
                     <li className="flex mb-3">
                         <img className="max-h-7 mr-2" src={'img/icons/broadcast.svg'} />
-                        <span>{selectedLicense?.streamsLimit} ONLINE AUDIO STREAMS</span>
+                        <span>{selectedLicense?.streamsLimit || 1} ONLINE AUDIO STREAMS</span>
                     </li>
 
                     <li className="flex mb-3">
@@ -178,7 +178,7 @@ export const ItemDetail = () => {
                     {!!selectedLicense?.radioStations && (
                         <li className="flex mb-3">
                             <img className="max-h-7 mr-2" src={'img/icons/radio.svg'} />
-                            <span>RADIO BROADCASTING RIGHTS ({selectedLicense?.radioStations} STATIONS)</span>
+                            <span>RADIO BROADCASTING RIGHTS ({selectedLicense?.radioStations || 1} STATIONS)</span>
                         </li>
                     )}
                 </ul>

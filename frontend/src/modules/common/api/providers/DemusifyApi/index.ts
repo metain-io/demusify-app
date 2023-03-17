@@ -107,6 +107,13 @@ class DemusifyApi extends BaseApiProvider implements IDemusifyApi {
             const rs = await this.executeRequest(requestKey, () => Client.get(uri, {}));
             return rs.data || {};
         },
+
+        getListItemTransactions: async (itemId: string) => {
+            const uri = `/demusify/api/v1/items/${itemId}/transactions`;
+            const requestKey = generateRequestKey(uri);
+            const rs = await this.executeRequest(requestKey, () => Client.get(uri, {}));
+            return rs.data || {};
+        },
     };
 
     s3 = {
@@ -148,6 +155,22 @@ class DemusifyApi extends BaseApiProvider implements IDemusifyApi {
                 }),
             );
             return rs;
+        },
+    };
+
+    me = {
+        getListCreations: async () => {
+            const uri = `/demusify/api/v1/me/creations`;
+            const requestKey = generateRequestKey(uri);
+            const rs = await this.executeRequest(requestKey, () => Client.get(uri, {}));
+            return rs.data || {};
+        },
+
+        getListLicenses: async () => {
+            const uri = `/demusify/api/v1/me/licenses`;
+            const requestKey = generateRequestKey(uri);
+            const rs = await this.executeRequest(requestKey, () => Client.get(uri, {}));
+            return rs.data || {};
         },
     };
 }

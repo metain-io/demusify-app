@@ -1,6 +1,7 @@
 import { MainLayout4 } from '@modules/app/layouts';
 import { ReactElement } from 'react';
 import { HeroSlider } from './hero-slider';
+import { Latest } from './lastest';
 import { Recommend } from './recommend';
 import { Trending } from './trending';
 
@@ -15,6 +16,9 @@ const Home3Page = () => {
 
                 {/* Trending */}
                 <Trending />
+
+                {/* Trending */}
+                <Latest />
 
                 {/* Boast */}
                 <section className="relative py-24 dark:bg-jacarta-800">

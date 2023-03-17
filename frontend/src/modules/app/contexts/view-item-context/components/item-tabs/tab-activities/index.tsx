@@ -72,7 +72,11 @@ export const TabActivities = () => {
                                         className="flex items-center border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
                                         role="cell"
                                     >
-                                        <a href={`https://solscan.io/tx/${item.txId}?cluster=devnet`} target="_blank">
+                                        <a
+                                            href={`https://solscan.io/tx/${item.txId}?cluster=devnet`}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
                                             {item.txId?.substring(0, 12)}
                                         </a>
                                     </div>

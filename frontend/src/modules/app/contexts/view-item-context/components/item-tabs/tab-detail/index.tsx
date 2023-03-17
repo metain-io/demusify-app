@@ -12,6 +12,7 @@ export const TabDetails = () => {
                         href={`https://solscan.io/address/${item.tokenMintAddress}?cluster=devnet`}
                         className="text-accent"
                         target="_blank"
+                        rel="noopener noreferrer"
                     >
                         {item.tokenMintAddress}
                     </a>

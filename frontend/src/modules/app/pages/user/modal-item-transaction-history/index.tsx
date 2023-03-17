@@ -118,6 +118,7 @@ export const ModalItemHistoryTransaction = (props: ModalItemHistoryTransactionPr
                                                         <a
                                                             href={`https://solscan.io/tx/${item.txId}?cluster=devnet`}
                                                             target="_blank"
+                                                            rel="noopener noreferrer"
                                                         >
                                                             {item.txId?.substring(0, 12)}
                                                         </a>

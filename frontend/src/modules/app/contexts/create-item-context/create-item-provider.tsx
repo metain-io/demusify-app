@@ -102,12 +102,29 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
             const item = {
                 itemID: id,
                 collectionID: value.collection.id,
+                creatorAddress: loginData.walletAddress,
                 createdAt: Date.now(),
                 updatedAt: Date.now(),
                 ...value,
             };
 
-            await DemusifyApi.items.createItem({ item, userWalletAddress: loginData.walletAddress });
+            const { data: tokenMintAddress } = await DemusifyApi.items.createItemTokenMint();
+            item.tokenMintAddress = tokenMintAddress;
+
+            const {
+                data: { onChainMetadataUri, createTokenMintMetadataSignature },
+            } = await DemusifyApi.items.createItemTokenMintMetadata(item);
+            item.onChainMetadataUri = onChainMetadataUri;
+            item.createTokenMintMetadataSignature = createTokenMintMetadataSignature;
+
+            const {
+                data: { mintToMasterSignature, transferToCreatorSignature },
+            } = await DemusifyApi.items.mintItemToken(item);
+            item.mintToMasterSignature = mintToMasterSignature;
+            item.transferToCreatorSignature = transferToCreatorSignature;
+
+            const createdItem = await DemusifyApi.items.createItem(item);
+            console.log({ createdItem });
 
             setState(() => ({ status: CreateItemStatus.SUBMIT_SUCCEEDED }));
 

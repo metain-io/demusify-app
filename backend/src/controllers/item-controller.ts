@@ -2,30 +2,29 @@ import { ItemService, NFTCreationService, SolanaService } from '@services/index'
 import { Request, Response } from 'express';
 
 export class ItemController {
-    async createItem(req: Request, res: Response) {
-        const { item, userWalletAddress } = req.body;
-        const user = (req as any).user;
-
-        console.log('CREATE ITEM', item);
-
+    async createItemTokenMint(req: Request, res: Response) {
         const solanaService = new SolanaService();
         const tokenMintAddress = await solanaService.createTokenMint();
 
-        const attributes = [];
+        res.json({
+            data: tokenMintAddress,
+        });
+    }
 
-        console.log('MINT ACCOUNT:', tokenMintAddress);
+    async createItemTokenMintMetadata(req: Request, res: Response) {
+        const { item } = req.body;
+
+        const solanaService = new SolanaService();
 
         const onChainMetadataUri = await solanaService.uploadMetadata({
             name: item.name,
             symbol: ``,
             description: item.description,
             image: item.coverArtImage,
-            external_url: item.externalLink
+            external_url: item.externalLink,
         });
 
-        console.log('METADATA URI:', onChainMetadataUri);
-
-        const createTokenMintMetadataSignature = await solanaService.createTokenMintMetadata(tokenMintAddress, {
+        const createTokenMintMetadataSignature = await solanaService.createTokenMintMetadata(item.tokenMintAddress, {
             name: item.name,
             symbol: '',
             uri: onChainMetadataUri,
@@ -35,35 +34,45 @@ export class ItemController {
             uses: null,
         });
 
-        console.log('METADATA MINT:', createTokenMintMetadataSignature);
+        res.json({
+            data: { onChainMetadataUri, createTokenMintMetadataSignature },
+        });
+    }
 
-        const mintToMasterSignature = await solanaService.mintTokenToMaster(tokenMintAddress);
+    async mintItemToken(req: Request, res: Response) {
+        const { item } = req.body;
 
-        console.log('MINT TO MASTER:', mintToMasterSignature);
+        const solanaService = new SolanaService();
+        const mintToMasterSignature = await solanaService.mintTokenToMaster(item.tokenMintAddress);
 
         const transferToCreatorSignature = await solanaService.transferTokenFromMaster(
-            tokenMintAddress,
-            userWalletAddress,
+            item.tokenMintAddress,
+            item.creatorAddress,
             1,
         );
 
-        console.log('MINT TO CREATOR:', transferToCreatorSignature);
+        res.json({
+            data: { mintToMasterSignature, transferToCreatorSignature },
+        });
+    }
+
+    async createItem(req: Request, res: Response) {
+        const user = (req as any).user;
+        const { item } = req.body;
 
         const itemService = new ItemService();
         const createdItem = await itemService.createItem({
             ...item,
             username: user.username,
-            tokenMintAddress: tokenMintAddress,
-            creatorAddress: userWalletAddress,
         });
 
         const nftCreationService = new NFTCreationService();
         await nftCreationService.createNFTCreation({
             creatorID: user.username,
-            nftID: tokenMintAddress,
+            nftID: item.tokenMintAddress,
             itemID: item.itemID,
-            mintToMasterSignature: mintToMasterSignature,
-            transferToCreatorSignature: transferToCreatorSignature,
+            mintToMasterSignature: item.mintToMasterSignature,
+            transferToCreatorSignature: item.transferToCreatorSignature,
         });
 
         res.json({

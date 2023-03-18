@@ -55,6 +55,7 @@ export const Recommend = () => {
                                                             className="w-full rounded-[0.625rem]"
                                                             loading="lazy"
                                                             style={{
+                                                                margin: 'auto',
                                                                 height: '230px',
                                                                 objectFit: 'cover',
                                                             }}

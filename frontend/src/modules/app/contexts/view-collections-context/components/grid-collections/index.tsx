@@ -17,7 +17,7 @@ export const GridCollections = () => {
                                     className="w-full rounded-[0.625rem]"
                                     loading="lazy"
                                     style={{
-                                        width: '230px',
+                                        margin: 'auto',
                                         height: '230px',
                                         objectFit: 'cover',
                                     }}

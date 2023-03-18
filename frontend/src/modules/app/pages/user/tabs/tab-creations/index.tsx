@@ -226,7 +226,7 @@ const Filters = () => {
                                             <img
                                                 src="img/avatars/collection_ava_1.png"
                                                 className="h-8 w-8 rounded-full"
-                                                style={{ height: '230px' }}
+                                                style={{ height: '230px', margin: 'auto', objectFit: 'cover' }}
                                                 loading="lazy"
                                                 alt="avatar"
                                             />

@@ -3,10 +3,9 @@
     "version": "1.0.0",
     "description": "",
     "scripts": {
-        "start": "npx nodemon src/index.ts",
-        "build:app": "npx webpack --mode production --config webpack.config.ts --entry src/index.ts --output-path .dist/app",
-        "build:lambda-handler": "npx webpack --mode production --config webpack.config.ts --entry src/lambda-handler.ts --output-path .dist/lambda-handler",
-        "test:mint": "ts-node src/test/testMint.ts"
+        "dev:lambda:api-gateway-handler": "npx nodemon src/lambdas/api-gateway-handler/index.local.ts",
+        "build:lambda:api-gateway-handler": "npx webpack --mode production --config webpack.config.ts --entry src/lambdas/api-gateway-handler/index.ts --output-path .dist/api-gateway-handler",
+        "build:lambda:sqs-handler": "npx webpack --mode production --config webpack.config.ts --entry src/lambdas/sqs-handler/index.ts --output-path .dist/sqs-handler"
     },
     "keywords": [],
     "author": "",

@@ -1,12 +1,12 @@
 require('dotenv').config();
 require('express-async-errors');
 import express, { NextFunction, Request, Response } from 'express';
-import { apiRouter } from '@routes/index';
+import { apiRouter } from './routes/index';
 import * as dynamoose from 'dynamoose';
 import { dynamoDb } from '@databases/index';
 import cors from 'cors';
 import bodyParser from 'body-parser';
-import { logRequest } from '@middlewares/index';
+import { logRequest } from './middlewares/index';
 
 dynamoose.aws.ddb.set(dynamoDb);
 

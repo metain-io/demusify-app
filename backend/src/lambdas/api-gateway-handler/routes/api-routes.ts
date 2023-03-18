@@ -1,13 +1,13 @@
-import { CreatorController } from '@controllers/creator-controller';
+import { CreatorController } from '../controllers/creator-controller';
 import {
     CollectionController,
     ItemController,
     MeController,
     PaymentController,
     S3Controller,
-} from '@controllers/index';
-import { UserController } from '@controllers/user-controller';
-import { accessTokenAuthentication } from '@middlewares/index';
+} from '../controllers/index';
+import { UserController } from '../controllers/user-controller';
+import { accessTokenAuthentication } from '../middlewares/index';
 import express from 'express';
 
 const apiRouter = express.Router();

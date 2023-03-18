@@ -17,11 +17,8 @@
 
         "baseUrl": "./src",
         "paths": {
-            "@controllers/*": ["controllers/*"],
-            "@middlewares/*": ["middlewares/*"],
-            "@models/*": ["models/*"],
-            "@routes/*": ["routes/*"],
             "@databases/*": ["databases/*"],
+            "@models/*": ["models/*"],
             "@services/*": ["services/*"]
         }
     },

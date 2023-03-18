@@ -19,7 +19,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 Pitch deck document of the project is at the root of this git repository.
 
-Introduction video can be found here: [https://youtu.be/BHNyMIgnZ5Q](https://youtu.be/BHNyMIgnZ5Q)
+Introduction video can be found here: [https://youtu.be/XTXIjNtQpwE](https://youtu.be/XTXIjNtQpwE)
 
 ## Demo
 

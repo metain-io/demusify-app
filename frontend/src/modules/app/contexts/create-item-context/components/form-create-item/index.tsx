@@ -1,6 +1,7 @@
 import React from 'react';
 import { ChangeEventHandler, MouseEventHandler } from 'react';
 import { CreateItemStatus, CreateItemUploadAssetStatus, useCreateItem } from '../../index';
+import { ModalSubmitFailed } from '../modal-submit-failed';
 
 const LeftSide = () => {
     const { form, uploadCoverArtImageState, uploadMusicState, handleUploadCoverArtImage, handleUploadMusic } =
@@ -122,12 +123,18 @@ const LeftSide = () => {
     );
 };
 
+declare var $: any;
+
 const RightSide = () => {
     const { state, form, collections } = useCreateItem();
 
     const onButtonCreateClicked: MouseEventHandler<HTMLButtonElement> = (e) => {
         e.preventDefault();
         form.handleSubmit();
+
+        // setTimeout(() => {
+        //     (document!.querySelector('#buttonShowSubmitFailed')! as any).click();
+        // }, 3000);
     };
 
     const handleSelectCollection = (collection: { id: string; name: string }) => {
@@ -484,6 +491,13 @@ const RightSide = () => {
                         : 'Create'}
                 </button>
 
+                <button
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalSubmitFailed"
+                    id="buttonShowSubmitFailed"
+                >
+                </button>
+
                 {state.error && (
                     <div className="mb-6">
                         <p className="mb-3 text-2xs text-red">{state.error}</p>
@@ -496,6 +510,8 @@ const RightSide = () => {
                     </div>
                 )}
             </div>
+
+            <ModalSubmitFailed />
         </>
     );
 };

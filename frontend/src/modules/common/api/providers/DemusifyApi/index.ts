@@ -83,12 +83,38 @@ class DemusifyApi extends BaseApiProvider implements IDemusifyApi {
     };
 
     items = {
-        createItem: async (data: any) => {
+        createItemTokenMint: async () => {
+            const uri = `/demusify/api/v1/items/token-mint`;
+            const requestKey = generateRequestKey(uri);
+            const rs = await this.executeRequest(requestKey, () => Client.post(uri, {}));
+            return rs;
+        },
+        createItemTokenMintMetadata: async (item: any) => {
+            const uri = `/demusify/api/v1/items/token-mint-metadata`;
+            const requestKey = generateRequestKey(uri);
+            const rs = await this.executeRequest(requestKey, () =>
+                Client.post(uri, {
+                    item,
+                }),
+            );
+            return rs;
+        },
+        mintItemToken: async (item: any) => {
+            const uri = `/demusify/api/v1/items/mint-token-request`;
+            const requestKey = generateRequestKey(uri);
+            const rs = await this.executeRequest(requestKey, () =>
+                Client.post(uri, {
+                    item,
+                }),
+            );
+            return rs;
+        },
+        createItem: async (item: any) => {
             const uri = `/demusify/api/v1/items`;
             const requestKey = generateRequestKey(uri);
             const rs = await this.executeRequest(requestKey, () =>
                 Client.post(uri, {
-                    ...data,
+                    item,
                 }),
             );
             return rs;

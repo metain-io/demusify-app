@@ -1,5 +1,6 @@
 import { ItemService, NFTCreationService, SolanaService } from '@services/index';
 import { Request, Response } from 'express';
+import { sendSqsMessage } from '../utils';
 
 export class ItemController {
     async createItemTokenMint(req: Request, res: Response) {
@@ -73,6 +74,27 @@ export class ItemController {
             itemID: item.itemID,
             mintToMasterSignature: item.mintToMasterSignature,
             transferToCreatorSignature: item.transferToCreatorSignature,
+        });
+
+        res.json({
+            data: createdItem,
+        });
+    }
+
+    async createItemV2(req: Request, res: Response) {
+        const user = (req as any).user;
+        const { item } = req.body;
+
+        const itemService = new ItemService();
+        const createdItem = await itemService.createItem({
+            ...item,
+            username: user.username,
+            state: 'PENDING',
+        });
+
+        await sendSqsMessage({
+            type: 'CREATE_NEW_ITEM_SUCCEEDED',
+            data: { item: createdItem },
         });
 
         res.json({

@@ -1,5 +1,5 @@
 export * from './create-new-item-succeeded-handler';
-export * from './create-token-mint-succeded-handler';
+export * from './create-token-mint-succeeded-handler';
 export * from './create-token-mint-metadata-succeeded-handler';
 export * from './mint-token-to-master-succeeded-handler';
 export * from './transfer-token-to-creator-succeeded-handler';

@@ -6,10 +6,9 @@ export async function transferTokenToCreatorSucceededHandler(data: any) {
     const itemService = new ItemService();
 
     try {
-        item.state = 'MARK_ITEM_CREATION_COMPLETED_SUCCEEDED';
+        item.state = 'COMPLETED';
         await itemService.updateItem(item.id, item);
 
-        // TODO: send sqs message: MARK_ITEM_CREATION_COMPLETED_SUCCEEDED
         await sendSqsMessage({
             type: 'MARK_ITEM_CREATION_COMPLETED_SUCCEEDED',
             data: { item: item },
@@ -18,7 +17,6 @@ export async function transferTokenToCreatorSucceededHandler(data: any) {
         item.state = 'MARK_ITEM_CREATION_COMPLETED_FAILED';
         await itemService.updateItem(item.id, item);
 
-        // TODO: send sqs message: MARK_ITEM_CREATION_COMPLETED_FAILED
         await sendSqsMessage({
             type: 'MARK_ITEM_CREATION_COMPLETED_FAILED',
             data: { item: item },

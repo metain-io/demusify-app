@@ -10,10 +10,9 @@ export async function createTokenMintMetadataSucceededHandler(data: any) {
         const mintToMasterSignature = await solanaService.mintTokenToMaster(item.tokenMintAddress);
 
         item.mintToMasterSignature = mintToMasterSignature;
-        item.state = 'MINT_TOKEN_TO_MASTER_SUCCEEDED';
+        item.state = 'TOKEN_MINTED_TO_MASTER';
         await itemService.updateItem(item.id, item);
 
-        // TODO: send sqs message: MINT_TOKEN_TO_MASTER_SUCCEEDED
         await sendSqsMessage({
             type: 'MINT_TOKEN_TO_MASTER_SUCCEEDED',
             data: { item: item },
@@ -22,7 +21,6 @@ export async function createTokenMintMetadataSucceededHandler(data: any) {
         item.state = 'MINT_TOKEN_TO_MASTER_FAILED';
         await itemService.updateItem(item.id, item);
 
-        // TODO: send sqs message: MINT_TOKEN_TO_MASTER_FAILED
         await sendSqsMessage({
             type: 'MINT_TOKEN_TO_MASTER_FAILED',
             data: { item: item },

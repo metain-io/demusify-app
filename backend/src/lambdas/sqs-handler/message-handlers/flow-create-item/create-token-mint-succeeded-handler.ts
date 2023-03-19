@@ -27,10 +27,9 @@ export async function createTokenMintSucceededHandler(data: any) {
 
         item.onChainMetadataUri = onChainMetadataUri;
         item.createTokenMintMetadataSignature = createTokenMintMetadataSignature;
-        item.state = 'CREATE_TOKEN_MINT_METADATA_SUCCEEDED';
+        item.state = 'TOKEN_MINT_METADATA_CREATED';
         await itemService.updateItem(item.id, item);
 
-        // TODO: send sqs message: CREATE_TOKEN_MINT_METADATA_SUCCEEDED
         await sendSqsMessage({
             type: 'CREATE_TOKEN_MINT_METADATA_SUCCEEDED',
             data: { item: item },
@@ -39,7 +38,6 @@ export async function createTokenMintSucceededHandler(data: any) {
         item.state = 'CREATE_TOKEN_MINT_METADATA_FAILED';
         await itemService.updateItem(item.id, item);
 
-        // TODO: send sqs message: CREATE_TOKEN_MINT_METADATA_FAILED
         await sendSqsMessage({
             type: 'CREATE_TOKEN_MINT_METADATA_FAILED',
             data: { item: item },

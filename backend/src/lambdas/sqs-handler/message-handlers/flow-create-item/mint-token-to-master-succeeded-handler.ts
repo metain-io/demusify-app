@@ -14,10 +14,9 @@ export async function mintTokenToMasterSucceededHandler(data: any) {
         );
 
         item.transferToCreatorSignature = transferToCreatorSignature;
-        item.state = 'TRANSFER_TOKEN_TO_CREATOR_SUCCEEDED';
+        item.state = 'TOKEN_TRANSFERED_TO_CREATOR';
         await itemService.updateItem(item.id, item);
 
-        // TODO: send sqs message: TRANSFER_TOKEN_TO_CREATOR_SUCCEEDED
         await sendSqsMessage({
             type: 'TRANSFER_TOKEN_TO_CREATOR_SUCCEEDED',
             data: { item: item },
@@ -26,7 +25,6 @@ export async function mintTokenToMasterSucceededHandler(data: any) {
         item.state = 'TRANSFER_TOKEN_TO_CREATOR_FAILED';
         await itemService.updateItem(item.id, item);
 
-        // TODO: send sqs message: TRANSFER_TOKEN_TO_CREATOR_FAILED
         await sendSqsMessage({
             type: 'TRANSFER_TOKEN_TO_CREATOR_FAILED',
             data: { item: item },

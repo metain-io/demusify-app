@@ -10,19 +10,17 @@ export async function createNewItemSucceededHandler(data: any) {
         const tokenMintAddress = await solanaService.createTokenMint();
 
         item.tokenMintAddress = tokenMintAddress;
-        item.state = 'CREATE_TOKEN_MINT_SUCCEEDED';
+        item.state = 'TOKEN_MINT_CREATED';
         await itemService.updateItem(item.id, item);
 
-        // TODO: send sqs message: CREATE_TOKEN_MINT_SUCCEEDED
         await sendSqsMessage({
-            type: 'CREATE_NEW_ITEM_SUCCEEDED',
+            type: 'CREATE_TOKEN_MINT_SUCCEEDED',
             data: { item: item },
         });
     } catch (error) {
         item.state = 'CREATE_TOKEN_MINT_FAILED';
         await itemService.updateItem(item.id, item);
 
-        // TODO: send sqs message: CREATE_TOKEN_MINT_FAILED
         await sendSqsMessage({
             type: 'CREATE_TOKEN_MINT_FAILED',
             data: { item: item },

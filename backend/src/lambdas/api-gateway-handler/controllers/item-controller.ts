@@ -1,87 +1,9 @@
-import { ItemService, NFTCreationService, SolanaService } from '@services/index';
+import { ItemService } from '@services/index';
 import { Request, Response } from 'express';
 import { sendSqsMessage } from '../utils';
 
 export class ItemController {
-    async createItemTokenMint(req: Request, res: Response) {
-        const solanaService = new SolanaService();
-        const tokenMintAddress = await solanaService.createTokenMint();
-
-        res.json({
-            data: tokenMintAddress,
-        });
-    }
-
-    async createItemTokenMintMetadata(req: Request, res: Response) {
-        const { item } = req.body;
-
-        const solanaService = new SolanaService();
-
-        const onChainMetadataUri = await solanaService.uploadMetadata({
-            name: item.name,
-            symbol: ``,
-            description: item.description,
-            image: item.coverArtImage,
-            external_url: item.externalLink,
-        });
-
-        const createTokenMintMetadataSignature = await solanaService.createTokenMintMetadata(item.tokenMintAddress, {
-            name: item.name,
-            symbol: '',
-            uri: onChainMetadataUri,
-            sellerFeeBasisPoints: 0,
-            creators: null,
-            collection: null,
-            uses: null,
-        });
-
-        res.json({
-            data: { onChainMetadataUri, createTokenMintMetadataSignature },
-        });
-    }
-
-    async mintItemToken(req: Request, res: Response) {
-        const { item } = req.body;
-
-        const solanaService = new SolanaService();
-        const mintToMasterSignature = await solanaService.mintTokenToMaster(item.tokenMintAddress);
-
-        const transferToCreatorSignature = await solanaService.transferTokenFromMaster(
-            item.tokenMintAddress,
-            item.creatorAddress,
-            1,
-        );
-
-        res.json({
-            data: { mintToMasterSignature, transferToCreatorSignature },
-        });
-    }
-
     async createItem(req: Request, res: Response) {
-        const user = (req as any).user;
-        const { item } = req.body;
-
-        const itemService = new ItemService();
-        const createdItem = await itemService.createItem({
-            ...item,
-            username: user.username,
-        });
-
-        const nftCreationService = new NFTCreationService();
-        await nftCreationService.createNFTCreation({
-            creatorID: user.username,
-            nftID: item.tokenMintAddress,
-            itemID: item.itemID,
-            mintToMasterSignature: item.mintToMasterSignature,
-            transferToCreatorSignature: item.transferToCreatorSignature,
-        });
-
-        res.json({
-            data: createdItem,
-        });
-    }
-
-    async createItemV2(req: Request, res: Response) {
         const user = (req as any).user;
         const { item } = req.body;
 

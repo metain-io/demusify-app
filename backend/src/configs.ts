@@ -24,6 +24,9 @@ const configs = {
     s3: {
         bucket: process.env.AWS_S3_BUCKET || '',
     },
+    sqs: {
+        queueUrl: process.env.AWS_SQS_QUEUE_URL || '',
+    },
 };
 
 export default configs;

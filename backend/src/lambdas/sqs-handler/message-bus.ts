@@ -53,7 +53,7 @@ export enum FlowPurchaseItemMessageTypes {
     MARK_ITEM_PAYMENT_CREATEION_COMPLETED_FAILED = 'MARK_ITEM_PAYMENT_CREATEION_COMPLETED_FAILED',
 }
 
-const messageBus = {
+export const messageBus = {
     // Flow Create Item
     [FlowCreateItemMessageTypes.CREATE_NEW_ITEM_SUCCEEDED]: createNewItemSucceededHandler,
     [FlowCreateItemMessageTypes.CREATE_TOKEN_MINT_SUCCEEDED]: createTokenMintSucceededHandler,

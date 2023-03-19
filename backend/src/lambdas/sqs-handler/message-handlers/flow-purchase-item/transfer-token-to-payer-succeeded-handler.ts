@@ -15,10 +15,9 @@ export async function transferTokenToPayerSucceededHandler(data: any) {
 
         item.amountSolTransferedToCreator = amountSolTransferedToCreator;
         item.transferSolFromMasterSignature = transferSolFromMasterSignature;
-        item.state = 'TRANSFER_SOL_TO_CREATOR_SUCCEEDED';
+        item.state = 'SOL_TRANSFERED_TO_CREATOR';
         await itemService.update(item.id, item);
 
-        // TODO: send sqs message: TRANSFER_SOL_TO_CREATOR_SUCCEEDED
         await sendSqsMessage({
             type: 'TRANSFER_SOL_TO_CREATOR_SUCCEEDED',
             data: { item: item },
@@ -27,7 +26,6 @@ export async function transferTokenToPayerSucceededHandler(data: any) {
         item.state = 'TRANSFER_SOL_TO_CREATOR_FAILED';
         await itemService.update(item.id, item);
 
-        // TODO: send sqs message: TRANSFER_SOL_TO_CREATOR_FAILED
         await sendSqsMessage({
             type: 'TRANSFER_SOL_TO_CREATOR_FAILED',
             data: { item: item },

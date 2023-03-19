@@ -1,35 +1,26 @@
-import { NFTLicenseService, SolanaService } from '@services/index';
+import { NFTLicenseService } from '@services/index';
 import { sendSqsMessage } from 'lambdas/sqs-handler/utils';
 
 export async function createNewItemPaymentSucceededHandler(data: any) {
     const { item } = data;
-    const solanaService = new SolanaService();
     const itemService = new NFTLicenseService();
 
     try {
-        const amountTokenTransferedToPayer = 1;
-        const transferTokenFromMasterSignature = await solanaService.transferSolFromMaster(
-            item.creatorAddress,
-            amountTokenTransferedToPayer,
-        );
+        // TODO: validate payments instead of validate valid as default
 
-        item.amountTokenTransferedToPayer = amountTokenTransferedToPayer;
-        item.transferTokenFromMasterSignature = transferTokenFromMasterSignature;
-        item.state = 'TRANSFER_TOKEN_TO_PAYER_SUCCEEDED';
+        item.state = 'VALIDATED';
         await itemService.update(item.id, item);
 
-        // TODO: send sqs message: TRANSFER_TOKEN_TO_PAYER_SUCCEEDED
         await sendSqsMessage({
-            type: 'TRANSFER_TOKEN_TO_PAYER_SUCCEEDED',
+            type: 'CHECK_ITEM_PAYMENT_VALIDATED',
             data: { item: item },
         });
     } catch (error) {
-        item.state = 'TRANSFER_TOKEN_TO_PAYER_FAILED';
+        item.state = 'CHECK_ITEM_PAYMENT_FAILED';
         await itemService.update(item.id, item);
 
-        // TODO: send sqs message: TRANSFER_TOKEN_TO_PAYER_FAILED
         await sendSqsMessage({
-            type: 'TRANSFER_TOKEN_TO_PAYER_FAILED',
+            type: 'CHECK_ITEM_PAYMENT_FAILED',
             data: { item: item },
         });
     }

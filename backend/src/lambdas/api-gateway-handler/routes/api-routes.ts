@@ -27,13 +27,6 @@ apiRouter.put('/collections/:collectionId', accessTokenAuthentication, new Colle
 apiRouter.delete('/collections/:collectionId', accessTokenAuthentication, new CollectionController().deleteCollection);
 
 // ITEM
-apiRouter.post('/items/token-mint', accessTokenAuthentication, new ItemController().createItemTokenMint);
-apiRouter.post(
-    '/items/token-mint-metadata',
-    accessTokenAuthentication,
-    new ItemController().createItemTokenMintMetadata,
-);
-apiRouter.post('/items/mint-token-request', accessTokenAuthentication, new ItemController().mintItemToken);
 apiRouter.post('/items', accessTokenAuthentication, new ItemController().createItem);
 apiRouter.get('/items', new ItemController().listItems);
 apiRouter.get('/items/:itemId', new ItemController().getItem);

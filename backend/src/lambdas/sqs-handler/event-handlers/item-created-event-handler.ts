@@ -11,7 +11,7 @@ export async function itemCreatedEventHandler(input: any) {
 
         item.tokenMintAddress = tokenMintAddress;
         item.state = 'ITEM_TOKEN_MINT_CREATED';
-        await itemService.updateItem(item.id, item);
+        await itemService.updateItem(item.itemID, item);
 
         await sendSqsMessage({
             type: 'ITEM_TOKEN_MINT_CREATED',

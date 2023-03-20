@@ -15,7 +15,7 @@ export async function itemTokenMintedToMasterEventHandler(input: any) {
 
         item.transferToCreatorSignature = transferToCreatorSignature;
         item.state = 'COMPLETED';
-        await itemService.updateItem(item.id, item);
+        await itemService.updateItem(item.itemID, item);
 
         await sendSqsMessage({
             type: 'ITEM_COMPLETED',

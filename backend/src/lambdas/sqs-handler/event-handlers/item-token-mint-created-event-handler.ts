@@ -28,7 +28,7 @@ export async function itemTokenMintCreatedEventHandler(input: any) {
         item.onChainMetadataUri = onChainMetadataUri;
         item.createTokenMintMetadataSignature = createTokenMintMetadataSignature;
         item.state = 'ITEM_TOKEN_MINT_METADATA_CREATED';
-        await itemService.updateItem(item.id, item);
+        await itemService.updateItem(item.itemID, item);
 
         await sendSqsMessage({
             type: 'ITEM_TOKEN_MINT_METADATA_CREATED',

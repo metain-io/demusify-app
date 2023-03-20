@@ -11,7 +11,7 @@ export async function itemTokenMintMetadataCreatedEventHandler(input: any) {
 
         item.mintToMasterSignature = mintToMasterSignature;
         item.state = 'ITEM_TOKEN_MINTED_TO_MASTER';
-        await itemService.updateItem(item.id, item);
+        await itemService.updateItem(item.itemID, item);
 
         await sendSqsMessage({
             type: 'ITEM_TOKEN_MINTED_TO_MASTER',

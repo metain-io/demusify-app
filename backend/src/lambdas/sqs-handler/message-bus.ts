@@ -1,85 +1,26 @@
-import {
-    createNewItemSucceededHandler,
-    createTokenMintFailedHandler,
-    createTokenMintMetadataFailedHandler,
-    createTokenMintMetadataSucceededHandler,
-    createTokenMintSucceededHandler,
-    markItemCreationCompletedFailedHandler,
-    markItemCreationCompletedSucceededHandler,
-    mintTokenToMasterFailedHandler,
-    mintTokenToMasterSucceededHandler,
-    transferTokenToCreatorFailedHandler,
-    transferTokenToCreatorSucceededHandler,
-} from './message-handlers/flow-create-item';
-import {
-    checkItemPaymentFailedHandler,
-    checkItemPaymentInvalidatedHandler,
-    checkItemPaymentValidatedHandler,
-    createNewItemPaymentSucceededHandler,
-    markItemPaymentCreationCompletedFailedHandler,
-    markItemPaymentCreationCompletedSucceededHandler,
-    transferSolToCreatorFailedHandler,
-    transferSolToCreatorSucceededHandler,
-    transferTokenToPayerFailedHandler,
-    transferTokenToPayerSucceededHandler,
-} from './message-handlers/flow-purchase-item';
-
-export enum FlowCreateItemMessageTypes {
-    CREATE_NEW_ITEM_SUCCEEDED = 'CREATE_NEW_ITEM_SUCCEEDED',
-    CREATE_TOKEN_MINT_SUCCEEDED = 'CREATE_TOKEN_MINT_SUCCEEDED',
-    CREATE_TOKEN_MINT_METADATA_SUCCEEDED = 'CREATE_TOKEN_MINT_METADATA_SUCCEEDED',
-    MINT_TOKEN_TO_MASTER_SUCCEEDED = 'MINT_TOKEN_TO_MASTER_SUCCEEDED',
-    TRANSFER_TOKEN_TO_CREATOR_SUCCEEDED = 'TRANSFER_TOKEN_TO_CREATOR_SUCCEEDED',
-    MARK_ITEM_CREATION_COMPLETED_SUCCEEDED = 'MARK_ITEM_CREATION_COMPLETED_SUCCEEDED',
-
-    CREATE_TOKEN_MINT_FAILED = 'CREATE_TOKEN_MINT_FAILED',
-    CREATE_TOKEN_MINT_METADATA_FAILED = 'CREATE_TOKEN_MINT_METADATA_FAILED',
-    MINT_TOKEN_TO_MASTER_FAILED = 'MINT_TOKEN_TO_MASTER_FAILED',
-    TRANSFER_TOKEN_TO_CREATOR_FAILED = 'TRANSFER_TOKEN_TO_CREATOR_FAILED',
-    MARK_ITEM_CREATEION_COMPLETED_FAILED = 'MARK_ITEM_CREATEION_COMPLETED_FAILED',
-}
-
-export enum FlowPurchaseItemMessageTypes {
-    CREATE_NEW_ITEM_PAYMENT_SUCCEEDED = 'CREATE_NEW_ITEM_PAYMENT_SUCCEEDED',
-    CHECK_ITEM_PAYMENT_VALIDATED = 'CHECK_ITEM_PAYMENT_VALIDATED',
-    TRANSFER_TOKEN_TO_PAYER_SUCCEEDED = 'TRANSFER_TOKEN_TO_PAYER_SUCCEEDED',
-    TRANSFER_SOL_TO_CREATOR_SUCCEEDED = 'TRANSFER_SOL_TO_CREATOR_SUCCEEDED',
-    MARK_ITEM_PAYMENT_CREATION_COMPLETED_SUCCEEDED = 'MARK_ITEM_PAYMENT_CREATION_COMPLETED_SUCCEEDED',
-
-    CHECK_ITEM_PAYMENT_INVALIDATED = 'CHECK_ITEM_PAYMENT_INVALIDATED',
-    CHECK_ITEM_PAYMENT_FAILED = 'CHECK_ITEM_PAYMENT_FAILED',
-    TRANSFER_TOKEN_TO_PAYER_FAILED = 'TRANSFER_TOKEN_TO_PAYER_FAILED',
-    TRANSFER_SOL_TO_CREATOR_FAILED = 'TRANSFER_SOL_TO_CREATOR_FAILED',
-    MARK_ITEM_PAYMENT_CREATEION_COMPLETED_FAILED = 'MARK_ITEM_PAYMENT_CREATEION_COMPLETED_FAILED',
-}
+import { createItemCommandHandler } from './command-handlers/create-item-command-handler';
+import { createItemPaymentCommandHandler } from './command-handlers/create-item-payment-command-handler';
+import { itemCreatedEventHandler } from './event-handlers/item-created-event-handler';
+import { itemPaymentCreatedEventHandler } from './event-handlers/item-payment-created-event-handler';
+import { itemPaymentVerifiedEventHandler } from './event-handlers/item-payment-verified-event-handler';
+import { itemTokenMintCreatedEventHandler } from './event-handlers/item-token-mint-created-event-handler';
+import { itemTokenMintMetadataCreatedEventHandler } from './event-handlers/item-token-mint-metadata-created-event-handler';
+import { itemTokenMintedToMasterEventHandler } from './event-handlers/item-token-minted-to-master-event-handler';
+import { itemTokenTransferedToPayerEventHandler } from './event-handlers/item-token-transfered-to-payer-event-handler';
 
 export const messageBus = {
-    // Flow Create Item
-    [FlowCreateItemMessageTypes.CREATE_NEW_ITEM_SUCCEEDED]: createNewItemSucceededHandler,
-    [FlowCreateItemMessageTypes.CREATE_TOKEN_MINT_SUCCEEDED]: createTokenMintSucceededHandler,
-    [FlowCreateItemMessageTypes.CREATE_TOKEN_MINT_METADATA_SUCCEEDED]: createTokenMintMetadataSucceededHandler,
-    [FlowCreateItemMessageTypes.MINT_TOKEN_TO_MASTER_SUCCEEDED]: mintTokenToMasterSucceededHandler,
-    [FlowCreateItemMessageTypes.TRANSFER_TOKEN_TO_CREATOR_SUCCEEDED]: transferTokenToCreatorSucceededHandler,
-    [FlowCreateItemMessageTypes.MARK_ITEM_CREATION_COMPLETED_SUCCEEDED]: markItemCreationCompletedSucceededHandler,
+    // CREAT ITEM
+    CREATE_ITEM: createItemCommandHandler,
 
-    [FlowCreateItemMessageTypes.CREATE_TOKEN_MINT_FAILED]: createTokenMintFailedHandler,
-    [FlowCreateItemMessageTypes.CREATE_TOKEN_MINT_METADATA_FAILED]: createTokenMintMetadataFailedHandler,
-    [FlowCreateItemMessageTypes.MINT_TOKEN_TO_MASTER_FAILED]: mintTokenToMasterFailedHandler,
-    [FlowCreateItemMessageTypes.TRANSFER_TOKEN_TO_CREATOR_FAILED]: transferTokenToCreatorFailedHandler,
-    [FlowCreateItemMessageTypes.MARK_ITEM_CREATEION_COMPLETED_FAILED]: markItemCreationCompletedFailedHandler,
+    ITEM_CREATED: itemCreatedEventHandler,
+    ITEM_TOKEN_MINT_CREATED: itemTokenMintCreatedEventHandler,
+    ITEM_TOKEN_MINT_METADATA_CREATED: itemTokenMintMetadataCreatedEventHandler,
+    ITEM_TOKEN_MINTED_TO_MASTER: itemTokenMintedToMasterEventHandler,
 
-    // Flow Purchase Item
-    [FlowPurchaseItemMessageTypes.CREATE_NEW_ITEM_PAYMENT_SUCCEEDED]: createNewItemPaymentSucceededHandler,
-    [FlowPurchaseItemMessageTypes.CHECK_ITEM_PAYMENT_VALIDATED]: checkItemPaymentValidatedHandler,
-    [FlowPurchaseItemMessageTypes.TRANSFER_TOKEN_TO_PAYER_SUCCEEDED]: transferTokenToPayerSucceededHandler,
-    [FlowPurchaseItemMessageTypes.TRANSFER_SOL_TO_CREATOR_SUCCEEDED]: transferSolToCreatorSucceededHandler,
-    [FlowPurchaseItemMessageTypes.MARK_ITEM_PAYMENT_CREATION_COMPLETED_SUCCEEDED]:
-        markItemPaymentCreationCompletedSucceededHandler,
+    // CREATE ITEM PAYMENT
+    CREATE_ITEM_PAYMENT: createItemPaymentCommandHandler,
 
-    [FlowPurchaseItemMessageTypes.CHECK_ITEM_PAYMENT_INVALIDATED]: checkItemPaymentInvalidatedHandler,
-    [FlowPurchaseItemMessageTypes.CHECK_ITEM_PAYMENT_FAILED]: checkItemPaymentFailedHandler,
-    [FlowPurchaseItemMessageTypes.TRANSFER_TOKEN_TO_PAYER_FAILED]: transferTokenToPayerFailedHandler,
-    [FlowPurchaseItemMessageTypes.TRANSFER_SOL_TO_CREATOR_FAILED]: transferSolToCreatorFailedHandler,
-    [FlowPurchaseItemMessageTypes.MARK_ITEM_PAYMENT_CREATEION_COMPLETED_FAILED]:
-        markItemPaymentCreationCompletedFailedHandler,
+    ITEM_PAYMENT_CREATED: itemPaymentCreatedEventHandler,
+    ITEM_PAYMENT_VERIFIED: itemPaymentVerifiedEventHandler,
+    ITEM_TOKEN_TRANSFERED_TO_PAYER: itemTokenTransferedToPayerEventHandler,
 };

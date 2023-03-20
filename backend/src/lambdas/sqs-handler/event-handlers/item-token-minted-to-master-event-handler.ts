@@ -1,8 +1,8 @@
 import { ItemService, SolanaService } from '@services/index';
 import { sendSqsMessage } from 'lambdas/sqs-handler/utils';
 
-export async function mintTokenToMasterSucceededHandler(data: any) {
-    const { item } = data;
+export async function itemTokenMintedToMasterEventHandler(input: any) {
+    const { item } = input;
     const solanaService = new SolanaService();
     const itemService = new ItemService();
 
@@ -14,20 +14,17 @@ export async function mintTokenToMasterSucceededHandler(data: any) {
         );
 
         item.transferToCreatorSignature = transferToCreatorSignature;
-        item.state = 'TOKEN_TRANSFERED_TO_CREATOR';
+        item.state = 'COMPLETED';
         await itemService.updateItem(item.id, item);
 
         await sendSqsMessage({
-            type: 'TRANSFER_TOKEN_TO_CREATOR_SUCCEEDED',
-            data: { item: item },
+            type: 'ITEM_COMPLETED',
+            input: { item },
         });
     } catch (error) {
-        item.state = 'TRANSFER_TOKEN_TO_CREATOR_FAILED';
-        await itemService.updateItem(item.id, item);
-
         await sendSqsMessage({
-            type: 'TRANSFER_TOKEN_TO_CREATOR_FAILED',
-            data: { item: item },
+            type: 'TRANSFER_ITEM_TOKEN_TO_CREATOR_FAILED',
+            input: { item, error },
         });
     }
 }

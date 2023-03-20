@@ -7,21 +7,17 @@ export class ItemController {
         const user = (req as any).user;
         const { item } = req.body;
 
-        const itemService = new ItemService();
-        const createdItem = await itemService.createItem({
+        const itemData = {
             ...item,
             username: user.username,
-            state: 'PENDING',
-        });
+        };
 
         await sendSqsMessage({
-            type: 'CREATE_NEW_ITEM_SUCCEEDED',
-            data: { item: createdItem },
+            type: 'CREATE_ITEM',
+            input: { item: itemData },
         });
 
-        res.json({
-            data: createdItem,
-        });
+        res.json({ success: true });
     }
 
     async listItems(req: Request, res: Response) {

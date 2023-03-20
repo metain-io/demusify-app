@@ -1,8 +1,8 @@
 import { ItemService, SolanaService } from '@services/index';
 import { sendSqsMessage } from 'lambdas/sqs-handler/utils';
 
-export async function createTokenMintSucceededHandler(data: any) {
-    const { item } = data;
+export async function itemTokenMintCreatedEventHandler(input: any) {
+    const { item } = input;
     const solanaService = new SolanaService();
     const itemService = new ItemService();
 
@@ -27,20 +27,17 @@ export async function createTokenMintSucceededHandler(data: any) {
 
         item.onChainMetadataUri = onChainMetadataUri;
         item.createTokenMintMetadataSignature = createTokenMintMetadataSignature;
-        item.state = 'TOKEN_MINT_METADATA_CREATED';
+        item.state = 'ITEM_TOKEN_MINT_METADATA_CREATED';
         await itemService.updateItem(item.id, item);
 
         await sendSqsMessage({
-            type: 'CREATE_TOKEN_MINT_METADATA_SUCCEEDED',
-            data: { item: item },
+            type: 'ITEM_TOKEN_MINT_METADATA_CREATED',
+            input: { item },
         });
     } catch (error) {
-        item.state = 'CREATE_TOKEN_MINT_METADATA_FAILED';
-        await itemService.updateItem(item.id, item);
-
         await sendSqsMessage({
-            type: 'CREATE_TOKEN_MINT_METADATA_FAILED',
-            data: { item: item },
+            type: 'CREATE_ITEM_TOKEN_MINT_METADATA_FAILED',
+            input: { item, error },
         });
     }
 }

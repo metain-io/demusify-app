@@ -8,7 +8,7 @@ export async function sendSqsMessage(message: any) {
         const sqs = new AWS.SQS({ apiVersion: '2012-11-05' });
 
         const params: AWS.SQS.SendMessageRequest = {
-            MessageBody: message,
+            MessageBody: JSON.stringify(message),
             QueueUrl: configs.sqs.queueUrl,
         };
 

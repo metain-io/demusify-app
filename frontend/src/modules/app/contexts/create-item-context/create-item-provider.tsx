@@ -108,21 +108,6 @@ export const CreateItemProvider = (props: CreateItemProviderProps) => {
                 ...value,
             };
 
-            const { data: tokenMintAddress } = await DemusifyApi.items.createItemTokenMint();
-            item.tokenMintAddress = tokenMintAddress;
-
-            const {
-                data: { onChainMetadataUri, createTokenMintMetadataSignature },
-            } = await DemusifyApi.items.createItemTokenMintMetadata(item);
-            item.onChainMetadataUri = onChainMetadataUri;
-            item.createTokenMintMetadataSignature = createTokenMintMetadataSignature;
-
-            const {
-                data: { mintToMasterSignature, transferToCreatorSignature },
-            } = await DemusifyApi.items.mintItemToken(item);
-            item.mintToMasterSignature = mintToMasterSignature;
-            item.transferToCreatorSignature = transferToCreatorSignature;
-
             const createdItem = await DemusifyApi.items.createItem(item);
             console.log({ createdItem });
 

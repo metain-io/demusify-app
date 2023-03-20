@@ -10,8 +10,11 @@ export const handler = (event: object, context: object) => {
 
     records.forEach((record) => {
         const body = record['body'];
-        const message = body['message'];
-        const input = body['input'];
+
+        const jsonBody = JSON.parse(body);
+
+        const message = jsonBody['type'];
+        const input = jsonBody['input'];
 
         messageBus[message]?.(input);
     });

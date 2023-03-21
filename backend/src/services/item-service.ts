@@ -10,7 +10,7 @@ export class ItemService {
     }
 
     async listCompletedItems() {
-        return await ItemModel.scan('state').eq('COMPLETED').limit(100).exec();
+        return await ItemModel.scan('state').eq('COMPLETED').or().where('state').not().exists().limit(100).exec();
     }
 
     async getItem(id: string) {

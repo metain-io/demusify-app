@@ -22,7 +22,7 @@ export class ItemController {
 
     async listItems(req: Request, res: Response) {
         const itemService = new ItemService();
-        const items = await itemService.listItems();
+        const items = await itemService.listCompletedItems();
 
         res.json({
             data: items,

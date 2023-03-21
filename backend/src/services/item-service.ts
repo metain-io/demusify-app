@@ -9,6 +9,10 @@ export class ItemService {
         return await ItemModel.scan().limit(100).exec();
     }
 
+    async listCompletedItems() {
+        return await ItemModel.scan('state').eq('COMPLETED').limit(100).exec();
+    }
+
     async getItem(id: string) {
         return (await ItemModel.query({ itemID: id }).exec())?.[0];
     }
@@ -38,12 +42,23 @@ export class ItemService {
     }
 
     async listItemTransactions(id: string) {
-        const creations = await NFTCreationModel.scan('itemID').eq(id).exec();
+        const creations = await ItemModel.scan('itemID').eq(id).exec();
         const licenses = await NFTLicenseModel.scan('itemId').eq(id).exec();
 
         const result = [
-            ...creations.map((i) => ({ type: 'create', txId: i.mintToMasterSignature, createdAt: i.createdAt })),
-            ...licenses.map((i) => ({ type: 'buy', txId: i.txID, createdAt: i.createdAt, price: i.price })),
+            ...creations.map((i) => ({
+                type: 'create',
+                txId: i.mintToMasterSignature,
+                createdAt: i.createdAt,
+                state: i.state,
+            })),
+            ...licenses.map((i) => ({
+                type: 'buy',
+                txId: i.txID,
+                createdAt: i.createdAt,
+                price: i.price,
+                state: i.state,
+            })),
         ].sort((a, b) => {
             const dateA = new Date(a.createdAt);
             const dateB = new Date(b.createdAt);

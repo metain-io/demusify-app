@@ -8,11 +8,11 @@ export type TabCreationsProps = {
 export const TabCreations = (props: TabCreationsProps) => {
     const { onItemSelected } = props;
 
-    const [creations, setCreations] = React.useState([]);
+    const [items, setItems] = React.useState([]);
 
     React.useEffect(() => {
-        DemusifyApi.me.getListCreations().then((creations) => {
-            setCreations(creations);
+        DemusifyApi.me.getListCreations().then((items) => {
+            setItems(items);
         });
     }, []);
 
@@ -24,15 +24,15 @@ export const TabCreations = (props: TabCreationsProps) => {
 
                 {/* <!-- Grid --> */}
                 <div className="grid grid-cols-1 gap-[1.875rem] md:grid-cols-2 lg:grid-cols-4">
-                    {creations.map((creation: any, index) => {
+                    {items.map((item: any, index) => {
                         return (
                             <>
                                 <article>
                                     <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                         <figure className="relative">
-                                            <a href={`view-item?itemId=${creation.item?.itemID}`}>
+                                            <a href={`view-item?itemId=${item.itemID}`}>
                                                 <img
-                                                    src={creation.item?.coverArtImage || '/img/logo_white.png'}
+                                                    src={item.coverArtImage || '/img/logo_white.png'}
                                                     alt="item 5"
                                                     className="w-full rounded-[0.625rem] object-cover"
                                                     style={{ height: '150px' }}
@@ -56,14 +56,14 @@ export const TabCreations = (props: TabCreationsProps) => {
                                                     </svg>
                                                 </span>
                                                 <span className="text-sm dark:text-jacarta-200">
-                                                    {creation.item?.liked || '0'}
+                                                    {item.liked || '0'}
                                                 </span>
                                             </div>
                                         </figure>
                                         <div className="mt-7 flex items-center justify-between">
-                                            <a href={`view-item?itemId=${creation.item?.itemID}`}>
+                                            <a href={`view-item?itemId=${item.itemID}`}>
                                                 <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
-                                                    {creation.item?.name || 'Unknown'}
+                                                    {item.name || 'Unknown'}
                                                 </span>
                                             </a>
                                             <div className="dropup rounded-full hover:bg-jacarta-100 dark:hover:bg-jacarta-600">
@@ -112,16 +112,16 @@ export const TabCreations = (props: TabCreationsProps) => {
                                         </div>
                                         <div className="flex items-center justify-between">
                                             <span className="text-jacarta-500 dark:text-jacarta-300">
-                                                {creation.sales || '0'}
+                                                {item.sales || '0'}
                                             </span>
                                             <span className="text-jacarta-500 dark:text-jacarta-300">
-                                                {(creation.revenue && (creation.revenue / 10000) * 10000) || '0'} SOL
+                                                {(item.revenue && (item.revenue / 10000) * 10000) || '0'} SOL
                                             </span>
                                         </div>
 
                                         <div className="mt-8 flex items-center justify-between">
                                             <a
-                                                href={`view-item?itemId=${creation.item.itemID}`}
+                                                href={`view-item?itemId=${item.itemID}`}
                                                 className="font-display text-sm font-semibold text-accent"
                                             >
                                                 Details
@@ -144,7 +144,7 @@ export const TabCreations = (props: TabCreationsProps) => {
                                                 <button
                                                     className="font-display text-sm font-semibold group-hover:text-accent dark:text-jacarta-200"
                                                     onClick={() => {
-                                                        onItemSelected?.(creation.item);
+                                                        onItemSelected?.(item);
                                                     }}
                                                 >
                                                     View History

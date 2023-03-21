@@ -6,47 +6,38 @@ export class MeService {
     }
 
     async listCreations(username: string) {
-        const creations = await NFTCreationModel.query({ creatorID: username }).exec();
-        const items = await ItemModel.scan('itemID')
-            .in(creations.map((i) => i.itemID))
-            .exec();
+        const items = await ItemModel.scan({ username }).exec();
 
-        const licenses = await NFTLicenseModel.scan('itemId')
+        const itemPayments = await NFTLicenseModel.scan('itemId')
             .in(items.map((i) => i.itemID))
             .exec();
 
-        const mapSales = licenses.reduce((prev, cur) => {
+        const mapSales = itemPayments.reduce((prev, cur) => {
             if (!prev[cur.itemId]) prev[cur.itemId] = 0;
             prev[cur.itemId]++;
             return prev;
         }, {});
 
-        const mapRevenue = licenses.reduce((prev, cur) => {
+        const mapRevenue = itemPayments.reduce((prev, cur) => {
             if (!prev[cur.itemId]) prev[cur.itemId] = cur.amountSolTransferedToCreator;
             prev[cur.itemId] += cur.amountSolTransferedToCreator;
             return prev;
         }, {});
 
-        const mapItems = items.reduce((prev, cur) => {
-            prev[cur.itemID] = cur;
-            return prev;
-        }, {});
-
-        const transformedCreations = creations.map((i) => ({
+        const transformedItem = items.map((i) => ({
             ...i,
-            item: mapItems[i.itemID] || null,
             sales: mapSales[i.itemID] || 0,
             revenue: mapRevenue[i.itemID] || 0,
         }));
 
-        return transformedCreations;
+        return transformedItem;
     }
 
     async listLicenses(username: string) {
-        const licenses = await NFTLicenseModel.query({ consumerID: username }).exec();
+        const itemPayments = await NFTLicenseModel.query({ consumerID: username }).exec();
 
         const items = await ItemModel.scan('itemID')
-            .in(licenses.map((i) => i.itemId))
+            .in(itemPayments.map((i) => i.itemId))
             .exec();
 
         const mapItems = items.reduce((prev, cur) => {
@@ -54,11 +45,11 @@ export class MeService {
             return prev;
         }, {});
 
-        const transformedLicenses = licenses.map((i) => ({
+        const transformedItemPayments = itemPayments.map((i) => ({
             ...i,
             item: mapItems[i.itemId] || null,
         }));
 
-        return transformedLicenses;
+        return transformedItemPayments;
     }
 }

@@ -52,7 +52,7 @@ export const ModalItemHistoryTransaction = (props: ModalItemHistoryTransactionPr
                                 role="table"
                                 className="scrollbar-custom grid max-h-72 w-full grid-cols-5 overflow-y-auto rounded-lg rounded-tl-none border border-jacarta-100 bg-white text-sm dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white"
                                 style={{
-                                    gridTemplateColumns: 'repeat(4,minmax(0,1fr))',
+                                    gridTemplateColumns: 'repeat(5,minmax(0,1fr))',
                                 }}
                             >
                                 <div className="contents" role="row">
@@ -93,6 +93,16 @@ export const ModalItemHistoryTransaction = (props: ModalItemHistoryTransactionPr
                                     >
                                         <span className="w-full overflow-hidden text-ellipsis text-jacarta-700 dark:text-jacarta-100">
                                             Price
+                                        </span>
+                                    </div>
+
+                                    {/* State */}
+                                    <div
+                                        className="sticky top-0 bg-light-base py-2 px-4 dark:bg-jacarta-600"
+                                        role="columnheader"
+                                    >
+                                        <span className="w-full overflow-hidden text-ellipsis text-jacarta-700 dark:text-jacarta-100">
+                                            State
                                         </span>
                                     </div>
                                 </div>
@@ -236,6 +246,14 @@ export const ModalItemHistoryTransaction = (props: ModalItemHistoryTransactionPr
                                                                 </span>
                                                             </>
                                                         )}
+                                                    </div>
+
+                                                    {/* Date */}
+                                                    <div
+                                                        className="flex items-center border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
+                                                        role="cell"
+                                                    >
+                                                        {item.state}
                                                     </div>
                                                 </div>
                                             </>

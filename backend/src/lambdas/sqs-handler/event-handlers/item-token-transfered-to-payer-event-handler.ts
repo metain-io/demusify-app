@@ -16,7 +16,7 @@ export async function itemTokenTransferedToPayerEventHandler(input: any) {
         item.amountSolTransferedToCreator = amountSolTransferedToCreator;
         item.transferSolFromMasterSignature = transferSolFromMasterSignature;
         item.state = 'COMPLETED';
-        await itemPaymentService.updateItemPayment(item.customerID, item.txID, item);
+        await itemPaymentService.updateItemPayment(item.consumerID, item.txID, item);
 
         await sendSqsMessage({
             type: 'ITEM_PAYMENT_COMPLETED',
@@ -26,6 +26,6 @@ export async function itemTokenTransferedToPayerEventHandler(input: any) {
         console.log('TRANSFER_SOL_TO_CREATOR_FAILED', item, error);
 
         item.state = 'TRANSFER_SOL_TO_CREATOR_FAILED';
-        await itemPaymentService.updateItemPayment(item.customerID, item.txID, item);
+        await itemPaymentService.updateItemPayment(item.consumerID, item.txID, item);
     }
 }

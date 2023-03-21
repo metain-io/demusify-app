@@ -34,6 +34,7 @@ export class ItemPaymentController {
             licenseId,
             price: selectedLicense.value,
             payerAddress,
+            creatorAddress: item.creatorAddress,
         };
 
         await sendSqsMessage({

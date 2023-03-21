@@ -8,7 +8,7 @@ export async function itemPaymentCreatedEventHandler(input: any) {
     try {
         // TODO: verify item payment
         item.state = 'VERIFIED';
-        await itemPaymentService.updateItemPayment(item.customerID, item.txID, item);
+        await itemPaymentService.updateItemPayment(item.consumerID, item.txID, item);
 
         await sendSqsMessage({
             type: 'ITEM_PAYMENT_VERIFIED',
@@ -18,6 +18,6 @@ export async function itemPaymentCreatedEventHandler(input: any) {
         console.log('VERIFY_ITEM_PAYMENT_FAILED', item, error);
 
         item.state = 'VERIFY_ITEM_PAYMENT_FAILED';
-        await itemPaymentService.updateItemPayment(item.customerID, item.txID, item);
+        await itemPaymentService.updateItemPayment(item.consumerID, item.txID, item);
     }
 }

@@ -1,9 +1,9 @@
-import { ItemService, NFTLicenseService, SolanaService } from '@services/index';
+import { ItemService } from '@services/index';
 import { Request, Response } from 'express';
 import { sendSqsMessage } from '../utils';
 
-export class PaymentController {
-    async createPayment(req: Request, res: Response) {
+export class ItemPaymentController {
+    async createItemPayment(req: Request, res: Response) {
         const { itemId, licenseId, paymentSignature, payerAddress } = req.body;
         const user = (req as any).user;
 

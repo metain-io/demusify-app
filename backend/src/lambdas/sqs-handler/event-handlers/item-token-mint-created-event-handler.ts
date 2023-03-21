@@ -35,9 +35,9 @@ export async function itemTokenMintCreatedEventHandler(input: any) {
             input: { item },
         });
     } catch (error) {
-        await sendSqsMessage({
-            type: 'CREATE_ITEM_TOKEN_MINT_METADATA_FAILED',
-            input: { item, error },
-        });
+        console.log('CREATE_ITEM_TOKEN_MINT_METADATA_FAILED', item, error);
+
+        item.state = 'CREATE_ITEM_TOKEN_MINT_METADATA_FAILED';
+        await itemService.updateItem(item.itemID, item);
     }
 }

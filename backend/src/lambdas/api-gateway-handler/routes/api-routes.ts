@@ -3,7 +3,7 @@ import {
     CollectionController,
     ItemController,
     MeController,
-    PaymentController,
+    ItemPaymentController,
     S3Controller,
 } from '../controllers/index';
 import { UserController } from '../controllers/user-controller';
@@ -42,7 +42,7 @@ apiRouter.get('/me/licenses', accessTokenAuthentication, new MeController().list
 // S3
 apiRouter.get('/s3/signed-url', accessTokenAuthentication, new S3Controller().getSignedUrl);
 
-// PAYMENT
-apiRouter.post('/payments', accessTokenAuthentication, new PaymentController().createPayment);
+// ITEM PAYMENT
+apiRouter.post('/item-payments', accessTokenAuthentication, new ItemPaymentController().createItemPayment);
 
 export { apiRouter };

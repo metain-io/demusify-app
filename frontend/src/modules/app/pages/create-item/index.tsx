@@ -14,7 +14,8 @@ const PageCreateItem = () => {
     const router = useRouter();
 
     const onCreateItemSucceeded = (item: any) => {
-        router.push(`view-item?itemId=${item.itemID}&viewOnly=true`);
+        // router.push(`view-item?itemId=${item.itemID}&viewOnly=true`);
+        router.push(`user`);
     };
 
     return (

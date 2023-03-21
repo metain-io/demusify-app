@@ -22,9 +22,9 @@ export async function itemTokenMintedToMasterEventHandler(input: any) {
             input: { item },
         });
     } catch (error) {
-        await sendSqsMessage({
-            type: 'TRANSFER_ITEM_TOKEN_TO_CREATOR_FAILED',
-            input: { item, error },
-        });
+        console.log('TRANSFER_ITEM_TOKEN_TO_CREATOR_FAILED', item, error);
+
+        item.state = 'TRANSFER_ITEM_TOKEN_TO_CREATOR_FAILED';
+        await itemService.updateItem(item.itemID, item);
     }
 }

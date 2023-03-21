@@ -18,9 +18,9 @@ export async function itemTokenMintMetadataCreatedEventHandler(input: any) {
             input: { item },
         });
     } catch (error) {
-        await sendSqsMessage({
-            type: 'MINT_TOKEN_TO_MASTER_FAILED',
-            input: { item, error },
-        });
+        console.log('MINT_TOKEN_TO_MASTER_FAILED', item, error);
+
+        item.state = 'MINT_TOKEN_TO_MASTER_FAILED';
+        await itemService.updateItem(item.itemID, item);
     }
 }

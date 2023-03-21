@@ -14,9 +14,6 @@ export async function createItemCommandHandler(input: any) {
             input: { item },
         });
     } catch (error) {
-        await sendSqsMessage({
-            type: 'CREATE_ITEM_FAILED',
-            input: { item, error },
-        });
+        console.log('CREATE_ITEM_FAILED', item, error);
     }
 }

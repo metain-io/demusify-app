@@ -18,9 +18,9 @@ export async function itemCreatedEventHandler(input: any) {
             input: { item },
         });
     } catch (error) {
-        await sendSqsMessage({
-            type: 'CREATE_ITEM_TOKEN_MINT_FAILED',
-            input: { item, error },
-        });
+        console.log('CREATE_ITEM_TOKEN_MINT_FAILED', item, error);
+
+        item.state = 'CREATE_ITEM_TOKEN_MINT_FAILED';
+        await itemService.updateItem(item.itemID, item);
     }
 }

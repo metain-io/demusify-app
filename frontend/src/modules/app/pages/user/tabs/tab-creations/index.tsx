@@ -154,7 +154,7 @@ export const TabCreations = (props: TabCreationsProps) => {
 
                                         <div
                                             className={`absolute top-0 left-0 px-4 py-1 text-white ${
-                                                !item.state || item.state ? 'bg-green' : 'bg-jacarta-600'
+                                                !item.state || item.state == 'COMPLETED' ? 'bg-green' : 'bg-jacarta-600'
                                             }`}
                                             style={{
                                                 borderBottomRightRadius: '1rem',

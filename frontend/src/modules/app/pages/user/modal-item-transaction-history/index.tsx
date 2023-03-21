@@ -253,7 +253,9 @@ export const ModalItemHistoryTransaction = (props: ModalItemHistoryTransactionPr
                                                         className="flex items-center border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
                                                         role="cell"
                                                     >
-                                                        {item.state}
+                                                        {!item.state || item.state == 'COMPLETED'
+                                                            ? 'Completed'
+                                                            : 'Processing'}
                                                     </div>
                                                 </div>
                                             </>

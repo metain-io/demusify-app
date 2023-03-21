@@ -139,7 +139,9 @@ export const TabLicenses = (props: TabLicensesProps) => {
 
                                         <div
                                             className={`absolute top-0 left-0 px-4 py-1 text-white ${
-                                                !license.state || license.state ? 'bg-green' : 'bg-jacarta-600'
+                                                !license.state || license.state == 'COMPLETED'
+                                                    ? 'bg-green'
+                                                    : 'bg-jacarta-600'
                                             }`}
                                             style={{
                                                 borderBottomRightRadius: '1rem',

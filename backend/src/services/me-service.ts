@@ -19,14 +19,16 @@ export class MeService {
             .exec();
 
         const mapSales = itemPayments.reduce((prev, cur) => {
-            if (!prev[cur.itemId]) prev[cur.itemId] = 0;
-            prev[cur.itemId]++;
+            if (cur.state && cur.state != 'COMPLETED') return prev;
+            if (!prev[cur.itemId]) prev[cur.itemId] = 1;
+            else prev[cur.itemId]++;
             return prev;
         }, {});
 
         const mapRevenue = itemPayments.reduce((prev, cur) => {
+            if (cur.state && cur.state != 'COMPLETED') return prev;
             if (!prev[cur.itemId]) prev[cur.itemId] = cur.amountSolTransferedToCreator;
-            prev[cur.itemId] += cur.amountSolTransferedToCreator;
+            else prev[cur.itemId] += cur.amountSolTransferedToCreator;
             return prev;
         }, {});
 

@@ -10,7 +10,22 @@ export class ItemService {
     }
 
     async listCompletedItems() {
-        return await ItemModel.scan('state').eq('COMPLETED').or().where('state').not().exists().limit(100).exec();
+        const listCompletedItems = await ItemModel.scan('state')
+            .eq('COMPLETED')
+            .or()
+            .where('state')
+            .not()
+            .exists()
+            .limit(100)
+            .exec();
+
+        listCompletedItems.sort((a, b) => {
+            if (a.createdAt < b.createdAt) return 1;
+            if (a.createdAt > b.createdAt) return -1;
+            return 0;
+        });
+
+        return listCompletedItems;
     }
 
     async getItem(id: string) {

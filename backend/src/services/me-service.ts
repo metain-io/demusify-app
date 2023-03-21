@@ -6,7 +6,13 @@ export class MeService {
     }
 
     async listCreations(username: string) {
-        const items = await ItemModel.scan({ username }).exec();
+        const items = await (
+            await ItemModel.scan({ username }).exec()
+        ).sort((a, b) => {
+            if (a.createdAt < b.createdAt) return 1;
+            if (a.createdAt > b.createdAt) return -1;
+            return 0;
+        });
 
         const itemPayments = await NFTLicenseModel.scan('itemId')
             .in(items.map((i) => i.itemID))
@@ -35,6 +41,12 @@ export class MeService {
 
     async listLicenses(username: string) {
         const itemPayments = await NFTLicenseModel.query({ consumerID: username }).exec();
+
+        itemPayments.sort((a, b) => {
+            if (a.createdAt < b.createdAt) return 1;
+            if (a.createdAt > b.createdAt) return -1;
+            return 0;
+        });
 
         const items = await ItemModel.scan('itemID')
             .in(itemPayments.map((i) => i.itemId))

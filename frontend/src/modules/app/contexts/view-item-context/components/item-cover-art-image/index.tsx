@@ -10,11 +10,11 @@ export const ItemCoverArtImage = () => {
     }
 
     return (
-        <figure className="mb-8 md:w-2/5 md:flex-shrink-0 md:flex-grow-0 md:basis-auto lg:w-1/2">
+        <figure className="mb-8 md:mb-0 md:w-2/5 md:flex-shrink-0 md:flex-grow-0 md:basis-auto lg:w-1/2">
             <img
                 src={item?.coverArtImage}
                 alt="item"
-                className="cursor-pointer rounded-2.5xl"
+                className="cursor-pointer rounded-2.5xl object-cover h-full"
                 // data-bs-toggle="modal"
                 // data-bs-target="#imageModal"
                 width={'100%'}

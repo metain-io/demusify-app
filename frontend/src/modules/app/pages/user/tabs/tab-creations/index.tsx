@@ -28,7 +28,7 @@ export const TabCreations = (props: TabCreationsProps) => {
                         return (
                             <>
                                 <article>
-                                    <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
+                                    <div className="relative block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
                                         <figure className="relative">
                                             <a href={`view-item?itemId=${item.itemID}`}>
                                                 <img
@@ -115,7 +115,7 @@ export const TabCreations = (props: TabCreationsProps) => {
                                                 {item.sales || '0'}
                                             </span>
                                             <span className="text-jacarta-500 dark:text-jacarta-300">
-                                                {(item.revenue && (item.revenue / 10000) * 10000) || '0'} SOL
+                                                {(item.revenue && item.revenue.toFixed(2)) || '0'} SOL
                                             </span>
                                         </div>
 
@@ -150,6 +150,18 @@ export const TabCreations = (props: TabCreationsProps) => {
                                                     View History
                                                 </button>
                                             </button>
+                                        </div>
+
+                                        <div
+                                            className={`absolute top-0 left-0 px-4 py-1 text-white ${
+                                                !item.state || item.state ? 'bg-green' : 'bg-jacarta-600'
+                                            }`}
+                                            style={{
+                                                borderBottomRightRadius: '1rem',
+                                                borderTopLeftRadius: '1.25rem',
+                                            }}
+                                        >
+                                            {!item.state || item.state == 'COMPLETED' ? 'Completed' : 'Processing'}
                                         </div>
                                     </div>
                                 </article>

@@ -8,7 +8,8 @@ export async function itemPaymentVerifiedEventHandler(input: any) {
 
     try {
         const amountTokenTransferedToPayer = 1;
-        const transferTokenFromMasterSignature = await solanaService.transferSolFromMaster(
+        const transferTokenFromMasterSignature = await solanaService.transferTokenFromMaster(
+            item.tokenMintAddress,
             item.payerAddress,
             amountTokenTransferedToPayer,
         );

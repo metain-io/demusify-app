@@ -30,6 +30,7 @@ export class ItemPaymentController {
             consumerID: user.username,
             txID: paymentSignature,
             nftID: item.tokenMintAddress,
+            tokenMintAddress: item.tokenMintAddress,
             itemId,
             licenseId,
             price: selectedLicense.value,

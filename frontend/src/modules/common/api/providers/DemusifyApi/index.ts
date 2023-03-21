@@ -158,8 +158,8 @@ class DemusifyApi extends BaseApiProvider implements IDemusifyApi {
         },
     };
 
-    payment = {
-        createPayment: async ({
+    itemPayment = {
+        createItemPayment: async ({
             itemId,
             licenseId,
             paymentSignature,
@@ -170,7 +170,7 @@ class DemusifyApi extends BaseApiProvider implements IDemusifyApi {
             paymentSignature: string;
             payerAddress: string;
         }) => {
-            const uri = `/demusify/api/v1/payments`;
+            const uri = `/demusify/api/v1/item-payments`;
             const requestKey = generateRequestKey(uri);
             const rs = await this.executeRequest(requestKey, () =>
                 Client.post(uri, {

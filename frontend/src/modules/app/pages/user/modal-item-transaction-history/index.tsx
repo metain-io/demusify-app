@@ -248,7 +248,7 @@ export const ModalItemHistoryTransaction = (props: ModalItemHistoryTransactionPr
                                                         )}
                                                     </div>
 
-                                                    {/* Date */}
+                                                    {/* State */}
                                                     <div
                                                         className="flex items-center border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
                                                         role="cell"

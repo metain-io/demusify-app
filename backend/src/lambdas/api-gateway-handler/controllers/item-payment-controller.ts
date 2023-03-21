@@ -38,7 +38,7 @@ export class ItemPaymentController {
 
         await sendSqsMessage({
             type: 'CREATE_ITEM_PAYMENT',
-            data: { item: itemData },
+            input: { item: itemData },
         });
 
         res.json({ success: true });

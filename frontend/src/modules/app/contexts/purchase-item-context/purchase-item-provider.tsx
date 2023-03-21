@@ -35,7 +35,7 @@ export const PurchaseItemProvider = (props: PurchaseItemProviderProps) => {
                 selectedLicense.value,
             );
             console.log('handlePurchase', { signature });
-            await DemusifyApi.payment.createPayment({
+            await DemusifyApi.itemPayment.createItemPayment({
                 itemId: item.itemID,
                 licenseId: selectedLicense.id,
                 payerAddress: loginData.walletAddress,
